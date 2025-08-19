@@ -1,0 +1,4964 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: immonex OpenImmo2WP 5.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/src\n"
+"POT-Creation-Date: 2025-08-04T13:32:14+00:00\n"
+"PO-Revision-Date: 2025-08-04 15:33+0200\n"
+"Last-Translator: resadm <scheuer@inveris.de>\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#. Plugin Name of the plugin
+#: immonex-openimmo2wp.php
+msgid "immonex OpenImmo2WP"
+msgstr "immonex OpenImmo2WP"
+
+#. Plugin URI of the plugin
+#: immonex-openimmo2wp.php
+msgid "https://plugins.inveris.de/wordpress-plugins/immonex-openimmo2wp/"
+msgstr "https://plugins.inveris.de/wordpress-plugins/immonex-openimmo2wp/"
+
+#. Description of the plugin
+#: immonex-openimmo2wp.php
+msgid "Automated import of OpenImmo-XML property data into WordPress websites."
+msgstr ""
+"Automatisierter Import von OpenImmo-XML-Immobiliendaten in WordPress-"
+"Websites."
+
+#. Author of the plugin
+#: immonex-openimmo2wp.php
+msgid "inveris OHG / immonex"
+msgstr "inveris OHG / immonex"
+
+#. Author URI of the plugin
+#: immonex-openimmo2wp.php
+msgid "https://plugins.inveris.de/"
+msgstr "https://plugins.inveris.de/"
+
+#: includes/class-attachment-utils.php:244
+msgid ""
+"No or invalid attachment format definition, using file extension instead: %s"
+msgstr ""
+"Keine oder ungültige Dateiformat-Definition, Erweiterung des Dateinamens "
+"wird alternativ verwendet: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-attachment-utils.php:365 includes/class-openimmo2wp.php:1499
+msgid "Error on deleting an image attachment: Attachment ID %s"
+msgstr "Fehler beim Löschen eines Bildanhangs: Anhang-ID %s"
+
+# @ default
+#: includes/class-cleanup.php:82
+msgid "Expired archive/log file deleted: %s"
+msgstr "Abgelaufene Archiv-/Logdatei gelöscht: %s"
+
+# @ default
+#: includes/class-cleanup.php:90
+msgid "Expired archive/log file could not be deleted: %s"
+msgstr "Abgelaufene Archiv-/Logdatei konnte nicht gelöscht werden: %s"
+
+# @ default
+#: includes/class-cleanup.php:161
+msgid "Outdated mapping backup file deleted: %s"
+msgstr "Veraltete Backup-Mapping-Datei gelöscht: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-cleanup.php:169
+msgid "Outdated mapping backup file could not be deleted: %s"
+msgstr "Veraltete Backup-Mapping-Datei konnte nicht gelöscht werden: %s"
+
+#: includes/class-countries.php:18
+msgid "Afghanistan"
+msgstr "Afghanistan"
+
+#: includes/class-countries.php:19
+msgid "Albania"
+msgstr "Albanien"
+
+#: includes/class-countries.php:20
+msgid "Algeria"
+msgstr "Algerien"
+
+#: includes/class-countries.php:21
+msgid "Andorra"
+msgstr "Andorra"
+
+#: includes/class-countries.php:22
+msgid "Angola"
+msgstr "Angola"
+
+#: includes/class-countries.php:23
+msgid "Antigua and Barbuda"
+msgstr "Antigua und Barbuda"
+
+#: includes/class-countries.php:24
+msgid "Argentina"
+msgstr "Argentinien"
+
+#: includes/class-countries.php:25
+msgid "Armenia"
+msgstr "Armenien"
+
+#: includes/class-countries.php:26
+msgid "Coral Sea Islands"
+msgstr "Korallenmeerinseln"
+
+#: includes/class-countries.php:27
+msgid "Austria"
+msgstr "Österreich"
+
+#: includes/class-countries.php:28
+msgid "Nagorno-Karabakh"
+msgstr "Nagorno-Karabakh"
+
+#: includes/class-countries.php:29
+msgid "Bahamas"
+msgstr "Bahamas"
+
+#: includes/class-countries.php:30
+msgid "Bahrain"
+msgstr "Bahrain"
+
+#: includes/class-countries.php:31
+msgid "Bangladesh"
+msgstr "Bangladesch"
+
+#: includes/class-countries.php:32
+msgid "Barbados"
+msgstr "Barbados"
+
+#: includes/class-countries.php:33
+msgid "Belarus"
+msgstr "Weißrussland"
+
+#: includes/class-countries.php:34
+msgid "Belgium"
+msgstr "Belgien"
+
+#: includes/class-countries.php:35
+msgid "Belize"
+msgstr "Belize"
+
+#: includes/class-countries.php:36
+msgid "Benin"
+msgstr "Benin"
+
+#: includes/class-countries.php:37
+msgid "Bhutan"
+msgstr "Bhutan"
+
+#: includes/class-countries.php:38
+msgid "Bolivia"
+msgstr "Bolivien"
+
+#: includes/class-countries.php:39
+msgid "Bosnia and Herzegovina"
+msgstr "Bosnien und Herzegowina"
+
+#: includes/class-countries.php:40
+msgid "Botswana"
+msgstr "Botswana"
+
+#: includes/class-countries.php:41
+msgid "Brazil"
+msgstr "Brasilien"
+
+#: includes/class-countries.php:42
+msgid "Brunei"
+msgstr "Brunei"
+
+#: includes/class-countries.php:43
+msgid "Bulgaria"
+msgstr "Bulgarien"
+
+#: includes/class-countries.php:44
+msgid "Burkina Faso"
+msgstr "Burkina Faso"
+
+#: includes/class-countries.php:45
+msgid "Burundi"
+msgstr "Burundi"
+
+#: includes/class-countries.php:46
+msgid "Cambodia"
+msgstr "Kambodscha"
+
+#: includes/class-countries.php:47
+msgid "Cameroon"
+msgstr "Kamerun"
+
+#: includes/class-countries.php:48
+msgid "Canada"
+msgstr "Kanada"
+
+#: includes/class-countries.php:49
+msgid "Cape Verde"
+msgstr "Kap Verde"
+
+#: includes/class-countries.php:50
+msgid "Central African Republic"
+msgstr "Zentralafrikanische Republik"
+
+#: includes/class-countries.php:51
+msgid "Chad"
+msgstr "Tschad"
+
+#: includes/class-countries.php:52
+msgid "Chile"
+msgstr "Chile"
+
+#: includes/class-countries.php:53
+msgid "China"
+msgstr "China"
+
+#: includes/class-countries.php:54
+msgid "Colombia"
+msgstr "Kolumbien"
+
+#: includes/class-countries.php:55
+msgid "Comoros"
+msgstr "Komoren"
+
+#: includes/class-countries.php:56 includes/class-countries.php:57
+msgid "Congo"
+msgstr "Kongo"
+
+#: includes/class-countries.php:58
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+#: includes/class-countries.php:59
+msgid "Cote d'Ivoire (Ivory Coast)"
+msgstr "Elfenbeinküste"
+
+#: includes/class-countries.php:60
+msgid "Croatia"
+msgstr "Kroatien"
+
+#: includes/class-countries.php:61
+msgid "Cuba"
+msgstr "Kuba"
+
+#: includes/class-countries.php:62
+msgid "Northern Cyprus"
+msgstr "Nord-Zypern"
+
+#: includes/class-countries.php:63
+msgid "Czech Republic"
+msgstr "Tschechische Republik"
+
+#: includes/class-countries.php:64
+msgid "Denmark"
+msgstr "Dänemark"
+
+#: includes/class-countries.php:65
+msgid "Djibouti"
+msgstr "Dschibuti"
+
+#: includes/class-countries.php:66
+msgid "Dominica"
+msgstr "Dominica"
+
+#: includes/class-countries.php:67
+msgid "Dominican Republic"
+msgstr "Dominikanische Republik"
+
+#: includes/class-countries.php:68
+msgid "Ecuador"
+msgstr "Ecuador"
+
+#: includes/class-countries.php:69
+msgid "Egypt"
+msgstr "Ägypten"
+
+#: includes/class-countries.php:70
+msgid "El Salvador"
+msgstr "El Salvador"
+
+#: includes/class-countries.php:71
+msgid "Equatorial Guinea"
+msgstr "Äquatorialguinea"
+
+#: includes/class-countries.php:72
+msgid "Eritrea"
+msgstr "Eritrea"
+
+#: includes/class-countries.php:73
+msgid "Estonia"
+msgstr "Estland"
+
+#: includes/class-countries.php:74
+msgid "Ethiopia"
+msgstr "Äthiopien"
+
+#: includes/class-countries.php:75
+msgid "Fiji"
+msgstr "Fiji"
+
+#: includes/class-countries.php:76
+msgid "Finland"
+msgstr "Finnland"
+
+#: includes/class-countries.php:77
+msgid "France"
+msgstr "Frankreich"
+
+#: includes/class-countries.php:78
+msgid "Gabon"
+msgstr "Gabun"
+
+#: includes/class-countries.php:79
+msgid "Gambia"
+msgstr "Gambia"
+
+#: includes/class-countries.php:80
+msgid "South Ossetia"
+msgstr "Südossetien"
+
+#: includes/class-countries.php:81
+msgid "Germany"
+msgstr "Deutschland"
+
+#: includes/class-countries.php:82
+msgid "Ghana"
+msgstr "Ghana"
+
+#: includes/class-countries.php:83
+msgid "Greece"
+msgstr "Griechenland"
+
+#: includes/class-countries.php:84
+msgid "Grenada"
+msgstr "Grenada"
+
+#: includes/class-countries.php:85
+msgid "Guatemala"
+msgstr "Guatemala"
+
+#: includes/class-countries.php:86
+msgid "Guinea"
+msgstr "Guinea"
+
+#: includes/class-countries.php:87
+msgid "Guinea-Bissau"
+msgstr "Guinea-Bissau"
+
+#: includes/class-countries.php:88
+msgid "Guyana"
+msgstr "Guyana"
+
+#: includes/class-countries.php:89
+msgid "Haiti"
+msgstr "Haiti"
+
+#: includes/class-countries.php:90
+msgid "Honduras"
+msgstr "Honduras"
+
+#: includes/class-countries.php:91
+msgid "Hungary"
+msgstr "Ungarn"
+
+#: includes/class-countries.php:92
+msgid "Iceland"
+msgstr "Island"
+
+#: includes/class-countries.php:93
+msgid "India"
+msgstr "Indien"
+
+#: includes/class-countries.php:94
+msgid "Indonesia"
+msgstr "Indonesien"
+
+#: includes/class-countries.php:95
+msgid "Iran"
+msgstr "Iran"
+
+#: includes/class-countries.php:96
+msgid "Iraq"
+msgstr "Irak"
+
+#: includes/class-countries.php:97
+msgid "Ireland"
+msgstr "Irland"
+
+#: includes/class-countries.php:98
+msgid "Israel"
+msgstr "Israel"
+
+#: includes/class-countries.php:99
+msgid "Italy"
+msgstr "Italien"
+
+#: includes/class-countries.php:100
+msgid "Jamaica"
+msgstr "Jamaica"
+
+#: includes/class-countries.php:101
+msgid "Japan"
+msgstr "Japan"
+
+#: includes/class-countries.php:102
+msgid "Jordan"
+msgstr "Jordanien"
+
+#: includes/class-countries.php:103
+msgid "Kazakhstan"
+msgstr "Kasachstan"
+
+#: includes/class-countries.php:104
+msgid "Kenya"
+msgstr "Kenia"
+
+#: includes/class-countries.php:105
+msgid "Kiribati"
+msgstr "Kiribati"
+
+#: includes/class-countries.php:106
+msgid "North Korea"
+msgstr "Korea (Demokratische Volksrepublik)"
+
+#: includes/class-countries.php:107
+msgid "South Korea"
+msgstr "Korea (Republik)"
+
+#: includes/class-countries.php:108
+msgid "Kuwait"
+msgstr "Kuwait"
+
+#: includes/class-countries.php:109
+msgid "Kyrgyzstan"
+msgstr "Kirgisistan"
+
+#: includes/class-countries.php:110
+msgid "Laos"
+msgstr "Laos"
+
+#: includes/class-countries.php:111
+msgid "Latvia"
+msgstr "Lettland"
+
+#: includes/class-countries.php:112
+msgid "Lebanon"
+msgstr "Libanon"
+
+#: includes/class-countries.php:113
+msgid "Lesotho"
+msgstr "Lesotho"
+
+#: includes/class-countries.php:114
+msgid "Liberia"
+msgstr "Liberia"
+
+#: includes/class-countries.php:115
+msgid "Libya"
+msgstr "Libyen"
+
+#: includes/class-countries.php:116
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
+#: includes/class-countries.php:117
+msgid "Lithuania"
+msgstr "Litauen"
+
+#: includes/class-countries.php:118
+msgid "Luxembourg"
+msgstr "Luxemburg"
+
+#: includes/class-countries.php:119
+msgid "Macedonia"
+msgstr "Mazedonien (FYROM)"
+
+#: includes/class-countries.php:120
+msgid "Madagascar"
+msgstr "Madagaskar"
+
+#: includes/class-countries.php:121
+msgid "Malawi"
+msgstr "Malawi"
+
+#: includes/class-countries.php:122
+msgid "Malaysia"
+msgstr "Malaysia"
+
+#: includes/class-countries.php:123
+msgid "Maldives"
+msgstr "Malediven"
+
+#: includes/class-countries.php:124
+msgid "Mali"
+msgstr "Mali"
+
+#: includes/class-countries.php:125
+msgid "Malta"
+msgstr "Malta"
+
+#: includes/class-countries.php:126
+msgid "Marshall Islands"
+msgstr "Marshallinseln"
+
+#: includes/class-countries.php:127
+msgid "Mauritania"
+msgstr "Mauretanien"
+
+#: includes/class-countries.php:128
+msgid "Mauritius"
+msgstr "Mauritius"
+
+#: includes/class-countries.php:129
+msgid "Mexico"
+msgstr "Mexiko"
+
+#: includes/class-countries.php:130
+msgid "Micronesia"
+msgstr "Mikronesien"
+
+#: includes/class-countries.php:131
+msgid "Pridnestrovie (Transnistria)"
+msgstr "Transnistrien"
+
+#: includes/class-countries.php:132
+msgid "Monaco"
+msgstr "Monaco"
+
+#: includes/class-countries.php:133
+msgid "Mongolia"
+msgstr "Mongolei"
+
+#: includes/class-countries.php:134
+msgid "Montenegro"
+msgstr "Montenegro"
+
+#: includes/class-countries.php:135
+msgid "Morocco"
+msgstr "Marokko"
+
+#: includes/class-countries.php:136
+msgid "Mozambique"
+msgstr "Mosambik"
+
+#: includes/class-countries.php:137
+msgid "Myanmar (Burma)"
+msgstr "Myanmar (Burma)"
+
+#: includes/class-countries.php:138
+msgid "Namibia"
+msgstr "Namibia"
+
+#: includes/class-countries.php:139
+msgid "Nauru"
+msgstr "Nauru"
+
+#: includes/class-countries.php:140
+msgid "Nepal"
+msgstr "Nepal"
+
+#: includes/class-countries.php:141
+msgid "Netherlands"
+msgstr "Niederlande"
+
+#: includes/class-countries.php:142
+msgid "New Zealand"
+msgstr "Neuseeland"
+
+#: includes/class-countries.php:143
+msgid "Nicaragua"
+msgstr "Nicaragua"
+
+#: includes/class-countries.php:144
+msgid "Niger"
+msgstr "Niger"
+
+#: includes/class-countries.php:145
+msgid "Nigeria"
+msgstr "Nigeria"
+
+#: includes/class-countries.php:146
+msgid "Norway"
+msgstr "Norwegen"
+
+#: includes/class-countries.php:147
+msgid "Oman"
+msgstr "Oman"
+
+#: includes/class-countries.php:148
+msgid "Pakistan"
+msgstr "Pakistan"
+
+#: includes/class-countries.php:149
+msgid "Palau"
+msgstr "Palau"
+
+#: includes/class-countries.php:150
+msgid "Panama"
+msgstr "Panama"
+
+#: includes/class-countries.php:151
+msgid "Papua New Guinea"
+msgstr "Papua-Neuguinea"
+
+#: includes/class-countries.php:152
+msgid "Paraguay"
+msgstr "Paraguay"
+
+#: includes/class-countries.php:153
+msgid "Peru"
+msgstr "Peru"
+
+#: includes/class-countries.php:154
+msgid "Philippines"
+msgstr "Philippinen"
+
+#: includes/class-countries.php:155
+msgid "Poland"
+msgstr "Polen"
+
+#: includes/class-countries.php:156
+msgid "Portugal"
+msgstr "Portugal"
+
+#: includes/class-countries.php:157
+msgid "Qatar"
+msgstr "Katar"
+
+#: includes/class-countries.php:158
+msgid "Romania"
+msgstr "Rumänien"
+
+#: includes/class-countries.php:159
+msgid "Russia"
+msgstr "Russland"
+
+#: includes/class-countries.php:160
+msgid "Rwanda"
+msgstr "Ruanda"
+
+#: includes/class-countries.php:161
+msgid "Saint Kitts and Nevis"
+msgstr "St. Kitts und Nevis"
+
+#: includes/class-countries.php:162
+msgid "Saint Lucia"
+msgstr "St. Lucia"
+
+#: includes/class-countries.php:163
+msgid "Saint Vincent and the Grenadines"
+msgstr "St. Vincent und die Grenadinen"
+
+#: includes/class-countries.php:164
+msgid "Samoa"
+msgstr "Samoa"
+
+#: includes/class-countries.php:165
+msgid "San Marino"
+msgstr "San Marino"
+
+#: includes/class-countries.php:166
+msgid "Sao Tome and Principe"
+msgstr "São Tomé und Príncipe"
+
+#: includes/class-countries.php:167
+msgid "Saudi Arabia"
+msgstr "Saudi-Arabien"
+
+#: includes/class-countries.php:168
+msgid "Senegal"
+msgstr "Senegal"
+
+#: includes/class-countries.php:169
+msgid "Serbia"
+msgstr "Serbien"
+
+#: includes/class-countries.php:170
+msgid "Seychelles"
+msgstr "Seychellen"
+
+#: includes/class-countries.php:171
+msgid "Sierra Leone"
+msgstr "Sierra Leone"
+
+#: includes/class-countries.php:172
+msgid "Singapore"
+msgstr "Singapur"
+
+#: includes/class-countries.php:173
+msgid "Slovakia"
+msgstr "Slowakische Republik"
+
+#: includes/class-countries.php:174
+msgid "Slovenia"
+msgstr "Slowenien"
+
+#: includes/class-countries.php:175
+msgid "Solomon Islands"
+msgstr "Salomonen"
+
+#: includes/class-countries.php:176
+msgid "Somaliland"
+msgstr "Somaliland"
+
+#: includes/class-countries.php:177
+msgid "South Africa"
+msgstr "Südafrika"
+
+#: includes/class-countries.php:178
+msgid "Spain"
+msgstr "Spanien"
+
+#: includes/class-countries.php:179
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+#: includes/class-countries.php:180
+msgid "Sudan"
+msgstr "Sudan"
+
+#: includes/class-countries.php:181
+msgid "Suriname"
+msgstr "Surinam"
+
+#: includes/class-countries.php:182
+msgid "Swaziland"
+msgstr "Swasiland"
+
+#: includes/class-countries.php:183
+msgid "Sweden"
+msgstr "Schweden"
+
+#: includes/class-countries.php:184
+msgid "Switzerland"
+msgstr "Schweiz"
+
+#: includes/class-countries.php:185
+msgid "Syria"
+msgstr "Syrien"
+
+#: includes/class-countries.php:186
+msgid "Tajikistan"
+msgstr "Tadschikistan"
+
+#: includes/class-countries.php:187
+msgid "Tanzania"
+msgstr "Tansania"
+
+#: includes/class-countries.php:188
+msgid "Thailand"
+msgstr "Thailand"
+
+#: includes/class-countries.php:189
+msgid "Timor-Leste (East Timor)"
+msgstr "Osttimor"
+
+#: includes/class-countries.php:190
+msgid "Togo"
+msgstr "Togo"
+
+#: includes/class-countries.php:191
+msgid "Tonga"
+msgstr "Tonga"
+
+#: includes/class-countries.php:192
+msgid "Trinidad and Tobago"
+msgstr "Trinidad und Tobago"
+
+#: includes/class-countries.php:193
+msgid "Tunisia"
+msgstr "Tunesien"
+
+#: includes/class-countries.php:194
+msgid "Turkey"
+msgstr "Türkei"
+
+#: includes/class-countries.php:195
+msgid "Turkmenistan"
+msgstr "Turkmenistan"
+
+#: includes/class-countries.php:196
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+#: includes/class-countries.php:197
+msgid "Uganda"
+msgstr "Uganda"
+
+#: includes/class-countries.php:198
+msgid "Ukraine"
+msgstr "Ukraine"
+
+#: includes/class-countries.php:199
+msgid "United Arab Emirates"
+msgstr "Vereinigte Arabische Emirate"
+
+#: includes/class-countries.php:200
+msgid "United Kingdom"
+msgstr "Vereinigtes Königreich (UK)"
+
+#: includes/class-countries.php:201
+msgid "United States"
+msgstr "USA"
+
+#: includes/class-countries.php:202
+msgid "Uruguay"
+msgstr "Uruguay"
+
+#: includes/class-countries.php:203
+msgid "Uzbekistan"
+msgstr "Usbekistan"
+
+#: includes/class-countries.php:204
+msgid "Vanuatu"
+msgstr "Vanuatu"
+
+#: includes/class-countries.php:205
+msgid "Vatican City"
+msgstr "Vatikanstadt"
+
+#: includes/class-countries.php:206
+msgid "Venezuela"
+msgstr "Venezuela"
+
+#: includes/class-countries.php:207
+msgid "Vietnam"
+msgstr "Vietnam"
+
+#: includes/class-countries.php:208
+msgid "Yemen"
+msgstr "Jemen"
+
+#: includes/class-countries.php:209
+msgid "Zambia"
+msgstr "Sambia"
+
+#: includes/class-countries.php:210
+msgid "Zimbabwe"
+msgstr "Simbabwe"
+
+#: includes/class-countries.php:211
+msgid "Taiwan"
+msgstr "Taiwan"
+
+#: includes/class-countries.php:212
+msgid "Christmas Island"
+msgstr "Weihnachtsinsel"
+
+#: includes/class-countries.php:213
+msgid "Cocos (Keeling) Islands"
+msgstr "Kokosinseln (Keeling Inseln)"
+
+#: includes/class-countries.php:214
+msgid "Heard Island and McDonald Islands"
+msgstr "Heard- und McDonald-Inseln"
+
+#: includes/class-countries.php:215
+msgid "Norfolk Island"
+msgstr "Norfolkinsel"
+
+#: includes/class-countries.php:216
+msgid "New Caledonia"
+msgstr "Neukaledonien"
+
+#: includes/class-countries.php:217
+msgid "Clipperton Island"
+msgstr "Clipperton-Insel"
+
+#: includes/class-countries.php:218
+msgid "Mayotte"
+msgstr "Mayotte"
+
+#: includes/class-countries.php:219
+msgid "Guadeloupe"
+msgstr "Guadeloupe"
+
+#: includes/class-countries.php:220
+msgid "Saint Pierre and Miquelon"
+msgstr "St. Pierre und Miquelon"
+
+#: includes/class-countries.php:221
+msgid "Wallis and Futuna"
+msgstr "Wallis und Futuna Inseln"
+
+#: includes/class-countries.php:222
+msgid "French Southern and Antarctic Lands"
+msgstr "Französische Süd- und Antarktisgebiete"
+
+#: includes/class-countries.php:223
+msgid "Bouvet Island"
+msgstr "Bouvetinsel"
+
+#: includes/class-countries.php:224
+msgid "Cook Islands"
+msgstr "Cook Inseln"
+
+#: includes/class-countries.php:225
+msgid "Niue"
+msgstr "Niue"
+
+#: includes/class-countries.php:226
+msgid "Tokelau"
+msgstr "Tokelau"
+
+#: includes/class-countries.php:227
+msgid "Guernsey"
+msgstr "Guernsey"
+
+#: includes/class-countries.php:228
+msgid "Isle of Man"
+msgstr "Isle of Man"
+
+#: includes/class-countries.php:229
+msgid "Jersey"
+msgstr "Jersey"
+
+#: includes/class-countries.php:230
+msgid "Anguilla"
+msgstr "Anguilla"
+
+#: includes/class-countries.php:231
+msgid "Bermuda"
+msgstr "Bermuda"
+
+#: includes/class-countries.php:232
+msgid "British Indian Ocean Territory"
+msgstr "Britisches Territorium im Indischen Ozean"
+
+#: includes/class-countries.php:233
+msgid "British Sovereign Base Areas"
+msgstr "Akrotiri und Dekelia (Britische Souveräne Basisgebiete, SBA)"
+
+#: includes/class-countries.php:234
+msgid "British Virgin Islands"
+msgstr "Britische Jungferninseln (British Virgin Islands)"
+
+#: includes/class-countries.php:235
+msgid "Cayman Islands"
+msgstr "Caymaninseln"
+
+#: includes/class-countries.php:236
+msgid "Falkland Islands (Islas Malvinas)"
+msgstr "Falklandinseln (Malvinas)"
+
+#: includes/class-countries.php:237
+msgid "Gibraltar"
+msgstr "Gibraltar"
+
+#: includes/class-countries.php:238
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#: includes/class-countries.php:239
+msgid "Pitcairn Islands"
+msgstr "Pitcairninseln"
+
+#: includes/class-countries.php:240
+msgid "Saint Helena"
+msgstr "St. Helena"
+
+#: includes/class-countries.php:241
+msgid "South Georgia & South Sandwich Islands"
+msgstr "Südgeorgien und Südliche Sandwichinseln"
+
+#: includes/class-countries.php:242
+msgid "Turks and Caicos Islands"
+msgstr "Turks- und Caicosinseln"
+
+#: includes/class-countries.php:243
+msgid "Northern Mariana Islands"
+msgstr "Nördliche Marianeninseln"
+
+#: includes/class-countries.php:244
+msgid "Puerto Rico"
+msgstr "Puerto Rico"
+
+#: includes/class-countries.php:245
+msgid "American Samoa"
+msgstr "Amerikanisch Samoa"
+
+#: includes/class-countries.php:246
+msgid "Wake Island"
+msgstr "Wake Island"
+
+#: includes/class-countries.php:247
+msgid "Guam"
+msgstr "Guam"
+
+#: includes/class-countries.php:248
+msgid "U.S. Virgin Islands"
+msgstr "U.S. Jungferninseln (U.S. Virgin Islands)"
+
+#: includes/class-countries.php:249
+msgid "Hong Kong"
+msgstr "Hong Kong"
+
+#: includes/class-countries.php:250
+msgid "Macau"
+msgstr "Macau"
+
+#: includes/class-countries.php:251
+msgid "Faroe Islands"
+msgstr "Färöerinseln"
+
+#: includes/class-countries.php:252
+msgid "Greenland"
+msgstr "Grönland"
+
+#: includes/class-countries.php:253
+msgid "French Guiana"
+msgstr "Französisch Guayana"
+
+#: includes/class-countries.php:254
+msgid "Martinique"
+msgstr "Martinique"
+
+#: includes/class-countries.php:255
+msgid "Reunion"
+msgstr "Reunion"
+
+#: includes/class-countries.php:256
+msgid "Aland"
+msgstr "Aland"
+
+#: includes/class-countries.php:257
+msgid "Aruba"
+msgstr "Aruba"
+
+#: includes/class-countries.php:258
+msgid "Netherlands Antilles"
+msgstr "Niederländische Antillen"
+
+#: includes/class-countries.php:259
+msgid "Svalbard"
+msgstr "Svalbard und Jan Mayen"
+
+#: includes/class-countries.php:260
+msgid "Ascension"
+msgstr "Ascension"
+
+#: includes/class-countries.php:261
+msgid "Tristan da Cunha"
+msgstr "Tristan da Cunha"
+
+#: includes/class-countries.php:262
+msgid "British Antarctic Territory"
+msgstr "Britisches Antarktis-Territorium"
+
+#: includes/class-import-content-filters.php:34
+msgid "Yes"
+msgstr "ja"
+
+#: includes/class-import-content-filters.php:35
+msgid "No"
+msgstr "nein"
+
+#: includes/class-import-content-filters.php:241
+msgid "Demand"
+msgstr "Bedarf"
+
+#: includes/class-import-content-filters.php:245
+msgid "Consumption"
+msgstr "Verbrauch"
+
+#: includes/class-import-content-filters.php:277
+msgid "before 2014"
+msgstr "vor 2014"
+
+#: includes/class-import-content-filters.php:281
+msgid "as from may 2014"
+msgstr "ab Mai 2014"
+
+#: includes/class-import-content-filters.php:285
+#: includes/class-openimmo2wp.php:3212 includes/class-openimmo2wp.php:4132
+msgid "not available"
+msgstr "nicht verfügbar"
+
+# @ immonex-openimmo2wp
+#: includes/class-import-content-filters.php:289
+msgid "not required"
+msgstr "nicht benötigt"
+
+# @ immonex-openimmo2wp
+#: includes/class-import-content-filters.php:293
+#: includes/class-import-content-filters.php:327
+#: includes/class-openimmo2wp.php:2909 includes/class-openimmo2wp.php:2910
+msgid "not specified"
+msgstr "nicht angegeben"
+
+#: includes/class-import-content-filters.php:319
+msgid "Residential Building"
+msgstr "Wohngebäude"
+
+#: includes/class-import-content-filters.php:323
+msgid "Non-residential Building"
+msgstr "Nichtwohngebäude"
+
+#: includes/class-import-content-filters.php:379
+msgid "Oil"
+msgstr "Öl"
+
+#: includes/class-import-content-filters.php:380
+msgid "Liquid Gas (Own Tank)"
+msgstr "Flüssiggas (eigener Tank)"
+
+#: includes/class-import-content-filters.php:381
+msgid "Gas"
+msgstr "Gas"
+
+#: includes/class-import-content-filters.php:382
+msgid "Water Electric Heating"
+msgstr "Warmwasser-Elektroheizung"
+
+#: includes/class-import-content-filters.php:383
+msgid "Electric"
+msgstr "Elektro"
+
+#: includes/class-import-content-filters.php:384
+msgid "Alternative"
+msgstr "Alternativ"
+
+#: includes/class-import-content-filters.php:385
+msgid "Solar"
+msgstr "Solar"
+
+#: includes/class-import-content-filters.php:386
+msgid "Geothermal"
+msgstr "Erdwärme"
+
+#: includes/class-import-content-filters.php:387
+msgid "Air Heat Pump"
+msgstr "Luft-Wärmepumpe"
+
+#: includes/class-import-content-filters.php:388
+msgid "District Heat"
+msgstr "Fernwärme"
+
+#: includes/class-import-content-filters.php:389
+msgid "Thermal Power Station"
+msgstr "Blockheizkraftwerk"
+
+#: includes/class-import-content-filters.php:390
+msgid "Pellets"
+msgstr "Pellets"
+
+#: includes/class-import-content-filters.php:391
+msgid "Coal"
+msgstr "Kohle"
+
+#: includes/class-import-content-filters.php:392
+msgid "Wood Chips"
+msgstr "Holzhackschnitzel"
+
+#: includes/class-import-content-filters.php:393
+msgid "Natural Gas (light)"
+msgstr "Erdgas (leicht)"
+
+#: includes/class-import-content-filters.php:394
+msgid "Natural Gas (heavy)"
+msgstr "Erdgas (schwer)"
+
+#: includes/class-import-content-filters.php:395
+msgid "District Heat (Steam)"
+msgstr "Fernwärme (Dampf)"
+
+#: includes/class-import-content-filters.php:396
+msgid "Local Heat"
+msgstr "Nahwärme"
+
+#: includes/class-import-content-filters.php:397
+msgid "Heat Delivery"
+msgstr "Wärmelieferung"
+
+#: includes/class-import-content-filters.php:398
+msgid "Bio Energy"
+msgstr "Bioenergie"
+
+#: includes/class-import-content-filters.php:399
+msgid "Wind Energy"
+msgstr "Windenergie"
+
+#: includes/class-import-content-filters.php:400
+msgid "Water Energy"
+msgstr "Wasserenergie"
+
+#: includes/class-import-content-filters.php:401
+msgid "Environmental Heat"
+msgstr "Umweltwärme"
+
+#: includes/class-import-content-filters.php:402
+msgid "Combined Heat and Power (fossil)"
+msgstr "Kraft-Wärme-Kopplung (fossil)"
+
+#: includes/class-import-content-filters.php:403
+msgid "Combined Heat and Power (renewable)"
+msgstr "Kraft-Wärme-Kopplung (erneuerbar)"
+
+#: includes/class-import-content-filters.php:404
+msgid "Combined Heat and Power (regenerative)"
+msgstr "Kraft-Wärme-Kopplung (regenerativ)"
+
+#: includes/class-import-content-filters.php:405
+msgid "Combined Heat and Power (Bio)"
+msgstr "Kraft-Wärme-Kopplung (Bio)"
+
+#: includes/class-install.php:70 includes/class-install.php:91
+msgid "We'll tell you the exact address on request."
+msgstr "Die genaue Adresse teilen wir Ihnen auf Anfrage gerne mit."
+
+#: includes/class-install.php:77
+msgid "NEW"
+msgstr "NEU"
+
+#: includes/class-install.php:82
+msgid "Agent"
+msgstr "Ansprechpartner"
+
+#: includes/class-install.php:85 includes/class-install.php:88
+#: includes/themes/class-houzez.php:462 includes/themes/class-myhome.php:391
+msgid "Floor Plan"
+msgstr "Grundriss"
+
+#: includes/class-install.php:94 includes/themes/class-zoner.php:32
+msgid "Further Details"
+msgstr "Weitere Details"
+
+#: includes/class-install.php:94 includes/class-install.php:105
+#: includes/class-install.php:114 includes/class-install.php:125
+#: includes/themes/class-freehold-progression.php:25
+#: includes/themes/class-hometown.php:25 includes/themes/class-houzez.php:32
+#: includes/themes/class-myhome.php:32 includes/themes/class-realhomes.php:27
+#: includes/themes/class-realplaces.php:27 includes/themes/class-realty.php:32
+#: includes/themes/class-wp-estate.php:33
+#: includes/themes/class-wp-residence.php:34 includes/themes/class-zoner.php:25
+msgid "Energy Pass"
+msgstr "Energieausweis"
+
+#: includes/class-install.php:94
+msgid "Additional Information on Prices"
+msgstr "Zusatzinfos zu den Preisen"
+
+#: includes/class-install.php:98
+msgid "Further Area Information"
+msgstr "Weitere Flächeninfos"
+
+#: includes/class-install.php:99
+msgid "Further Price Information"
+msgstr "Weitere Preisinfos"
+
+#: includes/class-install.php:100
+msgctxt "Objekt"
+msgid "Property"
+msgstr "Objekt"
+
+#: includes/class-install.php:101
+msgid "Amenities and Features"
+msgstr "Ausstattung"
+
+#: includes/class-install.php:102
+msgid "Location"
+msgstr "Lage"
+
+#: includes/class-install.php:103
+msgid "Floor Plans"
+msgstr "Grundrisse"
+
+#: includes/class-install.php:104
+msgid "Miscellaneous"
+msgstr "Sonstiges"
+
+#: includes/class-install.php:106 includes/class-install.php:115
+#: includes/class-install.php:126
+#: includes/themes/class-freehold-progression.php:34
+#: includes/widgets/class-immonex-property-attachments-widget.php:156
+msgid "Downloads & Links"
+msgstr "Downloads & Links"
+
+#: includes/class-install.php:124 includes/themes/class-realty.php:25
+msgid "Details"
+msgstr "Details"
+
+#: includes/class-install.php:130
+msgid "The marker does not show the exact property location."
+msgstr "In der Karte wird nicht der exakte Standort der Immobilie angezeigt."
+
+#: includes/class-install.php:168 includes/class-install.php:177
+msgid "working folder"
+msgstr "Arbeitsordner"
+
+#: includes/class-install.php:169 includes/class-install.php:182
+msgid "global import folder"
+msgstr "Globaler Importordner"
+
+#: includes/class-install.php:195
+msgid "user import base folder"
+msgstr "Benutzer-Import-Basisordner"
+
+#: includes/class-install.php:200
+msgid "archive folder"
+msgstr "Archivordner"
+
+#: includes/class-install.php:205
+msgid "main mapping folder"
+msgstr "Haupt-Mapping-Ordner"
+
+# @ immonex-openimmo2wp
+#: includes/class-install.php:244
+msgid "The following required directories could not be created: %s"
+msgstr ""
+"Die folgenden erforderlichen Verzeichnisse konnten nicht angelegt werden: %s"
+
+#: includes/class-install.php:274
+msgid "No mapping files available!"
+msgstr "Keine Mapping-Dateien verfügbar!"
+
+#: includes/class-install.php:302
+msgid ""
+"The mapping file <strong>%s</strong> has been updated, a backup of the "
+"previous file has been created (<strong>%s</strong>)."
+msgstr ""
+"Die Mapping-Datei <strong>%s</strong> wurde aktualisiert, eine Sicherung der "
+"vorherigen Datei wurde angelegt (<strong>%s</strong>)."
+
+# @ immonex-openimmo2wp
+#: includes/class-install.php:308
+msgid "The mapping file backup could not be created: %s"
+msgstr "Die Backup-Mapping-Datei konnte nicht angelegt werden: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-install.php:313
+msgid "The mapping files could not be copied/updated."
+msgstr "Die Mapping-Dateien konnten nicht kopiert/aktualisiert werden."
+
+#: includes/class-install.php:324
+msgid ""
+"The following errors occured when copying/backing up the mapping files: %s"
+msgstr ""
+"Die folgenden Fehler traten beim Kopieren/Sichern der Mapping-Dateien auf: %s"
+
+#: includes/class-legacy.php:69
+msgid "New OpenImmo2WP Menu Position"
+msgstr "Neue OpenImmo2WP Menü-Position"
+
+#: includes/class-openimmo2wp.php:959
+msgid "Error on initializing the logger - import is not possible (%s)"
+msgstr ""
+"Fehler beim Initialisieren des Loggers - Import kann nicht durchgeführt "
+"werden (%s)"
+
+#: includes/class-openimmo2wp.php:1156
+msgid "KILLSWITCH ACTIVE!"
+msgstr "KILLSWITCH AKTIV!"
+
+#: includes/class-openimmo2wp.php:1216
+msgid ""
+"%s is in use in combination with a <strong>not officially supported real "
+"estate theme or plugin</strong> (supported <strong>themes</strong>: %s; "
+"supported <strong>plugins</strong>: %s)."
+msgstr ""
+"%s wird in Kombination mit einem <strong>nicht offiziell unterstützten "
+"Immobilien-Theme oder -Plugin</strong> verwendet (unterstützte "
+"<strong>Themes</strong>: %s, unterstützte <strong>Plugins</strong>: %s)."
+
+#: includes/class-openimmo2wp.php:1234
+msgid "The widget (class) name is missing."
+msgstr "Der Widget-(Klassen)Name fehlt."
+
+#: includes/class-openimmo2wp.php:1236
+msgid ""
+"%s: Widget class not found. Make sure that this widget exists and the class "
+"name is correct."
+msgstr ""
+"%s: Widget-Klasse nicht gefunden. Bitte stelle sicher dass das Widget "
+"existiert und der Klassenname korrekt ist."
+
+#: includes/class-openimmo2wp.php:1341
+msgid "Every 2 Minutes"
+msgstr "Alle zwei Minuten"
+
+#: includes/class-openimmo2wp.php:1401
+msgid "Script run restarted by immonex Cron."
+msgstr "Scriptlauf via immonex-Cron neu gestartet."
+
+#: includes/class-openimmo2wp.php:1491
+msgid "Deletion of property attachments prevented by a filter function."
+msgstr "Löschung der Immobilien-Anhänge per Filterfunktion unterbunden."
+
+#: includes/class-openimmo2wp.php:1577
+msgid "Logger not available"
+msgstr "Logger nicht verfügbar"
+
+#: includes/class-openimmo2wp.php:1583
+msgid ""
+"Plugin license not active, please activate under <a href=\"%s\">OpenImmo2WP "
+"&rarr; Settings &rarr; License</a>!"
+msgstr ""
+"Plugin-Lizenz nicht aktiv, bitte aktivieren unter <a href=\"%s\">OpenImmo2WP "
+"&rarr; Einstellungen &rarr; Lizenz</a>!"
+
+#: includes/class-openimmo2wp.php:1646
+msgid ""
+"Current import ZIP archive not available anymore - import canceled (%s)."
+msgstr ""
+"Aktuelles Import-ZIP-Archiv nicht mehr verfügbar - Import abgebrochen (%s)."
+
+#: includes/class-openimmo2wp.php:1673
+msgid "Another import process is currently running."
+msgstr "Ein anderer Importvorgang läuft gerade."
+
+#: includes/class-openimmo2wp.php:1698
+msgid "Plugin Version: %s"
+msgstr "Plugin-Version: %s"
+
+#: includes/class-openimmo2wp.php:1699
+msgid "Plugin FS Folder: %s"
+msgstr "Plugin-DS-Ordner: %s"
+
+#: includes/class-openimmo2wp.php:1700
+msgid "Import Folder: %s"
+msgstr "Importordner: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1701
+msgid "Working Directory: %s"
+msgstr "Arbeitsverzeichnis: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1702
+msgid "Global Import Directory: %s"
+msgstr "Globales Importverzeichnis: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1703
+msgid "Archive Directory: %s"
+msgstr "Archivverzeichnis: %s"
+
+#: includes/class-openimmo2wp.php:1704
+msgid "Website/Local Timezone: %s"
+msgstr "Website-Zeitzone (lokal): %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1709
+msgid "Mapping error: %s"
+msgstr "Mapping-Fehler: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1777
+msgid "Unzipping %s"
+msgstr "Entpacke %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1790
+msgid "Successfully unzipped %s"
+msgstr "Erfolgreich entpackt: %s"
+
+#: includes/class-openimmo2wp.php:1799
+msgid "Error on unzipping %s (possibly file transfer not complete yet): %s"
+msgstr ""
+"Fehler beim Entpacken des Archivs %s (möglicherweise Dateitransfer noch "
+"nicht abgeschlossen): %s"
+
+#: includes/class-openimmo2wp.php:1801
+msgid "Error on unzipping %s: %s"
+msgstr "Fehler beim Entpacken des Archivs %s: %s"
+
+#: includes/class-openimmo2wp.php:1804
+msgid "Error on unzipping achive file: %s"
+msgstr "Fehler beim Entpacken des Archivs: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1814
+msgid "Corrupt/Unprocessable ZIP archive deleted: %s"
+msgstr "Fehlerhaftes bzw. nicht verarbeitbares ZIP-Archiv gelöscht: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1816
+msgid "Corrupt/Unprocessable ZIP archive could not be deleted: %s"
+msgstr ""
+"Fehlerhaftes bzw. nicht verarbeitbares ZIP-Archiv konnte nicht gelöscht "
+"werden: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1850
+msgid "Extraction directory successfully deleted: %s"
+msgstr "Extraktionsverzeichnis erfolgreich gelöscht: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1852
+msgid "Extraction directory could not be deleted: %s"
+msgstr "Extraktionsverzeichnis konnte nicht gelöscht werden: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1862
+msgid "ZIP archive moved to archive directory: %s"
+msgstr "ZIP-Archiv ins Archivverzeichnis verschoben: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1864
+msgid "ZIP archive could not be moved to archive directory: %s"
+msgstr "ZIP-Archiv konnte nicht in das Archivverzeichnis verschoben werden: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1869
+msgid "ZIP archive deleted: %s"
+msgstr "ZIP-Archiv gelöscht: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1871
+msgid "ZIP archive could not be deleted: %s"
+msgstr "ZIP-Archiv konnte nicht gelöscht werden: %s"
+
+#: includes/class-openimmo2wp.php:1879
+msgid "Cleanup error after completed import process: %s"
+msgstr "Fehler beim Aufräumen nach abgeschlossenem Importprozess: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1899
+msgid "Import completed successfully!"
+msgstr "Import erfolgreich abgeschlossen!"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:1901
+msgid "Errors during import: %s"
+msgstr "Fehler beim Importvorgang: %s"
+
+#: includes/class-openimmo2wp.php:2007
+msgid ""
+"Full imports are not permitted via the global import folder. Import of this "
+"file will be skipped."
+msgstr ""
+"Vollimporte über den globalen Importordner sind nicht erlaubt. Der Import "
+"dieser Datei wird übersprungen."
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2123
+msgid "Multiple properties with the same OpenImmo OBID found: %s"
+msgstr "Mehrere Immobilien mit der gleichen OpenImmo-OBID gefunden: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2125
+msgid "Property with OpenImmo OBID %s does not exist (yet)"
+msgstr "Objekt mit OpenImmo-OBID %s existiert (noch) nicht"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2187
+msgid "General"
+msgstr "Allgemein"
+
+#: includes/class-openimmo2wp.php:2190
+msgid "Script Resources"
+msgstr "Script-Ressourcen"
+
+#: includes/class-openimmo2wp.php:2193
+msgid "Geocoding"
+msgstr "Geocodierung"
+
+#: includes/class-openimmo2wp.php:2212
+msgid ""
+"Long-running imports will be splitted up into multiple script runs to "
+"prevent timeouts or server errors that mostly occur if not enough memory is "
+"available (e.g. during image processing)."
+msgstr ""
+"Länger dauernde Importvorgänge werden in mehrere Scriptläufe aufgeteilt, um "
+"Timeouts oder Serverfehler zu verhindern. Letztere treten meistens auf, wenn "
+"nicht genügend Speicher zur Verfügung steht (z. B. bei der Verarbeitung von "
+"Bildern)."
+
+#: includes/class-openimmo2wp.php:2218
+msgid ""
+"If no property location coordinates are transferred, these will be "
+"determined via geocoding during the import process. For this purpose, this "
+"plugin supports the basically free, %1$s based services <strong>Nominatim</"
+"strong> (%2$s) and %3$s kindly provided by %4$s. However, the usage of "
+"theses services <strong>could</strong> be limited or restricted anytime. "
+"Alternatively, the commercial %5$s or %6$s can be used. In the latter case, "
+"providing at least one suitable API key below is required."
+msgstr ""
+"Wenn keine Objekt-Standortkoordinaten übertragen werden, werden diese per "
+"Geocodierung im Rahmen des Importvorgangs ermittelt. Hierfür unterstützt das "
+"Plugin die grundsätzlich freien, %1$s basierten Dienste <strong>Nominatim</"
+"strong> (%2$s) und %3$s - freundlicherweise bereitgestellt von %4$s. Die "
+"Nutzung dieser Dienste <strong>kann</strong> aber jederzeit eingeschränkt "
+"oder unterbunden werden. Als (kostenpflichtige) Alternativen können auch die "
+"%5$s oder die %6$s eingesetzt werden. In letzterem Fall muss nachfolgend "
+"mindestens ein passender API-Schlüssel hinterlegt werden."
+
+#: includes/class-openimmo2wp.php:2220
+msgid "Usage Policy"
+msgstr "Nutzungsbedingungen"
+
+#: includes/class-openimmo2wp.php:2242
+msgid ""
+"<a href=\"%1$s\" class=\"immonex-doc-link\" target=\"_blank\">Mapping "
+"tables</a> are <strong>CSV files</strong> located in %2$s: <code>%3$s</code>"
+msgstr ""
+"<a href=\"%1$s\" class=\"immonex-doc-link\" target=\"_blank\">Mapping-"
+"Tabellen</a> sind in Form von <strong>CSV-Dateien</strong> hinterlegt in "
+"%2$s: <code>%3$s</code>"
+
+#: includes/class-openimmo2wp.php:2244
+msgid "these folders"
+msgstr "diesen Ordnern"
+
+#: includes/class-openimmo2wp.php:2244
+msgid "this folder"
+msgstr "diesem Ordner"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2255
+msgid "Mapping Type"
+msgstr "Mapping-Typ"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2266
+msgid "Enable Auto-Import"
+msgstr "Auto-Import aktivieren"
+
+#: includes/class-openimmo2wp.php:2270
+msgid ""
+"Activate to process <strong>OpenImmo ZIP archives</strong> in <a "
+"href=\"%1$s\">all import folders</a> frequently."
+msgstr ""
+"Aktivieren, um <strong>OpenImmo-ZIP-Archive</strong> in <a "
+"href=\"%1$s\">allen Importordnern</a> regelmäßig zu verarbeiten."
+
+#: includes/class-openimmo2wp.php:2278
+msgid "Include Subfolders"
+msgstr "Unterordner einschließen"
+
+#: includes/class-openimmo2wp.php:2282
+msgid ""
+"Activate if ZIP archives in <strong>subfolders</strong> of the <a "
+"href=\"%s\" class=\"immonex-doc-link\" target=\"_blank\">global import "
+"folder</a> shall be processed, too. Special folders (<code>mappings</code>, "
+"<code>users</code> and <code>archive</code>) and directories with names "
+"starting with underscores are not affected by this setting."
+msgstr ""
+"Aktivieren, wenn auch ZIP-Archive in <strong>Unterordnern</strong> des <a "
+"href=\"%s\" class=\"immonex-doc-link\" target=\"_blank\">globalen "
+"Importordners</a> verarbeitet werden sollen. Spezialordner (<code>mappings</"
+"code>, <code>users</code> und <code>archive</code>) und Verzeichnisse mit "
+"Namen, die mit Unterstrichen beginnen, sind von dieser Einstellung nicht "
+"betroffen."
+
+#: includes/class-openimmo2wp.php:2290
+msgid "Disable Global Full Imports"
+msgstr "Globale Vollimporte deaktivieren"
+
+#: includes/class-openimmo2wp.php:2294
+msgid ""
+"Activate this option to disable full imports via the <a href=\"%1$s\" "
+"class=\"immonex-doc-link\" target=\"_blank\">global import folder</a>. (Full "
+"imports via <a href=\"%2$s\" class=\"immonex-doc-link\" "
+"target=\"_blank\">user-specific import folders</a> are always permitted.)"
+msgstr ""
+"Option aktivieren, um Vollabgleiche über den <a href=\"%1$s\" "
+"class=\"immonex-doc-link\" target=\"_blank\">globalen Importordner</a> zu "
+"unterbinden. (Vollabgleiche über <a href=\"%2$s\" class=\"immonex-doc-link\" "
+"target=\"_blank\">benutzerbezogene Importordner</a> sind immer möglich.)"
+
+#: includes/class-openimmo2wp.php:2303
+msgid "Full Import Mode"
+msgstr "Vollimport-Modus"
+
+#: includes/class-openimmo2wp.php:2306
+msgid ""
+"<strong>delete partly / update changed only</strong>: delete existing "
+"properties if not listed in the import file (anymore), update if last update "
+"date is lower than the one of the new version<br>\n"
+"\t\t\t\t\t\t<strong>delete partly / update all</strong>: delete existing "
+"properties if not listed in the import file (anymore), always update listed "
+"properties<br>\n"
+"\t\t\t\t\t\t<strong>delete all / insert all</strong>: delete all existing "
+"properties, newly import all properties listed in the import file</strong>"
+msgstr ""
+"<strong>teilweise löschen / nur geänderte aktualisieren</strong>: vorhandene "
+"Objekte löschen, sofern nicht (mehr) in der Importdatei gelistet; "
+"aktualisieren, wenn das Datum der letzten Änderung vor dem der neuen Version "
+"liegt<br>\n"
+"\t\t\t\t\t\t<strong>teilweise löschen / alle aktualisieren</strong>: "
+"vorhandene Objekte löschen, sofern nicht (mehr) in der Importdatei gelistet; "
+"in der Importdatei gelistete Objekte immer aktualisieren<br>\n"
+"\t\t\t\t\t\t<strong>alle löschen / alle neu importieren</strong>: alle "
+"vorhandenen Objekte löschen; alle in der Importdatei enthaltenen Objekte neu "
+"importieren</strong>"
+
+#: includes/class-openimmo2wp.php:2310
+msgid "delete partly / update changed only"
+msgstr "teilweise löschen / nur geänderte aktualisieren"
+
+#: includes/class-openimmo2wp.php:2311
+msgid "delete partly / update all"
+msgstr "teilweise löschen / alle aktualisieren"
+
+#: includes/class-openimmo2wp.php:2312
+msgid "delete all / insert all"
+msgstr "alle löschen / alle neu importieren"
+
+#: includes/class-openimmo2wp.php:2319
+msgid "Review imported Properties"
+msgstr "Importierte Immobilien prüfen"
+
+#: includes/class-openimmo2wp.php:2322
+msgid ""
+"The post status of newly imported and/or updated properties is being set to "
+"\"<em>Pending Review</em>\" if the respective option is selected."
+msgstr ""
+"Der Beitragsstatus von neu importierten und/oder aktualisierten Immobilien "
+"wird auf \"<em>Ausstehender Review</em>“ gesetzt, wenn die entsprechende "
+"Option ausgewählt ist."
+
+#. translators: "none option" for no agent post type selection.
+#: includes/class-openimmo2wp.php:2324 includes/class-openimmo2wp.php:5048
+#: includes/themes/class-bo-beladomo.php:505
+#: includes/themes/class-bo-beladomo20.php:594
+#: includes/themes/class-bo-home.php:574
+#: includes/themes/class-brings-online.php:510
+#: includes/themes/class-cozy.php:161 includes/themes/class-estate-pro.php:92
+#: includes/themes/class-generic.php:82 includes/themes/class-generic.php:238
+#: includes/themes/class-hometown.php:184 includes/themes/class-houzez.php:339
+#: includes/themes/class-inventor-properties.php:293
+#: includes/themes/class-kickstart.php:547 includes/themes/class-myhome.php:275
+#: includes/themes/class-realeswp.php:298
+#: includes/themes/class-realhomes.php:257
+#: includes/themes/class-realhomes.php:295
+#: includes/themes/class-realia-plugin.php:297
+#: includes/themes/class-realia.php:152
+#: includes/themes/class-realplaces.php:199
+#: includes/themes/class-realty.php:239 includes/themes/class-shandora.php:84
+#: includes/themes/class-wp-estate.php:353
+#: includes/themes/class-wp-estate.php:847
+#: includes/themes/class-wp-listings.php:152
+#: includes/themes/class-wp-residence.php:324
+#: includes/themes/class-wp-residence.php:881
+#: includes/themes/class-wpcasa-plugin.php:176
+#: includes/themes/class-wpcasa.php:57 includes/themes/class-zoner.php:250
+msgid "none"
+msgstr "keine"
+
+#: includes/class-openimmo2wp.php:2325
+msgid "new properties only"
+msgstr "nur neue Immobilien"
+
+#: includes/class-openimmo2wp.php:2326
+msgid "all properties (new and updated)"
+msgstr "alle Immobilien (neu und aktualisiert)"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2333
+msgid "Import Log Recipient"
+msgstr "Importprotokoll-Empfänger"
+
+#: includes/class-openimmo2wp.php:2336
+msgid ""
+"Email address a summary shall be sent to after each processing of an import "
+"file."
+msgstr ""
+"E-Mail-Adresse, an die nach jeder Verarbeitung einer Importdatei eine "
+"Zusammenfassung gesendet werden soll."
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2342
+msgid "Debug Log Recipient"
+msgstr "Debugprotokoll-Empfänger"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2346
+msgid ""
+"Email address a log with extended debug information shall be sent to. (Debug "
+"logs are also saved in the <a href=\"%1$s\" class=\"immonex-doc-link\" "
+"target=\"_blank\">archive folder</a> <code>%2$s</code> if archiving is "
+"enabled.)"
+msgstr ""
+"E-Mail-Adresse, an die ein Protokoll mit erweiterten Debug-Informationen "
+"gesendet werden soll. (Debug-Protokolle werden zudem im <a href=\"%1$s\" "
+"class=\"immonex-doc-link\" target=\"_blank\">Archivordner</a> <code>%2$s</"
+"code> gespeichert, sofern die Archivierung aktiviert ist.)"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2355
+msgid "Archive Import Files"
+msgstr "Importdateien archivieren"
+
+#: includes/class-openimmo2wp.php:2358
+msgid "Days"
+msgstr "Tage"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2360
+msgid ""
+"Timeframe to keep processed import files in the <a href=\"%1$s\" "
+"class=\"immonex-doc-link\" target=\"_blank\">archive folder</a>: <code>%2$s</"
+"code> (max. 100, 0 = no archiving)"
+msgstr ""
+"Zeitrahmen für die Speicherung verarbeiteter Importdateien im <a "
+"href=\"%1$s\" class=\"immonex-doc-link\" target=\"_blank\">Archivordner</a>: "
+"<code>%2$s</code> (max. 100, 0 = keine Archivierung)"
+
+#: includes/class-openimmo2wp.php:2372
+msgid "Max. Script Execution Time"
+msgstr "Max. Script-Ausführungszeit"
+
+#: includes/class-openimmo2wp.php:2375
+msgid "Seconds"
+msgstr "Sekunden"
+
+#: includes/class-openimmo2wp.php:2377
+msgid ""
+"Maximum execution time for <strong>automated imports</strong>: %s - %s "
+"seconds (default: %s)"
+msgstr ""
+"Maximale Ausführungszeit für <strong>automatisierte Importe</strong>: %s - "
+"%s Sekunden (Standard: %s)"
+
+#: includes/class-openimmo2wp.php:2391
+msgid "Max. Number of Records"
+msgstr "Max. Anzahl Datensätze"
+
+#: includes/class-openimmo2wp.php:2394
+msgid ""
+"Maximum number of properties that will be imported per script run (0 = no "
+"limit)."
+msgstr ""
+"Maximale Anzahl an Immobilien, die pro Scriptlauf importiert werden (0 = "
+"kein Limit)."
+
+#: includes/class-openimmo2wp.php:2402
+msgid "Max. Number of Records to be deleted"
+msgstr "Max. Anzahl zu löschender Datensätze"
+
+#: includes/class-openimmo2wp.php:2405
+msgid ""
+"Maximum number of properties that will be deleted <strong>before the "
+"processing of full imports</strong> per script run (max. %u)."
+msgstr ""
+"Maximal Anzahl an Immobilien, die <strong>vor der Verarbeitung eines "
+"Vollabgleichs</strong> pro Scriptlauf gelöscht werden (max. %u)."
+
+#: includes/class-openimmo2wp.php:2415
+msgid "Max. Images per Property"
+msgstr "Max. Anzahl Bilder pro Objekt"
+
+#: includes/class-openimmo2wp.php:2418
+msgid ""
+"The maximum number of <strong>image</strong> attachments that will be "
+"imported <strong>per property</strong> (0 = no limit)."
+msgstr ""
+"Die maximale Anzahl an <strong>Bildanhängen</strong>, die <strong>pro "
+"Objekt</strong> importiert wird (0 = kein Limit)."
+
+#: includes/class-openimmo2wp.php:2426
+msgid "Max. Attachments per Script Run"
+msgstr "Max. Anzahl Dateianhänge pro Scriptlauf"
+
+#: includes/class-openimmo2wp.php:2429
+msgid ""
+"Maximum number of attachments (<strong>all allowed file types</strong>) that "
+"will be processed per <strong>script run</strong> (0 = no limit)."
+msgstr ""
+"Maximale Anzahl an Dateianhängen (<strong>alle erlaubten Dateiarten</"
+"strong>), die pro <strong>Scriptlauf</strong> verarbeitet werden (0 = kein "
+"Limit)."
+
+#: includes/class-openimmo2wp.php:2437
+msgid "Stall Check Time"
+msgstr "Abbruch-Prüfzeit"
+
+#: includes/class-openimmo2wp.php:2440
+msgid "Minutes"
+msgstr "Minuten"
+
+#: includes/class-openimmo2wp.php:2442
+msgid ""
+"Time after which a possibly uncontrolled aborted import process can be "
+"restarted automatically: %u - %u minutes (default: %u)"
+msgstr ""
+"Zeit, nach der ein möglicherweise \"unkontrolliert\" abgebrochener "
+"Importvorgang automatisch neu gestartet werden kann: %u - %u Minuten "
+"(Standard: %u)"
+
+#: includes/class-openimmo2wp.php:2456
+msgid "Default Geocoding Provider"
+msgstr "Standard-Anbieter/API"
+
+#: includes/class-openimmo2wp.php:2459
+msgid ""
+"Select the preferred provider for turning property addresses into geo "
+"coordinates. (The following ones will be used automatically if no geocoding "
+"is possible with the default one.)"
+msgstr ""
+"Die bevorzugte API für die Konvertierung von Adressen in Geo-Koordinaten "
+"kann hier ausgewählt werden. (Die folgenden werden automatisch verwendet, "
+"sofern keine Geocodierung mit der Standard-API möglich ist.)"
+
+#: includes/class-openimmo2wp.php:2466
+msgid "Google Maps API Key"
+msgstr "Google Maps API Key"
+
+#: includes/class-openimmo2wp.php:2469
+msgid ""
+"You can find information about getting a suitable API key on the respective "
+"<a href=\"%s\" target=\"_blank\">Google Developers page</a>."
+msgstr ""
+"Informationen zur Anforderung eines passenden API-Schlüssels sind auf der "
+"entsprechenden <a href=\"%s\" target=\"_blank\">Google-Developers-Seite</a> "
+"zu finden."
+
+#: includes/class-openimmo2wp.php:2475
+msgid "Bing Maps API Key"
+msgstr "Bing Maps API Key"
+
+#: includes/class-openimmo2wp.php:2478
+msgid ""
+"Get your personal API key in the <a href=\"%s\" target=\"_blank\">Bing Maps "
+"Dev Center</a>."
+msgstr ""
+"Ein persönlicher API-Schlüssel kann im <a href=\"%s\" target=\"_blank\">Bing "
+"Maps Dev Center</a> generiert werden."
+
+#: includes/class-openimmo2wp.php:2484
+msgid "Always use Coordinates"
+msgstr "Koordinaten immer verwenden"
+
+#: includes/class-openimmo2wp.php:2487
+msgid ""
+"Always use the <strong>submitted</strong> geo coordinates of properties (for "
+"map markers etc.), even if publishing the full address is not permitted."
+msgstr ""
+"Immer die <strong>übertragenenen</strong> Immobilien-Standortkoordinaten "
+"übernehmen (für Kartenmarker etc.), auch wenn die Veröffentlichung der "
+"vollen Objektadresse nicht erlaubt ist."
+
+#: includes/class-openimmo2wp.php:2593
+msgid "Logger error: %s"
+msgstr "Logger-Fehler: %s"
+
+#: includes/class-openimmo2wp.php:2597
+msgid "Current import process resetted!"
+msgstr "Aktueller Importprozess zurückgesetzt!"
+
+#: includes/class-openimmo2wp.php:2650
+msgid "Max. Script Execution Time: %s"
+msgstr "Max. Script-Ausführungszeit: %s"
+
+#: includes/class-openimmo2wp.php:2650 includes/class-openimmo2wp.php:2652
+#: includes/class-openimmo2wp.php:2654 includes/class-openimmo2wp.php:2655
+msgid "unlimited"
+msgstr "unbegrenzt"
+
+#: includes/class-openimmo2wp.php:2651
+msgid "Max. Script Memory Usage: %s"
+msgstr "Max. Script-Speicherverbrauch: %s"
+
+#: includes/class-openimmo2wp.php:2651
+msgid "unknown"
+msgstr "unbekannt"
+
+#: includes/class-openimmo2wp.php:2652
+msgid "Max. Records per Script Run: %s"
+msgstr "Max. Anzahl Datensätze pro Scriptlauf: %s"
+
+#: includes/class-openimmo2wp.php:2653
+msgid "Max. Records to be deleted per Script Run: %s"
+msgstr "Max. Anzahl zu löschender Datensätze pro Scriptlauf: %s"
+
+#: includes/class-openimmo2wp.php:2654
+msgid "Max. Attachments per Script Run: %s"
+msgstr "Max. Anzahl Dateianhänge pro Scriptlauf: %s"
+
+#: includes/class-openimmo2wp.php:2655
+msgid "Max. Image Attachments per Property: %s"
+msgstr "Max. Anzahl Bildanhänge pro Objekt: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2656
+msgid "%u XML files in archive"
+msgstr "%u XML-Dateien im Archiv"
+
+#: includes/class-openimmo2wp.php:2669
+msgid "Skipping already processed XML file: %s"
+msgstr "Bereits verarbeitete XML-Datei wird übersprungen: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2679
+msgid "XML file is being processed: %s"
+msgstr "XML-Datei wird verarbeitet: %s"
+
+#: includes/class-openimmo2wp.php:2696
+msgid "Error parsing processing XML files"
+msgstr "Fehler beim Parsen der Verarbeitungs-XML-Dateien"
+
+#: includes/class-openimmo2wp.php:2701
+msgid "Processing XML files successfully created"
+msgstr "Verarbeitungs-XML-Dateien erfolgreich erstellt"
+
+#: includes/class-openimmo2wp.php:2708
+msgid "Unknown error on creating processing XML files"
+msgstr "Unbekannter Fehler beim Erstellen der Verarbeitungs-XML-Dateien"
+
+#: includes/class-openimmo2wp.php:2712
+msgid "Source XML file not found (%s)"
+msgstr "Quell-XML-Datei nicht gefunden (%s)"
+
+#: includes/class-openimmo2wp.php:2722
+msgid "Unable to open or parse XML file (%s)"
+msgstr "XML-Quelldatei konnte nicht geöffnet oder geparst werden (%s)"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2727
+msgid "OpenImmo node \"anbieter\" not found"
+msgstr "OpenImmo-Knoten \"anbieter\" nicht gefunden"
+
+#: includes/class-openimmo2wp.php:2764
+msgid "no title"
+msgstr "kein Titel"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2766 includes/class-openimmo2wp.php:3006
+msgid "Delete"
+msgstr "Löschen"
+
+#: includes/class-openimmo2wp.php:2766 includes/class-openimmo2wp.php:3056
+msgid "New/Update"
+msgstr "Neu/Aktualisieren"
+
+#: includes/class-openimmo2wp.php:2815
+msgid "Properties in this file: %u"
+msgstr "Immobilien in dieser Datei: %u"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2819
+msgid "Import scope: Full"
+msgstr "Umfang: Vollimport"
+
+#: includes/class-openimmo2wp.php:2820
+msgid "Full import mode: %s"
+msgstr "Vollimport-Modus: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2823
+msgid "Import scope: Partial"
+msgstr "Umfang: Teilimport"
+
+#: includes/class-openimmo2wp.php:2831 includes/class-openimmo2wp.php:2947
+msgid "Previous import resumed"
+msgstr "Vorheriger Import fortgesetzt"
+
+#: includes/class-openimmo2wp.php:2874 includes/class-openimmo2wp.php:2888
+msgid "Invalid XML data"
+msgstr "Ungültige XML-Daten"
+
+#: includes/class-openimmo2wp.php:2880
+msgid "Invalid XML data: ANID missing (company: %s)"
+msgstr "Ungültige XML-Daten: ANID fehlt (Firma: %s)"
+
+#: includes/class-openimmo2wp.php:2895
+msgid "Unable to determine agency due to invalid XML data"
+msgstr ""
+"Anbieter (Agentur) kann aufgrund ungültiger XML-Daten nicht ermittelt werden"
+
+#: includes/class-openimmo2wp.php:2909
+msgid "Agency: %s"
+msgstr "Anbieter: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:2951
+msgid "Property %u of %u: %s"
+msgstr "Immobilie %u von %u: %s"
+
+#: includes/class-openimmo2wp.php:2955
+msgid "OpenImmo OBID missing, skipping property."
+msgstr "OpenImmo-OBID fehlt, Immobilie wird übersprungen."
+
+#: includes/class-openimmo2wp.php:2970
+msgid "Property skipped"
+msgstr "Immobilie übersprungen"
+
+#: includes/class-openimmo2wp.php:2975
+msgid "Reference Property"
+msgstr "Referenzobjekt"
+
+#: includes/class-openimmo2wp.php:2981 includes/class-openimmo2wp.php:3492
+msgid "%s of %s (%s)"
+msgstr "%s von %s (%s)"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:3006 includes/class-openimmo2wp.php:3056
+msgid "Action: %s"
+msgstr "Aktion: %s"
+
+#: includes/class-openimmo2wp.php:3021
+msgid "Special status SKIP recognized: skipping property."
+msgstr "Spezialstatus SKIP erkannt: Immobilie wird übersprungen."
+
+#: includes/class-openimmo2wp.php:3046
+msgid "Language not available (property skipped): %s"
+msgstr "Sprache nicht verfügbar (Immobilie übersprungen): %s"
+
+#: includes/class-openimmo2wp.php:3083
+msgid ""
+"The last property update time (%s) is before or equal to the existing "
+"property's (%s): skipping import/update."
+msgstr ""
+"Der Zeitpunkt der letzten Objekt-Aktualisierung (%1$s) liegt vor oder "
+"entspricht dem des vorhandenen Objekts (%2$s): Import/Aktualisierung wird "
+"übersprungen."
+
+#: includes/class-openimmo2wp.php:3115 includes/class-openimmo2wp.php:5786
+msgid "Resetting all attachments due to changed order."
+msgstr "Alle Anhänge werden zurückgesetzt (geänderte Reihenfolge)."
+
+#: includes/class-openimmo2wp.php:3156
+msgid "Keeping Property ID: %s"
+msgstr "Immobilien-ID wird beibehalten: %s"
+
+#: includes/class-openimmo2wp.php:3161
+msgid "Keeping Property Status: %s"
+msgstr "Immobilien-Status wird beibehalten: %s"
+
+#: includes/class-openimmo2wp.php:3165
+msgid "Error resetting property post (%1$s), ID: %2$s. Deleting it."
+msgstr ""
+"Fehler beim Zurücksetzen des Immobilien-Beitrags (%1$s), ID: %2$s. Beitrag "
+"wird gelöscht."
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:3182
+msgid "Property language: %s"
+msgstr "Sprache der Immobilie: %s"
+
+#: includes/class-openimmo2wp.php:3197
+msgid "Property updated, Post ID: %s"
+msgstr "Immobilie aktualisiert, Post-ID: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:3200
+msgid "Property created, Post ID: %s"
+msgstr "Immobilie erstellt, Post-ID: %s"
+
+#: includes/class-openimmo2wp.php:3212
+msgid "Resuming image/attachment import, Post ID: %s"
+msgstr "Bild-/Anhang-Import wird fortgesetzt, Post-ID: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:3235
+msgid "Error on saving taxonomy data (%s): %s"
+msgstr "Fehler beim Speichern von Taxonomiedaten: %s"
+
+#: includes/class-openimmo2wp.php:3405
+msgid ""
+"Group master property transferred as \"not visible\": post status set to "
+"\"pending\"."
+msgstr ""
+"Gruppen-Master-Objekt wurde als \"nicht sichtbar“ übertragen: Beitragsstatus "
+"„ausstehend“ gesetzt."
+
+#: includes/class-openimmo2wp.php:3409
+msgid "Translation ID (%s): %s"
+msgstr "Übersetzungs-ID (%s): %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:3467
+msgid "Property post could not be saved%s"
+msgstr "Immobilie (Post) konnte nicht gespeichert werden%s"
+
+#: includes/class-openimmo2wp.php:3470
+msgid "MySQL error: %s"
+msgstr "MySQL-Fehler: %s"
+
+#: includes/class-openimmo2wp.php:3477
+msgid "Current Execution Time: %u s"
+msgstr "Aktuelle Ausführungszeit: %u s"
+
+#: includes/class-openimmo2wp.php:3478
+msgid "Current Memory Usage: %s MB"
+msgstr "Aktueller Speicherverbrauch: %s MB"
+
+#: includes/class-openimmo2wp.php:3479
+msgid "Memory Peak Usage (allocated): %s MB"
+msgstr "Speichernutzung maximal (zugewiesen): %s MB"
+
+#: includes/class-openimmo2wp.php:3480
+msgid "Memory Peak Usage (real): %s MB"
+msgstr "Speichernutzung maximal (real): %s MB"
+
+#: includes/class-openimmo2wp.php:3491 includes/class-openimmo2wp.php:3492
+msgid "not available yet"
+msgstr "noch nicht verfügbar"
+
+#: includes/class-openimmo2wp.php:3531
+msgid "No XML files found!"
+msgstr "Keine XML-Dateien gefunden!"
+
+#: includes/class-openimmo2wp.php:3589
+msgid "Import is being interrupted and resumed due to script resources."
+msgstr ""
+"Import wird aufgrund der Script-Ressourcen unterbrochen und neu gestartet."
+
+#: includes/class-openimmo2wp.php:3592
+msgid "NO automatic resumption due to KILLSWITCH! (%s)"
+msgstr "KEINE automatische Wiederaufnahme wegen KILLSWITCH! (%s)"
+
+#: includes/class-openimmo2wp.php:3740
+msgid "%s of %s"
+msgstr "%s von %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:3760
+msgid "Start Import"
+msgstr "Import starten"
+
+#: includes/class-openimmo2wp.php:3761
+msgid "Resume Import"
+msgstr "Import fortsetzen"
+
+#: includes/class-openimmo2wp.php:3762
+msgid "Import running..."
+msgstr "Import läuft..."
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:3763
+msgid "Import stopped!"
+msgstr "Import angehalten!"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:3764
+msgid "Import aborted!"
+msgstr "Import abgebrochen!"
+
+#: includes/class-openimmo2wp.php:3765
+msgid "Processing import files..."
+msgstr "Importdateien werden verarbeitet..."
+
+#: includes/class-openimmo2wp.php:3766
+msgid "full import"
+msgstr "Vollimport"
+
+#: includes/class-openimmo2wp.php:3767
+msgid "partial import"
+msgstr "Teilimport"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:3768
+msgid "Import completed successfully"
+msgstr "Import erfolgreich abgeschlossen"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:3769
+msgid "Errors during import"
+msgstr "Fehler beim Importvorgang"
+
+#: includes/class-openimmo2wp.php:3771
+msgid "Fatal Error: Invalid Status"
+msgstr "Schwerwiegender Fehler: Ungültiger Status"
+
+#: includes/class-openimmo2wp.php:3773
+msgid "Server Error"
+msgstr "Serverfehler"
+
+#: includes/class-openimmo2wp.php:3775
+msgid "Property"
+msgstr "Objekt"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:3776
+msgid "Attachment"
+msgstr "Anhang"
+
+#: includes/class-openimmo2wp.php:3777
+msgid "Another import process is already running, force resumption now?"
+msgstr ""
+"Ein anderer Importvorgang läuft gerade, soll dieser jetzt fortgesetzt werden?"
+
+#: includes/class-openimmo2wp.php:3779
+msgid ""
+"If the import process seems to be interrupted, it can be resumed <strong>%d "
+"minutes</strong> after the last status change."
+msgstr ""
+"Wenn der Importvorgang unterbrochen zu sein scheint, kann er <strong>%d "
+"Minuten</strong> nach der letzten Statusänderung fortgesetzt werden."
+
+#: includes/class-openimmo2wp.php:3783
+msgid ""
+"Currently there are no import files pending processing.<br><br>Transfer "
+"<strong>OpenImmo-XML ZIP archives</strong> either to the <strong>global</"
+"strong> (single realtor agency) or <strong>user-based</strong> (multiple "
+"agencies/sources) import folders listed below (&rarr; <a href=\"%s\" "
+"target=\"_blank\">Documentation</a>)."
+msgstr ""
+"Derzeit sind keine Importdateien vorhanden.<br><br>Zu verarbeitende "
+"<strong>OpenImmo-XML-ZIP-Archive</strong> müssen entweder in den "
+"<strong>globalen</strong> (einzelne Immobilienmakler/Agentur) oder "
+"<strong>benutzerbezogene</strong> (mehrere Agenturen/Quellen) Importordner "
+"übertragen werden, die nachfolgend gelistet sind (&rarr; <a href=\"%s\" "
+"target=\"_blank\">Dokumentation</a>)."
+
+# @ default
+#: includes/class-openimmo2wp.php:3808
+msgid "Current status file deleted: %s"
+msgstr "Import-Statusdatei gelöscht: %s"
+
+# @ default
+#: includes/class-openimmo2wp.php:3810
+msgid "Current status file could not be deleted: %s"
+msgstr "Import-Statusdatei konnte nicht gelöscht werden: %s"
+
+# @ default
+#: includes/class-openimmo2wp.php:3816
+msgid "Current status option deleted: %s"
+msgstr "Import-Status-Option gelöscht: %s"
+
+# @ default
+#: includes/class-openimmo2wp.php:3818
+msgid "Current status option could not be deleted: %s"
+msgstr "Import-Status-Option konnte nicht gelöscht werden: %s"
+
+#: includes/class-openimmo2wp.php:3843
+msgid "Existing properties are being deleted."
+msgstr "Vorhandene Immobilien werden gelöscht."
+
+#: includes/class-openimmo2wp.php:3894
+msgid "Retrieving properties with offset %d."
+msgstr "Immobilien werden mit Offset %d abgerufen."
+
+#: includes/class-openimmo2wp.php:3897
+msgid "Records to check: %d"
+msgstr "Zu prüfende Datensätze: %d"
+
+#: includes/class-openimmo2wp.php:3900
+msgid "Determining properties to be deleted (offset: %u)..."
+msgstr "Zu löschende Immobilien werden ermittelt (Offset: %u)..."
+
+#: includes/class-openimmo2wp.php:3915
+msgid "Skipping property: %s (ID %s) - manually created"
+msgstr "Immobilie übersprungen: %s (ID %s) - manuell erstellt"
+
+#: includes/class-openimmo2wp.php:3945
+msgid "Number of properties to delete in this batch: %u"
+msgstr "Anzahl zu löschender Objekte in diesem Scriptlauf: %u"
+
+#: includes/class-openimmo2wp.php:3950
+msgid "Existing properties are being deleted (%s)..."
+msgstr "Vorhandene Immobilien werden gelöscht (%s)…"
+
+#: includes/class-openimmo2wp.php:3963
+msgid "No properties to delete..."
+msgstr "Keine zu löschenden Immobilien vorhanden..."
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:3997
+msgid "Property deleted: %s (ID %s)"
+msgstr "Objekt gelöscht: %s (ID %s)"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:4005
+msgid "Error on deleting a property: Post ID %s"
+msgstr "Fehler beim Löschen einer Immobilie: Post-ID %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:4095
+msgid "Property creation date (XML/filter): %s"
+msgstr "Objekt-Erstellungsdatum (XML/Filter): %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:4099
+msgid "Property creation date/time (XML/filter): %s"
+msgstr "Objekt-Erstellungsdatum/-zeit (XML/Filter): %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:4118
+msgid "Property post date (local / GMT): %s / %s"
+msgstr "Immobilien-Beitrags-Datum (lokal / GMT): %s / %s"
+
+#: includes/class-openimmo2wp.php:4148
+msgid "Title missing - skipping property!"
+msgstr "Titel/Bezeichnung fehlt - Immobilie wird übersprungen!"
+
+#: includes/class-openimmo2wp.php:4173
+msgid "Assigning default post author (admin): %s"
+msgstr "Standard-Beitragsautor (Administrator) zugewiesen: %s"
+
+#: includes/class-openimmo2wp.php:4183
+msgid "Assigning post author (WP user) based on the import folder name: %s"
+msgstr ""
+"Beitragsautor (WP-Benutzer) auf Basis des Importordner-Namens zugewiesen: %s"
+
+#: includes/class-openimmo2wp.php:4187
+msgid ""
+"No user with login name %s found, assigning default post author (admin): %s"
+msgstr ""
+"Kein Benutzer mit dem Login-Namen %s gefunden, Standard-Beitragsautor "
+"(Administrator) wird zugewiesen: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:4275
+msgid "Skipped inserting a taxonomy parent term: %s"
+msgstr "Einfügen eines Taxonomie-Parent-Begriffs übersprungen: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:4277
+msgid "Error on determining/inserting a taxonomy parent term: %s"
+msgstr "Fehler beim Ermitteln/Einfügen eines Taxonomie-Parent-Begriffs: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:4296
+#: includes/themes/class-theme-base.php:1151
+msgid "Skipped inserting a taxonomy term: %s"
+msgstr "Einfügen eines Taxonomie-Begriffs übersprungen: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:4298
+msgid "Error on determining/inserting a taxonomy term: %s"
+msgstr "Fehler beim Ermitteln/Einfügen eines Taxonomie-Begriffs: %s"
+
+#: includes/class-openimmo2wp.php:4420 includes/class-openimmo2wp.php:4425
+msgid "Seller"
+msgstr "Verkäufer"
+
+#: includes/class-openimmo2wp.php:4420 includes/class-openimmo2wp.php:4425
+msgid "Buyer"
+msgstr "Käufer"
+
+#: includes/class-openimmo2wp.php:4421 includes/class-openimmo2wp.php:4426
+msgid "Landlord"
+msgstr "Vermieter"
+
+#: includes/class-openimmo2wp.php:4421 includes/class-openimmo2wp.php:4426
+msgid "Tenant"
+msgstr "Mieter"
+
+#: includes/class-openimmo2wp.php:4508
+msgid "Group Identifier: %s"
+msgstr "Gruppenkennung: %s"
+
+#: includes/class-openimmo2wp.php:4514
+msgid "Group Master Object (%s)"
+msgstr "Gruppen-Master-Objekt (%s)"
+
+#: includes/class-openimmo2wp.php:4515
+msgid "visible"
+msgstr "sichtbar"
+
+#: includes/class-openimmo2wp.php:4515
+msgid "NOT VISIBLE"
+msgstr "NICHT SICHTBAR"
+
+#: includes/class-openimmo2wp.php:4649
+msgid "Skipping attachment %d of %d (filter function)."
+msgstr "Anhang %d von %d wird übersprungen (Filterfunktion)."
+
+#: includes/class-openimmo2wp.php:4673
+msgid "Max. number of image attachments reached (%d): skipping attachment."
+msgstr "Max. Anzahl an Bildanhängen erreicht (%d): Anhang wird übersprungen."
+
+#: includes/class-openimmo2wp.php:4693
+msgid "Skipping attachment due to missing path/filename"
+msgstr "Anhang wird aufgrund eines fehlenden Pfad-/Dateinamens übersprungen"
+
+#: includes/class-openimmo2wp.php:4699
+msgid "Skipping already existent attachment: %s"
+msgstr "Existierender Anhang wird übersprungen: %s"
+
+#: includes/class-openimmo2wp.php:4735
+msgid "Virtual Tour"
+msgstr "Virtuelle Tour"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:4762
+msgid "Attachment %u of %u: %s"
+msgstr "Anhang %u von %u: %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:4771
+msgid "Attachment URL: %s"
+msgstr "Anhang-URL: %s"
+
+#: includes/class-openimmo2wp.php:4812
+msgid ""
+"An already existing image attachment (ID %s) has been deleted before "
+"reimport: %s"
+msgstr ""
+"Ein bereits existierender Bildanhang (ID %s) wurde vor dem Neuimportieren "
+"gelöscht: %s"
+
+#: includes/class-openimmo2wp.php:4820
+msgid "Error on creating a temporary copy of: %s"
+msgstr "Fehler beim Erstellen einer temporären Kopie von: %s"
+
+#: includes/class-openimmo2wp.php:4823
+msgid "Error downloading a remote file: %s"
+msgstr "Fehler beim Herunterladen einer externen Datei: %s"
+
+#: includes/class-openimmo2wp.php:4848
+msgid "Attachment is not a valid image file: %s"
+msgstr "Anhang ist keine gültige Bilddatei: %s"
+
+#: includes/class-openimmo2wp.php:4877
+msgid "Error on importing an %s: %s"
+msgstr "Fehler beim Importieren eines %s: %s"
+
+#: includes/class-openimmo2wp.php:4877
+msgctxt "Error on importing an ..."
+msgid "image"
+msgstr "Bildes"
+
+#: includes/class-openimmo2wp.php:4877
+msgctxt "Error on importing an ..."
+msgid "file attachment"
+msgstr "Dateianhangs"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:4904
+msgid "Attachment processed (ID %s)"
+msgstr "Anhang verarbeitet (ID %s)"
+
+#: includes/class-openimmo2wp.php:4912
+msgid "Error on importing the image/attachment (max. retries exceeded): %s"
+msgstr ""
+"Fehler beim Importieren eines Bildes/Dateianhangs (max. Wiederholungen "
+"überschritten): %s"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:4916
+msgid "Attachment file not found"
+msgstr "Dateianhang nicht gefunden"
+
+#: includes/class-openimmo2wp.php:4970
+msgid "Mapping file encoding is not proper UTF-8."
+msgstr "Die Mapping-Datei ist nicht (vollständig) UTF-8-codiert."
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:5043
+msgid "No regular mappings found"
+msgstr "Keine regulären Mappings gefunden"
+
+# @ immonex-openimmo2wp
+#: includes/class-openimmo2wp.php:5051
+msgid "Mapping file not found: %s (available files: %s)"
+msgstr "Mapping-Datei nicht gefunden: %s (verfügbare Dateien: %s)"
+
+#: includes/class-openimmo2wp.php:5078
+msgid "Successfully unzipped nested ZIP archive %s"
+msgstr "Verschachteltes ZIP-Archive erfolgreich entpackt: %s"
+
+#: includes/class-openimmo2wp.php:5082
+msgid "Error unzipping nested ZIP archive %s: %s"
+msgstr "Fehler beim Entpacken des verschachtelten ZIP-Archivs %s: %s"
+
+#: includes/class-openimmo2wp.php:5084
+msgid "Error unzipping nested ZIP archive: %s"
+msgstr "Fehler beim Entpacken eines verschachtelten ZIP-Archivs: %s"
+
+#: includes/class-openimmo2wp.php:5145
+msgid "Import Log"
+msgstr "Import-Log"
+
+#: includes/class-openimmo2wp.php:5194
+msgid "Determining file modification time failed for %s"
+msgstr "Ermittlung der Datei-Änderungszeit fehlgeschlagen: %s"
+
+#: includes/class-openimmo2wp.php:5679
+msgid "Source file for temporary copy missing: %s"
+msgstr "Quelldatei für temporäre Kopie fehlt: %s"
+
+#: includes/class-openimmo2wp.php:5692
+msgid "Temporary copy could not be created: %s"
+msgstr "Temporäre Kopie konnte nicht erstellt werden: %s"
+
+#: includes/class-openimmo2wp.php:5814
+msgid ""
+"Keeping existing attachment due to equal MD5 check hash (ID: %s, Filenames "
+"WP/XML: %s / %s, Sizes WP/XML: %u / %u, Hash: %s)"
+msgstr ""
+"Existierender Anhang wird beibehalten - MD5-Check-Hash stimmt überein (ID: "
+"%s, Dateinamen WP/XML: %s / %s, Größen WP/XML: %u / %u, Hash: %s)"
+
+#: includes/class-openimmo2wp.php:5836
+msgid ""
+"Keeping existing attachment due to newer file modification time (ID: %s, "
+"Filenames WP/XML: %s / %s, Sizes WP/XML: %u / %u, Times WP/XML: %s / %s)"
+msgstr ""
+"Existierender Anhang wird beibehalten - aktuelleres Dateiänderungsdatum (ID: "
+"%s, Dateinamen WP/XML: %s / %s, Größen WP/XML: %u / %u, Zeiten WP/XML: %s / "
+"%s)"
+
+#: includes/class-openimmo2wp.php:5857
+msgid ""
+"Keeping existing attachment due to matching file name/path/URL and size (ID: "
+"%s, Path/URL WP/XML: %s / %s, Sizes WP/XML: %u / %u)"
+msgstr ""
+"Existierender Anhang wird beibehalten - Name/Pfad/URL und Dateigröße gleich "
+"(ID: %s, Pfad/URL WP/XML: %s / %s, Größen WP/XML: %u / %u)"
+
+#: includes/class-openimmo2wp.php:5877
+msgid ""
+"Keeping existing attachment due to matching file name and size (ID: %s, "
+"Filenames WP/XML: %s / %s, Sizes WP/XML: %u / %u)"
+msgstr ""
+"Existierender Anhang wird beibehalten - Dateiname und -größe übereinstimmend "
+"(ID: %s, Dateinamen WP/XML: %s / %s, Größen WP/XML: %u / %u)"
+
+#: includes/class-security.php:114
+msgid "Errors deleting unallowed files from import folders"
+msgstr "Fehler beim Löschen unerlaubter Dateien aus Importordnern"
+
+#: includes/class-security.php:115
+msgid ""
+"The following unallowed files <strong>could not</strong> be deleted from the "
+"import folders:"
+msgstr ""
+"Die folgenden unerlaubten Dateien <strong>konnten nicht</strong> aus den "
+"Importordnern gelöscht werden:"
+
+#: includes/class-security.php:116
+msgid "Please manually delete these files immediately for security reasons!"
+msgstr "Bitte diese Dateien aus Sicherheitsgründen umgehend manuell löschen!"
+
+#: includes/class-security.php:119
+msgid "Unallowed files deleted from import folders"
+msgstr "Nicht erlaubte Dateien aus Importordnern gelöscht"
+
+#: includes/class-security.php:120
+msgid ""
+"The following files have been deleted because these file types are not "
+"allowed in <strong>import folders</strong> for security reasons:"
+msgstr ""
+"Die folgenden Dateien wurden gelöscht, weil diese Dateiarten aus "
+"Sicherheitsgründen in <strong>Importordnern</strong> nicht zulässig sind:"
+
+#: includes/class-security.php:121
+msgid "The deleted files have been attached to this mail."
+msgstr "Die gelöschten Dateien wurden an diese Mail angehangen."
+
+#: includes/class-text-file-utils.php:40
+msgid "Unable to open the XML source file"
+msgstr "XML-Quelldatei konnte nicht geöffnet werden"
+
+#: includes/class-text-file-utils.php:49
+msgid "Unable to create the XML destination file (full)"
+msgstr "XML-Zieldatei (voller Umfang) konnte nicht erstellt werden"
+
+#: includes/class-text-file-utils.php:57
+msgid "Unable to create the XML destination file (stripped)"
+msgstr "XML-Zieldatei (eingeschränkter Umfang) konnte nicht erstellt werden"
+
+#: includes/class-wp-bootstrap.php:77
+msgid "Manual Import"
+msgstr "Manueller Import"
+
+#: includes/class-wp-bootstrap.php:78
+msgid "Import"
+msgstr "Import"
+
+#: includes/class-xml-reader.php:34 includes/class-xml-reader.php:82
+#: includes/class-xml-reader.php:97
+msgid "XML Error: %s"
+msgstr "XML-Fehler: %s"
+
+#: includes/themes/class-bo-beladomo.php:29
+#: includes/themes/class-bo-beladomo20.php:37
+#: includes/themes/class-bo-home.php:37
+#: includes/themes/class-bo-immobilia18.php:33
+#: includes/themes/class-brings-online.php:31
+msgid "smaller than 50"
+msgstr "kleiner als 50"
+
+#: includes/themes/class-bo-beladomo.php:37
+#: includes/themes/class-bo-beladomo20.php:45
+#: includes/themes/class-bo-home.php:45
+#: includes/themes/class-bo-immobilia18.php:41
+#: includes/themes/class-brings-online.php:39
+msgid "larger than 250"
+msgstr "größer als 250"
+
+#: includes/themes/class-bo-beladomo.php:480
+#: includes/themes/class-bo-beladomo20.php:569
+#: includes/themes/class-bo-home.php:550
+#: includes/themes/class-bo-immobilia18.php:509
+#: includes/themes/class-brings-online.php:450
+#: includes/themes/class-wp-listings.php:112
+msgid "Property address: %s"
+msgstr "Adresse der Immobilie: %s"
+
+# @ immonex-openimmo2wp
+#: includes/themes/class-bo-beladomo.php:483
+#: includes/themes/class-bo-beladomo20.php:572
+#: includes/themes/class-bo-home.php:553
+#: includes/themes/class-bo-immobilia18.php:512
+#: includes/themes/class-brings-online.php:458
+#: includes/themes/class-cozy.php:180 includes/themes/class-estate-pro.php:111
+#: includes/themes/class-freehold-progression.php:170
+#: includes/themes/class-freehold.php:124 includes/themes/class-generic.php:106
+#: includes/themes/class-houzez.php:358
+#: includes/themes/class-inventor-properties.php:315
+#: includes/themes/class-kickstart.php:566 includes/themes/class-myhome.php:295
+#: includes/themes/class-realeswp.php:319
+#: includes/themes/class-realia-plugin.php:317
+#: includes/themes/class-realty.php:260
+#: includes/themes/class-wpcasa-plugin.php:195
+#: includes/themes/class-wpcasa.php:76 includes/themes/class-zoner.php:269
+msgid "Property address NOT approved for publishing"
+msgstr "Immobilienadresse NICHT zur Veröffentlichung freigegeben"
+
+#: includes/themes/class-bo-beladomo.php:491
+#: includes/themes/class-bo-beladomo20.php:580
+#: includes/themes/class-bo-home.php:561
+#: includes/themes/class-bo-immobilia18.php:520
+#: includes/themes/class-brings-online.php:466
+#: includes/themes/class-cozy.php:155 includes/themes/class-estate-pro.php:86
+#: includes/themes/class-hometown.php:206 includes/themes/class-houzez.php:333
+#: includes/themes/class-inventor-properties.php:287
+#: includes/themes/class-kickstart.php:541 includes/themes/class-myhome.php:269
+#: includes/themes/class-realeswp.php:292
+#: includes/themes/class-realhomes.php:279
+#: includes/themes/class-realia-plugin.php:291
+#: includes/themes/class-realia.php:174
+#: includes/themes/class-realplaces.php:221
+#: includes/themes/class-realty.php:233 includes/themes/class-shandora.php:106
+#: includes/themes/class-wp-estate.php:375
+#: includes/themes/class-wp-listings.php:147
+#: includes/themes/class-wp-residence.php:346
+#: includes/themes/class-wpcasa-plugin.php:170
+#: includes/themes/class-wpcasa.php:51 includes/themes/class-zoner.php:244
+msgid ""
+"Property address NOT approved for publishing, but usable coordinates "
+"available and publishing permitted."
+msgstr ""
+"Immobilienadresse NICHT für die Veröffentlichung freigegeben, verfügbare "
+"Koordinaten können aber übernommen werden."
+
+# @ immonex-openimmo2wp
+#: includes/themes/class-bo-beladomo.php:503
+#: includes/themes/class-bo-beladomo20.php:592
+#: includes/themes/class-bo-home.php:572
+#: includes/themes/class-brings-online.php:508
+#: includes/themes/class-cozy.php:159 includes/themes/class-estate-pro.php:90
+#: includes/themes/class-generic.php:80 includes/themes/class-hometown.php:182
+#: includes/themes/class-houzez.php:337
+#: includes/themes/class-inventor-properties.php:291
+#: includes/themes/class-kickstart.php:545 includes/themes/class-myhome.php:273
+#: includes/themes/class-realeswp.php:296
+#: includes/themes/class-realhomes.php:255
+#: includes/themes/class-realia-plugin.php:295
+#: includes/themes/class-realia.php:150
+#: includes/themes/class-realplaces.php:197
+#: includes/themes/class-realty.php:237 includes/themes/class-shandora.php:82
+#: includes/themes/class-wp-estate.php:351
+#: includes/themes/class-wp-listings.php:150
+#: includes/themes/class-wp-residence.php:322
+#: includes/themes/class-wpcasa-plugin.php:174
+#: includes/themes/class-wpcasa.php:55 includes/themes/class-zoner.php:248
+msgid "Property address (Geocoding): %s (ISO2: %s)"
+msgstr "Adresse der Immobilie (Geocodierung): %s (ISO2: %s)"
+
+#: includes/themes/class-bo-beladomo.php:512
+#: includes/themes/class-bo-beladomo20.php:601
+#: includes/themes/class-bo-home.php:581
+#: includes/themes/class-brings-online.php:517
+#: includes/themes/class-cozy.php:168 includes/themes/class-estate-pro.php:99
+#: includes/themes/class-generic.php:94 includes/themes/class-hometown.php:191
+#: includes/themes/class-hometown.php:213 includes/themes/class-houzez.php:346
+#: includes/themes/class-inventor-properties.php:303
+#: includes/themes/class-kickstart.php:554 includes/themes/class-myhome.php:283
+#: includes/themes/class-realeswp.php:305
+#: includes/themes/class-realhomes.php:264
+#: includes/themes/class-realhomes.php:286
+#: includes/themes/class-realia-plugin.php:304
+#: includes/themes/class-realia.php:159 includes/themes/class-realia.php:182
+#: includes/themes/class-realplaces.php:206
+#: includes/themes/class-realplaces.php:228
+#: includes/themes/class-realty.php:248 includes/themes/class-shandora.php:91
+#: includes/themes/class-shandora.php:113
+#: includes/themes/class-wp-estate.php:360
+#: includes/themes/class-wp-estate.php:382
+#: includes/themes/class-wp-listings.php:159
+#: includes/themes/class-wp-residence.php:331
+#: includes/themes/class-wp-residence.php:353
+#: includes/themes/class-wpcasa-plugin.php:183
+#: includes/themes/class-wpcasa.php:64 includes/themes/class-zoner.php:257
+msgid "Geocoding result%s: %s%s"
+msgstr "Ergebnis der Geocodierung%s: %s%s"
+
+#: includes/themes/class-bo-beladomo.php:515
+#: includes/themes/class-bo-beladomo20.php:604
+#: includes/themes/class-bo-home.php:584
+#: includes/themes/class-brings-online.php:520
+#: includes/themes/class-cozy.php:171 includes/themes/class-estate-pro.php:102
+#: includes/themes/class-generic.php:97 includes/themes/class-hometown.php:194
+#: includes/themes/class-hometown.php:216 includes/themes/class-houzez.php:349
+#: includes/themes/class-inventor-properties.php:306
+#: includes/themes/class-kickstart.php:557 includes/themes/class-myhome.php:286
+#: includes/themes/class-realeswp.php:308
+#: includes/themes/class-realhomes.php:267
+#: includes/themes/class-realhomes.php:289
+#: includes/themes/class-realia-plugin.php:307
+#: includes/themes/class-realia.php:162 includes/themes/class-realia.php:185
+#: includes/themes/class-realplaces.php:209
+#: includes/themes/class-realplaces.php:231
+#: includes/themes/class-realty.php:251 includes/themes/class-shandora.php:94
+#: includes/themes/class-shandora.php:116
+#: includes/themes/class-wp-estate.php:363
+#: includes/themes/class-wp-estate.php:385
+#: includes/themes/class-wp-listings.php:162
+#: includes/themes/class-wp-residence.php:334
+#: includes/themes/class-wp-residence.php:356
+#: includes/themes/class-wpcasa-plugin.php:186
+#: includes/themes/class-wpcasa.php:67 includes/themes/class-zoner.php:260
+msgid "(cache)"
+msgstr "(Cache)"
+
+#: includes/themes/class-bo-beladomo.php:519
+#: includes/themes/class-bo-beladomo20.php:608
+#: includes/themes/class-bo-home.php:588
+#: includes/themes/class-brings-online.php:524
+#: includes/themes/class-cozy.php:175 includes/themes/class-estate-pro.php:106
+#: includes/themes/class-generic.php:101 includes/themes/class-hometown.php:229
+#: includes/themes/class-houzez.php:353
+#: includes/themes/class-inventor-properties.php:310
+#: includes/themes/class-kickstart.php:561 includes/themes/class-myhome.php:290
+#: includes/themes/class-realeswp.php:312
+#: includes/themes/class-realhomes.php:304
+#: includes/themes/class-realia-plugin.php:327
+#: includes/themes/class-realia.php:196
+#: includes/themes/class-realplaces.php:242
+#: includes/themes/class-realty.php:255 includes/themes/class-shandora.php:128
+#: includes/themes/class-wp-estate.php:397
+#: includes/themes/class-wp-listings.php:166
+#: includes/themes/class-wp-residence.php:368
+#: includes/themes/class-wpcasa-plugin.php:190
+#: includes/themes/class-wpcasa.php:71 includes/themes/class-zoner.php:264
+msgid "Geocoding failed (%s)"
+msgstr "Geocodierung fehlgeschlagen (%s)"
+
+#: includes/themes/class-bo-beladomo.php:519
+#: includes/themes/class-bo-beladomo20.php:608
+#: includes/themes/class-bo-home.php:588
+#: includes/themes/class-brings-online.php:524
+#: includes/themes/class-cozy.php:175 includes/themes/class-estate-pro.php:106
+#: includes/themes/class-generic.php:101 includes/themes/class-hometown.php:229
+#: includes/themes/class-houzez.php:353
+#: includes/themes/class-inventor-properties.php:310
+#: includes/themes/class-kickstart.php:561 includes/themes/class-myhome.php:290
+#: includes/themes/class-realeswp.php:312
+#: includes/themes/class-realhomes.php:304
+#: includes/themes/class-realia-plugin.php:327
+#: includes/themes/class-realia.php:196
+#: includes/themes/class-realplaces.php:242
+#: includes/themes/class-realty.php:255 includes/themes/class-shandora.php:128
+#: includes/themes/class-wp-estate.php:397
+#: includes/themes/class-wp-listings.php:166
+#: includes/themes/class-wp-residence.php:368
+#: includes/themes/class-wpcasa-plugin.php:190
+#: includes/themes/class-wpcasa.php:71 includes/themes/class-zoner.php:264
+msgid "unknown reason"
+msgstr "unbekannter Grund"
+
+#: includes/themes/class-bo-beladomo.php:719
+#: includes/themes/class-bo-beladomo20.php:890
+#: includes/themes/class-bo-home.php:869
+#: includes/themes/class-bo-immobilia18.php:763
+#: includes/themes/class-brings-online.php:733
+msgid "Existing reference property deleted before update: %s [%s]"
+msgstr "Vorhandenes Referenzobjekt vor Aktualisierung entfernt: %s [%s]"
+
+# @ immonex-openimmo2wp
+#: includes/themes/class-bo-beladomo.php:728
+#: includes/themes/class-bo-beladomo20.php:899
+#: includes/themes/class-bo-home.php:878
+#: includes/themes/class-bo-immobilia18.php:772
+#: includes/themes/class-brings-online.php:742
+msgid "Existing reference property could not be deleted before update: %s [%s]"
+msgstr ""
+"Vorhandenes Referenzobjekt konnte vor Aktualisierung nicht gelöscht werden: "
+"%s [%s]"
+
+#: includes/themes/class-bo-beladomo.php:742
+#: includes/themes/class-bo-beladomo20.php:913
+#: includes/themes/class-bo-home.php:892
+#: includes/themes/class-bo-immobilia18.php:786
+#: includes/themes/class-brings-online.php:756
+msgid "Imported property converted to reference (Portfolio): %s [%s]"
+msgstr ""
+"Importierte Immobilie in Referenzobjekt konvertiert (Portfolio): %s [%s]"
+
+# @ immonex-openimmo2wp
+#: includes/themes/class-bo-beladomo.php:793
+#: includes/themes/class-bo-beladomo20.php:991
+#: includes/themes/class-bo-home.php:963
+#: includes/themes/class-bo-immobilia18.php:854
+#: includes/themes/class-brings-online.php:797
+msgid "Reference property deleted: %s [%s]"
+msgstr "Referenzobjekt gelöscht: %s [%s]"
+
+#: includes/themes/class-bo-beladomo.php:802
+#: includes/themes/class-bo-beladomo20.php:1000
+#: includes/themes/class-bo-home.php:972
+#: includes/themes/class-bo-immobilia18.php:863
+#: includes/themes/class-brings-online.php:806
+msgid "Reference property could not be deleted: %s [%s]"
+msgstr "Referenzobjekt konnte nicht gelöscht werden: %s [%s]"
+
+#: includes/themes/class-bo-beladomo.php:844
+#: includes/themes/class-bo-beladomo20.php:1042
+#: includes/themes/class-bo-home.php:1027
+#: includes/themes/class-bo-immobilia18.php:932
+#: includes/themes/class-brings-online.php:877
+msgid "Use custom value clusters"
+msgstr "Gruppierung nach manuell angelegten Wertebereichen"
+
+#: includes/themes/class-bo-beladomo.php:848
+#: includes/themes/class-bo-beladomo20.php:1046
+#: includes/themes/class-bo-home.php:1031
+#: includes/themes/class-bo-immobilia18.php:936
+#: includes/themes/class-brings-online.php:847
+msgid "Property Size"
+msgstr "Immobiliengröße (Fläche)"
+
+#: includes/themes/class-bo-beladomo.php:849
+#: includes/themes/class-bo-beladomo20.php:1047
+#: includes/themes/class-bo-home.php:1032
+#: includes/themes/class-bo-immobilia18.php:937
+#: includes/themes/class-brings-online.php:848
+msgid "Rooms"
+msgstr "Anzahl der Zimmer"
+
+#: includes/themes/class-bo-beladomo.php:850
+#: includes/themes/class-bo-beladomo20.php:1048
+#: includes/themes/class-bo-home.php:1033
+#: includes/themes/class-bo-immobilia18.php:938
+#: includes/themes/class-brings-online.php:850
+msgid "Price"
+msgstr "Preis"
+
+#: includes/themes/class-bo-beladomo.php:852
+#: includes/themes/class-bo-beladomo20.php:1050
+#: includes/themes/class-bo-home.php:1035
+#: includes/themes/class-bo-immobilia18.php:940
+#: includes/themes/class-brings-online.php:881
+msgid ""
+"Enable automatic property classification based on custom value clusters for "
+"these taxonomies. For example, all properties with appropriate sizes will be "
+"linked with respective terms like \"up to 100&nbsp;m²\" or \"100&nbsp;m² - "
+"200&nbsp;m²\" if these have been manually created before."
+msgstr ""
+"Automatisierte Gruppierung der Immobilien anhand von manuell angelegten "
+"Wertebereichen in diesen Taxonomien aktivieren. Beispiel: Alle Immobilien "
+"mit der passenden Fläche werden mit entsprechenden Taxonomie-Angaben wie "
+"\"bis 100&nbsp;m²\" oder \"100&nbsp;m² - 200&nbsp;m²\" verknüpft, sofern "
+"diese vorher angelegt worden sind."
+
+#: includes/themes/class-bo-beladomo.php:858
+#: includes/themes/class-bo-beladomo20.php:1056
+#: includes/themes/class-bo-home.php:1041
+#: includes/themes/class-bo-immobilia18.php:946
+#: includes/themes/class-brings-online.php:887
+msgid "Delete References"
+msgstr "Löschen von Referenzobjekten"
+
+#: includes/themes/class-bo-beladomo.php:861
+#: includes/themes/class-bo-beladomo20.php:1059
+#: includes/themes/class-bo-home.php:1044
+#: includes/themes/class-bo-immobilia18.php:949
+#: includes/themes/class-brings-online.php:890
+msgid ""
+"<strong>Enable</strong> if reference properties shall be considered on "
+"deletion (only manual deletion <strong>otherwise</strong>)."
+msgstr ""
+"<strong>Aktivieren</strong>, wenn Referenzobjekte beim Löschen "
+"berücksichtigt werden sollen (<strong>andernfalls</strong> nur manuelle "
+"Löschung)."
+
+#: includes/themes/class-bo-beladomo.php:867
+#: includes/themes/class-bo-beladomo20.php:1065
+#: includes/themes/class-bo-home.php:1050
+#: includes/themes/class-bo-immobilia18.php:955
+#: includes/themes/class-brings-online.php:902
+msgid "Mark properties as new"
+msgstr "Immobilien als neu markieren"
+
+#: includes/themes/class-bo-beladomo.php:871
+#: includes/themes/class-bo-beladomo20.php:1069
+#: includes/themes/class-bo-home.php:1054
+#: includes/themes/class-bo-immobilia18.php:959
+#: includes/themes/class-brings-online.php:906
+msgid "days"
+msgstr "Tage"
+
+#: includes/themes/class-bo-beladomo.php:872
+#: includes/themes/class-bo-beladomo20.php:1070
+#: includes/themes/class-bo-home.php:1055
+#: includes/themes/class-bo-immobilia18.php:960
+msgid ""
+"This number is related to the date of the <strong>last update</strong> of "
+"the property record (0 = disabled)."
+msgstr ""
+"Diese Zahl bezieht sich auf das Datum der <strong>letzten Aktualisierung</"
+"strong> des Immobilien-Datensatzes (0 = deaktiviert)."
+
+#: includes/themes/class-bo-beladomo.php:879
+#: includes/themes/class-bo-beladomo20.php:1077
+#: includes/themes/class-bo-home.php:1062
+#: includes/themes/class-bo-immobilia18.php:967
+#: includes/themes/class-brings-online.php:914
+msgid "New label"
+msgstr "Neu-Label"
+
+#: includes/themes/class-bo-beladomo.php:883
+#: includes/themes/class-bo-beladomo20.php:1081
+#: includes/themes/class-bo-home.php:1066
+#: includes/themes/class-bo-immobilia18.php:971
+msgid "Text for the new label"
+msgstr "Text für das Neu-Label"
+
+#: includes/themes/class-bo-beladomo.php:889
+#: includes/themes/class-bo-beladomo20.php:1087
+#: includes/themes/class-bo-home.php:1072
+#: includes/themes/class-bo-immobilia18.php:1044
+#: includes/themes/class-brings-online.php:925
+#: includes/themes/class-cozy.php:518 includes/themes/class-estate-pro.php:267
+#: includes/themes/class-freehold.php:302
+#: includes/themes/class-hometown.php:452 includes/themes/class-houzez.php:938
+#: includes/themes/class-inventor-properties.php:544
+#: includes/themes/class-kickstart.php:1134
+#: includes/themes/class-myhome.php:490 includes/themes/class-realeswp.php:667
+#: includes/themes/class-realhomes.php:752
+#: includes/themes/class-realia-plugin.php:552
+#: includes/themes/class-realia.php:411
+#: includes/themes/class-realplaces.php:563
+#: includes/themes/class-realty.php:589 includes/themes/class-shandora.php:242
+#: includes/themes/class-wp-estate.php:888
+#: includes/themes/class-wp-listings.php:248
+#: includes/themes/class-wp-residence.php:910
+#: includes/themes/class-wpcasa-plugin.php:322
+#: includes/themes/class-zoner.php:694
+msgid "Additional content for property descriptions"
+msgstr "Zusatzinhalt für den Immobilien-Beschreibungstext"
+
+#: includes/themes/class-bo-beladomo.php:893
+#: includes/themes/class-bo-beladomo20.php:1091
+#: includes/themes/class-bo-home.php:1076
+#: includes/themes/class-bo-immobilia18.php:1048
+#: includes/themes/class-brings-online.php:929
+#: includes/themes/class-cozy.php:522 includes/themes/class-estate-pro.php:271
+#: includes/themes/class-freehold-progression.php:317
+#: includes/themes/class-freehold.php:306
+#: includes/themes/class-hometown.php:456 includes/themes/class-houzez.php:942
+#: includes/themes/class-inventor-properties.php:548
+#: includes/themes/class-kickstart.php:1138
+#: includes/themes/class-myhome.php:494
+#: includes/themes/class-realia-plugin.php:556
+#: includes/themes/class-realia.php:415
+#: includes/themes/class-realplaces.php:567
+#: includes/themes/class-realty.php:593 includes/themes/class-shandora.php:246
+#: includes/themes/class-wp-estate.php:892
+#: includes/themes/class-wp-listings.php:252
+#: includes/themes/class-wp-residence.php:914
+#: includes/themes/class-wpcasa-plugin.php:326
+#: includes/themes/class-zoner.php:698
+msgid ""
+"This content will be appended to the <strong>main description text</strong> "
+"of every imported property. This is especially useful for adding <a "
+"href=\"%s\" class=\"immonex-doc-link\" target=\"_blank\">widgets by "
+"shortcode</a>."
+msgstr ""
+"Dieser Inhalt wird an den <strong>Haupt-Beschreibungstext</strong> jeder "
+"importierten Immobilie angehangen. Das ist vor allem für das Hinzufügen von "
+"<a href=\"%s\" class=\"immonex-doc-link\" target=\"_blank\">Widgets per "
+"Shortcode</a> nützlich."
+
+#: includes/themes/class-bo-beladomo.php:901
+#: includes/themes/class-bo-beladomo20.php:1099
+#: includes/themes/class-bo-home.php:1084
+#: includes/themes/class-bo-immobilia18.php:977
+#: includes/themes/class-brings-online.php:866
+msgid "Overview Map"
+msgstr "Übersichtskarte"
+
+#: includes/themes/class-bo-beladomo.php:904
+#: includes/themes/class-bo-beladomo20.php:1102
+#: includes/themes/class-bo-home.php:1087
+#: includes/themes/class-brings-online.php:869
+msgid ""
+"Show marker for every imported property on the overview map (Google Map)"
+msgstr ""
+"Marker für jede importierte Immobilie auf der Übersichtskarte (Google Map) "
+"anzeigen"
+
+#: includes/themes/class-bo-beladomo.php:910
+#: includes/themes/class-bo-immobilia18.php:995
+msgid "Google Map zoom"
+msgstr "Google Map Zoom"
+
+#: includes/themes/class-bo-beladomo.php:914
+#: includes/themes/class-bo-beladomo20.php:1125
+#: includes/themes/class-bo-home.php:1097
+#: includes/themes/class-bo-immobilia18.php:999
+msgid "Default zoom factor for Google Maps on property detail pages"
+msgstr "Standard-Zoomstufe für Google Maps in Immobilien-Detailseiten"
+
+#: includes/themes/class-bo-beladomo.php:923
+msgid "Google Map height"
+msgstr "Google Map Höhe"
+
+#: includes/themes/class-bo-beladomo.php:926
+msgid "Height of Google Maps on property detail pages"
+msgstr "Höhe der Google Maps auf den Immobilien-Detailseiten"
+
+#: includes/themes/class-bo-beladomo.php:933
+#: includes/themes/class-bo-beladomo20.php:1134
+#: includes/themes/class-bo-home.php:1106
+#: includes/themes/class-bo-immobilia18.php:1008
+msgid "Show agent"
+msgstr "Ansprechpartner anzeigen"
+
+#: includes/themes/class-bo-beladomo.php:936
+#: includes/themes/class-bo-beladomo20.php:1137
+#: includes/themes/class-bo-home.php:1109
+#: includes/themes/class-bo-immobilia18.php:1011
+msgid "Show agent on property detail pages?"
+msgstr "Ansprechpartner auf Immobilien-Detailseiten anzeigen?"
+
+#: includes/themes/class-bo-beladomo.php:942
+#: includes/themes/class-bo-immobilia18.php:1017
+msgid "Agent box headline"
+msgstr "Ansprechpartner-Box-Titel"
+
+#: includes/themes/class-bo-beladomo.php:945
+#: includes/themes/class-bo-immobilia18.php:1020
+msgid "Headline for the agent box on property detail pages"
+msgstr "Überschrift der Ansprechpartner-Box auf den Immobilien-Detailseiten"
+
+#: includes/themes/class-bo-beladomo.php:951
+#: includes/themes/class-bo-beladomo20.php:1143
+#: includes/themes/class-bo-immobilia18.php:1026
+msgid "Show contact form"
+msgstr "Kontaktformular anzeigen"
+
+#: includes/themes/class-bo-beladomo.php:954
+#: includes/themes/class-bo-beladomo20.php:1146
+#: includes/themes/class-bo-immobilia18.php:1029
+msgid "Show a contact form on property detail pages?"
+msgstr "Kontaktformular auf Immobilien-Detailseiten anzeigen?"
+
+#: includes/themes/class-bo-beladomo.php:960
+#: includes/themes/class-bo-beladomo20.php:1152
+#: includes/themes/class-bo-home.php:1115
+#: includes/themes/class-bo-immobilia18.php:1035
+#: includes/themes/class-brings-online.php:950
+#: includes/themes/class-hometown.php:464
+#: includes/themes/class-wpcasa-plugin.php:334
+msgid "Note regarding property location"
+msgstr "Hinweis bzgl. Immobilienstandort"
+
+#: includes/themes/class-bo-beladomo.php:963
+#: includes/themes/class-bo-beladomo20.php:1155
+#: includes/themes/class-bo-home.php:1118
+#: includes/themes/class-bo-immobilia18.php:1038
+#: includes/themes/class-brings-online.php:953
+#: includes/themes/class-hometown.php:467
+#: includes/themes/class-wpcasa-plugin.php:337
+msgid ""
+"This text will be displayed if the publishing of the complete property "
+"address has not been approved."
+msgstr ""
+"Dieser Text wird angezeigt, wenn die Veröffentlichung der kompletten "
+"Objektadresse nicht freigegeben wurde."
+
+#: includes/themes/class-bo-beladomo20.php:461
+#: includes/themes/class-bo-home.php:442
+#: includes/themes/class-bo-immobilia18.php:437
+msgid "Sold"
+msgstr "Verkauft"
+
+#: includes/themes/class-bo-beladomo20.php:470
+#: includes/themes/class-bo-home.php:451
+#: includes/themes/class-bo-immobilia18.php:446
+msgid "Rented"
+msgstr "Vermietet"
+
+#: includes/themes/class-bo-beladomo20.php:1108
+msgid "Detail Page Map Position"
+msgstr "Kartenposition (Detailseiten)"
+
+#: includes/themes/class-bo-beladomo20.php:1112
+msgid "Top of page"
+msgstr "Seitenanfang"
+
+#: includes/themes/class-bo-beladomo20.php:1113
+msgid "Bottom of page"
+msgstr "Seitenende"
+
+#: includes/themes/class-bo-beladomo20.php:1115
+msgid "Google Map position on detail pages of imported properties"
+msgstr ""
+"Position der Karte (Google Map) in den Detailseiten importierter Objekte"
+
+#: includes/themes/class-bo-beladomo20.php:1121
+#: includes/themes/class-bo-home.php:1093
+msgid "Detail Page Map Zoom"
+msgstr "Kartenzoom (Detailseiten)"
+
+#: includes/themes/class-bo-immobilia18.php:980
+msgid ""
+"Show marker for every imported property on the overview map (Google Map)?"
+msgstr ""
+"Marker für jede importierte Immobilie auf der Übersichtskarte (Google Map) "
+"anzeigen?"
+
+#: includes/themes/class-bo-immobilia18.php:986
+msgid "Header Slider"
+msgstr "Header-Slider"
+
+#: includes/themes/class-bo-immobilia18.php:989
+msgid "Show imported properties in the header slider (e.g. on front page)?"
+msgstr ""
+"Importierte Immobilien im Header-Slider anzeigen (z. B. auf der Startseite)?"
+
+#: includes/themes/class-brings-online.php:856
+msgid "Display every imported property on start page"
+msgstr "Jede importierte Immobilie auf der Startseite anzeigen"
+
+#: includes/themes/class-brings-online.php:907
+msgid ""
+"This number is related to the date of the <strong>last update</strong> of "
+"the property record (theme/version dependent, 0 = disabled)."
+msgstr ""
+"Diese Angabe bezieht sich auf das Datum der <strong>letzten Änderung</"
+"strong> des Immobilien-Datensatzes (theme-/versionsabhängig, 0 = "
+"deaktiviert)."
+
+#: includes/themes/class-brings-online.php:918
+msgid "Text for the new label (theme/version dependent)"
+msgstr "Text für das Neu-Label (theme-/versionsabhängig)"
+
+#: includes/themes/class-brings-online.php:939
+msgid "Google Map Code Template"
+msgstr "Google-Map-Code-Vorlage"
+
+#: includes/themes/class-brings-online.php:942
+msgid ""
+"Embed code for the Google Map to display on the property detail page. Use "
+"the placeholders <strong>{address}</strong>, <strong>{iframe_width}</strong> "
+"and <strong>{iframe_height}</strong> here."
+msgstr ""
+"Embed-Code für die Google Map, die in der Immobilien-Detailseite angezeigt "
+"wird. Hier können die Platzhalter <strong>{address}</strong>, "
+"<strong>{iframe_width}</strong> and <strong>{iframe_height}</strong> "
+"verwendet werden."
+
+# @ immonex-openimmo2wp
+#: includes/themes/class-cozy.php:187 includes/themes/class-estate-pro.php:115
+#: includes/themes/class-generic.php:110 includes/themes/class-hometown.php:226
+#: includes/themes/class-houzez.php:362 includes/themes/class-kickstart.php:570
+#: includes/themes/class-myhome.php:299 includes/themes/class-realeswp.php:323
+#: includes/themes/class-realhomes.php:301
+#: includes/themes/class-realia-plugin.php:324
+#: includes/themes/class-realia.php:193
+#: includes/themes/class-realplaces.php:239
+#: includes/themes/class-realty.php:266 includes/themes/class-shandora.php:125
+#: includes/themes/class-wp-estate.php:394
+#: includes/themes/class-wp-residence.php:365
+#: includes/themes/class-wpcasa-plugin.php:204
+#: includes/themes/class-wpcasa.php:82 includes/themes/class-zoner.php:273
+msgid "Property geo coordinates: %s"
+msgstr "Geo-Koordinaten der Immobilie: %s"
+
+#: includes/themes/class-cozy.php:508
+msgid "Property description sections"
+msgstr "Abschnitte der Haupt-Beschreibung"
+
+#: includes/themes/class-cozy.php:511
+msgid ""
+"List of sections (property description texts or mapping groups) to be "
+"concatenated into the main property description field, one per line in "
+"format  \"description_name[:Title (optional)]\" or \"group:group_name[:Title "
+"(optional)]\" (sections available by default: property_description, "
+"amenity_description, location_description, misc_description, floor_plans, "
+"downloads_links; group names can be found in the mapping table)."
+msgstr ""
+"Liste der Abschnitte (Immobilien-Beschreibungstexte oder Mapping-Gruppen), "
+"die im Feld für den Haupt-Beschreibungstext der Immobilie verknüpft werden, "
+"jeweils ein Abschnitt pro Zeile im Format "
+"beschreibungstext_name[:Überschrift (optional)] bzw. "
+"\"group:gruppen_name[:Überschrift (optional)]“ (standardmäßig verfügbare "
+"Abschnitte: property_description, amenity_description, location_description, "
+"misc_description, floor_plans, downloads_links; Gruppennamen sind in der "
+"Mapping-Tabelle zu finden)."
+
+#: includes/themes/class-estate-pro.php:133
+#: includes/themes/class-wp-listings.php:214
+msgid "Price on request"
+msgstr "Preis auf Anfrage"
+
+#: includes/themes/class-estate-pro.php:220
+#: includes/themes/class-freehold-progression.php:257
+#: includes/themes/class-freehold.php:148 includes/themes/class-generic.php:132
+#: includes/themes/class-hometown.php:363 includes/themes/class-houzez.php:559
+#: includes/themes/class-kickstart.php:881 includes/themes/class-myhome.php:448
+#: includes/themes/class-realeswp.php:457
+#: includes/themes/class-realhomes.php:491
+#: includes/themes/class-realia-plugin.php:439
+#: includes/themes/class-realia.php:312
+#: includes/themes/class-realplaces.php:429
+#: includes/themes/class-realty.php:419 includes/themes/class-shandora.php:193
+#: includes/themes/class-theme-base.php:181
+#: includes/themes/class-wp-estate.php:427
+#: includes/themes/class-wp-residence.php:406
+#: includes/themes/class-zoner.php:448
+msgid "Contact person (Agent): %s"
+msgstr "Kontaktperson (Agent): %s"
+
+# @ immonex-openimmo2wp
+#: includes/themes/class-freehold-progression.php:163
+#: includes/themes/class-freehold.php:117
+msgid "Property address (Geocoding): %s"
+msgstr "Adresse der Immobilie (Geocodierung): %s"
+
+#: includes/themes/class-freehold-progression.php:313
+msgid "Additional Content for Property Descriptions"
+msgstr "Zusatzinhalt für den Immobilien-Beschreibungstext"
+
+#: includes/themes/class-freehold-progression.php:325
+msgid "Disable Agent Box"
+msgstr "Ansprechpartner-Box deaktivieren"
+
+#: includes/themes/class-freehold-progression.php:328
+msgid ""
+"Generally deactivate the display of the agent info/contact boxes on property "
+"detail pages."
+msgstr ""
+"Anzeige der Kontaktpersonen-Infobox in Immobilien-Detailseiten generell "
+"deaktivieren."
+
+#: includes/themes/class-freehold.php:284
+msgid "Mark every imported property as featured"
+msgstr "Jede importierte Immobilie als „featured“ markieren"
+
+#: includes/themes/class-freehold.php:287
+msgid ""
+"If activated, every imported property will appear in the start page slider "
+"and the featured properties list."
+msgstr ""
+"Wenn aktiviert, wird jede importierte Immobilie im Startseiten-Slider und in "
+"den \"Featured\"-Immobilien-Listen angezeigt."
+
+#: includes/themes/class-freehold.php:293
+msgid "Display every imported property on homepage"
+msgstr "Jede importierte Immobilie auf der Startseite anzeigen"
+
+#: includes/themes/class-freehold.php:296
+msgid ""
+"If activated, every imported property will appear in the homepage listings "
+"<strong>if the related theme option is set</strong>."
+msgstr ""
+"Wenn aktiviert, wird jede importierte Immobilie in der Startseiten-"
+"Immobilienliste angezeigt, <strong>sofern die entsprechende Theme-Option "
+"gesetzt ist</strong>."
+
+#: includes/themes/class-freehold.php:314
+msgid "Mapping groups in property description"
+msgstr "Mapping-Gruppen in der Immobilien-Beschreibung"
+
+#: includes/themes/class-freehold.php:318
+msgid ""
+"Comma-separated list of <a href=\"%s\" class=\"immonex-doc-link\" "
+"target=\"_blank\">mapping groups</a> to add as separate sections after the "
+"main property description, format <code>group_name:Title</code> (default: "
+"<code>additional_details:Further Details,epass:Energy "
+"Efficiency,prices:Additional Information on Prices</code>)."
+msgstr ""
+"Kommagetrennte Liste von <a href=\"%s\" class=\"immonex-doc-link\" "
+"target=\"_blank\">Mapping-Gruppen</a>, die als separate Abschnitte an den "
+"Haupt-Immobilien-Beschreibungstext angehangen werden sollen, Format "
+"<code>gruppenname:Überschrift</code> (Standard: "
+"<code>additional_details:Weitere "
+"Details,epass:Energieeffizienz,prices:Zusatzinfos zu den Preisen</code>)"
+
+#: includes/themes/class-freehold.php:327
+#: includes/themes/class-wp-listings.php:278
+msgid "YouTube Embed Code"
+msgstr "YouTube-Embed-Code"
+
+#: includes/themes/class-freehold.php:330
+msgid ""
+"Code for embedding YouTube videos, use <code>{video_id}</code> <strong>OR</"
+"strong> <code>{video_url}</code> as placeholders."
+msgstr ""
+"Code für das Einbetten von YouTube-Videos, als Platzhalter können "
+"<code>{video_id}</code> <strong>ODER</strong> <code>{video_url}</code> "
+"verwendet werden."
+
+#: includes/themes/class-freehold.php:336
+#: includes/themes/class-wp-listings.php:287
+msgid "Vimeo Embed Code"
+msgstr "Vimeo-Embed-Code"
+
+#: includes/themes/class-freehold.php:339
+msgid ""
+"Code for embedding Vimeo videos, use <code>{video_id}</code> <strong>OR</"
+"strong> <code>{video_url}</code> as placeholders."
+msgstr ""
+"Code für das Einbetten von Vimeo-Videos, als Platzhalter können "
+"<code>{video_id}</code> <strong>ODER</strong><code>{video_url}</code> "
+"verwendet werden."
+
+#: includes/themes/class-freehold.php:345
+#: includes/themes/class-wp-listings.php:296
+msgid "Custom Video Embed Code"
+msgstr "Benutzerdefinierter Video-Embed-Code"
+
+#: includes/themes/class-freehold.php:348
+msgid ""
+"Code for embedding videos of alternative providers, use <code>{video_id}</"
+"code> <strong>OR</strong> <code>{video_url}</code> as placeholders."
+msgstr ""
+"Code für das Einbetten von Videos bei alternativen Anbietern, als "
+"Platzhalter können <code>{video_id}</code> <strong>ODER</"
+"strong><code>{video_url}</code> verwendet werden."
+
+#: includes/themes/class-generic.php:175
+msgid ""
+"With <em>generic</em> themes, the post types for real estate properties and "
+"– if available – agents can be defined individually."
+msgstr ""
+"Bei <em>generischen</em> Themes können die Beitragsarten für Immobilien und "
+"– sofern vorhanden – Maklerdaten individuell festgelegt werden."
+
+#: includes/themes/class-generic.php:179
+msgid "Agent Post Custom Fields"
+msgstr "Benutzerdefinierte Felder von Makler-Beiträgen"
+
+#: includes/themes/class-generic.php:180
+msgid ""
+"If an agent post type is selected above, the <strong>names</strong> of the "
+"corresponding custom fields for the automated assignment during import can "
+"<strong>optionally</strong> be stated in the following fields."
+msgstr ""
+"Wurde eine Makler-Beitragsart ausgewählt, können die <strong>Namen</strong> "
+"der zugehörigen benutzerdefinierten Felder (<em>Custom Fields</em>) für die "
+"automatisierte Zuordnung beim Import <strong>optional</strong> in den "
+"folgenden Feldern hinterlegt werden."
+
+#: includes/themes/class-generic.php:221
+msgid "Property Post Type"
+msgstr "Immobilien-Beitragsart"
+
+#: includes/themes/class-generic.php:232
+msgid "Agent Post Type"
+msgstr "Makler-Beitragsart"
+
+#: includes/themes/class-generic.php:247
+msgid "Agent Post ID Custom Field"
+msgstr "Makler-Beitrags-ID CF"
+
+#: includes/themes/class-generic.php:250
+msgid ""
+"Name of the <strong>property post</strong> custom field in which the agent "
+"post ID should be stored (if available)."
+msgstr ""
+"Name des benutzerdefinierten Felds (<em>Custom Field</em>) der "
+"<strong>Immobilien-Beiträge</strong>, in dem die Makler-Beitrags-ID (sofern "
+"ermittelbar) gespeichert werden soll."
+
+#: includes/themes/class-generic.php:257
+msgid "Name CF"
+msgstr "Name CF"
+
+#. translators: %1$s = information contained in the custom field, %2$s = optional default value.
+#: includes/themes/class-generic.php:262 includes/themes/class-generic.php:277
+#: includes/themes/class-generic.php:292 includes/themes/class-generic.php:307
+msgid "Custom field that contains %1$s%2$s."
+msgstr "Benutzerdefiniertes Feld, das %1$s enthält%2$s."
+
+#: includes/themes/class-generic.php:263
+msgid "the agent's <strong>full name</strong>"
+msgstr "den <strong>vollständigen Namen</strong> des Maklers"
+
+#: includes/themes/class-generic.php:264
+msgid "defaults to the <strong>post title</strong> if empty"
+msgstr "<strong>Beitragstitel</strong> als Standardvorgabe, falls leer"
+
+#: includes/themes/class-generic.php:272
+msgid "First Name CF"
+msgstr "Vorname CF"
+
+#: includes/themes/class-generic.php:278
+msgid "the agent's <strong>first name</strong>"
+msgstr "den <strong>Vornamen</strong> des Maklers"
+
+#: includes/themes/class-generic.php:287
+msgid "Last Name CF"
+msgstr "Nachname CF"
+
+#: includes/themes/class-generic.php:293
+msgid "the agent's <strong>last name</strong>"
+msgstr "den <strong>Nachnamen</strong> des Maklers"
+
+#: includes/themes/class-generic.php:302
+msgid "Email CF"
+msgstr "E-Mail-Adresse CF"
+
+# @ immonex-openimmo2wp
+#: includes/themes/class-generic.php:308
+msgid "the agent's <strong>email address</strong>"
+msgstr "die <strong>Mailadresse</strong> des Maklers"
+
+#: includes/themes/class-hometown.php:219 includes/themes/class-realia.php:177
+#: includes/themes/class-realplaces.php:234
+#: includes/themes/class-shandora.php:119
+#: includes/themes/class-wp-estate.php:388
+#: includes/themes/class-wp-listings.php:115
+#: includes/themes/class-wp-residence.php:359
+msgid ""
+"Property address NOT approved for publishing, term used for geocoding: %s"
+msgstr ""
+"Immobilienadresse NICHT zur Veröffentlichung freigegeben, für die "
+"Geocodierung verwendete Angabe: %s"
+
+#: includes/themes/class-houzez.php:115 includes/themes/class-realhomes.php:103
+msgid ""
+"User is currently not subscribed to any membership package, skipping "
+"property."
+msgstr ""
+"Benutzer hat aktuell kein Abonnement-Paket gebucht, Immobilie wird "
+"übersprungen."
+
+#: includes/themes/class-houzez.php:130 includes/themes/class-realeswp.php:95
+#: includes/themes/class-realty.php:103 includes/themes/class-wp-estate.php:127
+#: includes/themes/class-wp-residence.php:124
+#: includes/themes/class-zoner.php:98
+msgid "Maximum number of properties reached, skipping property."
+msgstr "Maximale Anzahl an Immobilien erreicht, Immobilie wird übersprungen."
+
+#: includes/themes/class-houzez.php:572
+msgid "Assigning agent (ID: %d) linked to user."
+msgstr ""
+"Mit Benutzer verbundener Ansprechpartner (Agent, ID: %d) wird zugewiesen."
+
+#: includes/themes/class-houzez.php:579
+msgid "Assigning agency (ID: %d) linked to user."
+msgstr "Mit Benutzer verbundene Agentur (Agency, ID: %d) wird zugewiesen."
+
+#: includes/themes/class-houzez.php:645
+msgid "per"
+msgstr "pro"
+
+#: includes/themes/class-houzez.php:657 includes/themes/class-wp-estate.php:215
+#: includes/themes/class-wp-residence.php:207
+msgid "Car Space"
+msgid_plural "Car Spaces"
+msgstr[0] "Autostellplatz"
+msgstr[1] "Autostellplätze"
+
+#: includes/themes/class-houzez.php:747
+msgid "User's current number of available listings decreased, now: %d"
+msgstr ""
+"Aktuelle Anzahl empfohlener Objekte des Benutzers verringert, jetzt: %d"
+
+#: includes/themes/class-houzez.php:756
+msgid "User's current number of available featured listings decreased, now: %d"
+msgstr ""
+"Aktuelle Anzahl empfohlener Objekte des Benutzers verringert, jetzt: %d"
+
+#: includes/themes/class-houzez.php:760 includes/themes/class-realeswp.php:534
+#: includes/themes/class-realeswp.php:558 includes/themes/class-realty.php:506
+#: includes/themes/class-wp-estate.php:504
+#: includes/themes/class-wp-residence.php:496
+#: includes/themes/class-zoner.php:129
+msgid "Maximum number of featured listings reached, featured status removed."
+msgstr ""
+"Maximale Anzahl an empfohlenen Immobilien erreicht, \"Empfohlen-Status\" "
+"entfernt."
+
+#: includes/themes/class-houzez.php:902
+#: includes/themes/class-inventor-properties.php:474
+#: includes/themes/class-realeswp.php:658
+#: includes/themes/class-realhomes.php:697
+#: includes/themes/class-realia-plugin.php:533
+#: includes/themes/class-realty.php:580 includes/themes/class-wp-estate.php:860
+#: includes/themes/class-wp-residence.php:894
+#: includes/themes/class-zoner.php:685
+msgid "User Listing Quotas"
+msgstr "Benutzer Anzeigen-Kontingente"
+
+#: includes/themes/class-houzez.php:905
+#: includes/themes/class-inventor-properties.php:477
+#: includes/themes/class-realeswp.php:661
+#: includes/themes/class-realhomes.php:700 includes/themes/class-realty.php:583
+#: includes/themes/class-wp-estate.php:863
+#: includes/themes/class-wp-residence.php:897
+#: includes/themes/class-zoner.php:688
+msgid ""
+"Check and update maximum number of available listings per user during import."
+msgstr ""
+"Verfügbare Anzahl von Anzeigen pro Benutzer beim Import überprüfen und "
+"aktualisieren."
+
+#: includes/themes/class-houzez.php:911
+msgid "Enable Map"
+msgstr "Karte anzeigen"
+
+#: includes/themes/class-houzez.php:914
+msgid "Enable a map view for the property location on the detail pages."
+msgstr ""
+"Eine Kartenansicht in den Detailseiten aller importierten Immobilien "
+"aktivieren."
+
+#: includes/themes/class-houzez.php:920
+#: includes/themes/class-inventor-properties.php:526
+msgid "Enable Street View"
+msgstr "Street View aktivieren"
+
+#: includes/themes/class-houzez.php:923
+msgid "Enable Google Street View on the property detail pages."
+msgstr ""
+"Google Street View in den Detailseiten aller importierten Immobilien "
+"aktivieren."
+
+#: includes/themes/class-houzez.php:929
+msgid "Add properties to slider"
+msgstr "Immobilien zum Slider hinzufügen"
+
+#: includes/themes/class-houzez.php:932 includes/themes/class-realhomes.php:709
+#: includes/themes/class-realplaces.php:539
+msgid ""
+"For each property, the <strong>first</strong> image attachment will be used "
+"as slider image. These should be high resolution images with the "
+"<strong>same aspect ratio</strong>."
+msgstr ""
+"Es wird jeweils der <strong>erste</strong> Bildanhang einer Immobilie als "
+"Sliderbild verwendet. Diese Bilder sollten in einer hohen Auflösung und mit "
+"dem <strong>gleichen Verhältnis von Länge zu Breite</strong> übertragen "
+"werden."
+
+#: includes/themes/class-inventor-properties.php:76
+msgid ""
+"Maximum number of properties reached or package not valid, skipping property."
+msgstr ""
+"Maximale Anzahl von Immobilien erreicht oder Paket nicht gültig, überspringe "
+"Immobilie."
+
+#: includes/themes/class-inventor-properties.php:81
+#: includes/themes/class-realia-plugin.php:97
+#: includes/themes/class-wp-estate.php:132
+#: includes/themes/class-wp-residence.php:129
+msgid ""
+"Check function missing, current user quota can't be determined. Skipping "
+"property."
+msgstr ""
+"Prüffunktion fehlt, aktuelles Benutzer-Kontingent kann nicht ermittelt "
+"werden. Immobilie wird übersprungen."
+
+#: includes/themes/class-inventor-properties.php:321
+msgid "Property geo coordinates: %s, %s"
+msgstr "Immobilien-Geo-Koordinaten: %s, %s"
+
+#: includes/themes/class-inventor-properties.php:465
+msgid "Roadmap"
+msgstr "Straßenkarte"
+
+#: includes/themes/class-inventor-properties.php:466
+msgid "Satellite"
+msgstr "Satellit"
+
+#: includes/themes/class-inventor-properties.php:467
+msgid "Hybrid"
+msgstr "Hybrid"
+
+#: includes/themes/class-inventor-properties.php:483
+msgid "Default Banner Type"
+msgstr "Standard-Banner-Typ"
+
+#: includes/themes/class-inventor-properties.php:486
+msgid ""
+"Select the banner type to be displayed on property details pages. (Video "
+"banners will be activated automatically for properties with videos.)"
+msgstr ""
+"Bannertyp (Seitenkopf) auswählen, der für Immobilien-Detailseiten verwendet "
+"wird. (Video-Banner werden automatisch aktiviert, sofern das betr. Objekt "
+"ein Video enthält.)"
+
+#: includes/themes/class-inventor-properties.php:493
+msgid "Banner Map Zoom"
+msgstr "Banner-Kartenzoom"
+
+#: includes/themes/class-inventor-properties.php:496
+msgid "Enter the default zoom level if Google Map is selected as banner type."
+msgstr "Standard-Zoom-Level für Google-Map-Banner"
+
+#: includes/themes/class-inventor-properties.php:507
+msgid "Banner Map Type"
+msgstr "Banner-Kartentyp"
+
+#: includes/themes/class-inventor-properties.php:510
+msgid "Select the map type if Google Map is selected as banner type."
+msgstr "Kartentyp für Google-Map-Banner auswählen."
+
+#: includes/themes/class-inventor-properties.php:517
+msgid "Show Map Marker"
+msgstr "Kartenmarker anzeigen"
+
+#: includes/themes/class-inventor-properties.php:520
+msgid "Activate if a location marker shall be displayed on Google Map banners."
+msgstr ""
+"Option aktivieren, wenn ein Standortmarker in Google-Map-Bannern angezeigt "
+"werden soll."
+
+#: includes/themes/class-inventor-properties.php:529
+msgid "Activate to enable Google Street View."
+msgstr "Option aktivieren, um Google Street View einzuschalten."
+
+#: includes/themes/class-inventor-properties.php:535
+msgid "Enable Inside View"
+msgstr "Inside View aktivieren"
+
+#: includes/themes/class-inventor-properties.php:538
+msgid "Activate to enable Google Inside View."
+msgstr "Option aktivieren, um Google Inside View einzuschalten."
+
+#: includes/themes/class-kickstart.php:100
+msgid "Reference property is NOT being deleted."
+msgstr "Referenzobjekt wird NICHT gelöscht."
+
+#: includes/themes/class-kickstart.php:283
+msgid "Property Details"
+msgstr "Objektdetails"
+
+# @ immonex-openimmo2wp
+#: includes/themes/class-kickstart.php:970
+msgid "Error on assigning an agent: %s"
+msgstr "Fehler bei der Zuweisung eines Ansprechpartners: %s"
+
+#: includes/themes/class-kickstart.php:1013
+msgid "Error on creating an agent: %s"
+msgstr "Fehler beim Anlegen eines Ansprechparners: %s"
+
+#: includes/themes/class-kickstart.php:1052
+msgid "Assigning agent linked to user: %s (%d)"
+msgstr ""
+"Mit Benutzer verbundener Ansprechpartner (Agent) wird zugewiesen: %s (%d)"
+
+#: includes/themes/class-kickstart.php:1113
+msgid "Disable reference deletion"
+msgstr "Referenzobjekte nicht löschen"
+
+#: includes/themes/class-kickstart.php:1116
+msgid ""
+"Prevent properties marked as <strong>reference objects</strong> from being "
+"deleted on import."
+msgstr ""
+"Löschung von Immobilien beim Import verhindern, die als "
+"<strong>Referenzobjekte</strong> markiert sind."
+
+#: includes/themes/class-kickstart.php:1122
+msgid "Auto contacts"
+msgstr "Auto-Kontakte"
+
+#: includes/themes/class-kickstart.php:1126
+msgid ""
+"Enable automatic creation and update of agents and agencies (<strong><a "
+"href=\"%s\" target=\"_blank\">Team Add-on</a> required</strong>)."
+msgstr ""
+"Agenturen und Kontaktpersonen automatisiert anlegen und aktualisieren "
+"(<strong><a href=\"%s\" target=\"_blank\">Team-Add-on</a> erforderlich</"
+"strong>)"
+
+#: includes/themes/class-kickstart.php:1146
+msgid "Save \"regional addition\" as"
+msgstr "\"Regionalen Zusatz\" speichern als"
+
+#: includes/themes/class-kickstart.php:1149
+msgid ""
+"This option applies if the OpenImmo element <code>geo &gt; "
+"regionaler_zusatz</code> is mapped to the taxonomy <code>inx_location</code> "
+"(default)."
+msgstr ""
+"Diese Option findet Anwendung, wenn die OpenImmo-Angabe <code>geo &gt; "
+"regionaler_zusatz</code> via Mapping-Tabelle der Standort-Taxonomie "
+"<code>inx_location</code> zugeordnet ist (Standard)."
+
+#: includes/themes/class-kickstart.php:1151
+msgid "location child category: City ➞ Region"
+msgstr "Standort-Unterkategorie: Stadt/Ort ➞ Region"
+
+#: includes/themes/class-kickstart.php:1152
+msgid "location parent category: Region ➞ City"
+msgstr "Standort-Elternkategorie: Region ➞ Stadt/Ort"
+
+#: includes/themes/class-kickstart.php:1153
+msgid "additional location term on main level"
+msgstr "zusätzliche Standortangabe auf der Hauptebene"
+
+#: includes/themes/class-kickstart.php:1154
+msgid "text attachment in brackets: City (Region)"
+msgstr "Textanhang in Klammern: Stadt/Ort (Region)"
+
+#: includes/themes/class-kickstart.php:1155
+msgid "text attachment with hyphen: City-Region"
+msgstr "Textanhang mit Bindestrich: Stadt/Ort-Region"
+
+#: includes/themes/class-kickstart.php:1156
+msgid "ignore (special cases)"
+msgstr "ignorieren (Sonderfälle)"
+
+#: includes/themes/class-myhome.php:104 includes/themes/class-myhome.php:131
+msgid ""
+"Function update_field not available, additional features could not be saved. "
+"(Seems that ACF has not been installed or embedded yet.)"
+msgstr ""
+"Funktion update_field nicht verfügbar, zusätzliche Ausstattungsmerkmale "
+"konnten nicht gespeichert werden. (ACF wurde möglicherweise noch nicht "
+"installiert bzw. eingebunden.)"
+
+#: includes/themes/class-myhome.php:250
+msgid "Inserting a new street term failed (%s / %s)"
+msgstr "Erstellung eines neuen Straßen-Terms fehlgeschlagen (%s / %s)"
+
+#: includes/themes/class-myhome.php:399
+msgid ""
+"Function update_field not available, floor plan data could not be saved. "
+"(Seems that ACF has not been installed or embedded yet.)"
+msgstr ""
+"Funktion update_field nicht verfügbar, Grundrissdaten konnten nicht "
+"gespeichert werden. (ACF wurde möglicherweise noch nicht installiert bzw. "
+"eingebunden.)"
+
+#: includes/themes/class-myhome.php:424
+msgid ""
+"Function update_field not available, file attachment data could not be "
+"saved. (Seems that ACF has not been installed or embedded yet.)"
+msgstr ""
+"Funktion update_field nicht verfügbar, Datei-Anhangdaten konnten nicht "
+"gespeichert werden. (ACF wurde möglicherweise noch nicht installiert bzw. "
+"eingebunden.)"
+
+#: includes/themes/class-realeswp.php:469
+#: includes/themes/class-realia-plugin.php:456
+msgid "Assigning agent linked to user (ID: %d)."
+msgstr ""
+"Mit Benutzer verbundener Ansprechpartner (Agent) wird zugewiesen (ID: %d)."
+
+#: includes/themes/class-realeswp.php:514
+#: includes/themes/class-realeswp.php:544 includes/themes/class-realty.php:494
+#: includes/themes/class-wp-estate.php:493
+#: includes/themes/class-wp-residence.php:485
+msgid "User max. listing count decreased, available listings now: %d"
+msgstr ""
+"Maximale Anzahl an Immobilien für Benutzer verringert, aktuell verfügbar: %s"
+
+#: includes/themes/class-realeswp.php:520
+msgid ""
+"Max. number of free listings reached, property post status set to "
+"\"pending\"."
+msgstr ""
+"Maximale Anzahl an freien Anzeigen erreicht, Immobilienstatus wurde auf "
+"\"ausstehend\" gesetzt."
+
+#: includes/themes/class-realeswp.php:530
+#: includes/themes/class-realeswp.php:554 includes/themes/class-realty.php:502
+#: includes/themes/class-wp-estate.php:500
+#: includes/themes/class-wp-residence.php:492
+msgid "User max. featured listing count decreased, available listings now: %d"
+msgstr ""
+"Maximale Anzahl an empfohlenen Immobilien für Benutzer verringert, aktuell "
+"verfügbar: %s"
+
+#: includes/themes/class-realeswp.php:670
+#: includes/themes/class-realhomes.php:755
+msgid ""
+"This content will be appended to the main description of every imported "
+"property. This is especially useful for <strong>adding widgets by shortcode</"
+"strong> (details in the documentation)."
+msgstr ""
+"Dieser Inhalt wird an den Haupt-Beschreibungstext jeder importierten "
+"Immobilie angehangen. Das ist vor allem nützlich um <strong>Widgets per "
+"Shortcode</strong> hinzuzufügen (Details hierzu in der Dokumentation)."
+
+#: includes/themes/class-realhomes.php:111
+msgid ""
+"Maximum number of properties for user %d reached (%d/%d), skipping property."
+msgstr ""
+"Maximale Anzahl an verfügbaren Immobilien des Benutzers %d erreicht (%d/%d), "
+"Immobilie wird übersprungen."
+
+#: includes/themes/class-realhomes.php:293
+msgid ""
+"Property address NOT approved for publishing, term used for geocoding: %s "
+"(ISO2: %s)"
+msgstr ""
+"Immobilienadresse NICHT zur Veröffentlichung freigegeben, für die "
+"Geocodierung verwendete Angabe: %s (ISO2: %s)"
+
+#: includes/themes/class-realhomes.php:647
+msgid "Number of available listings for user %d decreased (%d)"
+msgstr "Anzahl verfügbarer Objekte des Benutzers %d verringert (%d)"
+
+#: includes/themes/class-realhomes.php:656
+msgid "Number of available featured listings for user %d decreased (%d)"
+msgstr ""
+"Anzahl verfügbarer empfohlener Objekte des Benutzers %d verringert (%d)"
+
+#: includes/themes/class-realhomes.php:660
+msgid ""
+"Maximum number of available featured listings for user %d reached, featured "
+"status removed."
+msgstr ""
+"Maximale Anzahl an verfügbaren empfohlenen Immobilien des Benutzers %d "
+"erreicht, \"Empfohlen-Status\" entfernt."
+
+#: includes/themes/class-realhomes.php:706
+#: includes/themes/class-realplaces.php:536
+msgid "Add every imported property to the start page slider"
+msgstr "Alle importierten Immobilien zum Startseiten-Slider hinzufügen"
+
+#: includes/themes/class-realhomes.php:715
+#: includes/themes/class-realplaces.php:545
+msgid "Show first property image in page banner"
+msgstr "Erstes Immobilienbild im Seitenbanner anzeigen"
+
+#: includes/themes/class-realhomes.php:718
+#: includes/themes/class-realplaces.php:548
+msgid ""
+"For each property, the <strong>first</strong> image attachment will be used "
+"as page banner image. These should be high resolution images with the "
+"<strong>same aspect ratio</strong>."
+msgstr ""
+"Es wird jeweils der <strong>erste</strong> Bildanhang einer Immobilie als "
+"Seiten-Bannergrafik verwendet. Diese Bilder sollten in einer hohen Auflösung "
+"und mit dem <strong>gleichen Verhältnis von Länge zu Breite</strong> "
+"übertragen werden."
+
+#: includes/themes/class-realhomes.php:724
+msgid "Gallery Type"
+msgstr "Galerietyp"
+
+#: includes/themes/class-realhomes.php:727
+msgid "Select the style of galleries displayed on the property details pages."
+msgstr ""
+"Stil der Galerien wählen, die auf den Immobilien-Detailseiten angezeigt "
+"werden."
+
+#: includes/themes/class-realhomes.php:734
+msgid "Hide Header Search Form"
+msgstr "Header-Suchformular ausblenden"
+
+#: includes/themes/class-realhomes.php:737
+msgid ""
+"Activate to <strong>disable</strong> the search form in the header area of "
+"property detail pages."
+msgstr ""
+"Aktivieren, um das Suchformular in Kopfbereich der Immobilien-Detailseiten "
+"<strong>auszublenden</strong>."
+
+#: includes/themes/class-realhomes.php:743
+#: includes/themes/class-realplaces.php:554
+msgid "Default Floor Plan Title"
+msgstr "Standard-Grundriss-Titel"
+
+#: includes/themes/class-realhomes.php:746
+#: includes/themes/class-realplaces.php:557
+msgid "Floor plan title to use if none is given."
+msgstr ""
+"Titel für Grundrisse, wenn exportseitig keine Bezeichnung angegeben wurde."
+
+#: includes/themes/class-realhomes.php:775
+#: includes/themes/class-wp-estate.php:844
+#: includes/themes/class-wp-estate.php:851
+#: includes/themes/class-wp-residence.php:878
+#: includes/themes/class-wp-residence.php:885
+msgid "global"
+msgstr "global"
+
+#: includes/themes/class-realhomes.php:776
+msgid "Default Gallery"
+msgstr "Standard-Galerie"
+
+#: includes/themes/class-realhomes.php:777
+msgid "Gallery with Thumbnails"
+msgstr "Galerie mit Thumbnails"
+
+#: includes/themes/class-realhomes.php:783
+msgid "Gallery with Thumbnails Two"
+msgstr "Galerie mit Thumbnails Zwei"
+
+#: includes/themes/class-realhomes.php:784
+msgid "Masonry"
+msgstr "Kacheln"
+
+#: includes/themes/class-realhomes.php:785
+msgid "Carousel"
+msgstr "Karussell"
+
+#: includes/themes/class-realhomes.php:786
+msgid "Full Width Carousel"
+msgstr "Karussell (volle Breite)"
+
+#: includes/themes/class-realia-plugin.php:92
+msgid ""
+"Maximum number of properties reached or package not active, skipping "
+"property."
+msgstr ""
+"Maximale Anzahl von Immobilien erreicht oder Paket nicht aktiv, überspringe "
+"Immobilie."
+
+#: includes/themes/class-realia-plugin.php:140
+#: includes/themes/class-realia.php:81
+msgid "Agency could not be determined - no properties are being deleted."
+msgstr ""
+"Agentur konnte nicht ermittelt werden - es werden keine Immobilien gelöscht."
+
+#: includes/themes/class-realia-plugin.php:159
+#: includes/themes/class-realia.php:102
+msgid "Skipping property: %s (ID %s) - not related to current agency"
+msgstr ""
+"Immobilie übersprungen: %s (ID %s) - gehört nicht zur aktuellen Agentur"
+
+#: includes/themes/class-realia-plugin.php:311
+msgid "Property address/city (Geocoding): %s"
+msgstr "Immobilienadresse/-stadt (Geocodierung): %s"
+
+#: includes/themes/class-realia-plugin.php:536
+msgid "Check number of available listings per user during import."
+msgstr "Anzahl verfügbarer Immobilienangebote pro Nutzer beim Import prüfen."
+
+#: includes/themes/class-realia-plugin.php:542
+#: includes/themes/class-realia.php:401
+msgid "Consider agency on property deletion (full imports)"
+msgstr ""
+"Agenturzugehörigkeit beim Löschen von Immobilien berücksichtigen "
+"(Vollimporte)"
+
+#: includes/themes/class-realia-plugin.php:545
+#: includes/themes/class-realia.php:404
+msgid ""
+"If set, only properties that belong to the agency named in the import XML "
+"file will be deleted before <strong>full imports</strong>."
+msgstr ""
+"Wenn aktiv werden vor <strong>Vollimporten</strong> nur Immobilien gelöscht, "
+"die zur in der Import-XML-Datei genannten Agentur gehören."
+
+#: includes/themes/class-realia-plugin.php:546
+#: includes/themes/class-realia.php:405 includes/themes/class-wp-estate.php:882
+msgid ""
+"<strong>Heads up!</strong> This option is <strong>deprecated</strong> and "
+"will be removed in the near future, please use considerably more reliable "
+"<strong>user-related import folders</strong> when dealing with multiple "
+"importing agencies."
+msgstr ""
+"<strong>Achtung!</strong> Diese Option is <strong>veraltet</strong> und wird "
+"in naher Zukunft entfernt, bitte stattdessen die deutlich zuverlässigeren "
+"<strong>benutzerbezogenen Importordner</strong> verwenden, wenn mehrere "
+"Agenturen parallel Immobiliendaten importieren."
+
+#: includes/themes/class-realia.php:332
+msgid "Agency related to agent assigned to property, ID: %d"
+msgstr ""
+"Mit Ansprechpartner (Agent) verbundene Agentur wurde der Immobile "
+"zugeordnet, ID: %s"
+
+#: includes/themes/class-theme-base.php:216
+msgid ""
+"WP user found by matching login name with the user import folder name: %1$s "
+"(ID %2$s)"
+msgstr ""
+"WP-Benutzer anhand identischen Login- und Importordner-Namen gefunden: %1$s "
+"(ID %2$s)"
+
+#: includes/themes/class-theme-base.php:239
+msgid "WP user found by name similarity: %1$s (ID %2$s)"
+msgstr "WP-Benutzer anhand von Namensähnlichkeit gefunden: %1$s (ID %2$s)"
+
+#: includes/themes/class-theme-base.php:247
+msgid "WP user found by email address: %1$s (ID %2$s)"
+msgstr "WP-Benutzer anhand der E-Mail-Adresse gefunden: %1$s (ID %2$s)"
+
+#: includes/themes/class-theme-base.php:259
+msgid "Best matching user: %1$s (ID %2$s)"
+msgstr "Am besten passender Benutzer: %1$s (ID %2$s)"
+
+#: includes/themes/class-theme-base.php:342
+msgid "Agent found by exact name match: %1$s (ID %2$s)"
+msgstr ""
+"Ansprechpartner (Agent) anhand übereinstimmenden Namens gefunden: %1$s (ID "
+"%2$s)"
+
+#: includes/themes/class-theme-base.php:352
+msgid "Agent found by name similarity: %1$s (ID %2$s)"
+msgstr ""
+"Ansprechpartner (Agent) anhand Namensähnlichkeit gefunden: %1$s (ID %2$s)"
+
+#: includes/themes/class-theme-base.php:352
+#: includes/themes/class-theme-base.php:372
+#: includes/themes/class-theme-base.php:390
+msgid "no name specified"
+msgstr "kein Name angegeben"
+
+#: includes/themes/class-theme-base.php:372
+msgid "Agent found by email address: %1$s (ID %2$s)"
+msgstr ""
+"Ansprechpartner (Agent) anhand der E-Mail-Adresse gefunden: %1$s (ID %2$s)"
+
+#: includes/themes/class-theme-base.php:389
+msgid "Best matching agent: %1$s (ID %2$s)"
+msgstr "Am besten passender Ansprechpartner (Agent): %1$s (ID %2$s)"
+
+#: includes/themes/class-theme-base.php:753
+msgid "Unable to translate the country: %s"
+msgstr "Ländername konnte nicht übersetzt werden: %s"
+
+#: includes/themes/class-theme-base.php:871
+msgid ""
+"Geocoding with original address failed, retrying with zipcode and locality "
+"name only: %s"
+msgstr ""
+"Geocodierung mit der ursprünglichen Adresse fehlgeschlagen, neuer Versuch "
+"nur mit PLZ und Ortsname: %s"
+
+#: includes/themes/class-theme-base.php:1016
+msgid "Temporary theme data could not be serialized."
+msgstr "Temporäre Theme-Daten konnten nicht serialisiert werden."
+
+# @ immonex-openimmo2wp
+#: includes/themes/class-theme-base.php:1021
+msgid "Error on saving temporary theme data to %s."
+msgstr "Fehler beim Speichern temporärer Theme-Daten (%s)."
+
+#: includes/themes/class-theme-base.php:1034
+msgid "Error on reading temporary theme data from %s."
+msgstr "Fehler beim Lesen temporärer Theme-Daten (%s)."
+
+#: includes/themes/class-theme-base.php:1038
+msgid "Temporary theme data could not be unserialized."
+msgstr "Temporäre Theme-Daten konnten nicht deserialisiert werden."
+
+#: includes/themes/class-theme-base.php:1048
+msgid "Empty temporary theme data."
+msgstr "Leere temporäre Theme-Daten."
+
+# @ immonex-openimmo2wp
+#: includes/themes/class-theme-base.php:1136
+msgid "Error on fetching taxonomy data: %s"
+msgstr "Fehler beim Abrufen von Taxonomiedaten: %s"
+
+# @ immonex-openimmo2wp
+#: includes/themes/class-theme-base.php:1148
+msgid "Error on saving taxonomy data: %s"
+msgstr "Fehler beim Speichern von Taxonomiedaten: %s"
+
+# @ immonex-openimmo2wp
+#: includes/themes/class-theme-base.php:1153
+msgid "Error on inserting a taxonomy term: %s"
+msgstr "Fehler beim Einfügen eines Taxonomie-Begriffs: %s"
+
+#: includes/themes/class-theme-base.php:1273
+msgctxt "reference term to replace"
+msgid "For Sale"
+msgstr "Zu Verkaufen"
+
+#: includes/themes/class-theme-base.php:1273
+msgctxt "reference term replacement"
+msgid "Sold"
+msgstr "Verkauft"
+
+#: includes/themes/class-theme-base.php:1274
+msgctxt "reference term to replace"
+msgid "For sale"
+msgstr "Zu verkaufen"
+
+#: includes/themes/class-theme-base.php:1274
+#: includes/themes/class-theme-base.php:1275
+#: includes/themes/class-theme-base.php:1276
+#: includes/themes/class-theme-base.php:1277
+msgctxt "reference term replacement"
+msgid "sold"
+msgstr "verkauft"
+
+#: includes/themes/class-theme-base.php:1275
+msgctxt "reference term to replace"
+msgid "for sale"
+msgstr "zu verkaufen"
+
+#: includes/themes/class-theme-base.php:1276
+msgctxt "reference term to replace"
+msgid "To Purchase"
+msgstr "Zum Kauf"
+
+#: includes/themes/class-theme-base.php:1277
+msgctxt "reference term to replace"
+msgid "to purchase"
+msgstr "zum Kauf"
+
+#: includes/themes/class-theme-base.php:1278
+msgctxt "reference term to replace"
+msgid "For Rent"
+msgstr "Zu Vermieten"
+
+#: includes/themes/class-theme-base.php:1278
+msgctxt "reference term replacement"
+msgid "Rented"
+msgstr "Vermietet"
+
+#: includes/themes/class-theme-base.php:1279
+msgctxt "reference term to replace"
+msgid "For rent"
+msgstr "Zu vermieten"
+
+#: includes/themes/class-theme-base.php:1279
+#: includes/themes/class-theme-base.php:1280
+#: includes/themes/class-theme-base.php:1281
+#: includes/themes/class-theme-base.php:1282
+#: includes/themes/class-theme-base.php:1283
+#: includes/themes/class-theme-base.php:1284
+msgctxt "reference term replacement"
+msgid "rented"
+msgstr "vermietet"
+
+#: includes/themes/class-theme-base.php:1280
+msgctxt "reference term to replace"
+msgid "for rent"
+msgstr "zu vermieten"
+
+#: includes/themes/class-theme-base.php:1281
+msgctxt "reference term to replace (Zur Miete)"
+msgid "For Rent"
+msgstr "Zur Miete"
+
+#: includes/themes/class-theme-base.php:1282
+msgctxt "reference term to replace (zur Miete)"
+msgid "for Rent"
+msgstr "zur Miete"
+
+#: includes/themes/class-theme-base.php:1283
+msgctxt "reference term to replace (Zu mieten)"
+msgid "To rent"
+msgstr "Zu mieten"
+
+#: includes/themes/class-theme-base.php:1284
+msgctxt "reference term to replace (zu mieten)"
+msgid "to rent"
+msgstr "zu mieten"
+
+#: includes/themes/class-wp-estate.php:40
+#: includes/themes/class-wp-residence.php:41
+msgid "Other Features"
+msgstr "Weitere Merkmale"
+
+#: includes/themes/class-wp-estate.php:321
+msgid "Full imports are not permitted. Import of this file will be skipped."
+msgstr ""
+"Vollimporte sind nicht erlaubt, der Import dieser Datei wird übersprungen."
+
+#: includes/themes/class-wp-estate.php:440
+#: includes/themes/class-wp-residence.php:420
+msgid "Assigning agent linked to user, ID: %d"
+msgstr ""
+"Mit Benutzer verbundener Ansprechpartner (Agent) wird zugewiesen, ID: %d"
+
+#: includes/themes/class-wp-estate.php:477
+#: includes/themes/class-wp-residence.php:469
+msgid "Check functions missing, current user quotas can't be updated."
+msgstr ""
+"Prüffunktionen fehlen, aktuelle Benutzer-Kontingente können nicht "
+"aktualisiert werden."
+
+#: includes/themes/class-wp-estate.php:575
+#: includes/themes/class-wp-residence.php:567
+msgid "Error on deleting a floor plan image attachment: Attachment ID %s"
+msgstr "Fehler beim Löschen einer Grundriss-Bilddatei: Anhang-ID %s"
+
+#: includes/themes/class-wp-estate.php:845
+#: includes/themes/class-wp-residence.php:879
+msgid "right"
+msgstr "rechts"
+
+#: includes/themes/class-wp-estate.php:846
+#: includes/themes/class-wp-residence.php:880
+msgid "left"
+msgstr "links"
+
+#: includes/themes/class-wp-estate.php:869
+#: includes/themes/class-wp-residence.php:903
+msgid "Add every imported property to the theme slider"
+msgstr "Jede importierte Immobilie zum Theme-Slider hinzufügen"
+
+#: includes/themes/class-wp-estate.php:872
+msgid "Requires theme version 4.0.0 or higher."
+msgstr "Theme-Version ab 4.0.0 ist Voraussetzung."
+
+#: includes/themes/class-wp-estate.php:878
+msgid "Disable Full Imports"
+msgstr "Vollimporte ausschließen"
+
+#: includes/themes/class-wp-estate.php:881
+msgid ""
+"Activate this option if multiple agents/agencies import their data into a "
+"single WP site."
+msgstr ""
+"Aktiviere diese Option, wenn mehrere Immobilienmakler/Agenturen ihre Daten "
+"in eine einzelne WP-Site importieren."
+
+#: includes/themes/class-wp-estate.php:901
+msgid "Sidebar placement"
+msgstr "Sidebar-Platzierung"
+
+#: includes/themes/class-wp-estate.php:921
+#: includes/themes/class-wp-residence.php:952
+msgid "Google Map Zoom Level"
+msgstr "Google-Map-Zoomstufe"
+
+#: includes/themes/class-wp-estate.php:924
+#: includes/themes/class-wp-residence.php:955
+msgid ""
+"Default zoom level for Google Maps on detail pages of imported properties (1 "
+"- 20)"
+msgstr ""
+"Standard-Zoomstufe für Google Maps auf den Immobilien-Detailseiten (1 - 20)"
+
+#: includes/themes/class-wp-estate.php:934
+#: includes/themes/class-wp-residence.php:965
+msgid "Enable Google Street View"
+msgstr "Google Street View aktivieren"
+
+#: includes/themes/class-wp-estate.php:937
+#: includes/themes/class-wp-residence.php:968
+msgid "Enable Google Street View for every imported property."
+msgstr "Google Street View für alle importierten Immobilien aktivieren."
+
+#: includes/themes/class-wp-estate.php:943
+#: includes/themes/class-wp-residence.php:974
+msgid "Google Street View Camera Angle"
+msgstr "Google Street View Kamera"
+
+#: includes/themes/class-wp-estate.php:946
+#: includes/themes/class-wp-residence.php:977
+msgid ""
+"Camera angle/heading to use for Google Street View on property detail pages "
+"(0 - 360)."
+msgstr ""
+"Kamera-Ausrichtung für Google-Street-View-Ansichten auf den Immobilien-"
+"Detailseiten (0 - 360)."
+
+#: includes/themes/class-wp-estate.php:948
+#: includes/themes/class-wp-residence.php:979
+msgid "Degrees"
+msgstr "Grad"
+
+#: includes/themes/class-wp-listings.php:260
+msgid "Gallery Code"
+msgstr "Galerie-Code"
+
+#: includes/themes/class-wp-listings.php:263
+msgid ""
+"Code (e.g. shortcode) for the gallery section to display on the property "
+"detail page."
+msgstr ""
+"Code (z. B. Shortcode) für den Galeriebereich, der in der Immobilien-"
+"Detailseite angezeigt wird."
+
+#: includes/themes/class-wp-listings.php:269
+msgid "Map Embed Template"
+msgstr "Karten-Einbindungs-Template"
+
+#: includes/themes/class-wp-listings.php:272
+msgid ""
+"Embed code for the map to display on the property detail page. Use the "
+"placeholders <strong>{address}</strong>, <strong>{lat}</strong> and "
+"<strong>{lng}</strong> here."
+msgstr ""
+"Embed-Code für die Darstellung der Karte in der Immobilien-Detailseite. Hier "
+"können die Platzhalter <strong>{address}</strong>, <strong>{lat}</strong> "
+"und <strong>{lng}</strong> verwendet werden."
+
+#: includes/themes/class-wp-listings.php:281
+msgid ""
+"Code for embedding YouTube videos, use {video_id} <strong>OR</strong> "
+"{video_url} as placeholders."
+msgstr ""
+"Code für das Einbetten von YouTube-Videos, als Platzhalter können {video_id} "
+"<strong>ODER</strong> {video_url} verwendet werden."
+
+#: includes/themes/class-wp-listings.php:290
+msgid ""
+"Code for embedding Vimeo videos, use {video_id} <strong>OR</strong> "
+"{video_url} as placeholders."
+msgstr ""
+"Code für das Einbetten von Vimeo-Videos, als Platzhalter können {video_id} "
+"<strong>ODER</strong> {video_url} verwendet werden."
+
+#: includes/themes/class-wp-listings.php:299
+msgid ""
+"Code for embedding videos of alternative providers, use {video_id} "
+"<strong>OR</strong> {video_url} as placeholders."
+msgstr ""
+"Code für das Einbetten von Videos bei alternativen Anbietern, als "
+"Platzhalter können {video_id} <strong>ODER</strong> {video_url} verwendet "
+"werden."
+
+#: includes/themes/class-wp-residence.php:437
+msgid ""
+"Agent author ID (%d) does not match ID of property WP author (%d), agent %d "
+"NOT linked to property."
+msgstr ""
+"Autor-ID des Ansprechpartners (%d) entspricht nicht der ID des Immobilien-"
+"Beitrags-Autors (%d), Ansprechpartner (Agent) %d NICHT mit Immobilien-"
+"Beitrag verknüpft."
+
+#: includes/themes/class-wp-residence.php:922
+msgid "Header Type"
+msgstr "Header-Typ"
+
+#: includes/themes/class-wp-residence.php:932
+msgid "Sidebar Placement"
+msgstr "Sidebar-Position"
+
+#: includes/themes/class-wpcasa-plugin.php:346
+msgid ""
+"Select the header type to display <strong>(supported themes only, e.g. "
+"WPCasa London)</strong>."
+msgstr ""
+"Anzeige/Typ des Headers festlegen <strong>(nur für Themes, die diese Option "
+"unterstützen, z. B. WPCasa London)</strong>."
+
+#: includes/themes/class-wpcasa-plugin.php:348
+msgid "Do not display"
+msgstr "nicht anzeigen"
+
+#: includes/themes/class-wpcasa-plugin.php:349
+msgid "Featured image &amp; title"
+msgstr "Beitragsbild &amp; Titel"
+
+#: includes/themes/class-wpcasa-plugin.php:350
+msgid "Image slider"
+msgstr "Bildslider"
+
+#: includes/themes/class-wpcasa-plugin.php:351
+msgid "Tagline &amp; background (to define by additional filter function)"
+msgstr "Slogan &amp; Hintergrundbild (mit zus. Filterfunktion zu definieren)"
+
+#: includes/themes/class-wpcasa-plugin.php:358
+msgid "Header Filter"
+msgstr "Header-Filter"
+
+#: includes/themes/class-wpcasa-plugin.php:361
+msgid "Remove filter effect from header images."
+msgstr "Filtereffekte nicht auf Headerbilder anwenden."
+
+#: includes/themes/class-zoner.php:475 includes/themes/class-zoner.php:556
+msgid "Zoner theme not available, user's property quota cant't be checked."
+msgstr ""
+"Zoner-Theme nicht verfügbar, das Benutzer-Anzeigenkontingent kann nicht "
+"überprüft werden."
+
+#: includes/themes/class-zoner.php:706
+msgid "Allow User Rating"
+msgstr "Nutzerbewertungen erlauben"
+
+#: includes/themes/class-zoner.php:709
+msgid "Activate to permit users to rate imported properties."
+msgstr ""
+"Aktivieren, um Nutzern die Bewertung von importierten Immobilien zu erlauben."
+
+# @ immonex-openimmo2wp
+#: includes/widgets/class-immonex-property-attachments-widget.php:35
+msgid "File Attachments and Links"
+msgstr "Dateianhänge und Links"
+
+#: includes/widgets/class-immonex-property-attachments-widget.php:37
+msgid ""
+"List of linked property file attachments (e.g. PDF) and links to external "
+"websites."
+msgstr ""
+"Liste verlinkter Dateianhänge in (z. B. PDF) und Links zu externen Websites "
+"für Immobilien-Detailseiten"
+
+# @ default
+#: includes/widgets/class-immonex-property-attachments-widget.php:159
+#: includes/widgets/class-immonex-user-defined-properties-widget.php:143
+msgid "Title"
+msgstr "Titel"
+
+#: includes/widgets/class-immonex-property-attachments-widget.php:163
+msgid "File Types"
+msgstr "Dateitypen"
+
+#: includes/widgets/class-immonex-property-attachments-widget.php:166
+msgid ""
+"Comma separated list of MIME types (e.g. \"application/pdf\" for PDF files), "
+"empty = display all types of files <strong>except images and videos</strong>."
+msgstr ""
+"Kommagetrennte Liste von MIME-Dateitypen (z. B. \"application/pdf\" für PDF-"
+"Dateien), leer = alle Dateitypen <strong>außer Bilder und Videos</strong> "
+"anzeigen."
+
+#: includes/widgets/class-immonex-property-attachments-widget.php:168
+msgid "Icon Size"
+msgstr "Icongröße"
+
+#: includes/widgets/class-immonex-property-attachments-widget.php:170
+msgid "no icons"
+msgstr "keine Icons"
+
+#: includes/widgets/class-immonex-property-attachments-widget.php:185
+#: includes/widgets/class-immonex-user-defined-properties-widget.php:177
+msgid "Item DIV classes"
+msgstr "DIV-Klassen (pro Element)"
+
+#: includes/widgets/class-immonex-property-attachments-widget.php:188
+#: includes/widgets/class-immonex-user-defined-properties-widget.php:180
+msgid ""
+"E. g. Bootstrap 2 grid class, default: \"span4\". <strong>This option "
+"currently applies to wpCasa based themes only!</strong>"
+msgstr ""
+"Bspw. Bootstrap 2 Grid-Klasse, Standard: \"span4\". <strong>Diese Option "
+"betrifft nur wpCasa-basierte Themes!</strong>"
+
+# @ immonex-openimmo2wp
+#: includes/widgets/class-immonex-user-defined-properties-widget.php:21
+msgid "User-defined Properties"
+msgstr "Benutzerdefinierte Eigenschaften"
+
+# @ immonex-openimmo2wp
+#: includes/widgets/class-immonex-user-defined-properties-widget.php:23
+msgid "Additional name-value pairs for real estate description."
+msgstr "Zusätzliche Name-Wert-Paare für die Beschreibung der Immobilie."
+
+#: includes/widgets/class-immonex-user-defined-properties-widget.php:140
+msgid "Additional Details"
+msgstr "Weitere Eigenschaften"
+
+#: includes/widgets/class-immonex-user-defined-properties-widget.php:147
+msgid "The following groups shall be:"
+msgstr "Die folgenden Gruppen:"
+
+#: includes/widgets/class-immonex-user-defined-properties-widget.php:150
+msgid "displayed"
+msgstr "anzeigen"
+
+#: includes/widgets/class-immonex-user-defined-properties-widget.php:154
+msgid "hidden"
+msgstr "ausblenden"
+
+#: includes/widgets/class-immonex-user-defined-properties-widget.php:158
+msgid "Groups"
+msgstr "Gruppen"
+
+#: includes/widgets/class-immonex-user-defined-properties-widget.php:161
+msgid "Comma separated list, empty = display all groups/fields."
+msgstr "Kommagetrennte Liste, leer = alle Gruppen/Felder anzeigen."
+
+#: includes/widgets/class-immonex-user-defined-properties-widget.php:163
+msgid "Display Type:"
+msgstr "Art der Ausgabe:"
+
+#: includes/widgets/class-immonex-user-defined-properties-widget.php:166
+msgid "Name: Value"
+msgstr "Name: Wert"
+
+#: includes/widgets/class-immonex-user-defined-properties-widget.php:170
+msgid "Value only"
+msgstr "Nur Wert"
+
+#: partials/immonex_oi2wp_new_options_location.php:58
+msgid "Watch out!"
+msgstr "Achtung!"
+
+#: partials/immonex_oi2wp_new_options_location.php:61
+msgid ""
+"With version 5, a separate item was added to the dashboard menu for "
+"OpenImmo2WP."
+msgstr ""
+"Mit Version 5 wurde für OpenImmo2WP ein eigener Punkt im Dashboard-Menü "
+"ergänzt."
+
+#: partials/immonex_oi2wp_new_options_location.php:67
+msgid ""
+"The plugin options have been moved to <a href=\"%s\">OpenImmo2WP &rarr; "
+"Settings</a>."
+msgstr ""
+"Die Plugin-Optionen wurden nach <a href=\"%s\">OpenImmo2WP &rarr; "
+"Einstellungen</a> verschoben."
+
+#: partials/immonex_oi2wp_new_options_location.php:76
+msgid ""
+"Manual imports can now be started here: <a href=\"%s\">OpenImmo2WP &rarr; "
+"Import</a>"
+msgstr ""
+"Manuelle Importe können ab jetzt hier gestartet werden: <a "
+"href=\"%s\">OpenImmo2WP &rarr; Import</a>"
+
+#: partials/openimmo2wp.php:68
+msgid ""
+"Please activate the plugin license under <a href=\"%s\">OpenImmo2WP &rarr; "
+"Settings &rarr; License</a>."
+msgstr ""
+"Bitte die Plugin-Lizenz unter <a href=\"%s\">OpenImmo2WP &rarr; "
+"Einstellungen &rarr; Lizenz</a> aktivieren."
+
+#: partials/openimmo2wp.php:80
+msgid ""
+"<strong>Automated</strong> import processing is currently <strong>not</"
+"strong> enabled"
+msgstr ""
+"Die <strong>automatisierte</strong> Importverarbeitung ist aktuell "
+"<strong>nicht</strong> aktiv"
+
+# @ default
+#: partials/openimmo2wp.php:82
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: partials/openimmo2wp.php:89
+msgid ""
+"During import, the following additional output has been generated server-"
+"side. In most cases, these messages are PHP warnings (if WP_DEBUG is "
+"enabled), but they could also point to possible errors."
+msgstr ""
+"Während des Imports wurde die folgende zusätzliche Ausgabe serverseitig "
+"generiert. In den meisten Fällen handelt es sich bei diesen Meldungen um PHP-"
+"Warnungen (wenn WP_DEBUG aktiviert ist), sie könnten aber auch auf mögliche "
+"Fehler hindeuten."
+
+#: partials/openimmo2wp.php:94
+msgid "Global"
+msgstr "Global"
+
+#: partials/openimmo2wp.php:95 partials/openimmo2wp.php:134
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: partials/openimmo2wp.php:133
+msgid "User related"
+msgstr "Benutzerbezogen"
+
+#: partials/openimmo2wp.php:187
+msgid ""
+"No <a href=\"%1$s\" class=\"immonex-doc-link\" target=\"_blank\">user import "
+"folders</a> exist yet. These must be created <strong>manually</strong> as "
+"subdirectory of the <span class=\"user-import-base-folder-name\">users</"
+"span> folder above, whereby the names must match the <strong>login names</"
+"strong> of the related <a href=\"%2$s\"> WP users</a>."
+msgstr ""
+"Es existieren noch keine <a href=\"%1$s\" class=\"immonex-doc-link\" "
+"target=\"_blank\">Benutzer-Importordner</a>. Diese werden <strong>manuell</"
+"strong> als Unterverzeichnisse des o. g. Ordners <span class=\"user-import-"
+"base-folder-name\">users</span> angelegt, wobei deren Namen den "
+"<strong>Login-Namen</strong> der zugehörigen <a href=\"%2$s\">WP-Benutzer</"
+"a> entsprechen müssen."
+
+#: templates/default_immonex-property-attachments.php:58
+#: templates/houzez_immonex-property-attachments.php:40
+#: templates/inventor-properties_immonex-property-attachments.php:39
+#: templates/realhomes_theme_immonex-property-attachments.php:48
+#: templates/realia4_immonex-property-attachments.php:43
+#: templates/realty_immonex-property-attachments.php:44
+#: templates/wpcasa_immonex-property-attachments.php:51
+#: templates/wp_estate_immonex-property-attachments.php:41
+#: templates/wp_residence_immonex-property-attachments.php:41
+msgid "Icon"
+msgstr "Symbol"
+
+#~ msgctxt "reference term to replace"
+#~ msgid "Zu Verkaufen"
+#~ msgstr "For Sale"
+
+#~ msgctxt "reference term replacement"
+#~ msgid "Verkauft"
+#~ msgstr "Sold"
+
+#~ msgctxt "reference term to replace"
+#~ msgid "Zu verkaufen"
+#~ msgstr "For sale"
+
+#~ msgctxt "reference term replacement"
+#~ msgid "verkauft"
+#~ msgstr "sold"
+
+#~ msgctxt "reference term to replace"
+#~ msgid "zu verkaufen"
+#~ msgstr "for sale"
+
+#~ msgctxt "reference term to replace"
+#~ msgid "Zum Kauf"
+#~ msgstr "For Purchase"
+
+#~ msgctxt "reference term to replace"
+#~ msgid "zum Kauf"
+#~ msgstr "for Purchase"
+
+#~ msgctxt "reference term to replace"
+#~ msgid "Zu Vermieten"
+#~ msgstr "For Rent"
+
+#~ msgctxt "reference term replacement"
+#~ msgid "Vermietet"
+#~ msgstr "Rented"
+
+#~ msgctxt "reference term to replace"
+#~ msgid "Zu vermieten"
+#~ msgstr "For rent"
+
+#~ msgctxt "reference term replacement"
+#~ msgid "vermietet"
+#~ msgstr "rented"
+
+#~ msgctxt "reference term to replace"
+#~ msgid "Zur Miete"
+#~ msgstr "For Rent"
+
+#~ msgctxt "reference term to replace"
+#~ msgid "zur Miete"
+#~ msgstr "for Rent"
+
+#~ msgctxt "reference term to replace"
+#~ msgid "Zu mieten"
+#~ msgstr "To rent"
+
+#~ msgctxt "reference term to replace"
+#~ msgid "zu mieten"
+#~ msgstr "to rent"
+
+#~ msgid "Long-distance Heating"
+#~ msgstr "Fernwärme"
+
+#~ msgid "Gallery with thumbnails on the right"
+#~ msgstr "Galerie mit Thumbnails rechts"
+
+#~ msgid "Gallery with thumbnails at the bottom"
+#~ msgstr "Galerie mit Thumbnails unten"
+
+#~ msgid "%s - %s seconds (default: %s)"
+#~ msgstr "%s - %s Sekunden (Standard: %s)"
+
+#~ msgid "Energy Efficiency"
+#~ msgstr "Energieeffizienz"
+
+#~ msgid ""
+#~ "This content will be appended to the main description of every imported "
+#~ "property."
+#~ msgstr ""
+#~ "Dieser Inhalt wird an den Haupt-Beschreibungstext jeder importierten "
+#~ "Immobilie angehangen."
+
+#~ msgid "Theme Options"
+#~ msgstr "Theme-Optionen"
+
+#~ msgid "Plugin Options"
+#~ msgstr "Plugin-Optionen"
+
+#~ msgid "Options"
+#~ msgstr "Optionen"
+
+# @ immonex-openimmo2wp
+#~ msgid "Email address"
+#~ msgstr "E-Mail-Adresse"
+
+#~ msgid "empty = no debug log creation"
+#~ msgstr "leer = keine Debugprotokoll-Erstellung"
+
+# @ default
+#~ msgid "DEBUG-MODE"
+#~ msgstr "DEBUG-MODUS"
+
+# @ immonex-openimmo2wp
+#~ msgid "Import Files"
+#~ msgstr "Importdateien"
+
+# @ immonex-openimmo2wp
+#~ msgid ""
+#~ "Directory for uploading ZIP files containing OpenImmo data for import"
+#~ msgstr ""
+#~ "Verzeichnis, in das ZIP-Dateien hochgeladen werden, die Daten im OpenImmo-"
+#~ "Format für den Import enthalten"
+
+#~ msgid ""
+#~ "All ZIP-Archives in the <strong>global import folder</strong> and the "
+#~ "<strong>users/username subfolders</strong> will be processed."
+#~ msgstr ""
+#~ "Alle ZIP-Archive im <strong>globalen Importordner</strong> sowie in den "
+#~ "<strong>users/username-Unterordnern</strong> werden verarbeitet."
+
+# @ immonex-openimmo2wp
+#~ msgid "Pending files:"
+#~ msgstr "Ausstehende Dateien:"
+
+#~ msgid "Current Property:"
+#~ msgstr "Aktuelle Immobilie:"
+
+#~ msgid "Current Attachment:"
+#~ msgstr "Aktueller Anhang:"
+
+#~ msgid ""
+#~ "If the import process seems to be interrupted, it can be resumed eight "
+#~ "minutes after the last status change."
+#~ msgstr ""
+#~ "Wenn der Importvorgang unterbrochen zu sein scheint, kann er acht Minuten "
+#~ "nach der letzten Statusänderung fortgesetzt werden."
+
+# @ immonex-openimmo2wp
+#~ msgid "Archive"
+#~ msgstr "Archiv"
+
+# @ immonex-openimmo2wp
+#~ msgid "Previously imported OpenImmo files (ZIP) and import logs"
+#~ msgstr "Bereits importierte OpenImmo-Dateien (ZIP) und Importprotokolle"
+
+# @ immonex-openimmo2wp
+#~ msgid "Mappings"
+#~ msgstr "Mappings (Zuordnungen)"
+
+# @ immonex-openimmo2wp
+#~ msgid "Mapping definition files (CSV)"
+#~ msgstr "Mapping-Definitionsdateien (CSV)"
+
+# @ immonex-openimmo2wp
+#~ msgid "Mapping tables"
+#~ msgstr "Mapping-Tabellen"
+
+#~ msgid "With version 5, OpenImmo2WP got its own main menu item."
+#~ msgstr ""
+#~ "Mit Version 5 wurde für OpenImmo2WP ein eigener Punkt im Dashboard-Menü "
+#~ "ergänzt."
+
+# @ immonex-openimmo2wp
+#~ msgid ""
+#~ "Process ZIP archives in import files directory (see directories tab) "
+#~ "frequently?"
+#~ msgstr ""
+#~ "ZIP-Archive im Import-Verzeichnis (siehe Verzeichnis-Tab) regelmäßig "
+#~ "verarbeiten?"
+
+# @ immonex-openimmo2wp
+#~ msgid "The import directory can't be created: %s"
+#~ msgstr "Das Importverzeichnis kann nicht angelegt werden: %s"
+
+#~ msgid "The user import directory can't be created: %s"
+#~ msgstr "Das Benutzer-Importverzeichnis kann nicht erstellt werden: %s"
+
+# @ immonex-openimmo2wp
+#~ msgid "The mappings directory can't be created: %s"
+#~ msgstr "Das Mapping-Verzeichnis kann nicht angelegt werden: %s"
+
+# @ immonex-openimmo2wp
+#~ msgid "The mapping file can't be copied: %s"
+#~ msgstr "Die Mapping-Datei kann nicht kopiert werden: %s"
+
+#~ msgid "Directories / Manual Import"
+#~ msgstr "Verzeichnisse / Manueller Import"
+
+#~ msgid "License"
+#~ msgstr "Lizenz"
+
+#~ msgid "Development never stops"
+#~ msgstr "Entwicklung endet nie"
+
+#~ msgid ""
+#~ "This software is based on various outstanding systems and technologies, "
+#~ "most notably PHP, WordPress and various great themes. As these are "
+#~ "constantly being developed further, we also keep this plugin up to date "
+#~ "&ndash; beside adding functions and fixing bugs."
+#~ msgstr ""
+#~ "Diese Software basiert auf mehreren herausragenden Systemen und "
+#~ "Technologien, allen voran PHP, WordPress und diverse großartige Themes. "
+#~ "So wie diese kontinuierlich weiterentwickelt werden, halten wir &ndash; "
+#~ "neben dem Ergänzen neuer Funktionen und dem Korrigieren von Fehlern "
+#~ "&ndash; auch dieses Plugin stets up-to-date."
+
+#~ msgid ""
+#~ "With a valid and active license, you support this ongoing development, "
+#~ "automatically receive all the <strong>latest plugin updates</strong> and "
+#~ "have access to our <strong>best support</strong>!"
+#~ msgstr ""
+#~ "Mit einer gültigen und aktiven Lizenz unterstützen Sie diese nachhaltige "
+#~ "Entwicklung, erhalten automatisch die <strong>neusten Plugin-"
+#~ "Aktualisierungen</strong> und können auf unseren <strong>besten Support</"
+#~ "strong> zurückgreifen!"
+
+#~ msgid "Max. Image Attachments"
+#~ msgstr "Max. Anzahl Bildanhänge"
+
+#~ msgid "30 - 3600 seconds, 0 = no time limit"
+#~ msgstr "30 - 3.600 Sekunden, 0 = kein Zeitlimit"
+
+#~ msgid "Max. Number of Attachments"
+#~ msgstr "Max. Anzahl Dateianhänge"
+
+#~ msgid "License Key"
+#~ msgstr "Lizenzschlüssel"
+
+#~ msgid "License Status"
+#~ msgstr "Lizenzstatus"
+
+# @ immonex-openimmo2wp
+#~ msgid "Please provide/select a valid mapping file in %s."
+#~ msgstr "Bitte eine gültige Mapping-Datei bereitstellen/auswählen in %s."
+
+# @ immonex-openimmo2wp
+#~ msgid "Archive files can be kept for max. 100 days."
+#~ msgstr "Archivdateien können für max. 100 Tage gespeichert bleiben."
+
+#~ msgid ""
+#~ "The valid range for the max. script execution time is 30 up to 3600 "
+#~ "seconds (0 = no time limit)."
+#~ msgstr ""
+#~ "Der mögliche Zeitrahmen für die maximale Script-Laufzeit liegt zwischen "
+#~ "30 und 3.600 Sekunden (0 = kein Zeitlimit)."
+
+#~ msgid "Fatal error during import"
+#~ msgstr "Schwerwiegender Fehler während des Importvorgangs"
+
+#~ msgid "Geocoding result: %s%s"
+#~ msgstr "Ergebnis der Geocodierung: %s%s"
+
+#~ msgid "User's current listing count increased, now: %d"
+#~ msgstr "Aktuelle Objektanzahl des Benutzers erhöht, jetzt: %d"
+
+#~ msgid "User's current featured listing count increased, now: %d"
+#~ msgstr "Aktuelle Anzahl empfohlener Objekte des Benutzers erhöht, jetzt: %d"
+
+# @ immonex-openimmo2wp
+#~ msgid "Unzip error: %s"
+#~ msgstr "Fehler beim Entpacken: %s"
+
+#, fuzzy
+#~| msgid "XML-Error: %s"
+#~ msgid "XM -Error: %s"
+#~ msgstr "XML-Fehler: %s"
+
+# @ immonex-openimmo2wp
+#~ msgid "Corrupt XML data (%s)"
+#~ msgstr "Fehlerhafte XML-Daten (%s)"
+
+# @ immonex-openimmo2wp
+#~ msgid "Corrupt XML data"
+#~ msgstr "Fehlerhafte XML-Daten"
+
+#~ msgid ""
+#~ "Some real estate themes/plugins require address geocoding during import. "
+#~ "Please provide API keys for at least one provider to avoid issues related "
+#~ "to daily request limits. If no keys are given, a free version of the "
+#~ "Google Maps API is being used - at least as long as it's still available "
+#~ "and the limits are not exceeded yet."
+#~ msgstr ""
+#~ "Bei einigen Immobilien-Themes/Plugins kann während des Imports die "
+#~ "Geokodierung von Objektadressen nötig sein. Zur Vermeidung von Problemen "
+#~ "mit Tageslimits für solche Anfragen sollte zumindest ein API-Schlüssel "
+#~ "für einen der folgenden Provider hinterlegt werden. Ist kein Schlüssel "
+#~ "verfügbar, wird eine freie Version der Google Maps API genutzt - "
+#~ "zumindest so lange diese noch verfügbar ist und das jeweilige Tageslimit "
+#~ "noch nicht überschritten wurde."
+
+#~ msgid "Ignore Zero Values"
+#~ msgstr "Nullwerte ignorieren"
+
+#~ msgid ""
+#~ "Filter out property details with empty and zero values during import?"
+#~ msgstr "Immobiliendetails mit Leer- oder Nullwerten beim Import ausfiltern?"

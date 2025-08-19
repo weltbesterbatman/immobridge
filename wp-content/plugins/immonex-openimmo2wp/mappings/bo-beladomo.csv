@@ -1,0 +1,898 @@
+# Version 2.0.0 / 2024-07-22,,Changes since last version are marked with a yellow background / Änderungen seit der letzten Version sind mit einem gelben Hintergrund markiert.,,,,,,,,
+Type,Group,Source,Destination,Filter,Title,Parent,Title DE,Parent DE,Last Update (Version),Last Update (Date)
+# Posts,,,,,,,,,,
+,,,,,,,,,,
+post,,freitexte->objekttitel,post_title,,,,,,,
+"# „freitexte->objektbeschreibung“, „freitexte->lage“, „freitexte->ausstatt_beschr“ will be concatenated into the main property description field (post_content).",,,,,,,,,,
+"# „freitexte->objektbeschreibung“, „freitexte->lage“, „freitexte->ausstatt_beschr“ werden in im Haupt-Beschreibungsfeld der Immobilie (post_content) zusammengefügt.",,,,,,,,,,
+post,,freitexte->objektbeschreibung+,post_content,,,,,,,
+post,,freitexte->lage+,post_content,,,,,,,
+post,,freitexte->ausstatt_beschr+,post_content,,,,,,,
+post,,freitexte->dreizeiler,post_excerpt,,,,,,1.4.1,2018-05-11
+,,,,,,,,,,
+# Taxonomy Terms,,,,,,,,,,
+,,,,,,,,,,
+#taxonomy,,objektkategorie->nutzungsart:WOHNEN,,,Living Properties,,Wohnimmobilien,,,
+#taxonomy,,objektkategorie->nutzungsart:GEWERBE,,,Commercial Properties,,Gewerbeimmobilien,,,
+#taxonomy,,objektkategorie->nutzungsart:ANLAGE,,,Investment,,Kapitalanlage,,,
+#taxonomy,,objektkategorie->nutzungsart:WAZ,,,Temporary Living,,Wohnen auf Zeit,,,
+#taxonomy,,freitexte->sonstige_angaben~Empfehlung,,,Featured Properties,,Empfehlungen,,,
+taxonomy,,geo->ort,location,,,,,,,
+,,,,,,,,,,
+taxonomy,,objektkategorie->objektart->zimmer,proptype,,Single Room,Single Rooms,Zimmer,Zimmer,,
+taxonomy,,objektkategorie->objektart->wohnung,proptype,,Flat,Flats,Wohnung,Wohnungen,,
+taxonomy,,objektkategorie->objektart->wohnung:wohnungtyp:KEINE_ANGABE,proptype,,Flat,Flats,Wohnung,Wohnungen,,
+taxonomy,,objektkategorie->objektart->wohnung:wohnungtyp:DACHGESCHOSS,proptype,,Attic Flat,Flats,DG-Wohnung,Wohnungen,,
+taxonomy,,objektkategorie->objektart->wohnung:wohnungtyp:MAISONETTE,proptype,,Maisonette,Flats,Maisonette-Wohnung,Wohnungen,,
+taxonomy,,objektkategorie->objektart->wohnung:wohnungtyp:LOFT-STUDIO-ATELIER,proptype,,Loft / Studio / Atelier,Flats,Loft / Studio / Atelier,Wohnungen,,
+taxonomy,,objektkategorie->objektart->wohnung:wohnungtyp:PENTHOUSE,proptype,,Penthouse Flat,Flats,Penthouse-Wohnung,Wohnungen,,
+taxonomy,,objektkategorie->objektart->wohnung:wohnungtyp:TERRASSEN,proptype,,Terrace Flat,Flats,Terrassenwohnung,Wohnungen,,
+taxonomy,,objektkategorie->objektart->wohnung:wohnungtyp:ETAGE,proptype,,Apartment,Flats,Etagenwohnung,Wohnungen,,
+taxonomy,,objektkategorie->objektart->wohnung:wohnungtyp:ERDGESCHOSS,proptype,,Ground-floor Flat,Flats,Erdgeschosswohnung,Wohnungen,,
+taxonomy,,objektkategorie->objektart->wohnung:wohnungtyp:SOUTERRAIN,proptype,,Basement Flat,Flats,Souterrainwohnung,Wohnungen,,
+taxonomy,,objektkategorie->objektart->wohnung:wohnungtyp:APARTMENT,proptype,,Apartment,Flats,Apartment,Wohnungen,,
+taxonomy,,objektkategorie->objektart->wohnung:wohnungtyp:FERIENWOHNUNG,proptype,,Holiday Flat,Flats,Ferienwohnung,Wohnungen,,
+taxonomy,,objektkategorie->objektart->wohnung:wohnungtyp:GALERIE,proptype,,Gallery Flat,Flats,Galeriewohnung,Wohnungen,,
+taxonomy,,objektkategorie->objektart->wohnung:wohnungtyp:ROHDACHBODEN,proptype,,Raw Attic,Flats,Rohdachboden,Wohnungen,,
+taxonomy,,objektkategorie->objektart->wohnung:wohnungtyp:ATTIKAWOHNUNG,proptype,,Penthouse Apartment,Flats,Attikawohnung,Wohnungen,,
+taxonomy,,objektkategorie->objektart->haus,proptype,,House,Houses,Haus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:KEINE_ANGABE,proptype,,House,Houses,Haus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:REIHENHAUS,proptype,,Row House,Houses,Reihenhaus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:REIHENEND,proptype,,End Unit,Houses,Reihenendhaus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:REIHENMITTEL,proptype,,Mid-terrace Town House,Houses,Reihenmittelhaus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:REIHENECK,proptype,,End Unit,Houses,Reiheneckhaus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:DOPPELHAUSHAELFTE,proptype,,Semi-detached House,Houses,Doppelhaushälfte,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:EINFAMILIENHAUS,proptype,,Single-family House,Houses,Einfamilienhaus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:STADTHAUS,proptype,,Town House,Houses,Stadthaus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:BUNGALOW,proptype,,Bungalow,Houses,Bungalow,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:VILLA,proptype,,Villa,Houses,Villa,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:RESTHOF,proptype,,Farm,Houses,Resthof,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:BAUERNHAUS,proptype,,Farm House,Houses,Bauernhaus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:LANDHAUS,proptype,,Country House,Houses,Landhaus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:SCHLOSS,proptype,,Castle,Houses,Schloss,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:ZWEIFAMILIENHAUS,proptype,,Two Family House,Houses,Zweifamilienhaus,Häuser,1.8.1,2023-10-25
+taxonomy,,objektkategorie->objektart->haus:haustyp:MEHRFAMILIENHAUS,proptype,,Multi-family House,Houses,Mehrfamilienhaus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:FERIENHAUS,proptype,,Holiday Home,Houses,Ferienhaus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:BERGHUETTE,proptype,,Mountain Hut,Houses,Berghütte,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:CHALET,proptype,,Chalet,Houses,Chalet,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:STRANDHAUS,proptype,,Beach Home,Houses,Strandhaus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:LAUBE-DATSCHE-GARTENHAUS,proptype,,Pergola / Weekend home / Summerhouse,Houses,Laube / Datsche / Gartenhaus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:APARTMENTHAUS,proptype,,Apartment House,Houses,Apartmenthaus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:BURG,proptype,,Castle,Houses,Burg,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:HERRENHAUS,proptype,,Mansion,Houses,Herrenhaus,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:FINCA,proptype,,Finca,Houses,Finca,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:RUSTICO,proptype,,Rustico,Houses,Rustico,Häuser,,
+taxonomy,,objektkategorie->objektart->haus:haustyp:FERTIGHAUS,proptype,,Prefabricated House,Houses,Fertighaus,Häuser,,
+taxonomy,,objektkategorie->objektart->grundstueck,proptype,,Lot,Lots,Grundstück,Grundstücke,,
+taxonomy,,objektkategorie->objektart->grundstueck:grundst_typ:WOHNEN,proptype,,Residential Lot,Lots,Grundstück (Wohnbebauung),Grundstücke,,
+taxonomy,,objektkategorie->objektart->grundstueck:grundst_typ:GEWERBE,proptype,,Commercial Lot,Lots,Grundstück (Gewerbe),Grundstücke,,
+taxonomy,,objektkategorie->objektart->grundstueck:grundst_typ:INDUSTRIE,proptype,,Industrial Lot,Lots,Industriegrundstück,Grundstücke,,
+taxonomy,,objektkategorie->objektart->grundstueck:grundst_typ:LAND_FORSTWIRSCHAFT,proptype,,Agricultural Lot,Lots,Grundstück (Land- und Forstwirtschaft),Grundstücke,1.4.0,2018-03-06
+taxonomy,,objektkategorie->objektart->grundstueck:grundst_typ:LAND_FORSTWIRTSCHAFT,proptype,,Agricultural Lot,Lots,Grundstück (Land- und Forstwirtschaft),Grundstücke,,
+taxonomy,,objektkategorie->objektart->grundstueck:grundst_typ:FREIZEIT,proptype,,Recreational Lot,Lots,Freizeitgrundstück,Grundstücke,,
+taxonomy,,objektkategorie->objektart->grundstueck:grundst_typ:GEMISCHT,proptype,,Mixed Lot,Lots,Grundstück (Gemischt),Grundstücke,,
+taxonomy,,objektkategorie->objektart->grundstueck:grundst_typ:GEWERBEPARK,proptype,,Commercial Park,Lots,Gewerbepark,Grundstücke,,
+taxonomy,,objektkategorie->objektart->grundstueck:grundst_typ:SONDERNUTZUNG,proptype,,Lot (Special Use),Lots,Grundstück (Sondernutzung),Grundstücke,,
+taxonomy,,objektkategorie->objektart->grundstueck:grundst_typ:SEE_LIEGENSCHAFT,proptype,,Waterside Property,Lots,Grundstück (See-Liegenschaft),Grundstücke,,
+taxonomy,,objektkategorie->objektart->buero_praxen,proptype,,Office,Commercial Properties,Büro / Praxis,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->buero_praxen:buero_typ:BUEROFLAECHE,proptype,,Office Space,Commercial Properties,Bürofläche,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->buero_praxen:buero_typ:BUEROHAUS,proptype,,Office Building,Commercial Properties,Bürohaus,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->buero_praxen:buero_typ:BUEROZENTRUM,proptype,,Office Center,Commercial Properties,Bürozentrum,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->buero_praxen:buero_typ:LOFT_ATELIER,proptype,,Loft / Atelier,Commercial Properties,Loft / Atelier,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->buero_praxen:buero_typ:PRAXIS,proptype,,Office,Commercial Properties,Praxis,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->buero_praxen:buero_typ:PRAXISFLAECHE,proptype,,Office Space,Commercial Properties,Praxisfläche,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->buero_praxen:buero_typ:PRAXISHAUS,proptype,,Office Building,Commercial Properties,Praxishaus,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->buero_praxen:buero_typ:AUSSTELLUNGSFLAECHE,proptype,,Exhibition Space,Commercial Properties,Ausstellungsfläche,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->buero_praxen:buero_typ:COWORKING,proptype,,Coworking,Commercial Properties,Co-Working,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->buero_praxen:buero_typ:SHARED_OFFICE,proptype,,Shared Office,Commercial Properties,Gemeinschaftsbüro,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->einzelhandel,proptype,,Retail,Commercial Properties,Einzelhandel,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->einzelhandel:handel_typ:LADENLOKAL,proptype,,Shop,Commercial Properties,Ladenlokal,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->einzelhandel:handel_typ:EINZELHANDELSLADEN,proptype,,Retail Store,Commercial Properties,Einzelhandelsladen,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->einzelhandel:handel_typ:VERBRAUCHERMARKT,proptype,,Store,Commercial Properties,Verbrauchermarkt,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->einzelhandel:handel_typ:EINKAUFSZENTRUM,proptype,,Mall,Commercial Properties,Einkaufszentrum,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->einzelhandel:handel_typ:KAUFHAUS,proptype,,Department Store,Commercial Properties,Kaufhaus,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->einzelhandel:handel_typ:FACTORY_OUTLET,proptype,,Factory Outlet,Commercial Properties,Factory Outlet,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->einzelhandel:handel_typ:KIOSK,proptype,,Kiosk,Commercial Properties,Kiosk,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->einzelhandel:handel_typ:VERKAUFSFLAECHE,proptype,,Selling Space,Commercial Properties,Verkaufsfläche,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->einzelhandel:handel_typ:AUSSTELLUNGSFLAECHE,proptype,,Exhibition Space,Commercial Properties,Ausstellungsfläche,Gewerbeobjekte,,
+taxonomy,,objektkategorie->objektart->gastgewerbe,proptype,,Hospitality Industry,Catering and Hotel Properties,Gastgewerbe,Gastronomie und Hotellerie,,
+taxonomy,,objektkategorie->objektart->gastgewerbe:gastgew_typ:GASTRONOMIE,proptype,,Gastronomy,Catering and Hotel Properties,Gastronomie,Gastronomie und Hotellerie,,
+taxonomy,,objektkategorie->objektart->gastgewerbe:gastgew_typ:GASTRONOMIE_UND_WOHNUNG,proptype,,Gastronomy and Flat,Catering and Hotel Properties,Gastronomie und Wohnung,Gastronomie und Hotellerie,,
+taxonomy,,objektkategorie->objektart->gastgewerbe:gastgew_typ:PENSIONEN,proptype,,Pension,Catering and Hotel Properties,Pension,Gastronomie und Hotellerie,,
+taxonomy,,objektkategorie->objektart->gastgewerbe:gastgew_typ:HOTELS,proptype,,Hotel,Catering and Hotel Properties,Hotel,Gastronomie und Hotellerie,,
+taxonomy,,objektkategorie->objektart->gastgewerbe:gastgew_typ:WEITERE_BEHERBERGUNGSBETRIEBE,proptype,,Other Lodging Establishments,Catering and Hotel Properties,Beherbergungsbetrieb,Gastronomie und Hotellerie,,
+taxonomy,,objektkategorie->objektart->gastgewerbe:gastgew_typ:BAR,proptype,,Bar,Catering and Hotel Properties,Bar,Gastronomie und Hotellerie,,
+taxonomy,,objektkategorie->objektart->gastgewerbe:gastgew_typ:CAFE,proptype,,Café,Catering and Hotel Properties,Café,Gastronomie und Hotellerie,,
+taxonomy,,objektkategorie->objektart->gastgewerbe:gastgew_typ:DISCOTHEK,proptype,,Discotheque,Catering and Hotel Properties,Discothek,Gastronomie und Hotellerie,,
+taxonomy,,objektkategorie->objektart->gastgewerbe:gastgew_typ:RESTAURANT,proptype,,Restaurant,Catering and Hotel Properties,Restaurant,Gastronomie und Hotellerie,,
+taxonomy,,objektkategorie->objektart->gastgewerbe:gastgew_typ:RAUCHERLOKAL,proptype,,Smoker Pub,Catering and Hotel Properties,Raucherlokal,Gastronomie und Hotellerie,,
+taxonomy,,objektkategorie->objektart->gastgewerbe:gastgew_typ:EINRAUMLOKAL,proptype,,Single-room Pub,Catering and Hotel Properties,Einraumlokal,Gastronomie und Hotellerie,,
+taxonomy,,objektkategorie->objektart->hallen_lager_prod,proptype,,Hall / Warehouse / Production,Storage and Production Spaces,Halle / Lager / Produktion,Lager- und Produktionsflächen,,
+taxonomy,,objektkategorie->objektart->hallen_lager_prod:hallen_typ:HALLE,proptype,,Hall,Storage and Production Spaces,Halle,Lager- und Produktionsflächen,,
+taxonomy,,objektkategorie->objektart->hallen_lager_prod:hallen_typ:INDUSTRIEHALLE,proptype,,Industrial Hall,Storage and Production Spaces,Industriehalle,Lager- und Produktionsflächen,,
+taxonomy,,objektkategorie->objektart->hallen_lager_prod:hallen_typ:LAGER,proptype,,Warehouse,Storage and Production Spaces,Lager,Lager- und Produktionsflächen,,
+taxonomy,,objektkategorie->objektart->hallen_lager_prod:hallen_typ:LAGERFLAECHEN,proptype,,Warehousing Space,Storage and Production Spaces,Lagerfläche,Lager- und Produktionsflächen,,
+taxonomy,,objektkategorie->objektart->hallen_lager_prod:hallen_typ:LAGER_MIT_FREIFLAECHE,proptype,,Warehouse with Open Space,Storage and Production Spaces,Lager mit Freifläche,Lager- und Produktionsflächen,1.3.0,2018-01-02
+taxonomy,,objektkategorie->objektart->hallen_lager_prod:hallen_typ:HOCHREGALLAGER,proptype,,High-bay Warenhouse,Storage and Production Spaces,Hochregallager,Lager- und Produktionsflächen,,
+taxonomy,,objektkategorie->objektart->hallen_lager_prod:hallen_typ:SPEDITIONSLAGER,proptype,,Forwarding Agency Warehouse,Storage and Production Spaces,Speditionslager,Lager- und Produktionsflächen,,
+taxonomy,,objektkategorie->objektart->hallen_lager_prod:hallen_typ:PRODUKTION,proptype,,Production,Storage and Production Spaces,Produktion,Lager- und Produktionsflächen,,
+taxonomy,,objektkategorie->objektart->hallen_lager_prod:hallen_typ:WERKSTATT,proptype,,Workshop,Storage and Production Spaces,Werkstatt,Lager- und Produktionsflächen,,
+taxonomy,,objektkategorie->objektart->hallen_lager_prod:hallen_typ:SERVICE,proptype,,Service,Storage and Production Spaces,Service,Lager- und Produktionsflächen,,
+taxonomy,,objektkategorie->objektart->hallen_lager_prod:hallen_typ:FREIFLAECHEN,proptype,,Open Space,Storage and Production Spaces,Freifläche,Lager- und Produktionsflächen,,
+taxonomy,,objektkategorie->objektart->hallen_lager_prod:hallen_typ:KUEHLHAUS,proptype,,Cold Warehouse,Storage and Production Spaces,Kühlhaus,Lager- und Produktionsflächen,,
+taxonomy,,objektkategorie->objektart->land_und_forstwirtschaft,proptype,,Agriculture and Forestry,Agriculture and Forestry Properties,Land- und Forstwirtschaft,Land- und Forstwirtschaft,,
+taxonomy,,objektkategorie->objektart->land_und_forstwirtschaft:land_typ:LANDWIRTSCHAFTLICHE_BETRIEBE,proptype,,Agricultural Plant,Agriculture and Forestry Properties,Landwirtschaftlicher Betrieb,Land- und Forstwirtschaft,,
+taxonomy,,objektkategorie->objektart->land_und_forstwirtschaft:land_typ:BAUERNHOF,proptype,,Farm,Agriculture and Forestry Properties,Bauernhof,Land- und Forstwirtschaft,,
+taxonomy,,objektkategorie->objektart->land_und_forstwirtschaft:land_typ:AUSSIEDLERHOF,proptype,,Isolated Farmstead,Agriculture and Forestry Properties,Aussiedlerhof,Land- und Forstwirtschaft,,
+taxonomy,,objektkategorie->objektart->land_und_forstwirtschaft:land_typ:GARTENBAU,proptype,,Gardening,Agriculture and Forestry Properties,Gartenbau,Land- und Forstwirtschaft,,
+taxonomy,,objektkategorie->objektart->land_und_forstwirtschaft:land_typ:ACKERBAU,proptype,,Arable Farming,Agriculture and Forestry Properties,Ackerbau,Land- und Forstwirtschaft,,
+taxonomy,,objektkategorie->objektart->land_und_forstwirtschaft:land_typ:WEINBAU,proptype,,Wine-growing,Agriculture and Forestry Properties,Weinbau,Land- und Forstwirtschaft,,
+taxonomy,,objektkategorie->objektart->land_und_forstwirtschaft:land_typ:VIEHWIRTSCHAFT,proptype,,Ranching,Agriculture and Forestry Properties,Viehwirtschaft,Land- und Forstwirtschaft,,
+taxonomy,,objektkategorie->objektart->land_und_forstwirtschaft:land_typ:JAGD_UND_FORSTWIRTSCHAFT,proptype,,Hunting and Forestry,Agriculture and Forestry Properties,Jagd- und Forstwirtschaft,Land- und Forstwirtschaft,,
+taxonomy,,objektkategorie->objektart->land_und_forstwirtschaft:land_typ:TEICH_UND_FISCHWIRTSCHAFT,proptype,,Fish Farming,Agriculture and Forestry Properties,Teich- und Fischwirtschaft,Land- und Forstwirtschaft,,
+taxonomy,,objektkategorie->objektart->land_und_forstwirtschaft:land_typ:SCHEUNEN,proptype,,Barn,Agriculture and Forestry Properties,Scheune,Land- und Forstwirtschaft,,
+taxonomy,,objektkategorie->objektart->land_und_forstwirtschaft:land_typ:REITERHOEFE,proptype,,Equestrian Center,Agriculture and Forestry Properties,Reiterhof,Land- und Forstwirtschaft,,
+taxonomy,,objektkategorie->objektart->land_und_forstwirtschaft:land_typ:SONSTIGE_LANDWIRTSCHAFTSIMMOBILIEN,proptype,,Other Agricultural Properties,Agriculture and Forestry Properties,Sonstige Landwirtschaftsimmobilie,Land- und Forstwirtschaft,,
+taxonomy,,objektkategorie->objektart->land_und_forstwirtschaft:land_typ:ANWESEN,proptype,,Estate,Agriculture and Forestry Properties,Anwesen,Land- und Forstwirtschaft,,
+taxonomy,,objektkategorie->objektart->land_und_forstwirtschaft:land_typ:JAGDREVIER,proptype,,Hunting Ground,Agriculture and Forestry Properties,Jagdrevier,Land- und Forstwirtschaft,,
+taxonomy,,objektkategorie->objektart->parken,proptype,,Parking,Parking Spaces,Parken,Parken,,
+taxonomy,,objektkategorie->objektart->parken:parken_typ:STELLPLATZ,proptype,,Car Space,Parking Spaces,Stellplatz,Parken,,
+taxonomy,,objektkategorie->objektart->parken:parken_typ:CARPORT,proptype,,Carport,Parking Spaces,Carport,Parken,,
+taxonomy,,objektkategorie->objektart->parken:parken_typ:DOPPELGARAGE,proptype,,Double Garage,Parking Spaces,Doppelgarage,Parken,,
+taxonomy,,objektkategorie->objektart->parken:parken_typ:DUPLEX,proptype,,Duplex,Parking Spaces,Duplex,Parken,,
+taxonomy,,objektkategorie->objektart->parken:parken_typ:TIEFGARAGE,proptype,,Deep-level Garage,Parking Spaces,Tiefgarage,Parken,,
+taxonomy,,objektkategorie->objektart->parken:parken_typ:BOOTSLIEGEPLATZ,proptype,,Berth,Parking Spaces,Bootsliegeplatz,Parken,1.3.0,2018-01-02
+taxonomy,,objektkategorie->objektart->parken:parken_typ:EINZELGARAGE,proptype,,Single Garage,Parking Spaces,Einzelgarage,Parken,,
+taxonomy,,objektkategorie->objektart->parken:parken_typ:PARKPLATZ,proptype,,Parking Space,Parking Spaces,Parkplatz,Parken,,
+taxonomy,,objektkategorie->objektart->parken:parken_typ:TIEFGARAGENSTELLPLATZ,proptype,,Deep-level Car Space,Parking Spaces,Tiefgaragenstellplatz,Parken,,
+taxonomy,,objektkategorie->objektart->parken:parken_typ:PARKPLATZ_STROM,proptype,,Car Space with Power Connector,Parking Spaces,Parkplatz mit Stromanschluss,Parken,,
+taxonomy,,objektkategorie->objektart->sonstige,proptype,,Other Property,Miscellaneous Properties,Sonstige Immobilie,Sonstige Immobilien,,
+taxonomy,,objektkategorie->objektart->sonstige:sonstige_typ:PARKHAUS,proptype,,Parking Garage,Miscellaneous Properties,Parkhaus,Sonstige Immobilien,,
+taxonomy,,objektkategorie->objektart->sonstige:sonstige_typ:TANKSTELLE,proptype,,Gas Station,Miscellaneous Properties,Tankstelle,Sonstige Immobilien,,
+taxonomy,,objektkategorie->objektart->sonstige:sonstige_typ:KRANKENHAUS,proptype,,Hospital,Miscellaneous Properties,Krankenhaus,Sonstige Immobilien,,
+taxonomy,,objektkategorie->objektart->sonstige:sonstige_typ:SONSTIGE,proptype,,Other Property,Miscellaneous Properties,Sonstige Immobilie,Sonstige Immobilien,,
+taxonomy,,objektkategorie->objektart->freizeitimmobilie_gewerblich,proptype,,Commercial Recreational Property,Commercial Leisure Properties,Gewerbliche Freizeitimmobilie,Gewerbliche Freizeitimmobilien,,
+taxonomy,,objektkategorie->objektart->freizeitimmobilie_gewerblich:freizeit_typ:SPORTANLAGEN,proptype,,Sports Facility,Commercial Leisure Properties,Sportanlage,Gewerbliche Freizeitimmobilien,,
+taxonomy,,objektkategorie->objektart->freizeitimmobilie_gewerblich:freizeit_typ:VERGNUEGUNGSPARKS_UND_CENTER,proptype,,Theme Park,Commercial Leisure Properties,Vergnügungspark / -center,Gewerbliche Freizeitimmobilien,,
+taxonomy,,objektkategorie->objektart->freizeitimmobilie_gewerblich:freizeit_typ:FREIZEITANLAGE,proptype,,Recreational Facility,Commercial Leisure Properties,Freizeitanlage,Gewerbliche Freizeitimmobilien,,
+taxonomy,,objektkategorie->objektart->zinshaus_renditeobjekt,proptype,,Block of Flats / Income Property,Income Properties,Zinshaus / Renditeobjekt,Renditeobjekte,,
+taxonomy,,objektkategorie->objektart->zinshaus_renditeobjekt:zins_typ:MEHRFAMILIENHAUS,proptype,,Multi-family House,Income Properties,Mehrfamilienhaus,Renditeobjekte,,
+taxonomy,,objektkategorie->objektart->zinshaus_renditeobjekt:zins_typ:WOHN_UND_GESCHAEFTSHAUS,proptype,,Living and Commercial Property,Income Properties,Wohn- und Geschäftshaus,Renditeobjekte,,
+taxonomy,,objektkategorie->objektart->zinshaus_renditeobjekt:zins_typ:GESCHAEFTSHAUS,proptype,,Commercial Property,Income Properties,Geschäftshaus,Renditeobjekte,,
+taxonomy,,objektkategorie->objektart->zinshaus_renditeobjekt:zins_typ:BUEROGEBAEUDE,proptype,,Office Building,Income Properties,Bürogebäude,Renditeobjekte,,
+taxonomy,,objektkategorie->objektart->zinshaus_renditeobjekt:zins_typ:SB_MAERKTE,proptype,,Self-service Market,Income Properties,SB-Markt,Renditeobjekte,,
+taxonomy,,objektkategorie->objektart->zinshaus_renditeobjekt:zins_typ:EINKAUFSCENTREN,proptype,,Mall,Income Properties,Einkaufszentrum,Renditeobjekte,,
+taxonomy,,objektkategorie->objektart->zinshaus_renditeobjekt:zins_typ:WOHNANLAGEN,proptype,,Residential Facility,Income Properties,Wohnanlage,Renditeobjekte,,
+taxonomy,,objektkategorie->objektart->zinshaus_renditeobjekt:zins_typ:VERBRAUCHERMAERKTE,proptype,,Store,Income Properties,Verbrauchermarkt,Renditeobjekte,,
+taxonomy,,objektkategorie->objektart->zinshaus_renditeobjekt:zins_typ:INDUSTRIEANLAGEN,proptype,,Industry Facility,Income Properties,Industrieanlage,Renditeobjekte,,
+taxonomy,,objektkategorie->objektart->zinshaus_renditeobjekt:zins_typ:PFLEGEHEIM,proptype,,Care Home,Income Properties,Pflegeheim,Renditeobjekte,,
+taxonomy,,objektkategorie->objektart->zinshaus_renditeobjekt:zins_typ:SANATORIUM,proptype,,Sanatorium,Income Properties,Sanatorium,Renditeobjekte,,
+taxonomy,,objektkategorie->objektart->zinshaus_renditeobjekt:zins_typ:SENIORENHEIM,proptype,,Retirement Home,Income Properties,Seniorenheim,Renditeobjekte,,
+taxonomy,,objektkategorie->objektart->zinshaus_renditeobjekt:zins_typ:BETREUTES-WOHNEN,proptype,,Assisted Living,Income Properties,Betreutes Wohnen,Renditeobjekte,,
+,,,,,,,,,,
+taxonomy,,objektkategorie->vermarktungsart:ERBPACHT,offertype,,Leasehold,,Erbpacht,,,
+taxonomy,,objektkategorie->vermarktungsart:MIETE_PACHT,offertype,,Rent,,Vermietung,,,
+taxonomy,,objektkategorie->vermarktungsart:KAUF,offertype,,Sale,,Verkauf,,,
+taxonomy,,objektkategorie->vermarktungsart:MIETE,offertype,,Rent,,Vermietung,,,
+taxonomy,,objektkategorie->vermarktungsart:LEASING,offertype,,Leasing,,Leasing,,1.3.0,2018-01-02
+,,,,,,,,,,
+taxonomy,,flaechen->anzahl_zimmer,rooms,integer,,,,,,
+,,,,,,,,,,
+# The following assignments of the taxonomy „size“ will be converted the related size category.,,,,,,,,,,
+# Die folgenden Zuordnungen der Taxonomie „size“ werden in die entspr. Größenkategorie konvertiert.,,,,,,,,,,
+taxonomy,,flaechen->lagerflaeche,size,integer,,,,,,
+taxonomy,,flaechen->gastroflaeche,size,integer,,,,,,
+taxonomy,,flaechen->ladenflaeche,size,integer,,,,,,
+taxonomy,,flaechen->verkaufsflaeche,size,integer,,,,,,
+taxonomy,,flaechen->bueroflaeche,size,integer,,,,,,
+taxonomy,,flaechen->bueroteilflaeche,size,integer,,,,,,
+taxonomy,,flaechen->grundstuecksflaeche,size,integer,,,,,,
+taxonomy,,flaechen->gesamtflaeche,size,integer,,,,,,
+taxonomy,,flaechen->nutzflaeche,size,integer,,,,,,
+taxonomy,,flaechen->wohnflaeche,size,integer,,,,,,
+,,,,,,,,,,
+# The following assignments of the taxonomy „price“ will be converted the related price category.,,,,,,,,,,
+# Die folgenden Zuordnungen der Taxonomie „price“ werden in die entspr. Preiskategorie konvertiert.,,,,,,,,,,
+taxonomy,,preise->gesamtbelastungbrutto,price,integer,,,,,1.7.4,2022-03-10
+taxonomy,,preise->pauschalmiete,price,integer,,,,,1.7.4,2022-03-10
+taxonomy,,preise->gesamtmietebrutto,price,integer,,,,,1.7.4,2022-03-10
+taxonomy,,preise->erbpacht,price,integer,,,,,1.7.4,2022-03-10
+taxonomy,,preise->pacht,price,integer,,,,,1.7.4,2022-03-10
+taxonomy,,preise->warmmiete,price,integer,,,,,,
+taxonomy,,preise->kaltmiete,price,integer,,,,,1.7.4,2022-03-10
+taxonomy,,preise->nettokaltmiete,price,integer,,,,,,
+taxonomy,,preise->kaufpreisbrutto,price,integer,,,,,1.7.4,2022-03-10
+taxonomy,,preise->kaufpreis:auf_anfrage:false,price,integer,,,,,1.7.4,2022-03-10
+taxonomy,,preise->kaufpreis,price,integer,,,,,1.7.4,2022-03-10
+,,,,,,,,,,
+# Custom Fields,,,,,,,,,,
+,,,,,,,,,,
+custom_field,,freitexte->objekttitel,_boT_meta-title,,,,,,,
+custom_field,,freitexte->sonstige_angaben,_boP_prop-extras,,,,,,,
+,,,,,,,,,,
+custom_field,,preise->kaufpreis_pro_qm,_boP_prop-price,number_format,,,,,1.7.4,2022-03-10
+custom_field,,preise->kaufpreisbrutto,_boP_prop-price,number_format,,,,,,
+custom_field,,preise->kaufpreis:auf_anfrage:false,_boP_prop-price,number_format,,,,,,
+custom_field,,preise->kaufpreis,_boP_prop-price,number_format,,,,,,
+custom_field,,preise->gesamtbelastungnetto*,_boP_prop-price4,number_format,,,,,2.0.0,2024-07-17
+custom_field,,preise->hauptmietzinsnetto*,_boP_prop-price2,number_format,,,,,2.0.0,2024-07-17
+custom_field,,preise->gesamtmietenetto*,_boP_prop-price4,number_format,,,,,2.0.0,2024-07-17
+custom_field,,preise->summemietenetto*,_boP_prop-price4,number_format,,,,,2.0.0,2024-07-17
+custom_field,,preise->hausgeld,_boP_prop-price6,number_format,,,,,,
+custom_field,,preise->nettokaltmiete,_boP_prop-price2,number_format,,,,,,
+custom_field,,preise->kaltmiete,_boP_prop-price2,number_format,,,,,,
+custom_field,,preise->nebenkosten,_boP_prop-price3,number_format,,,,,,
+custom_field,,preise->erbpacht,_boP_prop-price4,number_format,,,,,1.5.0,2019-10-23
+custom_field,,preise->mietpreis_pro_qm,_boP_prop-price4,number_format,,,,,1.7.4,2022-03-10
+custom_field,,preise->gesamtbelastungbrutto,_boP_prop-price4,number_format,,,,,1.7.4,2022-03-10
+custom_field,,preise->pacht,_boP_prop-price4,number_format,,,,,1.7.4,2022-03-10
+custom_field,,preise->pauschalmiete,_boP_prop-price4,number_format,,,,,1.5.0,2019-10-23
+custom_field,,preise->gesamtmietebrutto,_boP_prop-price4,number_format,,,,,1.7.4,2022-03-10
+custom_field,,preise->warmmiete,_boP_prop-price4,number_format,,,,,,
+,,,,,,,,,,
+custom_field,,preise->stp_parkhaus:stellplatzmiete,_boP_prop-price5,number_format,,,,,,
+custom_field,,preise->stp_tiefgarage:stellplatzmiete,_boP_prop-price5,number_format,,,,,,
+custom_field,,preise->stp_duplex:stellplatzmiete,_boP_prop-price5,number_format,,,,,,
+custom_field,,preise->stp_freiplatz:stellplatzmiete,_boP_prop-price5,number_format,,,,,,
+custom_field,,preise->stp_carport:stellplatzmiete,_boP_prop-price5,number_format,,,,,,
+custom_field,,preise->stp_garage:stellplatzmiete,_boP_prop-price5,number_format,,,,,,
+custom_field,,preise->heizkosten,_boP_prop-heat-costs,number_format,,,,,,
+custom_field,,preise->kaution,_boP_prop-deposit,currency,,,,,,
+custom_field,,preise->kaution_text,_boP_prop-deposit,,,,,,,
+custom_field,,flaechen->wohnflaeche,_boP_prop-size,number_format,,,,,,
+custom_field,,flaechen->gesamtflaeche,_boP_prop-size2,number_format,,,,,,
+custom_field,,flaechen->grundstuecksflaeche,_boP_prop-size3,number_format,,,,,,
+custom_field,,flaechen->nutzflaeche,_boP_prop-size4,number_format,,,,,,
+custom_field,,flaechen->ladenflaeche,_boP_prop-size5,number_format,,,,,,
+custom_field,,flaechen->verkaufsflaeche,_boP_prop-size5,number_format,,,,,,
+custom_field,,flaechen->lagerflaeche,_boP_prop-size6,number_format,,,,,1.4.0,2018-04-20
+custom_field,,flaechen->anzahl_schlafzimmer,_boP_prop-livrooms,integer,,,,,,
+custom_field,,flaechen->anzahl_zimmer,_boP_prop-rooms,integer,,,,,,
+custom_field,,flaechen->anzahl_badezimmer,_boP_prop-bathrooms,integer,,,,,,
+custom_field,,ausstattung->heizungsart:OFEN+,_boP_prop-heat-tool,,Heating by Stove,,Ofenheizung,,,
+custom_field,,ausstattung->heizungsart:ETAGE+,_boP_prop-heat-tool,,Self-contained Central Heating,,Etagenheizung,,,
+custom_field,,ausstattung->heizungsart:ZENTRAL+,_boP_prop-heat-tool,,Central Heating,,Zentralheizung,,,
+custom_field,,ausstattung->heizungsart:FERN+,_boP_prop-heat-tool,,District Heating,,Fernheizung,,2.0.0,2024-07-17
+custom_field,,ausstattung->heizungsart:FUSSBODEN+,_boP_prop-heat-tool,,Underfloor Heating,,Fußbodenheizung,,,
+custom_field,,zustand_angaben->baujahr,_boP_prop-year,,,,,,,
+custom_field,,zustand_angaben->letztemodernisierung,_boP_prop-re,,,,,,,
+custom_field,,zustand_angaben->zustand:zustand_art:ERSTBEZUG,_boP_prop-status,,First Occupancy,,Erstbezug,,,
+custom_field,,zustand_angaben->zustand:zustand_art:TEIL_VOLLRENOVIERUNGSBED,_boP_prop-status,,in Need of Renovation,,renovierungsbedürftig,,,
+custom_field,,zustand_angaben->zustand:zustand_art:NEUWERTIG,_boP_prop-status,,in Mint Condition,,neuwertig,,,
+custom_field,,zustand_angaben->zustand:zustand_art:TEIL_VOLLSANIERT,_boP_prop-status,,rehabilitated,,saniert,,,
+custom_field,,zustand_angaben->zustand:zustand_art:TEIL_VOLLRENOVIERT,_boP_prop-status,,renovated,,renoviert,,,
+custom_field,,zustand_angaben->zustand:zustand_art:TEIL_SANIERT,_boP_prop-status,,partly rehabilitated,,teilsaniert,,,
+custom_field,,zustand_angaben->zustand:zustand_art:VOLL_SANIERT,_boP_prop-status,,fully rehabilitated,,vollsaniert,,,
+custom_field,,zustand_angaben->zustand:zustand_art:SANIERUNGSBEDUERFTIG,_boP_prop-status,,in Need of Rehabilitation,,sanierungsbedürftig,,,
+custom_field,,zustand_angaben->zustand:zustand_art:BAUFAELLIG,_boP_prop-status,,decrepit,,baufällig,,,
+custom_field,,zustand_angaben->zustand:zustand_art:NACH_VEREINBARUNG,_boP_prop-status,,by Arrangement,,nach Vereinbarung,,,
+custom_field,,zustand_angaben->zustand:zustand_art:MODERNISIERT,_boP_prop-status,,modernized,,modernisiert,,,
+custom_field,,zustand_angaben->zustand:zustand_art:GEPFLEGT,_boP_prop-status,,neat,,gepflegt,,,
+custom_field,,zustand_angaben->zustand:zustand_art:ROHBAU,_boP_prop-status,,Shell of Building,,Rohbau,,,
+custom_field,,zustand_angaben->zustand:zustand_art:ENTKERNT,_boP_prop-status,,gutted,,entkernt,,,
+custom_field,,zustand_angaben->zustand:zustand_art:ABRISSOBJEKT,_boP_prop-status,,Demolition Property,,Abrissobjekt,,,
+custom_field,,zustand_angaben->zustand:zustand_art:PROJEKTIERT,_boP_prop-status,,projected,,projektiert,,1.7.9,2023-03-14
+custom_field,,verwaltung_objekt->verfuegbar_ab,_boP_prop-start,date,,,,,1.2.0,2017-04-06
+,,,,,,,,,,
+custom_field,,ausstattung->befeuerung:OEL+,_boP_prop-heat,,Oil,,Öl,,,
+custom_field,,ausstattung->befeuerung:GAS+,_boP_prop-heat,,Gas,,Gas,,,
+custom_field,,ausstattung->befeuerung:ELEKTRO+,_boP_prop-heat,,Electric,,Elektro,,,
+custom_field,,ausstattung->befeuerung:ALTERNATIV+,_boP_prop-heat,,Alternative,,Alternativ,,,
+custom_field,,ausstattung->befeuerung:SOLAR+,_boP_prop-heat,,Solar,,Solar,,,
+custom_field,,ausstattung->befeuerung:ERDWAERME+,_boP_prop-heat,,Geothermal,,Erdwärme,,,
+custom_field,,ausstattung->befeuerung:LUFTWP+,_boP_prop-heat,,Air Heat Pump,,Luft-Wärmepumpe,,,
+custom_field,,ausstattung->befeuerung:FERN+,_boP_prop-heat,,District Heat,,Fernwärme,,2.0.0,2024-07-17
+custom_field,,ausstattung->befeuerung:BLOCK+,_boP_prop-heat,,Thermal Power Station,,Blockheizkraftwerk,,,
+custom_field,,ausstattung->befeuerung:WASSER-ELEKTRO+,_boP_prop-heat,,Water Electric Heating,,Warmwasser-Elektroheizung,,,
+custom_field,,ausstattung->befeuerung:PELLET+,_boP_prop-heat,,Pellets,,Pellets,,,
+custom_field,,ausstattung->befeuerung:KOHLE+,_boP_prop-heat,,Coal,,Kohle,,,
+custom_field,,ausstattung->befeuerung:HOLZ+,_boP_prop-heat,,Wood Chips,,Holz-Hackschnitzel,,,
+custom_field,,ausstattung->befeuerung:FLUESSIGGAS+,_boP_prop-heat,,Liquid Gas (Own Tank),,Flüssiggas (eigener Tank),,,
+custom_field,,ausstattung->befeuerung:ERDGAS_LEICHT+,_boP_prop-heat,,Natural Gas (light),,Erdgas (leicht),,2.0.0,2024-07-17
+custom_field,,ausstattung->befeuerung:ERDGAS_SCHWER+,_boP_prop-heat,,Natural Gas (heavy),,Erdgas (schwer),,2.0.0,2024-07-17
+custom_field,,ausstattung->befeuerung:FERNWAERME_DAMPF+,_boP_prop-heat,,District Heat (Steam),,Fernwärme (Dampf),,2.0.0,2024-07-17
+custom_field,,ausstattung->befeuerung:NAHWAERME+,_boP_prop-heat,,Local Heat,,Nahwärme,,2.0.0,2024-07-17
+custom_field,,ausstattung->befeuerung:WAERMELIEFERUNG+,_boP_prop-heat,,Heat Delivery,,Wärmelieferung,,2.0.0,2024-07-17
+custom_field,,ausstattung->befeuerung:BIOENERGIE+,_boP_prop-heat,,Bio Energy,,Bioenergie,,2.0.0,2024-07-17
+custom_field,,ausstattung->befeuerung:WINDENERGIE+,_boP_prop-heat,,Wind Energy,,Windenergie,,2.0.0,2024-07-17
+custom_field,,ausstattung->befeuerung:WASSERENERGIE+,_boP_prop-heat,,Water Energy,,Wasserenergie,,2.0.0,2024-07-17
+custom_field,,ausstattung->befeuerung:UMWELTWAERME+,_boP_prop-heat,,Environmental Heat,,Umweltwärme,,2.0.0,2024-07-17
+custom_field,,ausstattung->befeuerung:KWK_FOSSIL+,_boP_prop-heat,,Combined Heat and Power (fossil),,Kraft-Wärme-Kopplung (fossil),,2.0.0,2024-07-17
+custom_field,,ausstattung->befeuerung:KWK_ERNEUERBAR+,_boP_prop-heat,,Combined Heat and Power (renewable),,Kraft-Wärme-Kopplung (erneuerbar),,2.0.0,2024-07-17
+custom_field,,ausstattung->befeuerung:KWK_REGENERATIV+,_boP_prop-heat,,Combined Heat and Power (regenerative),,Kraft-Wärme-Kopplung (regenerativ),,2.0.0,2024-07-17
+custom_field,,ausstattung->befeuerung:KWK_BIO+,_boP_prop-heat,,Combined Heat and Power (Bio),,Kraft-Wärme-Kopplung (Bio),,2.0.0,2024-07-17
+custom_field,,zustand_angaben->energiepass->primaerenergietraeger,_boP_prop-heat,epass_energy_carriers,,,,,1.4.2,2018-07-10
+custom_field,,zustand_angaben->energiepass->endenergiebedarf,_boP_prop-eco,epass_unit,,,,,,
+custom_field,,zustand_angaben->energiepass->energieverbrauchkennwert,_boP_prop-eco,epass_unit,,,,,1.3.0,2018-01-02
+"# The source definition „...energiepass->art“ is not a valid OpenImmo XML node, but smooths out a buggy export implementation of the OpenEstate-ImmoTool.",,,,,,,,,,
+"# Die Quelldefinition „...energiepass->art“ ist kein gültiger OpenImmo-XML-Knoten, bügelt aber eine fehlerhafte Export-Implementierung des OpenEstate-ImmoTools aus.",,,,,,,,,,
+custom_field,,zustand_angaben->energiepass->art,_boP_prop-eco-mode,epass_type,,,,,,
+custom_field,,zustand_angaben->energiepass->epart,_boP_prop-eco-mode,epass_type,,,,,,
+custom_field,,zustand_angaben->user_defined_simplefield:feldname:epass_wertklasse,_boP_prop-eco-class,,,,,,,
+custom_field,,zustand_angaben->energiepass->wertklasse,_boP_prop-eco-class,,,,,,1.4.3,2018-11-21
+custom_field,,zustand_angaben->user_defined_simplefield:feldname:epass_waermewert,_boP_prop-convalue-heating,epass_unit,,,,,1.9.0,2022-11-20
+custom_field,,zustand_angaben->energiepass->waermewert,_boP_prop-convalue-heating,epass_unit,,,,,1.9.0,2022-11-20
+custom_field,,zustand_angaben->user_defined_simplefield:feldname:epass_waermewert,_boP_prop-convalue-electricity,epass_unit,,,,,1.9.0,2022-11-20
+custom_field,,zustand_angaben->energiepass->stromwert,_boP_prop-convalue-electricity,epass_unit,,,,,1.9.0,2022-11-20
+,,,,,,,,,,
+custom_field,,geo->etage,_boP_prop-level,,,,,,,
+custom_field,,geo->etage=0,_boP_prop-level,,GF,,EG,,1.9.1,2023-12-21
+custom_field,,geo->anzahl_etagen,_boP_prop-level-count,,,,,,,
+,,,,,,,,,,
+custom_field,,ausstattung->gartennutzung,_boP_prop-garden,,yes,,,,,
+custom_field,,flaechen->anzahl_balkone,_boP_prop-balkony,integer,yes,,,,,
+custom_field,,flaechen->anzahl_terrassen,_boP_prop-patio,integer,yes,,,,,
+custom_field,,ausstattung->stellplatzart:GARAGE,_boP_prop-garage,,yes,,,,,
+custom_field,,ausstattung->stellplatzart:CARPORT,_boP_prop-carport,,yes,,,,,
+custom_field,,ausstattung->stellplatzart:FREIPLATZ,_boP_prop-carport,,yes,,,,,
+custom_field,,ausstattung->fahrstuhl,_boP_prop-lift,,yes,,,,,
+custom_field,,ausstattung->barrierefrei,_boP_prop-access,,yes,,,,,
+custom_field,,ausstattung->kueche:EBK,_boP_prop-kitchen,,yes,,,,,
+custom_field,,ausstattung->gaestewc,_boP_prop-wc,,yes,,,,,
+custom_field,,ausstattung->gaeste_wc,_boP_prop-wc,,yes,,,,,
+custom_field,,ausstattung->unterkellert:keller:JA,_boP_prop-basement,,yes,,,,,
+custom_field,,ausstattung->unterkellert:keller:TEIL,_boP_prop-basement,,yes,,,,,
+custom_field,,ausstattung->wasch_trockenraum,_boP_prop-washing,,yes,,,,,
+custom_field,,ausstattung->fahrradraum,_boP_prop-basement-bic,,yes,,,,,
+custom_field,,ausstattung->swimmingpool,_boP_prop-pool,,yes,,,,,
+custom_field,,verwaltung_objekt->haustiere,_boP_prop-pets,,yes,,,,,
+custom_field,,ausstattung->sauna,_boP_prop-sauna,,yes,,,,,
+custom_field,,ausstattung->dachboden,_boP_prop-attic,,yes,,,,,
+custom_field,,ausstattung->abstellraum,_boP_prop-storage,,yes,,,,,
+custom_field,,zustand_angaben->verkaufstatus:stand:VERKAUFT,bor_prop-sale,,sold,,,,,
+custom_field,,zustand_angaben->verkaufstatus:stand:VERKAUFT,bor_prop-marker,,Sold,,Verkauft,,,
+custom_field,,zustand_angaben->verkaufstatus:stand:RESERVIERT,bor_prop-marker,,Reserved,,Reserviert,,1.1.1,2017-01-09
+,,,,,,,,,,
+custom_field,,verwaltung_techn->objektnr_extern,_boP_prop-id,,,,,,,
+# Use external property ID also as translation ID in multilingual sites.,,,,,,,,,,
+# Externe Objektnummer zusätzlich als Übersetzungs-ID in mehrsprachigen Websites verwenden.,,,,,,,,,,
+custom_field,,verwaltung_techn->objektnr_extern,_immonex_translation_id,,,,,,,
+,,,,,,,,,,
+# Example for mapping foreign language text fields (output via immonex User-defined Properties widget),,,,,,,,,,
+# Beispiel für das Mapping von fremdsprachigen Textfeldern (Ausgabe mit dem immonex-Widget für benutzerdefinierte Eigenschaften),,,,,,,,,,
+#custom_field,infotext_i18n,freitexte->objekt_text:lang:en,,,Infos,,Infos,,,
+,,,,,,,,,,
+# Some of the following elements – if available – are used for geocoding automatically and must not be imported explicitly.,,,,,,,,,,
+# Einige der folgenden Elemente werden – sofern vorhanden – automatisch für die Geocodierung verwendet und müssen nicht explizit importiert werden.,,,,,,,,,,
+#custom_field,,geo->plz,,,Postcode,,PLZ,,,
+#custom_field,,geo->ort,,,City,,Ort,,,
+#custom_field,,geo->geokoordinaten:breitengrad,,,Latitude,,Breitengrad,,,
+#custom_field,,geo->geokoordinaten:laengengrad,,,Longitude,,Längengrad,,,
+#custom_field,,geo->strasse,,,Street,,Straße,,,
+#custom_field,,geo->hausnummer,,,Street Number,,Hausnummer,,,
+#custom_field,,geo->bundesland,,,State,,Bundesland,,,
+custom_field,,geo->land:iso_land,_immonex_iso_country,,,,,,,
+#custom_field,,geo->gemeindecode,,,Communal Code,,Gemeindecode,,,
+#custom_field,,geo->flur,,,Cadastral District,,Flur,,,
+#custom_field,,geo->flurstueck,,,Sub-plot,,Flurstück,,,
+#custom_field,,geo->gemarkung,,,Communal District,,Gemarkung,,,
+,,,,,,,,,,
+custom_field,,geo->wohnungsnr,custom_data+,,,Flat Number,,Wohnungsnummer,,
+custom_field,,geo->regionaler_zusatz,custom_data+,,,Additional Location Info,,Zusatzinformation zur Lage,,
+custom_field,,geo->lage_im_bau:RECHTS+,custom_data+,,Right,Location inside the Building,rechts,Lage im Gebäude,,
+custom_field,,geo->lage_im_bau:VORNE+,custom_data+,,in the Front,Location inside the Building,vorne,Lage im Gebäude,,
+custom_field,,geo->lage_im_bau:HINTEN+,custom_data+,,in the Rear,Location inside the Building,hinten,Lage im Gebäude,,
+,,,,,,,,,,
+custom_field,,geo->lage_gebiet:gebiete:WOHN,custom_data+,,Residential Area,Location/Area,Wohngebiet,Lage/Gebiet,,
+custom_field,,geo->lage_gebiet:gebiete:GEWERBE,custom_data+,,Commercial Area,Location/Area,Gewerbegebiet,Lage/Gebiet,,
+custom_field,,geo->lage_gebiet:gebiete:INDUSTRIE,custom_data+,,Industrial Area,Location/Area,Industriegebiet,Lage/Gebiet,,
+custom_field,,geo->lage_gebiet:gebiete:MISCH,custom_data+,,Mixed Use Area,Location/Area,Mischgebiet,Lage/Gebiet,,
+custom_field,,geo->lage_gebiet:gebiete:NEUBAU,custom_data+,,Developing Area,Location/Area,Neubaugebiet,Lage/Gebiet,,
+custom_field,,geo->lage_gebiet:gebiete:ORTSLAGE,custom_data+,,Town / Village,Location/Area,Ortslage,Lage/Gebiet,,
+custom_field,,geo->lage_gebiet:gebiete:SIEDLUNG,custom_data+,,Housing Estate,Location/Area,Siedlung,Lage/Gebiet,,
+custom_field,,geo->lage_gebiet:gebiete:STADTRAND,custom_data+,,City Limits,Location/Area,Stadtrand,Lage/Gebiet,,
+custom_field,,geo->lage_gebiet:gebiete:STADTTEIL,custom_data+,,District,Location/Area,Stadtteil,Lage/Gebiet,,
+custom_field,,geo->lage_gebiet:gebiete:STADTZENTRUM,custom_data+,,Downtown,Location/Area,Stadtzentrum,Lage/Gebiet,,
+custom_field,,geo->lage_gebiet:gebiete:NEBENZENTRUM,custom_data+,,Outskirts,Location/Area,Nebenzentrum,Lage/Gebiet,,
+custom_field,,geo->lage_gebiet:gebiete:1A,custom_data+,,Prime,Location/Area,1A,Lage/Gebiet,,
+custom_field,,geo->lage_gebiet:gebiete:1B,custom_data+,,Subprime,Location/Area,1B,Lage/Gebiet,,
+,,,,,,,,,,
+custom_field,,zustand_angaben->bebaubar_nach:bebaubar_attr:34_NACHBARSCHAFT,custom_data+,,Neighborhood (§ 34 BauGB),Buildable according to,Nachbarschaft (§ 34 BauGB),Bebaubar nach,1.8.0,2023-03-27
+custom_field,,zustand_angaben->bebaubar_nach:bebaubar_attr:35_AUSSENGEBIET,custom_data+,,Outer Area (§ 35 BauGB),Buildable according to,Außengebiet (§ 35 BauGB),Bebaubar nach,1.8.0,2023-03-27
+custom_field,,zustand_angaben->bebaubar_nach:bebaubar_attr:B_PLAN,custom_data+,,Development Plan,Buildable according to,Bebauungsplan,Bebaubar nach,1.8.0,2023-03-27
+custom_field,,zustand_angaben->bebaubar_nach:bebaubar_attr:KEIN_BAULAND,custom_data+,,No Building Land,Buildable according to,Kein Bauland,Bebaubar nach,1.8.0,2023-03-27
+custom_field,,zustand_angaben->bebaubar_nach:bebaubar_attr:BAUERWARTUNGSLAND,custom_data+,,Building Expectation Land,Buildable according to,Bauerwartungsland,Bebaubar nach,1.8.0,2023-03-27
+custom_field,,zustand_angaben->bebaubar_nach:bebaubar_attr:LAENDERSPEZIFISCH,custom_data+,,Country-specific,Buildable according to,länderspezifisch,Bebaubar nach,1.8.0,2023-03-27
+custom_field,,zustand_angaben->bebaubar_nach:bebaubar_attr:BAULAND_OHNE_B_PLAN,custom_data+,,Building Land without Development Plan,Buildable according to,Bauland ohne Bebauungsplan,Bebaubar nach,1.8.0,2023-03-27
+,,,,,,,,,,
+"# The associated WordPress user will be determined by the contents of the nodes kontaktperson->titel, kontaktperson->vorname and kontaktperson->name automatically.",,,,,,,,,,
+"# Der zugehörige WordPress-Benutzer wird anhand der Inhalte der Elemente kontaktperson->titel, kontaktperson->vorname und kontaktperson->name automatisch ermittelt.",,,,,,,,,,
+#custom_field,contact,kontaktperson->email_zentrale,,,Email (Head Office),,E-Mail (Zentrale),,,
+#custom_field,contact,kontaktperson->email_direkt,,,Email (Personal),,E-Mail (direkt),,,
+#custom_field,contact,kontaktperson->tel_zentrale,,,Phone (Head Office),,Telefon (Zentrale),,,
+#custom_field,contact,kontaktperson->tel_durchw,,,Phone (Call-through),,Telefon (Durchwahl),,,
+#custom_field,contact,kontaktperson->tel_fax,,,Fax,,Fax,,,
+#custom_field,contact,kontaktperson->tel_handy,,,Cellphone,,Mobil,,,
+#custom_field,contact,kontaktperson->name,,,Last Name,,Name,,,
+#custom_field,contact,kontaktperson->vorname,,,First Name,,Vorname,,,
+#custom_field,contact,kontaktperson->titel,,,Title,,Titel,,,
+#custom_field,contact,kontaktperson->anrede,,,Salutation,,Anrede,,,
+#custom_field,contact,kontaktperson->firma,,,Company,,Firma,,,
+#custom_field,contact,kontaktperson->zusatzfeld,,,Further Information,,Weitere Infos,,,
+#custom_field,contact,kontaktperson->strasse,,,Street,,Straße,,,
+#custom_field,contact,kontaktperson->hausnummer,,,Street Number,,Hausnummer,,,
+#custom_field,contact,kontaktperson->plz,,,Postcode,,PLZ,,,
+#custom_field,contact,kontaktperson->ort,,,City,,Ort,,,
+#custom_field,contact,kontaktperson->postfach,,,PO Box,,Postfach,,,
+#custom_field,contact,kontaktperson->postf_plz,,,PO Box Postcode,,Postfach-PLZ,,,
+#custom_field,contact,kontaktperson->postf_ort,,,PO Box City,,Postfach-Ort,,,
+#custom_field,contact,kontaktperson->land:iso_land,,,Country,,Land,,,
+#custom_field,contact,kontaktperson->email_priv,,,Email (Private),,E-Mail (privat),,,
+#custom_field,contact,kontaktperson->email_sonstige,,,Additional Email Address,,Sonstige E-Mail-Adresse,,,
+#custom_field,contact,kontaktperson->email_sonstige:emailart:EM_ZENTRALE,,,Additional Email Address (Head Office),,Sonstige E-Mail-Adresse (Zentrale),,,
+#custom_field,contact,kontaktperson->email_sonstige:emailart:EM_DIREKT,,,Additional Email Address (Personal),,Sonstige E-Mail-Adresse (direkt),,,
+#custom_field,contact,kontaktperson->email_sonstige:emailart:EM_PRIVAT,,,Additional Email Address (Private),,Sonstige E-Mail-Adresse (privat),,,
+#custom_field,contact,kontaktperson->email_sonstige:emailart:EM_SONSTIGE,,,Additional Email Address (Other),,Sonstige E-Mail-Adresse (sonstige),,,
+#custom_field,contact,kontaktperson->email_sonstige:bemerkung,,,Additional Email Address – Remark,,Sonstige E-Mail-Adresse – Bemerkung,,,
+#custom_field,contact,kontaktperson->tel_sonstige,,,Additional Phone Number,,Sonstige Telefonnummer,,,
+#custom_field,contact,kontaktperson->tel_sonstige:telefonart:TEL_ZENTRALE,,,Additional Phone Number (Head Office),,Sonstige Telefonnummer (Zentrale),,,
+#custom_field,contact,kontaktperson->tel_sonstige:telefonart:TEL_DURCHW,,,Additional Phone Number (Call-through),,Sonstige Telefonnummer (Durchwahl),,,
+#custom_field,contact,kontaktperson->tel_sonstige:telefonart:TEL_PRIVAT,,,Additional Phone Number (Private),,Sonstige Telefonnummer (privat),,,
+#custom_field,contact,kontaktperson->tel_sonstige:telefonart:TEL_HANDY,,,Additional Phone Number (Mobile Phone),,Sonstige Telefonnummer (mobil),,,
+#custom_field,contact,kontaktperson->tel_sonstige:telefonart:TEL_FAX,,,Additional Fax Number,,Sonstige Faxnummer,,,
+#custom_field,contact,kontaktperson->tel_sonstige:telefonart:TEL_SONSTIGE,,,Additional Phone Number (Other),,Sonstige Telefonnummer (sonstige),,,
+#custom_field,contact,kontaktperson->tel_sonstige:bemerkung,,,Additional Phone Number – Remark,,Sonstige Telefonnummer – Bemerkung,,,
+#custom_field,contact,kontaktperson->url,,,URL,,URL,,,
+#custom_field,contact,kontaktperson->personennummer,,,Person ID,,Personennummer,,,
+,,,,,,,,,,
+#custom_field,prices,preise->kaufpreisnetto*,custom_data+,currency,,Purchase Price excl. VAT,,Netto-Kaufpreis,1.1.0,2016-12-06
+#custom_field,prices,preise->kaufpreisnetto:kaufpreisust,custom_data+,currency,,Purchase Price VAT,,Kaufpreis-MwSt.,,
+custom_field,prices,preise->nettokaltmiete,custom_data+,currency,,Net Cold Rent,,Nettokaltmiete,1.5.0,2019-10-23
+custom_field,prices,preise->kaltmiete,custom_data+,currency,,Cold Rent,,Kaltmiete,1.5.0,2019-10-23
+custom_field,prices,preise->warmmiete,custom_data+,currency,,Warm Rent,,Warmmiete,1.5.0,2019-10-23
+custom_field,prices,preise->mietzuschlag,custom_data+,currency,,Rent Surcharges,,weitere Mietzuschläge,,
+custom_field,prices,preise->heizkosten_enthalten,custom_data+,boolean,,Heating Costs included in Rent,,Heizkosten in Warmmiete enthalten,,
+custom_field,prices,preise->zzg_mehrwertsteuer,custom_data+,boolean,,Prices plus VAT,,Preise zuzüglich Mehrwertsteuer,,
+#custom_field,prices,preise->hauptmietzinsnetto*,custom_data+,currency,,Main House Rent excl. VAT,,Haupt-Mietzins zzgl. MwSt.,1.1.0,2016-12-06
+#custom_field,prices,preise->hauptmietzinsnetto:hauptsmietzinsust,custom_data+,currency,,Main House Rent VAT,,Haupt-Mietzins-MwSt.,,
+custom_field,prices,preise->pauschalmiete,custom_data+,currency,,General Rent,,Pauschalmiete,,
+#custom_field,prices,preise->betriebskostennetto*,custom_data+,currency,,Operational Service Charges excl. VAT,,Betriebs-Nebenkosten zzgl. MwSt.,1.1.2,2017-02-25
+#custom_field,prices,preise->betriebskostennetto:betriebskostenust,custom_data+,currency,,Operational Service Charges VAT,,Betriebs-Nebenkosten-MwSt.,1.1.2,2017-02-25
+#custom_field,prices,preise->evbnetto*,custom_data+,currency,,Maintenance Dues excl. VAT,,Erhaltungs- und Verbesserungsbeitrag zzgl. MwSt.,1.1.0,2016-12-06
+#custom_field,prices,preise->evbnetto:evbust,custom_data+,currency,,Maintenance Dues VAT,,Erhaltungs- und Verbesserungsbeitrag MwSt.,,
+#custom_field,prices,preise->gesamtmietenetto*,custom_data+,currency,,Overall Rent excl. VAT,,Summe aller Mietzins-Zahlungen zzgl. MwSt.,1.1.0,2016-12-06
+#custom_field,prices,preise->gesamtmietenetto:gesamtmieteust,custom_data+,currency,,Overall Rent VAT,,Summe aller Mietzins-Zahlungen MwSt.,,
+custom_field,prices,preise->gesamtmietenbrutto,custom_data+,currency,,Overall Rent,,Gesamtmiete,1.5.0,2019-10-23
+#custom_field,prices,preise->gesamtbelastungnetto*,custom_data+,currency,,Overall Costs excl. VAT,,Summe aller Nebenkosten/Mietzinse zzgl. MwSt.,1.1.0,2016-12-06
+#custom_field,prices,preise->gesamtbelastungnetto:gesamtbelastungust,custom_data+,currency,,Overall Costs VAT,,Summe aller Nebenkosten/Mietzinse MwSt.,,
+custom_field,prices,preise->gesamtbelastungbrutto,custom_data+,currency,,Overall Costs,,Gesamtkosten,1.5.0,2019-10-23
+custom_field,prices,preise->gesamtkostenprom2von,custom_data+,currency,,Overall Costs per sqm (min.),,Gesamtkosten pro m² von,1.5.1,2020-02-10
+custom_field,prices,preise->gesamtkostenprom2von:gesamtkostenprom2bis,custom_data+,currency,,Overall Costs per sqm (max.),,Gesamtkosten pro m² bis,1.5.1,2020-02-10
+#custom_field,prices,preise->heizkostennetto*,custom_data+,currency,,Heating Costs excl. VAT,,Heizkosten pro Einheit zzgl. MwSt.,1.1.0,2016-12-06
+#custom_field,prices,preise->heizkostennetto:heizkostenust,custom_data+,currency,,Heating Costs VAT,,Heizkosten pro Einheit MwSt.,,
+#custom_field,prices,preise->monatlichekostennetto*,custom_data+,currency,,Monthly Costs excl. VAT,,Summe der monatlichen Kosten zzgl. MwSt.,1.1.0,2016-12-06
+#custom_field,prices,preise->monatlichekostennetto:monatlichekostenust,custom_data+,currency,,Monthly Costs VAT,,Summe der monatlichen Kosten MwSt.,1.1.0,2016-12-06
+#custom_field,prices,preise->monatlichekostenbrutto,custom_data+,currency,,Monthly Costs incl. VAT,,Summe der monatlichen Kosten inkl. MwSt.,,
+custom_field,prices,preise->nebenkostenprom2von,custom_data+,currency,,Service Charges per sqm (min.),,Nebenkosten pro m² von,,
+custom_field,prices,preise->nebenkostenprom2von:nebenkostenprom2bis,custom_data+,currency,,Service Charges per sqm (max.),,Nebenkosten pro m² bis,,
+#custom_field,prices,preise->ruecklagenetto*,custom_data+,currency,,Reserve excl. VAT,,Rücklage zzgl. MwSt.,1.1.0,2016-12-06
+#custom_field,prices,preise->ruecklagenetto:ruecklageust,custom_data+,currency,,Reserve VAT,,Rücklage MwSt.,,
+#custom_field,prices,preise->sonstigekostennetto*,custom_data+,currency,,Other Costs excl. VAT,,Sonstige Kosten zzgl. MwSt.,1.1.0,2016-12-06
+#custom_field,prices,preise->sonstigekostennetto:sonstigekostenust,custom_data+,currency,,Other Costs VAT,,Sonstige Kosten MwSt.,,
+#custom_field,prices,preise->sonstigemietenetto*,custom_data+,currency,,Other Renting Costs excl. VAT,,Ergänzende Mietkosten zzgl. MwSt.,1.1.0,2016-12-06
+#custom_field,prices,preise->sonstigemietenetto:sonstigemieteust,custom_data+,currency,,Other Renting Costs VAT,,Ergänzende Mietkosten MwSt.,,
+#custom_field,prices,preise->summemietenetto*,custom_data+,currency,,Total Rent excl. VAT,,Gesamtsumme Mietkosten zzgl. MwSt.,1.1.0,2016-12-06
+#custom_field,prices,preise->summemietenetto:summemieteust,custom_data+,currency,,Total Rent VAT,,Gesamtsumme Mietkosten MwSt.,,
+#custom_field,prices,preise->nettomieteprom2von*,custom_data+,currency,,Rent per sqm excl. VAT (min.),,Miete zzgl. MwSt. pro m² von,1.1.0,2016-12-06
+#custom_field,prices,preise->nettomieteprom2von:nettomieteprom2bis,custom_data+,currency,,Rent per sqm excl. VAT (max.),,Miete zzgl. MwSt. pro m² bis,,
+custom_field,prices,preise->pacht,custom_data+,currency,,Rent,,Pacht,1.3.0,2018-01-02
+custom_field,prices,preise->erbpacht,custom_data+,currency,,Rent,,Erbpacht,1.3.0,2018-01-02
+custom_field,prices,preise->abstand,custom_data+,currency,,Key Money,,Abstand,,
+custom_field,prices,preise->preis_zeitraum_von,custom_data+,,,Price valid from,,Preis gültig von,,
+custom_field,prices,preise->preis_zeitraum_bis,custom_data+,,,Price valid until,,Preis gültig bis,,
+custom_field,prices,preise->mietpreis_pro_qm,custom_data+,currency,,Net Cold Rent per sqm,,Netto-Kaltmiete pro m²,1.5.0,2019-10-23
+custom_field,prices,preise->kaufpreis_pro_qm,custom_data+,currency,,Purchase Price per sqm,,Kaufpreis pro m²,,
+#custom_field,prices,preise->provisionspflichtig,custom_data+,boolean,,Subject to Commission,,provisionspflichtige Immobilie,,
+#custom_field,prices,preise->innen_courtage*,custom_data+,,,Seller Commission,,Verkäuferprovision,1.7.9,44999
+custom_field,prices,preise->aussen_courtage*,custom_data+,,,Buyer's Commission,,Käuferprovision,1.7.3,2021-04-15
+#custom_field,prices,preise->provisionnetto,custom_data+,currency,,Gross Commission,,Provision (netto),,
+custom_field,prices,preise->provisionbrutto,custom_data+,currency,,Gross Commission,,Provision (brutto),,
+custom_field,prices,preise->courtage_hinweis,custom_data+,,,Courtage Remark,,Hinweis zur Courtage,,
+custom_field,prices,preise->mwst_satz,custom_data+,unit:%:0,,VAT Rate,,MwSt.-Satz,1.2.0,2017-04-06
+custom_field,prices,preise->mwst_gesamt,custom_data+,currency,,Overall VAT,,MwSt. gesamt,1.2.0,2017-04-06
+custom_field,prices,preise->x_fache,custom_data+,,,Multiple (Purchase Price related to Yearly Rent),,X-fache (Kaufpreis bez. auf Jahresmiete),,
+custom_field,prices,preise->nettorendite,custom_data+,number_format,,Net Return (%),,Nettorendite (%),,
+custom_field,prices,preise->nettorendite_soll,custom_data+,number_format,,"Net Return (%, normal)",,"Nettorendite (%, soll)",,
+custom_field,prices,preise->nettorendite_ist,custom_data+,number_format,,"Net Return (%, current)",,"Nettorendite (%, ist)",,
+custom_field,prices,preise->mieteinnahmen_ist,custom_data+,currency,,Current Rental Revenues per Year,,Aktuelle Mieteinnahmen pro Jahr,1.5.0,2019-10-23
+custom_field,prices,preise->mieteinnahmen_ist:periode:TAG,custom_data+,currency,,Current Rental Revenues per Day,,Aktuelle Mieteinnahmen pro Tag,,
+custom_field,prices,preise->mieteinnahmen_ist:periode:WOCHE,custom_data+,currency,,Current Rental Revenues per Week,,Aktuelle Mieteinnahmen pro Woche,,
+custom_field,prices,preise->mieteinnahmen_ist:periode:MONAT,custom_data+,currency,,Current Rental Revenues per Month,,Aktuelle Mieteinnahmen pro Monat,,
+custom_field,prices,preise->mieteinnahmen_ist:periode:JAHR,custom_data+,currency,,Current Rental Revenues per Year,,Aktuelle Mieteinnahmen pro Jahr,,
+custom_field,prices,preise->mieteinnahmen_soll,custom_data+,currency,,Rental Revenues per Year (normal),,Aktuelle Mieteinnahmen pro Jahr (soll),1.5.0,2019-10-23
+custom_field,prices,preise->mieteinnahmen_soll:periode:TAG,custom_data+,currency,,Rental Revenues per Day (normal),,Aktuelle Mieteinnahmen pro Tag (soll),,
+custom_field,prices,preise->mieteinnahmen_soll:periode:WOCHE,custom_data+,currency,,Rental Revenues per Week (normal),,Aktuelle Mieteinnahmen pro Woche (soll),,
+custom_field,prices,preise->mieteinnahmen_soll:periode:MONAT,custom_data+,currency,,Rental Revenues per Month (normal),,Aktuelle Mieteinnahmen pro Monat (soll),,
+custom_field,prices,preise->mieteinnahmen_soll:periode:JAHR,custom_data+,currency,,Rental Revenues per Year (normal),,Aktuelle Mieteinnahmen pro Jahr (soll),,
+custom_field,prices,preise->erschliessungskosten,custom_data+,currency,,Development Charges,,Erschließungskosten,,
+custom_field,prices,preise->geschaeftsguthaben,custom_data+,currency,,Capital Share,,Geschäftsguthaben,,
+custom_field,prices,preise->stp_carport:anzahl,custom_data+,,,Number of Carport Parking Spaces,,Anzahl Carport-Stellplätze,,
+custom_field,prices,preise->stp_carport:stellplatzmiete,custom_data+,currency,,Parking Space Rent (Carport),,Stellplatzmiete (Carport),,
+custom_field,prices,preise->stp_carport:stellplatzkaufpreis,custom_data+,currency,,Parking Space Purchase Price (Carport),,Stellplatzkaufpreis (Carport),,
+custom_field,prices,preise->stp_duplex:anzahl,custom_data+,,,Number of Duplex Parking Spaces,,Anzahl Duplex-Stellplätze,,
+custom_field,prices,preise->stp_duplex:stellplatzmiete,custom_data+,currency,,Parking Space Rent (Duplex),,Stellplatzmiete (Duplex),,
+custom_field,prices,preise->stp_duplex:stellplatzkaufpreis,custom_data+,currency,,Parking Space Purchase Price (Duplex),,Stellplatzkaufpreis (Duplex),,
+custom_field,prices,preise->stp_freiplatz:anzahl,custom_data+,,,Number of Outdoor Parking Spaces,,Anzahl Außenstellplätze,,
+custom_field,prices,preise->stp_freiplatz:stellplatzmiete,custom_data+,currency,,Parking Space Rent (Outdoor),,Außenstellplatzmiete,,
+custom_field,prices,preise->stp_freiplatz:stellplatzkaufpreis,custom_data+,currency,,Parking Space Purchase Price (Outdoor),,Außenstellplatzkaufpreis,,
+custom_field,prices,preise->stp_garage:anzahl,custom_data+,,,Number of Garage Parking Spaces,,Anzahl Garagenstellplätze,,
+custom_field,prices,preise->stp_garage:stellplatzmiete,custom_data+,currency,,Parking Space Rent (Garage),,Stellplatzmiete (Garage),,
+custom_field,prices,preise->stp_garage:stellplatzkaufpreis,custom_data+,currency,,Parking Space Purchase Price (Garage),,Stellplatzkaufpreis (Garage),,
+custom_field,prices,preise->stp_parkhaus:anzahl,custom_data+,,,Number of Parking Spaces (Parking Garage),,Anzahl Parkhaus-Stellplätze,,
+custom_field,prices,preise->stp_parkhaus:stellplatzmiete,custom_data+,currency,,Parking Space Rent (Parking Garage),,Stellplatzmiete (Parkhaus),,
+custom_field,prices,preise->stp_parkhaus:stellplatzkaufpreis,custom_data+,currency,,Parking Space Purchase Price (Parking Garage),,Stellplatzkaufpreis (Parkhaus),,
+custom_field,prices,preise->stp_tiefgarage:anzahl,custom_data+,,,Number of Parking Spaces (Deep-level Garage),,Anzahl TG-Stellplätze,,
+custom_field,prices,preise->stp_tiefgarage:stellplatzmiete,custom_data+,currency,,Parking Space Rent (Deep-level Garage),,Stellplatzmiete (Tiefgarage),,
+custom_field,prices,preise->stp_tiefgarage:stellplatzkaufpreis,custom_data+,currency,,Parking Space Purchase Price (Deep-level Garage),,Stellplatzkaufpreis (Tiefgarage),,
+custom_field,prices,preise->richtpreis,custom_data+,currency,,Benchmark Price,,Richtpreis,,
+custom_field,prices,preise->richtpreisprom2,custom_data+,currency,,Benchmark Price per sqm,,Richtpreis pro m²,,
+custom_field,prices,preise->preis_zeiteinheit:zeiteinheit:TAG,custom_data+,,Day,Price Time Period,Tag,Preis-Zeiteinheit,,
+custom_field,prices,preise->preis_zeiteinheit:zeiteinheit:WOCHE,custom_data+,,Week,Price Time Period,Woche,Preis-Zeiteinheit,,
+custom_field,prices,preise->preis_zeiteinheit:zeiteinheit:MONAT,custom_data+,,Month,Price Time Period,Monat,Preis-Zeiteinheit,,
+custom_field,prices,preise->preis_zeiteinheit:zeiteinheit:JAHR,custom_data+,,Year,Price Time Period,Jahr,Preis-Zeiteinheit,,
+custom_field,prices,preise->freitext_preis,custom_data+,,,Additional Price Information,,Zusatzinfos zu den Preisen,,
+custom_field,,bieterverfahren->beginn_angebotsphase,custom_data+,date,,Begin of Offer Phase,,Beginn der Angebotsphase,,
+custom_field,,bieterverfahren->besichtigungstermin,custom_data+,date,,Date of Walkthrough,,Besichtigungstermin,,
+custom_field,,bieterverfahren->besichtigungstermin_2,custom_data+,date,,Date of Walkthrough (alternative),,Besichtigungstermin (alternativ),,
+custom_field,,bieterverfahren->beginn_bietzeit,custom_data+,date,,Begin of Offering Period,,Beginn der Bietzeit,,
+custom_field,,bieterverfahren->ende_bietzeit,custom_data+,date,,End of Offering Period,,Ende der Bietzeit,,
+custom_field,,versteigerung->aktenzeichen,custom_data+,,,File Number (Auction),,Aktenzeichen (Versteigerung),,
+custom_field,,versteigerung->zvtermin,custom_data+,date_time,,Date of Foreclosure Auction,,Termin der Zwangsversteigerung,,
+custom_field,,versteigerung->zusatztermin,custom_data+,date_time,,Date of Foreclosure Auction (alternative),,Termin der Zwangsversteigerung (Zusatztermin),,
+custom_field,,versteigerung->amtsgericht,custom_data+,,,District Court,,Amtsgericht,,
+custom_field,,versteigerung->verkehrswert,custom_data+,currency,,Market Value,,Verkehrswert,,
+custom_field,,flaechen->balkon_terrasse_flaeche,custom_data+,sqm,,Balcony/Terrace Space,,Balkon-/Terrassenfläche,,
+custom_field,,flaechen->anzahl_stellplaetze,custom_data+,integer,,Car Spaces,,Stellplätze,,
+#custom_field,,flaechen->ladenflaeche,custom_data+,sqm,,Shop Area,,Ladenfläche,1.9.1,2023-12-21
+#custom_field,,flaechen->verkaufsflaeche,custom_data+,sqm,,Retail Area,,Verkaufsfläche,1.9.1,2023-12-21
+#custom_field,,flaechen->lagerflaeche,custom_data+,sqm,,Storage Area,,Lagerfläche,1.4.0,2018-04-21
+custom_field,,flaechen->freiflaeche,custom_data+,sqm,,Open Space,,Freifläche,,
+custom_field,,flaechen->bueroflaeche,custom_data+,sqm,,Office Area,,Bürofläche,,
+custom_field,,flaechen->bueroteilflaeche,custom_data+,sqm,,Office Area Part,,Büroteilfläche,,
+custom_field,,flaechen->fensterfront,custom_data+,sqm,,Length of Window Front,,Länge der Fensterfläche,,
+custom_field,,flaechen->verwaltungsflaeche,custom_data+,sqm,,Administration Area,,Verwaltungsfläche,,
+custom_field,,flaechen->gastroflaeche,custom_data+,sqm,,Gastronomy Area,,Gastrofläche,,
+custom_field,,flaechen->grz,custom_data+,,,Site Occupancy Index,,Grundflächenzahl,,
+custom_field,,flaechen->gfz,custom_data+,,,Floor-space Index,,Geschossflächenzahl,,
+custom_field,,flaechen->bmz,custom_data+,,,Cubic Index,,Baumassenzahl,,
+custom_field,,flaechen->bgf,custom_data+,,,Gross Floor Area Index,,Brutto-Geschossflächen-Zahl,,
+custom_field,,flaechen->sonstflaeche,custom_data+,sqm,,Additional Space,,Sonstige Fläche,,
+custom_field,,flaechen->anzahl_sep_wc,custom_data+,integer,,Lavatories,,Separate WCs,1.1.0,2016-12-06
+custom_field,,flaechen->anzahl_balkone,custom_data+,integer,,Balconies,,Balkone,1.4.0,2018-04-20
+custom_field,,flaechen->anzahl_terrassen,custom_data+,integer,,Terraces,,Terrassen,1.4.0,2018-04-20
+custom_field,,flaechen->anzahl_logia,custom_data+,integer,,Loggias,,Loggien,,
+custom_field,,flaechen->anzahl_wohn_schlafzimmer,custom_data+,integer,,Living Rooms and Bedrooms,,Wohn- und Schlafzimmer,,
+custom_field,,flaechen->gartenflaeche,custom_data+,sqm,,Garden Space,,Gartenfläche,,
+custom_field,,flaechen->kellerflaeche,custom_data+,sqm,,Basement Space,,Kellerfläche,,
+custom_field,,flaechen->fensterfront_qm,custom_data+,sqm,,Window Front Size,,Fensterfront,,
+custom_field,,flaechen->grundstuecksfront,custom_data+,,,Plot / Street Front (m),,Grundstücksfront zur Straße (m),,
+custom_field,,flaechen->dachbodenflaeche,custom_data+,sqm,,Attic Space,,Dachbodenfläche,,
+custom_field,,flaechen->teilbar_ab,custom_data+,sqm,,Separable from,,Teilbar ab,,
+custom_field,,flaechen->beheizbare_flaeche,custom_data+,sqm,,Heatable Space,,Beheizbare Fläche,,
+custom_field,,flaechen->plaetze_gastraum,custom_data+,,,Seats (Seating Area),,Plätze im Gastraum,,
+custom_field,,flaechen->anzahl_betten,custom_data+,,,Number of Beds,,Anzahl der Betten,,
+custom_field,,flaechen->anzahl_tagungsraeume,custom_data+,,,Conference Rooms,,Tagungsräume,,
+custom_field,,flaechen->vermietbare_flaeche,custom_data+,sqm,,Rentable Space,,Vermietbare Fläche,,
+custom_field,,flaechen->anzahl_wohneinheiten,custom_data+,,,Living Units,,Wohneinheiten,,
+custom_field,,flaechen->anzahl_gewerbeeinheiten,custom_data+,,,Commercial Units,,Gewerbeeinheiten,,
+custom_field,,flaechen->kubatur,custom_data+,,,Cubature,,Kubatur,,
+custom_field,,flaechen->ausnuetzungsziffer,custom_data+,,,Occupancy Rate,,Ausnützungsziffer,1.2.0,2017-04-06
+custom_field,,flaechen->flaeche_von,custom_data+,sqm,,Area (min.),,Fläche von,,
+custom_field,,flaechen->flaeche_bis,custom_data+,sqm,,Area (max.),,Fläche bis,,
+custom_field,,ausstattung->ausstatt_kategorie=STANDARD,custom_data+,,Standard,Level of Features,Standard,Art der Ausstattung,,
+custom_field,,ausstattung->ausstatt_kategorie=GEHOBEN,custom_data+,,High Quality Interior,Level of Features,gehoben,Art der Ausstattung,1.7.9,2023-03-14
+custom_field,,ausstattung->ausstatt_kategorie=LUXUS,custom_data+,,Luxury,Level of Features,luxuriös,Art der Ausstattung,,
+custom_field,,ausstattung->stromanschlusswert,custom_data+,,,Electrical Connection Value (KW),,Stromanschlusswert (KW),,
+custom_field,,ausstattung->hallenhoehe,custom_data+,,,Hall Height (m),,Hallenhöhe (m),,
+custom_field,,ausstattung->breitband_zugang:art,custom_data+,,,Internet,,Internet,1.7.1,2020-12-26
+custom_field,,ausstattung->breitband_zugang:speed,custom_data+,,,Internet Speed,,Internet-Geschwindigkeit,1.7.1,2020-12-26
+#custom_field,,ausstattung->befeuerung:OEL+,custom_data+,,Oil,Firing,Öl,Befeuerung,,
+#custom_field,,ausstattung->befeuerung:GAS+,custom_data+,,Gas,Firing,Gas,Befeuerung,,
+#custom_field,,ausstattung->befeuerung:ELEKTRO+,custom_data+,,Electric,Firing,Elektro,Befeuerung,,
+#custom_field,,ausstattung->befeuerung:ALTERNATIV+,custom_data+,,Alternative,Firing,Alternativ,Befeuerung,,
+#custom_field,,ausstattung->befeuerung:SOLAR+,custom_data+,,Solar,Firing,Solar,Befeuerung,,
+#custom_field,,ausstattung->befeuerung:ERDWAERME+,custom_data+,,Geothermal,Firing,Erdwärme,Befeuerung,,
+#custom_field,,ausstattung->befeuerung:LUFTWP+,custom_data+,,Air Heat Pump,Firing,Luft-Wärmepumpe,Befeuerung,,
+#custom_field,,ausstattung->befeuerung:FERN+,custom_data+,,District Heat,Firing,Fernwärme,Befeuerung,2.0.0,2024-07-17
+#custom_field,,ausstattung->befeuerung:BLOCK+,custom_data+,,Thermal Power Station,Firing,Blockheizkraftwerk,Befeuerung,,
+#custom_field,,ausstattung->befeuerung:WASSER-ELEKTRO+,custom_data+,,Water Electric Heating,Firing,Warmwasser-Elektroheizung,Befeuerung,,
+#custom_field,,ausstattung->befeuerung:PELLET+,custom_data+,,Pellets,Firing,Pellets,Befeuerung,,
+#custom_field,,ausstattung->befeuerung:KOHLE+,custom_data+,,Coal,Firing,Kohle,Befeuerung,,
+#custom_field,,ausstattung->befeuerung:HOLZ+,custom_data+,,Wood Chips,Firing,Holz-Hackschnitzel,Befeuerung,,
+#custom_field,,ausstattung->befeuerung:FLUESSIGGAS+,custom_data+,,Liquid Gas (Own Tank),Firing,Flüssiggas (eigener Tank),Befeuerung,,
+#custom_field,,ausstattung->befeuerung:ERDGAS_LEICHT+,custom_data+,,Natural Gas (light),Firing,Erdgas (leicht),Befeuerung,2.0.0,2024-07-17
+#custom_field,,ausstattung->befeuerung:ERDGAS_SCHWER+,custom_data+,,Natural Gas (heavy),Firing,Erdgas (schwer),Befeuerung,2.0.0,2024-07-17
+#custom_field,,ausstattung->befeuerung:FERNWAERME_DAMPF+,custom_data+,,District Heat (Steam),Firing,Fernwärme (Dampf),Befeuerung,2.0.0,2024-07-17
+#custom_field,,ausstattung->befeuerung:NAHWAERME+,custom_data+,,Local Heat,Firing,Nahwärme,Befeuerung,2.0.0,2024-07-17
+#custom_field,,ausstattung->befeuerung:WAERMELIEFERUNG+,custom_data+,,Heat Delivery,Firing,Wärmelieferung,Befeuerung,2.0.0,2024-07-17
+#custom_field,,ausstattung->befeuerung:BIOENERGIE+,custom_data+,,Bio Energy,Firing,Bioenergie,Befeuerung,2.0.0,2024-07-17
+#custom_field,,ausstattung->befeuerung:WINDENERGIE+,custom_data+,,Wind Energy,Firing,Windenergie,Befeuerung,2.0.0,2024-07-17
+#custom_field,,ausstattung->befeuerung:WASSERENERGIE+,custom_data+,,Water Energy,Firing,Wasserenergie,Befeuerung,2.0.0,2024-07-17
+#custom_field,,ausstattung->befeuerung:UMWELTWAERME+,custom_data+,,Environmental Heat,Firing,Umweltwärme,Befeuerung,2.0.0,2024-07-17
+#custom_field,,ausstattung->befeuerung:KWK_FOSSIL+,custom_data+,,Combined Heat and Power (fossil),Firing,Kraft-Wärme-Kopplung (fossil),Befeuerung,2.0.0,2024-07-17
+#custom_field,,ausstattung->befeuerung:KWK_ERNEUERBAR+,custom_data+,,Combined Heat and Power (renewable),Firing,Kraft-Wärme-Kopplung (erneuerbar),Befeuerung,2.0.0,2024-07-17
+#custom_field,,ausstattung->befeuerung:KWK_REGENERATIV+,custom_data+,,Combined Heat and Power (regenerative),Firing,Kraft-Wärme-Kopplung (regenerativ),Befeuerung,2.0.0,2024-07-17
+#custom_field,,ausstattung->befeuerung:KWK_BIO+,custom_data+,,Combined Heat and Power (Bio),Firing,Kraft-Wärme-Kopplung (Bio),Befeuerung,2.0.0,2024-07-17
+custom_field,,ausstattung->boden:FLIESEN+,custom_data+,,Tiled,Flooring,Fliesen,Bodenbelag,,
+custom_field,,ausstattung->boden:STEIN+,custom_data+,,Stone,Flooring,Stein,Bodenbelag,,
+custom_field,,ausstattung->boden:TEPPICH+,custom_data+,,Carpeted,Flooring,Teppich,Bodenbelag,,
+custom_field,,ausstattung->boden:PARKETT+,custom_data+,,Hardwood,Flooring,Parkett,Bodenbelag,,
+custom_field,,ausstattung->boden:FERTIGPARKETT+,custom_data+,,Engineered Wooden Flooring,Flooring,Fertigparkett,Bodenbelag,,
+custom_field,,ausstattung->boden:LAMINAT+,custom_data+,,Laminate,Flooring,Laminat,Bodenbelag,,
+custom_field,,ausstattung->boden:DIELEN+,custom_data+,,Plank,Flooring,Dielen,Bodenbelag,,
+custom_field,,ausstattung->boden:KUNSTSTOFF+,custom_data+,,Plastic,Flooring,Kunststoff,Bodenbelag,1.7.9,2023-03-14
+custom_field,,ausstattung->boden:ESTRICH+,custom_data+,,Cement,Flooring,Estrich,Bodenbelag,,
+custom_field,,ausstattung->boden:DOPPELBODEN+,custom_data+,,Double Floor,Flooring,Doppelboden,Bodenbelag,,
+custom_field,,ausstattung->boden:LINOLEUM+,custom_data+,,Linoleum,Flooring,Linoleum,Bodenbelag,,
+custom_field,,ausstattung->boden:MARMOR+,custom_data+,,Marble,Flooring,Marmor,Bodenbelag,,
+custom_field,,ausstattung->boden:TERRAKOTTA+,custom_data+,,Terracotta,Flooring,Terrakotta,Bodenbelag,,
+custom_field,,ausstattung->boden:GRANIT+,custom_data+,,Granite,Flooring,Granit,Bodenbelag,,
+custom_field,,ausstattung->bad:DUSCHE+,custom_data+,,Shower,Bath Features,Dusche,Badausstattung,,
+custom_field,,ausstattung->bad:WANNE+,custom_data+,,Bathtub,Bath Features,Badewanne,Badausstattung,,
+custom_field,,ausstattung->bad:FENSTER+,custom_data+,,Window,Bath Features,Fenster,Badausstattung,1.7.9,2023-03-14
+custom_field,,ausstattung->bad:BIDET+,custom_data+,,Bidet,Bath Features,Bidet,Badausstattung,,
+custom_field,,ausstattung->bad:PISSOIR+,custom_data+,,Urinal,Bath Features,Pissoir,Badausstattung,,
+#custom_field,,ausstattung->kueche:EBK+,custom_data+,,Fitted Kitchen,Kitchen,Einbauküche,Küche,,
+custom_field,,ausstattung->kueche:OFFEN+,custom_data+,,Open Kitchen,Kitchen,Offene Küche,Küche,,
+custom_field,,ausstattung->kueche:PANTRY+,custom_data+,,Pantry Kitchen,Kitchen,Pantry-Küche,Küche,,
+custom_field,,ausstattung->ausricht_balkon_terrasse:NORD+,custom_data+,,North,Balcony/Terrace Orientation,Nord,Ausrichtung Balkon/Terrasse,,
+custom_field,,ausstattung->ausricht_balkon_terrasse:OST+,custom_data+,,East,Balcony/Terrace Orientation,Ost,Ausrichtung Balkon/Terrasse,,
+custom_field,,ausstattung->ausricht_balkon_terrasse:SUED+,custom_data+,,South,Balcony/Terrace Orientation,Süd,Ausrichtung Balkon/Terrasse,,
+custom_field,,ausstattung->ausricht_balkon_terrasse:WEST+,custom_data+,,West,Balcony/Terrace Orientation,West,Ausrichtung Balkon/Terrasse,,
+custom_field,,ausstattung->ausricht_balkon_terrasse:NORDOST+,custom_data+,,North/East,Balcony/Terrace Orientation,Nord-Ost,Ausrichtung Balkon/Terrasse,,
+custom_field,,ausstattung->ausricht_balkon_terrasse:NORDWEST+,custom_data+,,North/West,Balcony/Terrace Orientation,Nord-West,Ausrichtung Balkon/Terrasse,,
+custom_field,,ausstattung->ausricht_balkon_terrasse:SUEDOST+,custom_data+,,South/East,Balcony/Terrace Orientation,Süd-Ost,Ausrichtung Balkon/Terrasse,,
+custom_field,,ausstattung->ausricht_balkon_terrasse:SUEDWEST+,custom_data+,,South/West,Balcony/Terrace Orientation,Süd-West,Ausrichtung Balkon/Terrasse,,
+custom_field,,ausstattung->sicherheitstechnik:ALARMANLAGE+,custom_data+,,Alarm System,Security Systems,Alarmanlage,Sicherheitstechnik,,
+custom_field,,ausstattung->sicherheitstechnik:KAMERA+,custom_data+,,Camera,Security Systems,Kamera,Sicherheitstechnik,,
+custom_field,,ausstattung->sicherheitstechnik:POLIZEIRUF+,custom_data+,,Police Call,Security Systems,Polizeiruf,Sicherheitstechnik,,
+#custom_field,,ausstattung->stellplatzart:GARAGE+,custom_data+,,Garage,Car Space Type,Garage,Stellplatzart,,
+custom_field,,ausstattung->stellplatzart:TIEFGARAGE+,custom_data+,,Deep-level Garage,Car Space Type,Tiefgarage,Stellplatzart,,
+#custom_field,,ausstattung->stellplatzart:CARPORT+,custom_data+,,Carport,Car Space Type,Carport,Stellplatzart,,
+#custom_field,,ausstattung->stellplatzart:FREIPLATZ+,custom_data+,,Outdoor Ground,Car Space Type,Freiplatz,Stellplatzart,,
+custom_field,,ausstattung->stellplatzart:PARKHAUS+,custom_data+,,Car Park,Car Space Type,Parkhaus,Stellplatzart,,
+custom_field,,ausstattung->stellplatzart:DUPLEX+,custom_data+,,Duplex,Car Space Type,Duplex,Stellplatzart,,
+custom_field,,ausstattung->angeschl_gastronomie:HOTELRESTAURANT+,custom_data+,,Hotel-Restaurant,Connected Gastronomy,Hotel-Restaurant,angeschl. Gastronomie,,
+custom_field,,ausstattung->angeschl_gastronomie:BAR+,custom_data+,,Bar,Connected Gastronomy,Bar,angeschl. Gastronomie,,
+custom_field,,ausstattung->serviceleistungen:BETREUTES_WOHNEN+,custom_data+,,Assisted Living,Service,Betreutes Wohnen,Service,,
+custom_field,,ausstattung->serviceleistungen:CATERING+,custom_data+,,Catering,Service,Catering,Service,,
+custom_field,,ausstattung->serviceleistungen:REINIGUNG+,custom_data+,,Cleaning,Service,Reinigung,Service,,
+custom_field,,ausstattung->serviceleistungen:EINKAUF+,custom_data+,,Daily Shopping,Service,Einkauf,Service,,
+custom_field,,ausstattung->serviceleistungen:WACHDIENST+,custom_data+,,Security,Service,Wachdienst,Service,,
+custom_field,,ausstattung->dachform:KRUEPPELWALMDACH,custom_data+,,Half-hip Roof,Roof Shape,Krüppelwalmdach,Dachform,,
+custom_field,,ausstattung->dachform:MANSARDDACH,custom_data+,,Gambrel Roof,Roof Shape,Mansarddach,Dachform,,
+custom_field,,ausstattung->dachform:PULTDACH,custom_data+,,Monopitch Roof,Roof Shape,Pultdach,Dachform,,
+custom_field,,ausstattung->dachform:SATTELDACH,custom_data+,,Gabled Roof,Roof Shape,Satteldach,Dachform,,
+custom_field,,ausstattung->dachform:WALMDACH,custom_data+,,Hip Roof,Roof Shape,Walmdach,Dachform,,
+custom_field,,ausstattung->dachform:FLACHDACH,custom_data+,,Flat Roof,Roof Shape,Flachdach,Dachform,,
+custom_field,,ausstattung->dachform:PYRAMIDENDACH,custom_data+,,Pyramid Roof,Roof Shape,Pyramidendach,Dachform,,
+custom_field,,ausstattung->bauweise:MASSIV,custom_data+,,Massive,Construction Type,massiv,Bauweise,,
+custom_field,,ausstattung->bauweise:FERTIGTEILE,custom_data+,,Finished Parts,Construction Type,Fertigteile,Bauweise,,
+custom_field,,ausstattung->bauweise:HOLZ,custom_data+,,Timber,Construction Type,Holz,Bauweise,,
+custom_field,,ausstattung->ausbaustufe:BAUSATZHAUS,custom_data+,,Building Kit House,Construction Level,Bausatzhaus,Ausbaustufe,,
+custom_field,,ausstattung->ausbaustufe:AUSBAUHAUS,custom_data+,,Bare-bones House,Construction Level,Ausbauhaus,Ausbaustufe,,
+custom_field,,ausstattung->ausbaustufe:SCHLUESSELFERTIGMITKELLER,custom_data+,,Turnkey ready with Basement,Construction Level,schlüsselfertig mit Keller,Ausbaustufe,,
+custom_field,,ausstattung->ausbaustufe:SCHLUESSELFERTIGOHNEBODENPLATTE,custom_data+,,Turnkey ready without Base Plate,Construction Level,schlüsselfertig ohne Bodenplatte,Ausbaustufe,,
+custom_field,,ausstattung->ausbaustufe:SCHLUESSELFERTIGMITBODENPLATTE,custom_data+,,Turnkey ready with Base Plate,Construction Level,schlüsselfertig mit Bodenplatte,Ausbaustufe,,
+custom_field,,ausstattung->energietyp:PASSIVHAUS,custom_data+,,Passive House,Energy Type,Passivhaus,Energietyp,,
+custom_field,,ausstattung->energietyp:NIEDRIGENERGIE,custom_data+,,Low-energy House,Energy Type,Niedrigenergiehaus,Energietyp,,
+custom_field,,ausstattung->energietyp:NEUBAUSTANDARD,custom_data+,,New Building Standard,Energy Type,Neubaustandard,Energietyp,,
+custom_field,,ausstattung->energietyp:KFW40,custom_data+,,KFW40,Energy Type,KFW40,Energietyp,,
+custom_field,,ausstattung->energietyp:KFW60,custom_data+,,KFW60,Energy Type,KFW60,Energietyp,,
+custom_field,,ausstattung->energietyp:KFW55,custom_data+,,KFW55,Energy Type,KFW55,Energietyp,,
+custom_field,,ausstattung->energietyp:KFW70,custom_data+,,KFW70,Energy Type,KFW70,Energietyp,,
+custom_field,,ausstattung->energietyp:MINERGIEBAUWEISE,custom_data+,,MINERGIE Construction,Energy Type,MINERGIE-Bauweise,Energietyp,,
+custom_field,,ausstattung->energietyp:MINERGIE_ZERTIFIZIERT,custom_data+,,MINERGIE Construction (Certified),Energy Type,MINERGIE-Bauweise (zertifiziert),Energietyp,,
+custom_field,,zustand_angaben->bauzone,custom_data+,,,Building Zone,,Bauzone,,
+custom_field,,zustand_angaben->altlasten,custom_data+,,,Legacy Issues,,Altlasten,,
+custom_field,,zustand_angaben->erschliessung:erschl_attr:UNERSCHLOSSEN,custom_data+,,undeveloped,Development,unerschlossen,Erschließung,,
+custom_field,,zustand_angaben->erschliessung:erschl_attr:TEILERSCHLOSSEN,custom_data+,,partly developed,Development,teilerschlossen,Erschließung,,
+custom_field,,zustand_angaben->erschliessung:erschl_attr:VOLLERSCHLOSSEN,custom_data+,,fully developed,Development,vollerschlossen,Erschließung,,
+custom_field,,zustand_angaben->erschliessung:erschl_attr:ORTSUEBLICHERSCHLOSSEN,custom_data+,,developed customary in a place,Development,ortsüblich erschlossen,Erschließung,,
+custom_field,,zustand_angaben->erschliessung_umfang:erschl_attr:GAS+,custom_data+,,Gas Connection,Development Scope,Gasanschluss vorhanden,Erschließungsumfang,1.5.0,2019-10-23
+custom_field,,zustand_angaben->erschliessung_umfang:erschl_attr:WASSER+,custom_data+,,Water Connection,Development Scope,Wasseranschluss vorhanden,Erschließungsumfang,1.5.0,2019-10-23
+custom_field,,zustand_angaben->erschliessung_umfang:erschl_attr:STROM+,custom_data+,,Power Connection,Development Scope,Stromanschluss vorhanden,Erschließungsumfang,1.5.0,2019-10-23
+custom_field,,zustand_angaben->erschliessung_umfang:erschl_attr:TK+,custom_data+,,Telecommunication,Development Scope,TK-Anschluss vorhanden,Erschließungsumfang,1.5.0,2019-10-23
+custom_field,,infrastruktur->ausblick:blick:FERNE,custom_data+,,Panoramic View,View,Fernblick,Ausblick,,
+custom_field,,infrastruktur->ausblick:blick:SEE,custom_data+,,Lake View,View,Seeblick,Ausblick,,
+custom_field,,infrastruktur->ausblick:blick:BERGE,custom_data+,,Mountain View,View,Bergblick,Ausblick,,
+custom_field,,infrastruktur->ausblick:blick:MEER,custom_data+,,Sea View,View,Meerblick,Ausblick,,
+,,,,,,,,,,
+# Energy pass fields for Austria prior to OpenImmo 1.2.5,,,,,,,,,,
+# Energieausweis-Felder für Österreich vor OpenImmo 1.2.5,,,,,,,,,,
+custom_field,epass,zustand_angaben->user_defined_simplefield:feldname:epass_hwbwert,,epass_unit,HWB Value,,HWB-Wert,,1.7.3,2021-04-15
+custom_field,epass,zustand_angaben->user_defined_simplefield:feldname:epass_hwbklasse,,,HWB Class,,HWB-Klasse,,1.7.3,2021-04-15
+custom_field,epass,zustand_angaben->user_defined_simplefield:feldname:epass_fgeewert,,number_format:9,fGEE Value,,fGEE-Wert,,1.7.3,2021-04-15
+custom_field,epass,zustand_angaben->user_defined_simplefield:feldname:epass_fgeeklasse,,,fGEE Class,,fGEE-Klasse,,1.7.3,2021-04-15
+,,,,,,,,,,
+custom_field,,zustand_angaben->user_defined_simplefield:feldname:epass_hwbwert,custom_data+,epass_unit,,HWB Value,,HWB-Wert,1.9.0,2022-11-20
+custom_field,,zustand_angaben->user_defined_simplefield:feldname:epass_hwbklasse,custom_data+,,,HWB Class,,HWB-Klasse,1.9.0,2022-11-20
+custom_field,,zustand_angaben->user_defined_simplefield:feldname:epass_fgeewert,custom_data+,number_format:9,,fGEE Value,,fGEE-Wert,1.9.0,2022-11-20
+custom_field,,zustand_angaben->user_defined_simplefield:feldname:epass_fgeeklasse,custom_data+,,,fGEE Class,,fGEE-Klasse,1.9.0,2022-11-20
+,,,,,,,,,,
+"The source definition „...energiepass->art“ is not a valid OpenImmo XML node, but smooths out a buggy export implementation of the OpenEstate-ImmoTool.",,,,,,,,,,
+"Die Quelldefinition „...energiepass->art“ ist kein gültiger OpenImmo-XML-Knoten, bügelt aber eine fehlerhafte Export-Implementierung des OpenEstate-ImmoTools aus.",,,,,,,,,,
+custom_field,epass,zustand_angaben->energiepass->art,,epass_type,Energy Pass Type,,Energieausweis-Art,,,
+custom_field,epass,zustand_angaben->energiepass->epart,,epass_type,Energy Pass Type,,Energieausweis-Art,,,
+custom_field,epass,zustand_angaben->energiepass->gueltig_bis,,date,Energy Pass valid until,,Energieausweis gültig bis,,1.7.0,2020-07-29
+custom_field,epass,zustand_angaben->energiepass->energieverbrauchkennwert,,epass_unit,Energy Consumption Parameter,,Energieverbrauchskennwert,,,
+custom_field,epass,zustand_angaben->energiepass->mitwarmwasser,,boolean,Warm Water included in Energy Consumption,,Warmwasser im Energieverbrauch enthalten,,,
+custom_field,epass,zustand_angaben->energiepass->endenergiebedarf,,epass_unit,Final Energy Requirement,,Endenergiebedarf,,,
+custom_field,epass,zustand_angaben->energiepass->hwbwert,,epass_unit,HWB Value,,HWB-Wert,,1.1.0,2016-12-06
+custom_field,epass,zustand_angaben->energiepass->hwbklasse,,,HWB Class,,HWB-Klasse,,,
+custom_field,epass,zustand_angaben->energiepass->fgeewert,,number_format:9,fGEE Value,,fGEE-Wert,,1.1.0,2016-12-06
+custom_field,epass,zustand_angaben->energiepass->fgeeklasse,,,fGEE Class,,fGEE-Klasse,,1.1.0,2016-12-06
+,,,,,,,,,,
+custom_field,,zustand_angaben->energiepass->gueltig_bis,custom_data+,date,,Energy Pass valid until,,Energieausweis gültig bis,1.9.0,2022-11-20
+custom_field,,zustand_angaben->energiepass->mitwarmwasser,custom_data+,boolean,,Warm Water included in Energy Consumption,,Warmwasser im Energieverbrauch enthalten,1.9.0,2022-11-20
+custom_field,,zustand_angaben->energiepass->hwbwert,custom_data+,epass_unit,,HWB Value,,HWB-Wert,1.9.0,2022-11-20
+custom_field,,zustand_angaben->energiepass->hwbklasse,custom_data+,,,HWB Class,,HWB-Klasse,1.9.0,2022-11-20
+custom_field,,zustand_angaben->energiepass->fgeewert,custom_data+,number_format:9,,fGEE Value,,fGEE-Wert,1.9.0,2022-11-20
+custom_field,,zustand_angaben->energiepass->fgeeklasse,custom_data+,,,fGEE Class,,fGEE-Klasse,1.9.0,2022-11-20
+,,,,,,,,,,
+# Energy pass fields since OpenImmo 1.2.6,,,,,,,,,,
+# Energieausweis-Felder seit OpenImmo 1.2.6,,,,,,,,,,
+,,,,,,,,,,
+custom_field,epass,zustand_angaben->user_defined_simplefield:feldname:epass_stromwert,,epass_unit,Energy Consumption Parameter (Power),,Stromverbrauchskennwert,,,
+custom_field,epass,zustand_angaben->user_defined_simplefield:feldname:epass_waermewert,,epass_unit,Energy Consumption Parameter (Heating),,Heizenergieverbrauchskennwert,,,
+custom_field,epass,zustand_angaben->user_defined_simplefield:feldname:epass_wertklasse,,,Energy Efficiency Class,,Energieeffizienzklasse,,,
+custom_field,epass,zustand_angaben->user_defined_simplefield:feldname:epass_baujahr,,,Build Year (Energy Pass),,Baujahr (Energieausweis),,1.7.0,2020-07-29
+custom_field,epass,zustand_angaben->user_defined_simplefield:feldname:epass_ausstelldatum,,date,Energy Pass Issuing Date,,Energieausweis-Ausstellungsdatum,,,
+custom_field,epass,zustand_angaben->user_defined_simplefield:feldname:epass_jahrgang,,epass_year,Energy Pass Year,,Energieausweis-Jahrgang,,,
+custom_field,epass,zustand_angaben->user_defined_simplefield:feldname:epass_gebaeudeart,,epass_building_type,Energy Pass Building Type,,Energieausweis-Gebäudeart,,,
+,,,,,,,,,,
+custom_field,,zustand_angaben->user_defined_simplefield:feldname:epass_ausstelldatum,custom_data+,date,,Energy Pass Issuing Date,,Energieausweis-Ausstellungsdatum,1.9.0,2022-11-20
+custom_field,,zustand_angaben->user_defined_simplefield:feldname:epass_jahrgang,custom_data+,epass_year,,Energy Pass Year,,Energieausweis-Jahrgang,1.9.0,2022-11-20
+custom_field,,zustand_angaben->user_defined_simplefield:feldname:epass_gebaeudeart,custom_data+,epass_building_type,,Energy Pass Building Type,,Energieausweis-Gebäudeart,1.9.0,2022-11-20
+,,,,,,,,,,
+# Energy pass fields since OpenImmo 1.2.7,,,,,,,,,,
+# Energieausweis-Felder seit OpenImmo 1.2.7,,,,,,,,,,
+,,,,,,,,,,
+custom_field,epass,ausstattung->befeuerung:OEL+,,,Oil,Primary Energy Carrier,Öl,Primärenergieträger,,
+custom_field,epass,ausstattung->befeuerung:GAS+,,,Gas,Primary Energy Carrier,Gas,Primärenergieträger,,
+custom_field,epass,ausstattung->befeuerung:ELEKTRO+,,,Electric,Primary Energy Carrier,Elektro,Primärenergieträger,,
+custom_field,epass,ausstattung->befeuerung:ALTERNATIV+,,,Alternative,Primary Energy Carrier,Alternativ,Primärenergieträger,,
+custom_field,epass,ausstattung->befeuerung:SOLAR+,,,Solar,Primary Energy Carrier,Solar,Primärenergieträger,,
+custom_field,epass,ausstattung->befeuerung:ERDWAERME+,,,Geothermal,Primary Energy Carrier,Erdwärme,Primärenergieträger,,
+custom_field,epass,ausstattung->befeuerung:LUFTWP+,,,Air Heat Pump,Primary Energy Carrier,Luft-Wärmepumpe,Primärenergieträger,,
+custom_field,epass,ausstattung->befeuerung:FERN+,,,District Heat,Primary Energy Carrier,Fernwärme,Primärenergieträger,2.0.0,2024-07-17
+custom_field,epass,ausstattung->befeuerung:BLOCK+,,,Thermal Power Station,Primary Energy Carrier,Blockheizkraftwerk,Primärenergieträger,,
+custom_field,epass,ausstattung->befeuerung:WASSER-ELEKTRO+,,,Water Electric Heating,Primary Energy Carrier,Warmwasser-Elektroheizung,Primärenergieträger,,
+custom_field,epass,ausstattung->befeuerung:PELLET+,,,Pellets,Primary Energy Carrier,Pellets,Primärenergieträger,,
+custom_field,epass,ausstattung->befeuerung:KOHLE+,,,Coal,Primary Energy Carrier,Kohle,Primärenergieträger,,
+custom_field,epass,ausstattung->befeuerung:HOLZ+,,,Wood Chips,Primary Energy Carrier,Holz-Hackschnitzel,Primärenergieträger,,
+custom_field,epass,ausstattung->befeuerung:FLUESSIGGAS+,,,Liquid Gas (Own Tank),Primary Energy Carrier,Flüssiggas (eigener Tank),Primärenergieträger,,
+custom_field,epass,ausstattung->befeuerung:ERDGAS_LEICHT+,,,Natural Gas (light),Primary Energy Carrier,Erdgas (leicht),Primärenergieträger,2.0.0,2024-07-17
+custom_field,epass,ausstattung->befeuerung:ERDGAS_SCHWER+,,,Natural Gas (heavy),Primary Energy Carrier,Erdgas (schwer),Primärenergieträger,2.0.0,2024-07-17
+custom_field,epass,ausstattung->befeuerung:FERNWAERME_DAMPF+,,,District Heat (Steam),Primary Energy Carrier,Fernwärme (Dampf),Primärenergieträger,2.0.0,2024-07-17
+custom_field,epass,ausstattung->befeuerung:NAHWAERME+,,,Local Heat,Primary Energy Carrier,Nahwärme,Primärenergieträger,2.0.0,2024-07-17
+custom_field,epass,ausstattung->befeuerung:WAERMELIEFERUNG+,,,Heat Delivery,Primary Energy Carrier,Wärmelieferung,Primärenergieträger,2.0.0,2024-07-17
+custom_field,epass,ausstattung->befeuerung:BIOENERGIE+,,,Bio Energy,Primary Energy Carrier,Bioenergie,Primärenergieträger,2.0.0,2024-07-17
+custom_field,epass,ausstattung->befeuerung:WINDENERGIE+,,,Wind Energy,Primary Energy Carrier,Windenergie,Primärenergieträger,2.0.0,2024-07-17
+custom_field,epass,ausstattung->befeuerung:WASSERENERGIE+,,,Water Energy,Primary Energy Carrier,Wasserenergie,Primärenergieträger,2.0.0,2024-07-17
+custom_field,epass,ausstattung->befeuerung:UMWELTWAERME+,,,Environmental Heat,Primary Energy Carrier,Umweltwärme,Primärenergieträger,2.0.0,2024-07-17
+custom_field,epass,ausstattung->befeuerung:KWK_FOSSIL+,,,Combined Heat and Power (fossil),Primary Energy Carrier,Kraft-Wärme-Kopplung (fossil),Primärenergieträger,2.0.0,2024-07-17
+custom_field,epass,ausstattung->befeuerung:KWK_ERNEUERBAR+,,,Combined Heat and Power (renewable),Primary Energy Carrier,Kraft-Wärme-Kopplung (erneuerbar),Primärenergieträger,2.0.0,2024-07-17
+custom_field,epass,ausstattung->befeuerung:KWK_REGENERATIV+,,,Combined Heat and Power (regenerative),Primary Energy Carrier,Kraft-Wärme-Kopplung (regenerativ),Primärenergieträger,2.0.0,2024-07-17
+custom_field,epass,ausstattung->befeuerung:KWK_BIO+,,,Combined Heat and Power (Bio),Primary Energy Carrier,Kraft-Wärme-Kopplung (Bio),Primärenergieträger,2.0.0,2024-07-17
+custom_field,epass,zustand_angaben->energiepass->primaerenergietraeger,,epass_energy_carriers,Primary Energy Carrier,,Primärenergieträger,,1.4.0,2017-03-06
+custom_field,epass,zustand_angaben->energiepass->stromwert,,epass_unit,Energy Consumption Parameter (Power),,Stromverbrauchskennwert,,,
+custom_field,epass,zustand_angaben->energiepass->waermewert,,epass_unit,Energy Consumption Parameter (Heating),,Heizenergieverbrauchskennwert,,,
+custom_field,epass,zustand_angaben->energiepass->wertklasse,,,Energy Efficiency Class,,Energieeffizienzklasse,,,
+custom_field,epass,zustand_angaben->energiepass->baujahr,,,Build Year (Energy Pass),,Baujahr (Energieausweis),,1.7.0,2020-07-29
+custom_field,epass,zustand_angaben->energiepass->ausstelldatum,,date,Energy Pass Issuing Date,,Energieausweis-Ausstellungsdatum,,,
+custom_field,epass,zustand_angaben->energiepass->jahrgang,,epass_year,Energy Pass Year,,Energieausweis-Jahrgang,,,
+custom_field,epass,zustand_angaben->energiepass->gebaeudeart,,epass_building_type,Energy Pass Building Type,,Energieausweis-Gebäudeart,,,
+custom_field,epass,zustand_angaben->energiepass->epasstext,,,Energy Pass Remarks,,Energieausweis-Anmerkungen,,,
+custom_field,epass,zustand_angaben->energiepass->geg2018,,,GEG Information,,Angaben gem. GEG,,2.0.0,2024-07-17
+,,,,,,,,,,
+custom_field,,zustand_angaben->energiepass->ausstelldatum,custom_data+,date,,Energy Pass Issuing Date,,Energieausweis-Ausstellungsdatum,1.9.0,2022-11-20
+custom_field,,zustand_angaben->energiepass->jahrgang,custom_data+,epass_year,,Energy Pass Year,,Energieausweis-Jahrgang,1.9.0,2022-11-20
+custom_field,,zustand_angaben->energiepass->gebaeudeart,custom_data+,epass_building_type,,Energy Pass Building Type,,Energieausweis-Gebäudeart,1.9.0,2022-11-20
+custom_field,,zustand_angaben->energiepass->epasstext,custom_data+,,,Energy Pass Remarks,,Energieausweis-Anmerkungen,1.9.0,2022-11-20
+custom_field,,zustand_angaben->energiepass->geg2018,custom_data+,,,GEG Information,,Angaben gem. GEG,2.0.0,2024-07-17
+,,,,,,,,,,
+custom_field,,infrastruktur->distanzen:distanz_zu:FLUGHAFEN,custom_data+,unit:km:1,,Distance to Airport,,Distanz zum Flughafen,,
+custom_field,,infrastruktur->distanzen:distanz_zu:FERNBAHNHOF,custom_data+,unit:km:1,,Distance to Main-line Station,,Distanz zum Fernbahnhof,,
+custom_field,,infrastruktur->distanzen:distanz_zu:AUTOBAHN,custom_data+,unit:km:1,,Distance to Expressway,,Distanz zur Autobahn,,
+custom_field,,infrastruktur->distanzen:distanz_zu:US_BAHN,custom_data+,unit:km:1,,Distance to Subway / City Train Station,,Distanz zu U/S-Bahn-Haltestelle,,
+custom_field,,infrastruktur->distanzen:distanz_zu:BUS,custom_data+,unit:km:1,,Distance to Bus Station,,Distanz zu Bushaltestelle,,
+custom_field,,infrastruktur->distanzen:distanz_zu:KINDERGAERTEN,custom_data+,unit:km:1,,Distance to Kindergarten,,Distanz zum Kindergarten,,
+custom_field,,infrastruktur->distanzen:distanz_zu:GRUNDSCHULE,custom_data+,unit:km:1,,Distance to Primary School,,Distanz zur Grundschule,,
+custom_field,,infrastruktur->distanzen:distanz_zu:HAUPTSCHULE,custom_data+,unit:km:1,,Distance to Hauptschule,,Distanz zur Hauptschule,,
+custom_field,,infrastruktur->distanzen:distanz_zu:REALSCHULE,custom_data+,unit:km:1,,Distance to Realschule,,Distanz zur Realschule,,
+custom_field,,infrastruktur->distanzen:distanz_zu:GESAMTSCHULE,custom_data+,unit:km:1,,Distance to Integrated School,,Distanz zur Gesamtschule,,
+custom_field,,infrastruktur->distanzen:distanz_zu:GYMNASIUM,custom_data+,unit:km:1,,Distance to Secondary School,,Distanz zum Gymnasium,,
+custom_field,,infrastruktur->distanzen:distanz_zu:ZENTRUM,custom_data+,unit:km:1,,Distance to City Center,,Distanz zum Zentrum,,
+custom_field,,infrastruktur->distanzen:distanz_zu:EINKAUFSMOEGLICHKEITEN,custom_data+,unit:km:1,,Distance to Shopping Facilities,,Distanz zu Einkaufsmöglichkeiten,,
+custom_field,,infrastruktur->distanzen:distanz_zu:GASTSTAETTEN,custom_data+,unit:km:1,,Distance to Restaurants,,Distanz zu Gaststätten,,
+custom_field,,infrastruktur->distanzen_sport:distanz_zu_sport:STRAND,custom_data+,unit:km:1,,Distance to Beach,,Distanz zum Strand,,
+custom_field,,infrastruktur->distanzen_sport:distanz_zu_sport:SEE,custom_data+,unit:km:1,,Distance to Lake,,Distanz zum See,,
+custom_field,,infrastruktur->distanzen_sport:distanz_zu_sport:MEER,custom_data+,unit:km:1,,Distance to Sea,,Distanz zum Meer,,
+custom_field,,infrastruktur->distanzen_sport:distanz_zu_sport:SKIGEBIET,custom_data+,unit:km:1,,Distance to Ski Area,,Distanz zum Skigebiet,,
+custom_field,,infrastruktur->distanzen_sport:distanz_zu_sport:SPORTANLAGEN,custom_data+,unit:km:1,,Distance to Sports Grounds,,Distanz zu Sportanlagen,,
+custom_field,,infrastruktur->distanzen_sport:distanz_zu_sport:WANDERGEBIETE,custom_data+,unit:km:1,,Distance to Hiking Areas,,Distanz zu Wandergebieten,,
+custom_field,,infrastruktur->distanzen_sport:distanz_zu_sport:NAHERHOLUNG,custom_data+,unit:km:1,,Distance to Recreational Area,,Distanz zum Naherholungsgebiet,,
+custom_field,,verwaltung_objekt->abdatum,custom_data+,date,,Available from,,Immobilie ist verfügbar ab,,
+custom_field,,verwaltung_objekt->bisdatum,custom_data+,date,,Available until,,Immobilie ist verfügbar bis,,
+custom_field,,verwaltung_objekt->min_mietdauer=not_empty:min_dauer:TAG,custom_data+,,,Min. Length of Lease (Days),,Mindest-Mietdauer (Tage),,
+custom_field,,verwaltung_objekt->min_mietdauer=not_empty:min_dauer:WOCHE,custom_data+,,,Min. Length of Lease (Weeks),,Mindest-Mietdauer (Wochen),,
+custom_field,,verwaltung_objekt->min_mietdauer=not_empty:min_dauer:MONAT,custom_data+,,,Min. Length of Lease (Months),,Mindest-Mietdauer (Monate),,
+custom_field,,verwaltung_objekt->min_mietdauer=not_empty:min_dauer:JAHR,custom_data+,,,Min. Length of Lease (Years),,Mindest-Mietdauer (Jahre),,
+custom_field,,verwaltung_objekt->max_mietdauer=not_empty:max_dauer:TAG,custom_data+,,,Max. Length of Lease (Days),,maximale Mietdauer (Tage),,
+custom_field,,verwaltung_objekt->max_mietdauer=not_empty:max_dauer:WOCHE,custom_data+,,,Max. Length of Lease (Weeks),,maximale Mietdauer (Wochen),,
+custom_field,,verwaltung_objekt->max_mietdauer=not_empty:max_dauer:MONAT,custom_data+,,,Max. Length of Lease (Months),,maximale Mietdauer (Monate),,
+custom_field,,verwaltung_objekt->max_mietdauer=not_empty:max_dauer:JAHR,custom_data+,,,Max. Length of Lease (Years),,maximale Mietdauer (Jahre),,
+custom_field,,verwaltung_objekt->versteigerungstermin,custom_data+,date,,Auction Date,,Versteigerungstermin,,
+custom_field,,verwaltung_objekt->zugang,custom_data+,,,Access,,Zugang,,
+custom_field,,verwaltung_objekt->laufzeit,custom_data+,,,Remaining Term (Leasehold),,Restlaufzeit (Erbpacht),,
+custom_field,,verwaltung_objekt->max_personen,custom_data+,,,Max. Number of Residents,,Maximale Anzahl Bewohner,,
+custom_field,,verwaltung_objekt->branchen,custom_data+,,,Industries,,Branchen,,
+,,,,,,,,,,
+custom_field,,versteigerung->zwangsversteigerung,custombox_data+,,Foreclosure Auction,,Zwangsversteigerung,,,
+custom_field,,flaechen->einliegerwohnung,custombox_data+,,Granny Flat,,Einliegerwohnung,,,
+custom_field,,ausstattung->wg_geeignet,custombox_data+,,Suitable for Flat Share,,WG-geeignet,,,
+custom_field,,ausstattung->raeume_veraenderbar,custombox_data+,,Rooms modifiable,,Räume veränderbar,,,
+custom_field,,ausstattung->bad,custombox_data+,,Bathroom,,Bad,,,
+custom_field,,ausstattung->kueche,custombox_data+,,Kitchen,,Küche,,,
+custom_field,,ausstattung->kamin,custombox_data+,,Fireplace,,Kamin,,1.5.0,2019-10-23
+custom_field,,ausstattung->klimatisiert,custombox_data+,,Air Condition,,Klimaanlage,,,
+custom_field,,ausstattung->fahrstuhl:PERSONEN,custombox_data+,,Passenger Elevator,,Personenaufzug,,,
+custom_field,,ausstattung->fahrstuhl:LASTEN,custombox_data+,,Freight Elevator,,Lastenaufzug,,,
+custom_field,,ausstattung->moebliert,custombox_data+,,furnished,,möbliert,,,
+custom_field,,ausstattung->moebliert:moeb:TEIL,custombox_data+,,partly furnished,,teilmöbliert,,,
+custom_field,,ausstattung->moebliert:moeb:VOLL,custombox_data+,,ready-furnished,,vollmöbliert,,,
+custom_field,,ausstattung->rollstuhlgerecht,custombox_data+,,wheelchair-accessible,,rollstuhlgerecht,,,
+custom_field,,ausstattung->kabel_sat_tv,custombox_data+,,Cable/Satellite TV,,Kabel/Sat-TV,,,
+custom_field,,ausstattung->dvbt,custombox_data+,,Terrestrial Video Broadcasting,,DVBT-Empfang,,,
+custom_field,,ausstattung->wasch_trockenraum,custombox_data+,,Washing/Drying Room,,Wasch-/Trockenraum,,,
+custom_field,,ausstattung->wintergarten,custombox_data+,,Winter Garden,,Wintergarten,,,
+custom_field,,ausstattung->dv_verkabelung,custombox_data+,,Computer Cabling,,DV-Verkabelung,,,
+custom_field,,ausstattung->rampe,custombox_data+,,Ramp,,Rampe,,,
+custom_field,,ausstattung->hebebuehne,custombox_data+,,Service Lift,,Hebebühne,,,
+custom_field,,ausstattung->kran,custombox_data+,,Crane,,Kran,,,
+custom_field,,ausstattung->gastterrasse,custombox_data+,,Guest Terrace,,Gastterrasse,,,
+custom_field,,ausstattung->kantine_cafeteria,custombox_data+,,Cafeteria,,Kantine / Cafeteria,,,
+custom_field,,ausstattung->teekueche,custombox_data+,,Tea Kitchen,,Teeküche,,,
+custom_field,,ausstattung->angeschl_gastronomie,custombox_data+,,Connected Gastronomy,,angeschl. Gastronomie,,,
+custom_field,,ausstattung->brauereibindung,custombox_data+,,Brewery Commitment,,Brauereibindung,,,
+custom_field,,ausstattung->sporteinrichtungen,custombox_data+,,Sports Facilities,,Sporteinrichtungen,,,
+custom_field,,ausstattung->wellnessbereich,custombox_data+,,Spa,,Wellnessbereich,,,
+custom_field,,ausstattung->telefon_ferienimmobilie,custombox_data+,,Phone in place (Holiday Property),,Telefon vorhanden (Ferienimmobilie),,,
+custom_field,,ausstattung->breitband_zugang,custombox_data+,,Broadband Internet Access,,Breitband-Internetzugang,,,
+custom_field,,ausstattung->umts_empfang,custombox_data+,,UMTS reception,,UMTS-Empfang,,,
+custom_field,,ausstattung->sicherheitstechnik,custombox_data+,,Security Technology,,Sicherheitstechnik,,,
+#custom_field,,ausstattung->unterkellert:keller:NEIN,custombox_data+,,no Basement,,kein Keller,,,
+custom_field,,ausstattung->rolladen,custombox_data+,,Shutters,,Rollläden,,,
+custom_field,,ausstattung->bibliothek,custombox_data+,,Library,,Bibliothek,,,
+custom_field,,ausstattung->kabelkanaele,custombox_data+,,Cable Channels,,Kabelkanäle,,,
+custom_field,,ausstattung->seniorengerecht,custombox_data+,,senior-focused,,seniorengerecht,,,
+custom_field,,zustand_angaben->alter:alter_attr:ALTBAU,custombox_data+,,Old Building,,Altbau,,,
+custom_field,,zustand_angaben->alter:alter_attr:NEUBAU,custombox_data+,,New Building,,Neubau,,,
+custom_field,,zustand_angaben->verkaufstatus:stand:RESERVIERT,custombox_data+,,Property is reserved,,Objekt ist reserviert,,,
+custom_field,,infrastruktur->zulieferung,custombox_data+,,Delivery,,Zulieferung,,,
+custom_field,,verwaltung_objekt->wbs_sozialwohnung,custombox_data+,,WBS required,,Wohnberechtigungsschein erforderlich,,,
+custom_field,,verwaltung_objekt->vermietet,custombox_data+,,Property is currently rented,,Immobilie ist zurzeit vermietet,,,
+custom_field,,verwaltung_objekt->nichtraucher,custombox_data+,,Non-smoking Property,,Nichtraucher-Immobilie,,,
+custom_field,,verwaltung_objekt->geschlecht:geschl_attr:NUR_MANN,custombox_data+,,available for Men only,,nur für Männer verfügbar,,,
+custom_field,,verwaltung_objekt->geschlecht:geschl_attr:NUR_FRAU,custombox_data+,,available for Women only,,nur für Frauen verfügbar,,,
+custom_field,,verwaltung_objekt->denkmalgeschuetzt,custombox_data+,,listed on a Historic Register,,denkmalgeschützt,,,
+custom_field,,verwaltung_objekt->als_ferien,custombox_data+,,Leisure Time Use possible,,als Ferienimmobilie nutzbar,,,
+custom_field,,verwaltung_objekt->gewerbliche_nutzung,custombox_data+,,Commercial Use possible,,gewerbliche Nutzung möglich,,,
+custom_field,,verwaltung_objekt->hochhaus,custombox_data+,,Flat in Apartment Tower,,Wohnung in einem Hochhaus,,,
+,,,,,,,,,,
+# onOffice style standard custom fields,,,,,,,,,,
+# onOffice benutzerdefinierte Standardfelder,,,,,,,,,,
+,,,,,,,,,,
+custom_field,,verwaltung_objekt->user_defined_simplefield:feldname:top_angebot,bor_prop-marker,,Top Offer,,Top-Angebot,,1.6.0,2020-06-09
+custom_field,,verwaltung_objekt->user_defined_simplefield:feldname:preisreduktion,bor_prop-marker,,Reduced Price,,Preis reduziert,,1.6.0,2020-06-09
+#custom_field,,verwaltung_objekt->user_defined_simplefield:feldname:courtage_frei,,,,,,,1.6.0,2020-06-09
+custom_field,,verwaltung_objekt->user_defined_simplefield:feldname:neu,bor_prop-marker,,New,,Neu,,1.6.0,2020-06-09
+#custom_field,,verwaltung_objekt->user_defined_simplefield:feldname:referenz,,,,,,,1.6.0,2020-06-09
+custom_field,,verwaltung_objekt->user_defined_simplefield:feldname:objekt_des_tages,bor_prop-marker,,Property of the day,,Objekt des Tages,,1.6.0,2020-06-09
+custom_field,,verwaltung_objekt->user_defined_simplefield:feldname:reserviert,bor_prop-marker,,Reserved,,Reserviert,,1.6.0,2020-06-09
+custom_field,,verwaltung_objekt->user_defined_simplefield:feldname:verkauft,bor_prop-marker,,Sold,,Verkauft,,1.6.0,2020-06-09
+custom_field,,verwaltung_objekt->user_defined_simplefield:feldname:verkauft,bor_prop-sale,,sold,,,,1.6.0,2020-06-09
+#custom_field,,verwaltung_objekt->user_defined_simplefield:feldname:veroeffentlichen,,,,,,,1.6.0,2020-06-09
+custom_field,,verwaltung_objekt->user_defined_simplefield:feldname:exklusiv,bor_prop-marker,,Exclusive,,Exklusiv,,1.6.0,2020-06-09
+custom_field,,verwaltung_objekt->user_defined_simplefield:feldname:objekt_der_woche,bor_prop-marker,,Property of the Week,,Objekt der Woche,,1.6.0,2020-06-09

@@ -1,0 +1,55 @@
+# WordPress Core Files
+/wp-admin/
+/wp-includes/
+/wp-content/languages/
+/wp-content/themes/twentytwentyfour/
+/wp-content/themes/twentytwentythree/
+/wp-content/themes/twentytwentytwo/
+/wp-content/upgrade/
+/wp-content/upgrade-temp-backup/
+/wp-content/uploads/
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+index.php
+license.txt
+readme.html
+
+# WordPress Configuration
+wp-config.php
+
+# System Files
+.DS_Store
+.htaccess
+
+# IDE Files
+.vscode/
+.idea/
+
+# Logs
+*.log
+debug.log
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Node Modules (if any)
+node_modules/
+
+# Composer
+vendor/
+
+# Keep only our project files
+!/wp-content/plugins/immobridge/
+!/_project-planung/

@@ -1,0 +1,31 @@
+<?php
+/**
+ * Widget template (immonex User-defined Properties) for the Kickstart plugin.
+ */
+?>
+<div class="immonex-widget immonex-widget-kickstart<?php if ( isset( $instance['class'] ) && $instance['class'] ) echo ' ' . $instance['class']; ?>">
+	<?php if ( ! empty( $title ) ) { ?>
+	<div class="immonex-widget-title clearfix">
+		<?php echo $args['before_title'] . $title . $args['after_title']; ?>
+	</div>
+	<?php } ?>
+	<ul class="immonex-property-details inx-detail-list">
+		<?php
+			foreach( $display_meta as $key => $value ) {
+				if ( false !== strpos( $value, "\n" ) ) {
+					// Value seems to be a continuous text: apply WP content filter.
+					$value = apply_filters( 'the_content', $value );
+				}
+		?>
+		<li>
+			<?php if ( isset( $instance['type'] ) && 'value_only' === $instance['type'] ) { ?>
+			<span class="property-details-value inx-detail-list__title"><?php _e( $value, 'immonex-openimmo2wp' ); ?></span>
+			<?php } else { ?>
+			<?php echo $key; ?>: <span class="property-details-value inx-detail-list__value"><?php _e( $value, 'immonex-openimmo2wp' ); ?></span>
+			<?php } ?>
+		</li>
+		<?php
+			}
+		?>
+	</ul>
+</div>

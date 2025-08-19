@@ -1,0 +1,38 @@
+# Composer
+/vendor/
+composer.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+
+# Logs
+*.log
+/logs/
+
+# Testing
+/coverage/
+.phpunit.result.cache
+
+# Temporary files
+/temp/
+*.tmp
+
+# Node modules (if any)
+node_modules/
+npm-debug.log*
+
+# Build artifacts
+/build/
+/dist/

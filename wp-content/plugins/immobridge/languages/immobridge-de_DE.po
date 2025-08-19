@@ -1,0 +1,320 @@
+# German translations for ImmoBridge Plugin
+# Copyright (C) 2025 ImmoBridge
+# This file is distributed under the same license as the ImmoBridge package.
+msgid ""
+msgstr ""
+"Project-Id-Version: ImmoBridge 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-18 20:25+0200\n"
+"PO-Revision-Date: 2025-08-18 20:25+0200\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Meta Field Descriptions (for Bricks Builder)
+msgid "Property type (apartment, house, etc.)"
+msgstr "Immobilientyp (Wohnung, Haus, etc.)"
+
+msgid "Property status (available, sold, etc.)"
+msgstr "Immobilienstatus (verfügbar, verkauft, etc.)"
+
+msgid "Property price"
+msgstr "Preis"
+
+msgid "Price type (sale or rent)"
+msgstr "Preistyp (Kauf oder Miete)"
+
+msgid "Living area in square meters"
+msgstr "Wohnfläche in Quadratmetern"
+
+msgid "Total area in square meters"
+msgstr "Gesamtfläche in Quadratmetern"
+
+msgid "Number of rooms"
+msgstr "Anzahl Zimmer"
+
+msgid "Number of bedrooms"
+msgstr "Anzahl Schlafzimmer"
+
+msgid "Number of bathrooms"
+msgstr "Anzahl Badezimmer"
+
+msgid "Property address"
+msgstr "Adresse"
+
+msgid "City"
+msgstr "Stadt"
+
+msgid "ZIP code"
+msgstr "Postleitzahl"
+
+msgid "Country"
+msgstr "Land"
+
+msgid "Latitude coordinate"
+msgstr "Breitengrad"
+
+msgid "Longitude coordinate"
+msgstr "Längengrad"
+
+msgid "OpenImmo ID"
+msgstr "OpenImmo ID"
+
+msgid "Import timestamp"
+msgstr "Import-Zeitstempel"
+
+msgid "Property images (JSON)"
+msgstr "Immobilienbilder (JSON)"
+
+msgid "Property documents (JSON)"
+msgstr "Immobiliendokumente (JSON)"
+
+# Post Type Labels
+msgid "Properties"
+msgstr "Immobilien"
+
+msgid "Property"
+msgstr "Immobilie"
+
+msgid "Add New"
+msgstr "Neue hinzufügen"
+
+msgid "Add New Property"
+msgstr "Neue Immobilie hinzufügen"
+
+msgid "New Property"
+msgstr "Neue Immobilie"
+
+msgid "Edit Property"
+msgstr "Immobilie bearbeiten"
+
+msgid "View Property"
+msgstr "Immobilie anzeigen"
+
+msgid "All Properties"
+msgstr "Alle Immobilien"
+
+msgid "Search Properties"
+msgstr "Immobilien suchen"
+
+msgid "Parent Properties:"
+msgstr "Übergeordnete Immobilien:"
+
+msgid "No properties found."
+msgstr "Keine Immobilien gefunden."
+
+msgid "No properties found in Trash."
+msgstr "Keine Immobilien im Papierkorb gefunden."
+
+msgid "Property Image"
+msgstr "Immobilienbild"
+
+msgid "Set property image"
+msgstr "Immobilienbild festlegen"
+
+msgid "Remove property image"
+msgstr "Immobilienbild entfernen"
+
+msgid "Use as property image"
+msgstr "Als Immobilienbild verwenden"
+
+msgid "Property Archives"
+msgstr "Immobilien-Archive"
+
+msgid "Insert into property"
+msgstr "In Immobilie einfügen"
+
+msgid "Uploaded to this property"
+msgstr "Zu dieser Immobilie hochgeladen"
+
+msgid "Filter properties list"
+msgstr "Immobilienliste filtern"
+
+msgid "Properties list navigation"
+msgstr "Navigation der Immobilienliste"
+
+msgid "Properties list"
+msgstr "Immobilienliste"
+
+msgid "Real estate properties managed by ImmoBridge"
+msgstr "Immobilien verwaltet von ImmoBridge"
+
+msgid "Property Title"
+msgstr "Immobilientitel"
+
+msgid "Property description..."
+msgstr "Immobilienbeschreibung..."
+
+# Meta Box Labels
+msgid "Property Details"
+msgstr "Immobiliendetails"
+
+msgid "Location"
+msgstr "Standort"
+
+msgid "Images & Documents"
+msgstr "Bilder & Dokumente"
+
+msgid "OpenImmo Data"
+msgstr "OpenImmo Daten"
+
+msgid "Property Type"
+msgstr "Immobilientyp"
+
+msgid "Select Type"
+msgstr "Typ auswählen"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Select Status"
+msgstr "Status auswählen"
+
+msgid "Price"
+msgstr "Preis"
+
+msgid "Sale"
+msgstr "Kauf"
+
+msgid "Rent"
+msgstr "Miete"
+
+msgid "Living Area (m²)"
+msgstr "Wohnfläche (m²)"
+
+msgid "Total Area (m²)"
+msgstr "Gesamtfläche (m²)"
+
+msgid "Rooms"
+msgstr "Zimmer"
+
+msgid "Bedrooms"
+msgstr "Schlafzimmer"
+
+msgid "Bathrooms"
+msgstr "Badezimmer"
+
+msgid "Address"
+msgstr "Adresse"
+
+msgid "Coordinates"
+msgstr "Koordinaten"
+
+msgid "Latitude"
+msgstr "Breitengrad"
+
+msgid "Longitude"
+msgstr "Längengrad"
+
+msgid "Images"
+msgstr "Bilder"
+
+msgid "Image URL"
+msgstr "Bild-URL"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "Add Image"
+msgstr "Bild hinzufügen"
+
+msgid "Documents"
+msgstr "Dokumente"
+
+msgid "Document URL"
+msgstr "Dokument-URL"
+
+msgid "Add Document"
+msgstr "Dokument hinzufügen"
+
+msgid "Imported At"
+msgstr "Importiert am"
+
+# Admin Interface
+msgid "ImmoBridge"
+msgstr "ImmoBridge"
+
+msgid "ImmoBridge Dashboard"
+msgstr "ImmoBridge Dashboard"
+
+msgid "OpenImmo Import"
+msgstr "OpenImmo Import"
+
+msgid "Import"
+msgstr "Import"
+
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "Total Properties"
+msgstr "Immobilien gesamt"
+
+msgid "Last Import"
+msgstr "Letzter Import"
+
+msgid "Never"
+msgstr "Nie"
+
+msgid "Quick Actions"
+msgstr "Schnellaktionen"
+
+msgid "Import OpenImmo Data"
+msgstr "OpenImmo Daten importieren"
+
+msgid "Manage Properties"
+msgstr "Immobilien verwalten"
+
+msgid "Run Migration Script"
+msgstr "Migrationsskript ausführen"
+
+msgid "Recent Import Log"
+msgstr "Aktuelles Import-Protokoll"
+
+msgid "OpenImmo File"
+msgstr "OpenImmo Datei"
+
+msgid "Select an OpenImmo XML file or ZIP archive containing XML and images."
+msgstr "Wählen Sie eine OpenImmo XML-Datei oder ein ZIP-Archiv mit XML und Bildern aus."
+
+msgid "Import Options"
+msgstr "Import-Optionen"
+
+msgid "Import images"
+msgstr "Bilder importieren"
+
+msgid "Update existing properties"
+msgstr "Bestehende Immobilien aktualisieren"
+
+msgid "Check \"Update existing\" to overwrite properties with the same OpenImmo ID."
+msgstr "Aktivieren Sie \"Bestehende aktualisieren\", um Immobilien mit derselben OpenImmo ID zu überschreiben."
+
+msgid "Start Import"
+msgstr "Import starten"
+
+msgid "Available Import Files"
+msgstr "Verfügbare Import-Dateien"
+
+msgid "Import this file"
+msgstr "Diese Datei importieren"
+
+msgid "ImmoBridge Settings"
+msgstr "ImmoBridge Einstellungen"
+
+msgid "Default Import Settings"
+msgstr "Standard Import-Einstellungen"
+
+msgid "Import images by default"
+msgstr "Bilder standardmäßig importieren"
+
+msgid "Update existing properties by default"
+msgstr "Bestehende Immobilien standardmäßig aktualisieren"
+
+msgid "Security check failed."
+msgstr "Sicherheitsprüfung fehlgeschlagen."
+
+msgid "Insufficient permissions."
+msgstr "Unzureichende Berechtigungen."

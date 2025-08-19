@@ -1,0 +1,56 @@
+<wpml-config>
+	<custom-fields>
+		<custom-field action="copy">_immonex_translation_id</custom-field>
+		<custom-field action="copy">_immonex_iso_country</custom-field>
+		<custom-field action="copy-once">_immonex_import_folder</custom-field>
+		<custom-field action="copy-once">_immonex_links</custom-field>
+		<custom-field action="ignore">_immonex_custom_fields</custom-field>
+	</custom-fields>
+	<admin-texts>
+		<key name="immonex-openimmo2wp_options">
+			<key name="kickstart_add_description_content" />
+			<key name="brings-online_new_label" />
+			<key name="brings-online_add_description_content" />
+			<key name="brings-online_address_publishing_not_approved_message" />
+			<key name="bo-beladomo_new_label" />
+			<key name="bo-beladomo_add_description_content" />
+			<key name="bo-beladomo_agent_box_headline" />
+			<key name="bo-beladomo_address_publishing_not_approved_message" />
+			<key name="bo-beladomo20_new_label" />
+			<key name="bo-beladomo20_add_description_content" />
+			<key name="bo-beladomo20_agent_box_headline" />
+			<key name="bo-beladomo20_address_publishing_not_approved_message" />
+			<key name="bo-immobilia18_new_label" />
+			<key name="bo-immobilia18_add_description_content" />
+			<key name="bo-immobilia18_agent_box_headline" />
+			<key name="bo-immobilia18_address_publishing_not_approved_message" />
+			<key name="bo-home_new_label" />
+			<key name="bo-home_add_description_content" />
+			<key name="bo-home_address_publishing_not_approved_message" />
+			<key name="realia_add_description_content" />
+			<key name="shandora_add_description_content" />
+			<key name="hometown_add_description_content" />
+			<key name="hometown_address_publishing_not_approved_message" />
+			<key name="realhomes_add_description_content" />
+			<key name="realhomes_default_title_nameless_floor_plans" />
+			<key name="realplaces_add_description_content" />
+			<key name="realplaces_default_title_nameless_floor_plans" />
+			<key name="wp-residence_add_description_content" />
+			<key name="wp-estate_add_description_content" />
+			<key name="realty_add_description_content" />
+			<key name="freehold_add_description_content" />
+			<key name="freehold_add_description_groups" />
+			<key name="wp-listings_add_description_content" />
+			<key name="wpcasa_plugin_add_description_content" />
+			<key name="wpcasa_plugin_remark_not_exact_location" />
+			<key name="inventor-properties_add_description_content" />
+			<key name="estate-pro_add_description_content" />
+			<key name="cozy_description_sections" />
+			<key name="cozy_add_description_content" />
+			<key name="realeswp_add_description_content" />
+			<key name="zoner_add_description_content" />
+			<key name="houzez_add_description_content" />
+			<key name="realia_plugin_add_description_content" />
+		</key>
+	</admin-texts>
+</wpml-config>

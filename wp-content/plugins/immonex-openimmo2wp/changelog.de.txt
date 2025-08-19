@@ -1,0 +1,532 @@
+== Changelog ==
+
+= 5.3.11 =
+* Veröffentlichungsdatum: 29.01.2025
+* Workaround zur Korrektur eines Houzez-Theme-Bugs ergänzt (leere Objekt-IDs).
+* Kickstart-Mapping-Tabelle aktualisiert.
+* Verarbeitung von Panorama-Fotos/Videos überarbeitet.
+* Ermittlung von Objekt-IDs erweitert.
+* Import von AreaButler-URLs ergänzt.
+* Erkennung von Giraffe360-URLs ergänzt (virtuelle Touren).
+* Abhängigkeiten aktualisiert.
+* Kompatibilität mit WordPress 6.8 und PHP 8.3 verifiziert.
+
+= 5.3.0 "Poke" =
+* Veröffentlichungsdatum: 23.07.2024
+* Mapping-Abfrageoptionen ergänzt: empty, exists, missing, empty_or_missing.
+* Speicherung von Gebäudeenergieklassen und zugehörigen IDs in dedizierten benutzerdefinierten Feldern.
+* Neuladen von Übersetzungen bei Sprachwechseln während des Imports hinzugefügt.
+* AVIF zur Liste unterstützter Bildformate hinzugefügt.
+* Custom Field für den Status der Immobilien-Beiträge ergänzt.
+* Import von Grundrissen und Energieskalen im PDF-Format für immonex Kickstart überarbeitet.
+* Standard-Vorgabewerte für immonex Kickstart erweitert.
+* Mapping-Tabellen erweitert/überarbeitet (u. a. GEG-Angaben).
+* Mapping-Fehler beim Abfragen bestimmter numerischer Werte behoben.
+* RealHomes-Theme-Unterstützung aktualisiert.
+* Verarbeitung von Video-URLs verbessert.
+
+= 5.2.0 =
+* Veröffentlichungsdatum: 24.01.2024
+* Mapping-Tabellen aktualisiert.
+* Status-Displayfehler bei manuellen Importen behoben.
+* Kompatibilitätsprobleme im Zusammenhang mit Drittanbieter-Plugins und -Themes (z. B. Impreza) behoben.
+* Kompatibilität mit WordPress 6.5 verbessert.
+* Abhängigkeiten aktualisiert.
+
+= 5.1.8 =
+* Veröffentlichungsdatum: 06.11.2023
+* Themespezifische Zuordnung der Bildanhänge überarbeitet (Grundrisse etc.).
+* Bereinigung nach Importvorgängen reaktiviert.
+* Fehler im Zusammenhang mit nicht erfolgreichen Geocodierungsabfragen korrigiert.
+* Kompatibilität mit WordPress 6.4 und PHP 8.2 verbessert.
+* Houzez- und Cozy-Theme-Support aktualisiert.
+* Alle Mapping-Tabellen aktualisiert.
+* Core- und Lizenzierungskomponenten aktualisiert.
+
+= 5.1.0 =
+* Veröffentlichungsdatum: 22.09.2023
+* PHP-Speicherlimit für importbezogene Aufgaben erhöht.
+* Prozesssteuerung für manuelle Importe überarbeitet (u. a. max. Ausführungszeit).
+* Zuordnung von Grundriss-Bilddateien überarbeitet.
+* Kompatibilität in Windows-basierten Hosting-Umgebungen verbessert.
+* Initialisierungsprioritäten angepasst, um die Kompatibilität mit ACF-basierten Themes zu verbessern.
+* Lizenzierungskomponente aktualisiert (Vermeidung irregulärer automatisierter Lizenz-Deaktivierungen in mehrsprachigen Umgebungen).
+
+= 5.0.14 =
+* Veröffentlichungsdatum: 10.07.2023
+* Generierung von Immobilien-Kurzbeschreibungen überbeitet (mehrsprachige Objekte).
+* Taxonomie-Term-Import-Fehler im Zusammenhang mit neueren Houzez/WP-Versionen korrigiert.
+
+= 5.0.11 =
+* Veröffentlichungsdatum: 27.06.2023
+* Namen der MO-Übersetzungsdateien korrigiert (de_DE_formal, de_AT, de_CH und de_CH_informal)
+* Unkritische PHP-Warnung behoben.
+
+= 5.0.10 =
+* Veröffentlichungsdatum: 21.06.2023
+* Sicherheitsprüfungen für Importordner und Import-ZIP-Dateien erweitert.
+* Grundlegende WPML-Unterstützung (in Kombination mit dem Multilang-Add-on) aktualisiert.
+* Problem bzgl. Anhang-Dateinamen in speziellen Formaten behoben.
+* Unbeabsichtigte Löschung von Referenzobjekten korrigiert (Kickstart).
+* Framework und Lizenzierungskomponente aktualisiert.
+
+= 5.0.4 =
+* Veröffentlichungsdatum: 24.05.2023
+* Filter zur Definition erlaubter Dateiformate für Immobilien-Anhänge überarbeitet.
+* Fehler bei der Erkennung von Importdateien behoben.
+
+= 5.0.2 =
+* Veröffentlichungsdatum: 19.05.2023
+* Darstellungsproblem bzgl. des Lizenzstatus von Add-on-Plugins behoben.
+
+= 5.0.1 =
+* Veröffentlichungsdatum: 18.05.2023
+* Problem bei der Übernahme des bisherigen Lizenzstatus behoben.
+
+= 5.0.0 "Swing" =
+* Veröffentlichungsdatum: 17.05.2023
+* Backend-UI überarbeitet.
+* Lizenzsystem aktualisiert (inkl. Unterstützung von DEV-Lizenzen).
+* Unterstützung für die BO-HOME-Themes von BRINGS ergänzt.
+* Unterstützung für das Theme Freehold Progression ergänzt (Freehold >= 3.0).
+* Themespezifische Widget-Templates und CSS-Regeln aktualisiert.
+* Automatisierte Widget-Installation bei Erstaktivierungen erweitert.
+* Unterstützung für das Flowfact-Referenzflag ergänzt (showAsReference).
+* MD5-Hash-Prüfung für Anhänge ergänzt.
+* Filter-Hook zur Modifizierung von Theme-Support-Flags ergänzt.
+* Erkennung von skalierten Bildanhängen verbessert.
+* Filter-Hook zur Anpassung des "Unschärfe-Faktors" bei Standortoordinaten von Objekten ohne Adressfreigabe.
+* Fehler im Zusammenhang mit Anhang-Abfragen in WPML-Umgebungen korrigiert.
+* Alle Mapping-Tabellen aktualisiert.
+* PHP-8-Kompatibilität verbessert.
+* Externe Komponenten aktualisiert.
+
+= 4.9.34 =
+* Veröffentlichungsdatum: 29.07.2022
+* Filter-Hook immonex_oi2wp_tax_mapping ergänzt.
+* Protokollierung von Debug-Daten erweitert.
+* Mehrere kleinere Fehler behoben.
+
+= 4.9.31 =
+* Veröffentlichungsdatum: 09.07.2022
+* Grundlegende Unterstützung für "generische" Themes ergänzt.
+* Bedingungen "entspricht nicht" und "enthält nicht" für Mapping-Quellangaben ergänzt.
+* Alle Mapping-Tabellen aktualisiert (Priorisierung der Preisangaben).
+* Kickstart-Unterstützung aktualisiert (automatisierte Erstellung von Kontaktpersonen-Datensätzen mit der gleichen Mailadresse ermöglicht).
+* BO-Beladomo20-Theme-Support aktualisiert.
+* Theme-Support für WpResidence (WP Residence) und WpEstate (WP Estate) aktualisiert.
+* Fehler bei der Konvertierung nichtnumerischer Werte behoben.
+
+= 4.9.22 =
+* Veröffentlichungsdatum: 25.02.2022
+* Neuer Filter zur Anpassung der Immobilien-Anhang-Dateinamen ergänzt.
+* Houzez-Theme-Support aktualisiert und erweitert (u. a. Mehrwährungs-Umgebungen).
+* Mapping-Tabelle für BO-Beladomo20 aktualisiert.
+* Erkennung und Zuweisung vorhandener Kontaktpersonen (Agenten) überarbeitet.
+* Option zur Spezifizierung der Verarbeitung regionaler Zusatzangaben ergänzt (Kickstart).
+* Verarbeitung teilweise ungültiger OpenImmo-XML-Dateien verbessert (Autokorrektur).
+* Statusvorgabe für Gruppen-Master-Objekte, die nicht angezeigt werden sollen, in "ausstehend" geändert.
+* Formatierung importierter Zahlenwerte/Währungsangaben verbessert.
+* Vorbereitung für den Einsatz in Kombination mit immonex Notify.
+* Fehler bei der Verarbeitung von Custom-Field-Metadaten behoben (Kickstart).
+* Fehler bzgl. der Erkennung und Löschung veralteter ZIP- und Log-Dateien korrigiert.
+* Problem im Zusammenhang mit dem Filter-Hook immonex_oi2wp_property_xml_before_import behoben.
+
+= 4.9.0 =
+* Veröffentlichungsdatum: 17.05.2021
+* Geocodierung von Immobilien-Standorten überarbeitet.
+* Houzez-Theme-Unterstützung überarbeitet (Agent/ur-Zuweisung).
+* Real-Homes-Theme-Unterstützung überarbeitet (externe Videos).
+* Cozy-Theme-Unterstützung erweitert.
+* WP-Residence-Theme-Unterstützung erweitert.
+* Verarbeitung externer Anhänge angepasst.
+* Vor-Import-Filter-Hook für Anhänge erweitert.
+* Kickstart-Mapping-Tabelle aktualisiert (Büroflächen-Reihenfolge).
+* Realia-Plugin-Mapping-Tabelle aktualisiert (ältere Energieangaben für Österreich).
+* Alle Mapping-Tabellen aktualisiert (Verkäuferprovision).
+* Bereinigung von Immobilien-Textinhalten erweitert.
+* Prüfung externer Dateianhänge verbessert.
+* Kompatibilität in Windows-basierten Hostingumgebungen verbessert.
+* Objekt-Lösch-Hooks bei der Vollabgleich-Verarbeitung verfügbar gemacht.
+* Filter-Hook zur Anpassung der Prüfzeit bzgl. serverseitig abgebrochener Importprozesse ergänzt.
+
+= 4.8.6 =
+* Veröffentlichungsdatum: 26.12.2020
+* Themespezifischen Code und Mapping-Tabellen aktualisiert.
+* Unbeabsichtigte Löschung aktiver Mapping-Dateien mit Backup-Zeitstempel korrigiert.
+* Kleinere Kompatibilitäts-Updates (WP 5.6).
+
+= 4.8.0 =
+* Veröffentlichungsdatum: 01.09.2020
+* Option zur Aktivierung/Deaktivierung von Referenzobjekten ergänzt (BringsOnline-Themes).
+* Problem bei Löschung fehlerhafter/nicht verarbeitbarer ZIP-Archive behoben.
+* Fehler bzgl. benutzerbezogener Importordner mit Punkt im Namen korrigiert.
+* Kompatibilität mit WP 5.5 verbessert.
+
+= 4.7.0 =
+* Veröffentlichungsdatum: 31.07.2020
+* Option zur Verarbeitung von ZIP-Archiven in Unterordnern des globalen Import-Verzeichnisses ergänzt.
+* Unterstützung für "Master-Objekte" und Untereinheiten ergänzt (Themes: Houzez, Real Homes, Real Places, WP Residence und WP Estate).
+* Automatisierte Löschung veralteter Mapping-Sicherungen ergänzt.
+* Grundlegende Unterstützung und Mappings für benutzerdefinierte onOffice-Flags hinzugefügt.
+* Problem bzgl. Löschung von Dekomprimierungs-Ordnern beschädigter ZIP-Archive behoben.
+* Unterstützung folgender Themes/Plugins aktualisiert/erweitert: Kickstart, BO-Beladomo/20, BO-Immobilia18, BringsOnline, Houzez, Real Homes, Real Places, WP Residence, WP Estate, MyHome
+* Alle Standard-Mapping-Tabellen aktualisiert (präzisere Begriffe, Tippfehler korrigiert etc.)
+* Verarbeitung sehr großer ZIP/XML-Dateien verbessert.
+* Automatisierte Erkennung von Ansprechpartnern verbessert.
+* Verarbeitung mehrsprachiger Inhalte und Anhänge sowie WPML-Kompatibilität optimiert.
+* Generierung und Ausgabe von Admin-Hinweisen angepasst.
+* Debug-Logging erweitert.
+* PHP-7.4-Kompatibilität verbessert.
+
+= 4.6 =
+* Veröffentlichungsdatum: 26.02.2020
+* Unterstützung für das Theme BO-Beladomo20 ergänzt.
+* Unterstützung für WP Residence aktualisiert.
+* Verarbeitung mehrsprachiger Inhalte (in Kombination mit dem Multilang-Add-on) überarbeitet.
+* Mehrere Ausnahmefall-Fehler korrigiert.
+* Alle Mapping-Tabellen aktualisiert (kleinere Optimierungen).
+
+= 4.5 =
+* Veröffentlichungsdatum: 20.11.2019
+* Weiteren Fehler hinsichtlich nicht gelöschter Immobilien bei Vollabgleichen (in Sonderfällen) behoben.
+* Theme-Unterstützung für WP Residence aktualisiert (Version 2.0.0+).
+* Mapping-Tabelle für BO-Immobilia18 aktualisiert.
+
+= 4.4 =
+* Veröffentlichungsdatum: 04.11.2019
+* Fehler hinsichtlich nicht gelöschter Immobilien bei Vollabgleichen (in Sonderfällen) behoben.
+* Stabilität bei der Verarbeitung sehr großer Importdateien verbessert.
+* Mapping-Tabellen und Unterstützung für verschiedene Themes aktualisiert.
+
+= 4.3 =
+* Veröffentlichungsdatum: 17.07.2019
+* Verarbeitung von Anhängen überarbeitet (vor allem Erkennung bereits vorhandener Dateien).
+* Mapping-Tabellen und Unterstützung für verschiedene Themes aktualisiert.
+* Mehrere kleinere Fehler korrigiert.
+
+= 4.2 "Warp" =
+* Veröffentlichungsdatum: 04.04.2019
+* Grundlegende Überarbeitung der XML-Verarbeitung zur Verbesserung und Beschleunigung des Imports von sehr umfangreichen Dateien.
+* Erkennung und Verarbeitung von bereits existierenden Immobilien und Anhängen optimiert.
+* Diverse performancebezogene Optimierungen.
+* Unterstützung und "Glue Code" für mehrere Themes aktualisiert.
+
+= 4.0.1 =
+* Veröffentlichungsdatum: 23.11.2018
+* Kompatibilitätsproblem behoben (PHP Versionen < 5.6).
+
+= 4.0 =
+* Veröffentlichungsdatum: 22.11.2018
+* Unterstützung neuer Geocodierungs-Dienste (OpenStreetMap): Nominatim und Photon
+* Unterstützung für das Theme BO-Immobilia18 von brings-online.com ergänzt.
+* Speicherung von XML-Quelltexten von importierten Immobilien ergänzt.
+* Neuer Action-Hook: immonex_oi2wp_property_xml_source_saved
+* Theme-Unterstützung aktualisiert: Real Places, Real Homes, brings-online.com-Themes
+* Mittlerweile überflüssige Option bzgl. Verarbeitung von Nullwerten entfernt.
+* Unterstützung für immonex Kickstart überarbeitet.
+* Framework aktualisiert.
+
+= 3.9.3 =
+* Veröffentlichungsdatum: 29.08.2018
+* Möglichkeit zur Ergänzung benutzerdefinierter Mapping-Ordner per Filterfunktion ergänzt (Hook: immonex_oi2wp_mapping_folders).
+* Fehler bei der Protokollerstellung behoben.
+
+= 3.9 =
+* Veröffentlichungsdatum: 17.08.2018
+* Alias für WP-Residence-Versionen >= 1.40 ergänzt.
+* Neuer Action-Hook: immonex_oi2wp_taxonomy_term_inserted.
+* Neuer Filter-Hook: immonex_oi2wp_update_property_links.
+* Mapping-Möglichkeiten für die kommende Unterstützung weiterer Immobilien-Themes und -Plugins erweitert.
+* Fehler-/Exception-Behandlung des Loggers überarbeitet.
+
+= 3.8 =
+* Veröffentlichungsdatum: 03.07.2018
+* Unterstützung für das Immobilien-Theme MyHome ergänzt.
+* Unterstützung diverser anderer Themes aktualisiert (inkl. Standard-Mapping-Tabellen).
+* Vollimport-Verarbeitung überarbeitet und entspr. Modus-Option ergänzt.
+* Speicherung temporärer Importdaten umgestellt (Datei anstatt Transient).
+* Generierung der Veröffentlichungszeit bei Immobilien-Beiträgen verbessert.
+* Löschung veralteter Archivdateien überarbeitet.
+* Speicherung der OpenImmo-ANID bei jedem importierten Objekt ergänzt.
+* Automatische Zuordnung der Immobilien-Ansprechpartner verbessert.
+* Neue Filter- und Action-Hooks ergänzt.
+
+= 3.6.1 =
+* Veröffentlichungsdatum: 12.01.2018
+* Teilweise unzuverlässige Erkennung von Grundrissbildern korrigiert.
+
+= 3.6 =
+* Veröffentlichungsdatum: 06.01.2018
+* Geocodierung verbessert inkl. neuem Filter zur Deaktivierung der "Koordinaten-Unschärfe".
+* Erkennung der Haupt-Objektbilder verbessert, die via XML definiert wurden.
+* Grundlegende Erkennung/Verarbeitung von URLs von "virtuellen Touren" ergänzt (aktuell unterstützte Themes: Houzez, WP Residence, WP Estate).
+* Multisite-Installationen: Lizenztab wird nun nur noch in den Plugin-Optionen innerhalb der Haupt-Website angezeigt.
+* Detailupdates in allen Standard-Mapping-Tabellen.
+
+= 3.5 =
+* Veröffentlichungsdatum: 27.10.2017
+* Unterstützung aktueller Theme-Versionen aktualisiert, u. a. Hometown, WP Residence und Real Homes.
+* Neue interne Mapping-Filterfunktion zur Konvertierung von OpenImmo-Energieträger-Angaben ergänzt.
+* Statusabfrage bei Fehlern im Rahmen der Geocodierung erweitert.
+* Übersetzungsvorgaben für WPML und Polylang erweitert.
+* Detailupdates in mehreren Standard-Mapping-Tabellen.
+
+= 3.4 =
+* Veröffentlichungsdatum: 13.09.2017
+* Unterstützung für das Immobilien-Theme Preston ergänzt.
+* Theme-Unterstützung für die aktuellen Versionen von Real Homes, WP Estate, WP Residence, Realia and BO-Beladomo überarbeitet/erweitert.
+* Detailupdates in mehreren Standard-Mapping-Tabellen.
+
+= 3.3 =
+* Veröffentlichungsdatum: 19.06.2017
+* Ansprechpartnerzuordnung anhand von Namen und E-Mail-Adressen beim Import überarbeitet.
+* Theme-Unterstützung für die aktuellen Versionen von WP Residence, Hometown, Houzez, BO-Beladomo und weitere brings-online.com-Lösungen überarbeitet/erweitert.
+* Kompatibilität mit WPML verbessert.
+* Möglichen "Hänger" beim Verarbeiten von ungültigen XML-Daten behoben.
+* Mehrsprachige Dokumentations-Links auf der Plugin-Einstellungsseite korrigiert.
+
+= 3.2 =
+* Veröffentlichungsdatum: 07.04.2017
+* Unterstützung für das Immobilien-Theme Houzez ergänzt.
+* Unterstützung für Inventor-Properties-basierte Websites überarbeitet (u. a. Geocodierung).
+* Erweiterte Statusinformationen hinzugefügt, die über den Filter-Hook immonex_oi2wp_property_xml_before_import bereitgestellt werden.
+* Unterstützung für die Themes/Plugins WPCasa, WP Residence und Zoner aktualisiert.
+* Standard-Mapping-Tabellen aktualisiert (Tippfehler korrigiert, kleinere Optimierungen).
+
+= 3.1 =
+* Veröffentlichungsdatum: 19.03.2017
+* Theme-Unterstützung für BO-Beladomo erweitert (Option zum Hinzufügen von Google-Map-Kartenmarkern für importierte Objekte).
+* Theme-Unterstützung für Real Homes 2.7.0 überarbeitet (inkl. Unterstützung von Abonnement-Paket-Kontingenten).
+* Unterstützung für die Themes WP Residence und Real Places geringfügig aktualisiert.
+* Möglichkeit für die zusätzliche Speicherung von Anhangtiteln als Textauszug (Bildunterschrift) ergänzt.
+
+= 3.0 =
+* Veröffentlichungsdatum: 26.02.2017
+* Geocodierung überarbeitet (neue Optionen für Google-Maps-API-Key, Standardanbieter und Nutzung übermittelter Standordkoordinaten, wenn die Adressveröffentlichung nicht freigegeben ist).
+* Verarbeitung mehrerer XML-Dateien in einem einzelnen ZIP-Archiv korrigiert.
+* Verarbeitung von XML-Dateien in Unterordnern (nach Entpacken) ermöglicht.
+* Erweiterte Debug-Ausgabe beim manuellen (AJAX-basierten) Import ergänzt.
+* Möglichkeit zum Ausschluss des Haupt-Beitragsbilds (Featured Image) beim Zurücksetzen von Immobilien-Beiträgen während des Imports ergänzt.
+* Problem beim Einbinden von immonex-Widgets außerhalb der Loop behoben.
+* Automatische Lizenzdeaktivierung bei Nichterreichbarkeit des Lizenzierungsservers behoben.
+* Filtermethode zum Ausschneiden von Sprachcodes aus Taxonomie-Begriffen hinzugefügt (Kompatibilität).
+* Unterstützung für Themes von brings-online.com überarbeitet.
+* Mögliches Problem beim Prüfen von Anhängen auf externen Servern behoben.
+* Standard-Mapping-Tabellen leicht überarbeitet (Tippfehler).
+
+= 2.9.3 =
+* Veröffentlichungsdatum: 30.12.2016
+* Fehler bei der Erkennung/Zuweisung von Grundriss-Anhängen unter bestimmten Bedingungen behoben.
+* Neue Sicherheitsfunktionen ergänzt.
+
+= 2.9 =
+* Veröffentlichungsdatum: 20.12.2016
+* Option zur Begrenzung der Anzahl der Bildanhänge pro Objekt ergänzt.
+* Neue Filter-Hooks für die Prüfung von ZIP-Archiven vor dem Import, dem Ausschließen von Metadaten beim Beitrags-Reset, dem Setzen der Löschzeit für nicht verarbeitbare ZIP-Dateien sowie zum Umschalten auf die vorherige Verarbeitung bzgl. dem Hinzufügen von Sprachcodes zu Taxonomie-Term-Slugs ergänzt.
+* Logging für Importdaten erweitert, die Objekte mehrerer Agenturen enthalten.
+* Verabeitung mehrsprachiger Inhalte verbessert (vor allem bei Taxonomie-Parent-Terms).
+* Unterstützung für das Theme WP Residence aktualisiert (neue Standard-Immobilien- Sidebar-Option "global").
+* Unterstützung für das Theme Hometown aktualisiert (Speicherung der Ansprechpartner bei älteren Theme-Versionen).
+* Standard-Mapping-Tabellen aktualisiert (mehrere Details geändert sowie Tippfehler korrigiert).
+* Diverse Updates zur Verbesserung der Stabilität und dem Handling von Sonderfällen implementiert.
+
+= 2.8 =
+* Veröffentlichungsdatum: 12.09.2016
+* Unterstützung für das Theme Zoner ergänzt.
+* "Unschärfe" bei der Geocodierung zur Vermeidung von mehreren Immobilien-Kartenmarkern an der identischen Position (z. B. Ortsmitte) ergänzt.
+* Kleineren Fehler bzgl. leeren XML-Elementen ohne Attribute korrigiert.
+* Unterstützung für brings-online.com-basierte Themes leicht überarbeitet.
+* Diverse weitere Detail-Verbesserungen umgesetzt.
+
+= 2.7 =
+* Veröffentlichungsdatum: 20.07.2016
+* Unterstützung für das Theme BO-Beladomo ergänzt (brings-online.com).
+* Neue interne Filterfunktion (via Mapping-Tabellen) ergänzt: float
+* Unterstützung für brings-online.com-Themes überarbeitet.
+* immonex-Widgets bzgl. Ausgabe von benutzerdefinierten CSS-Klassen (Shortcode) erweitert.
+* HTML-Abschlusselement-Fehler in immonex-Widget für Reales WP korrigiert.
+* Diverse Detailanpassungen in Standard-Mapping-Tabellen.
+
+= 2.6.2 =
+* Veröffentlichungsdatum: 06.07.2016
+* Kompatibilität mit dem Theme Reales WP verbessert.
+* Mapping-Tabellen korrigiert (Distanzen/Kindergärten).
+
+= 2.6 =
+* Veröffentlichungsdatum: 05.07.2016
+* Unterstützung für das Theme Reales WP ergänzt.
+* WPCasa-Unterstützung erweitert (u. a. Übernahme der Ansprechpartner-Daten aus den zugehörigen Benutzer-Daten).
+* Unterstützung für Inventor-Properties-basierende Themes erweitert (Grundrisse).
+* Interne Methoden zur Ausfilterung von Leer- und Nullwerten überarbeitet.
+* Mapping-Tabellen aktualisiert.
+* Einige kleinere Fehler behoben.
+
+= 2.5.1 =
+* Veröffentlichungsdatum: 14.06.2016
+* Unterstützung für die aktuelle Version von Estate Pro aktualisiert (Objektgalerie).
+
+= 2.5 =
+* Veröffentlichungsdatum: 14.06.2016
+* Unterstützung für das Theme Estate Pro ergänzt.
+* Verarbeitung von Bildanhängen überarbeitet (bessere Kompatibilität in eingeschränkten Hosting-Umgebungen).
+* Unterstützung für den Import und die Darstellung von externen Links mit dem immonex-Widget für Anhänge ergänzt.
+* Verarbeitung von Inhalten (Plugin-Optionen, Taxonomie-Begriffe) in mehrsprachigen Websites überarbeitet.
+* Prüfoptionen für importierte Immobilien erweitert.
+* Unterstützung mehrerer Themes aktualisiert.
+* Mapping-Optionen für Dezimalstellen erweitert.
+* Mapping-Tabellen aktualisiert.
+* Diverse andere Verbesserungen und Fehlerkorrekturen.
+
+= 2.4 =
+* Veröffentlichungsdatum: 25.04.2016
+* Unterstützung für Themes ergänzed, die auf auf Inventor Properties (pluginbasiertes Anzeigen-Framework) aufbauen, z. B. Superlist.
+* Globale Option zum Festlegen des Status "Ausstehender Review" für neu importierte Immobilien hinzugefügt.
+* Zuordnung von Immobilien-Ansprechpartnern in mehrsprachigen Umgebungen verbessert.
+* Möglichkeit zum Kombinieren von Strings per Mapping-Tabelle mit Leerzeichen anstatt Komma ergänzt.
+* Unterstützung für die brings-online.com-, WP-Residence- und WP-Estate-Themes leicht überarbeitet.
+* Möglichkeiten zum Import von Videos erweitert.
+* Import von Anhängen auf externen Servern optimiert.
+
+= 2.3.2 =
+* Veröffentlichungsdatum: 18.04.2016
+* Kompatibilität mit Hometown >= 2.3 verbessert.
+* Kleinere Fehler bzgl. Taxonomie-Begriffen ohne Sprachcodes im Slug sowie der Speicherung einer WPCasa-Option behoben.
+
+= 2.3 =
+* Veröffentlichungsdatum: 14.04.2016
+* Möglichkeit zur Verwendung separater, benutzerbezogener Importordner inkl. automatischer Benutzer/Agentur-Zuordnung ergänzt.
+* Option zur Deaktivierung von Vollimporten über den globalen Importordner ergänzt.
+* Prüfung/Aktualisierung der Benutzer-Anzeigen-Kontingente beim Import für WP Residence, WP Estate, Realia (>= 4) und Realty ergänzt.
+* Verarbeitung von Taxonomie-Begriffen in mehrsprachigen Umgebungen überarbeitet.
+* Neuen Filter-Hook für die Zuweisung von Zeitstempeln für importierte Immobilien in umgekehrter Reihenfolge hinzugefügt.
+* Möglichkeit zur Beibehaltung des aktuellen Beitragsstatus von zu aktualisierenden Immobilien ergänzt.
+* Funktion zur Filterung von Elementen mit Nullwerten korrigiert.
+* Standard-Mapping-Tabellen für unterstützte Themes und Plugins aktualisiert.
+* Automatisierte Lizenzstatus-Prüfungen und -Benachrichtigungen hinzugefügt.
+* Mehrere Optimierungen bzgl. der Website-Performance und -Sicherheit.
+* Diverse weitere Detailverbesserungen und Korrekturen.
+* Plugin mit WordPress 4.5 getestet.
+
+= 2.0.5 =
+* Veröffentlichungsdatum: 10.02.2016
+* Reihenfolge der Ordnersuche für immonex-Widget-Templates korrigiert.
+* Fehler bzgl. Import leerer XML-Elementen behoben, die Taxonomien zugeordnet sind.
+* Unterstützung für die Themes Real Homes und Real Places überarbeitet.
+* Möglichkeit zur Nutzung von Theme-Aliasen (bei umbenannten Themes) ergänzt.
+
+= 2.0 =
+* Veröffentlichungsdatum: 02.02.2016
+* Unterstützung für das Immobilien-Theme Real Estate ergänzt.
+* Mappings für das Real-Places-Theme aktualisiert.
+* Diverse weitere Detailverbesserungen und -korrekturen.
+
+= 1.9.6 =
+* Veröffentlichungsdatum: 15.01.2016
+* Unterstützung für die Themes Real Homes (2.4.2) und WP Residence (1.13.x) aktualisiert.
+* Option zum Ausfiltern von Leer- und Nullwerten ergänzt.
+* Erkennung von Grundrissgrafiken erweitert.
+* Debug-Protokollierung erweitert.
+* Diverse weitere Verbesserungen und Korrekturen.
+
+= 1.9 =
+* Veröffentlichungsdatum: 04.12.2015
+* Unterstützung für das Realia-Plugin sowie das Realia-4-Theme ergänzt.
+* Unterstützung für Realty-, WP-Residence- und brings-online.com-Themes aktualisiert.
+* Möglichkeit zur Nutzung der Bing-Maps-API als Alternative zur Google-Maps-API für die Geocodierung ergänzt.
+* Prüfung und Verarbeitung von doppelt gezippten Import-Archiven hinzugefügt.
+* Fehler bzgl. dem Versand von Importprotokoll-Mails behoben.
+
+= 1.8 =
+* Veröffentlichungsdatum: 13.11.2015
+* Unterstützung für das Immobilien-Theme Real Places ergänzt.
+* Stabilität verbessert.
+
+= 1.7 =
+* Veröffentlichungsdatum: 15.10.2015
+* Unterstützung für das Immobilien-Plugin WP Estate ergänzt.
+* Unterstützung für WP Residence und die brings-online.com-Themes überarbeitet.
+* Einige kleinere Probleme im Zusammenhang mit dem Import mehrsprachiger Inhalte behoben.
+* Fehler behoben, durch den einige Admin-Meldungen nicht angezeigt wurden.
+
+= 1.6 =
+* Veröffentlichungsdatum: 25.09.2015
+* Möglichkeit zur automatischen Klassifizierung von Immobilien anhand von manuell angelegten Taxonomiebegriffen ergänzt (brings-online.com-Themes).
+* Kleinere Fehler in der Unterstützung für brings-online.com-Themes behoben.
+* Verarbeitung mehrsprachiger Inhalte optimiert.
+* Fehler bei der Plugin-Aktivierung behoben.
+
+= 1.5.5 =
+* Veröffentlichungsdatum: 07.09.2015
+* Verarbeitung für die aktuelle Version des Hometown-Themes angepasst.
+* Verarbeitung und Mapping-Tabelle für die brings-online.com-Themens angepasst.
+* Speicherung temporärer Importprozess-Daten überarbeitet.
+* Unterstützungsklasse für automatische Updates aktualisiert.
+* Diverse Detailverbesserungen.
+
+= 1.5.1 =
+* Veröffentlichungsdatum: 14.08.2015
+* Fehler bei der Zuordnung von Bild-/Dateianhängen behoben, der u. U. beim Fortsetzen von Importvorgängen auftreten konnte.
+
+= 1.5 =
+* Veröffentlichungsdatum: 12.08.2015
+* Unterstützung für das Theme Freehold ergänzt.
+* Unterstützung für die Verarbeitung mehrsprachiger Inhalte verbessert.
+* Mapping-Tabellen aktualisiert.
+
+= 1.4 =
+* Veröffentlichungsdatum: 24.07.2015
+* Unterstützung für das Theme Realty ergänzt.
+* Unterstützung für dem Import vom Remote-Dateianhängen ergänzt.
+* Interne Filterfunktion number_format erweitert.
+* Schnittstellenfunktionen für mehrsprachige Importe per Filterfunktion deaktivierbar gemacht.
+* Fehler bzgl. Geo-Koordination in der WP-Residence-Unterstützung behoben.
+* Mapping-Tabellen aktualisiert.
+
+= 1.3 =
+* Veröffentlichungsdatum: 29.06.2015
+* Unterstützung für das WP-Residence-Theme ergänzt.
+* Unterstützung für das Immobilia-Theme aktualisiert (Version 3).
+* Neue interne Filterfunktion für das Hinzufügen von variablen Einheiten/Anhängen ergänzt.
+* Verarbeitung der Liste unterstützter Themes überarbeitet.
+* Diverse Detailupdates.
+
+= 1.2.2 =
+* Veröffentlichungsdatum: 08.06.2015
+* Unterstützung für das Theme Real Homes ergänzt.
+* Standard-Mapping-Tabellen aktualisiert.
+* Diverse kleinere Anpassungen und Korrekturen.
+
+= 1.2 =
+* Veröffentlichungsdatum: 21.05.2015
+* (Child) Theme-Ordner als möglicher Ort für Widget-Templates ergänzt.
+* Maximale Anzahl von Wiederholungen für den Import von Bildern/Anhängen ergänzt.
+* Timeout für laufende Import-Prozesse von fünf auf drei Minuten reduziert.
+* Kompatibilität mit Hosting-Umgebungen verbessert, bei denen allow_url_fopen deaktiviert ist.
+* Fehler in Realia-Unterstützungs-Code korrigiert.
+* Mappingproblem beim Import von Elementen mit Nullwerten behoben.
+
+= 1.1.3 =
+* Veröffentlichungsdatum: 28.04.2015
+* Unterstützung für das Hometown-Theme ergänzt.
+* Prüfung der php.ini-Angabe der maximalen Script-Laufzeit ergänzt.
+* Kleinere Widget-Darstellungsprobleme behoben.
+
+= 1.1 =
+* Veröffentlichungsdatum: 23.04.2015
+* Unterstützung für das Shandora-Theme ergänzt.
+* Neue Mapping-Möglichkeiten: Prüfung auf nicht-leere Elemente sowie Übergabe von Parametern für interne Filterfunktionen.
+* Standard-Mapping-Tabellen aktualisiert.
+
+= 1.0.3 =
+* Veröffentlichungsdatum: 13.04.2015
+* Filter immonex_oi2wp_add_post_data_element ergänzt.
+* Permalink-Problem beim Aktualisieren von Immobilien behoben.
+
+= 1.0.1 =
+* Veröffentlichungsdatum: 23.03.2015
+* Fehler behoben, der unter bestimmten Bedingungen zum Überspringen von Objekten beim Import geführt hat.
+
+= 1.0 =
+* Veröffentlichungsdatum: 12.03.2015
+* Erste Veröffentlichung.
