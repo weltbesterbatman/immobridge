@@ -30,13 +30,8 @@ final class BricksServiceProvider implements ServiceProviderInterface
      */
     public function register(Container $container): void
     {
-        // TODO: Register Bricks services
-        $container->singleton('bricks.integration', function () {
-            return new class {
-                public function init(): void {
-                    // TODO: Implement Bricks integration
-                }
-            };
+        $container->singleton(BricksIntegrationServiceProvider::class, function ($container) {
+            return new BricksIntegrationServiceProvider();
         });
     }
 
@@ -47,6 +42,7 @@ final class BricksServiceProvider implements ServiceProviderInterface
      */
     public function boot(Container $container): void
     {
-        // TODO: Boot Bricks services
+        $integration = $container->get(BricksIntegrationServiceProvider::class);
+        $integration->register($container);
     }
 }

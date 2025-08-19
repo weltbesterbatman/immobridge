@@ -50,8 +50,10 @@ Diese Regeln definieren die Standards und Konventionen für die Entwicklung des 
 * Password: Admin-123456
 
 **URL zur Datenbank**
+
 http://localhost:8888/phpMyAdmin5/index.php?route=/database/structure&db=wp_immonexbrickswplocal_db
 
+Host der Datenbank: localhost:8889
 
 ### 10. Aktualisierung der Datei  07_Projekt_Roadmap.md
 

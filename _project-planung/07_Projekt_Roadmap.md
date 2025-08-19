@@ -1,6 +1,6 @@
 # ImmoBridge Plugin - Projekt Roadmap
 
-Version 5.0 Date 2025-08-19 12:03
+Version 6.0 Date 2025-08-19 14:08
 
 ## Projektübersicht
 
@@ -38,7 +38,7 @@ Modernisierung des WordPress-Plugins "immonex-openimmo2wp" zu "ImmoBridge" mit m
 - ✅ ZIP-Subdirectory Problem gelöst
 - ✅ Server-Timeout Problem gelöst
 
-## Phase 3: Bricks Builder Integration ✅ ABGESCHLOSSEN
+## Phase 3: Bricks Builder Integration 🔴AIN SRHEITSEN
 
 - [x] **Recherche & Planung**
   - [x] Analyse der Frontend-Darstellung im Legacy-Plugin `immonex-openimmo2wp`
@@ -56,7 +56,7 @@ Modernisierung des WordPress-Plugins "immonex-openimmo2wp" zu "ImmoBridge" mit m
   - [ ] Property Card Element
   - [ ] Property Gallery Element
 
-**Status**: ✅ **ERFOLGREICH ABGESCHLOSSEN**
+**Status**: 🔴 **FEHLERHAFT - DEBUGGING ERFORDERLICH**
 
 **Implementierungsdetails (19.08.2025 12:03):**
 
