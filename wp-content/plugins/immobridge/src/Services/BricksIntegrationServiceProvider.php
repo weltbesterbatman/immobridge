@@ -37,6 +37,11 @@ final class BricksIntegrationServiceProvider implements ServiceProviderInterface
         add_filter('bricks/dynamic_data/tags', [$this, 'registerDynamicDataTags']);
         add_action('bricks/builder/before_save_post', [$this, 'validatePropertyTemplate']);
     }
+
+    public function boot(Container $container): void
+    {
+        // Bootstrapping logic can be added here if needed
+    }
     
     /**
      * Check if Bricks theme is active
@@ -83,190 +88,77 @@ final class BricksIntegrationServiceProvider implements ServiceProviderInterface
      */
     public function registerDynamicDataTags(array $tags): array
     {
-        // Basic property information
-        $tags['immobridge_property_title'] = [
-            'label' => __('Property Title', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyTitle']
+        $groups = [
+            'immobridge_general' => __('ImmoBridge: Allgemein', 'immobridge'),
+            'immobridge_price' => __('ImmoBridge: Preis', 'immobridge'),
+            'immobridge_area' => __('ImmoBridge: Flächen', 'immobridge'),
+            'immobridge_address' => __('ImmoBridge: Adresse', 'immobridge'),
+            'immobridge_features' => __('ImmoBridge: Merkmale', 'immobridge'),
+            'immobridge_contact' => __('ImmoBridge: Kontakt', 'immobridge'),
+            'immobridge_energy' => __('ImmoBridge: Energie', 'immobridge'),
+            'immobridge_media' => __('ImmoBridge: Medien', 'immobridge'),
         ];
-        
-        $tags['immobridge_property_description'] = [
-            'label' => __('Property Description', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyDescription']
+
+        foreach ($groups as $key => $label) {
+            add_filter("bricks/dynamic_data/groups/{$key}", function() use ($label) {
+                return $label;
+            });
+        }
+
+        $property_tags = [
+            // Allgemein
+            'immobridge_property_title' => ['group' => 'immobridge_general', 'label' => __('Titel', 'immobridge'), 'callback' => [$this, 'getPropertyTitle']],
+            'immobridge_property_description' => ['group' => 'immobridge_general', 'label' => __('Beschreibung', 'immobridge'), 'callback' => [$this, 'getPropertyDescription']],
+            'immobridge_openimmo_id' => ['group' => 'immobridge_general', 'label' => __('OpenImmo ID', 'immobridge'), 'callback' => [$this, 'getOpenImmoId']],
+
+            // Preis
+            'immobridge_property_price' => ['group' => 'immobridge_price', 'label' => __('Preis', 'immobridge'), 'callback' => [$this, 'getPropertyPrice']],
+            'immobridge_property_price_formatted' => ['group' => 'immobridge_price', 'label' => __('Preis (Formatiert)', 'immobridge'), 'callback' => [$this, 'getPropertyPriceFormatted']],
+            'immobridge_property_rent' => ['group' => 'immobridge_price', 'label' => __('Miete', 'immobridge'), 'callback' => [$this, 'getPropertyRent']],
+            'immobridge_property_additional_costs' => ['group' => 'immobridge_price', 'label' => __('Nebenkosten', 'immobridge'), 'callback' => [$this, 'getPropertyAdditionalCosts']],
+
+            // Flächen
+            'immobridge_property_living_area' => ['group' => 'immobridge_area', 'label' => __('Wohnfläche', 'immobridge'), 'callback' => [$this, 'getPropertyLivingArea']],
+            'immobridge_property_total_area' => ['group' => 'immobridge_area', 'label' => __('Gesamtfläche', 'immobridge'), 'callback' => [$this, 'getPropertyTotalArea']],
+
+            // Adresse
+            'immobridge_property_address' => ['group' => 'immobridge_address', 'label' => __('Adresse', 'immobridge'), 'callback' => [$this, 'getPropertyAddress']],
+            'immobridge_property_city' => ['group' => 'immobridge_address', 'label' => __('Stadt', 'immobridge'), 'callback' => [$this, 'getPropertyCity']],
+            'immobridge_property_postal_code' => ['group' => 'immobridge_address', 'label' => __('PLZ', 'immobridge'), 'callback' => [$this, 'getPropertyPostalCode']],
+            'immobridge_property_country' => ['group' => 'immobridge_address', 'label' => __('Land', 'immobridge'), 'callback' => [$this, 'getPropertyCountry']],
+
+            // Merkmale
+            'immobridge_property_rooms' => ['group' => 'immobridge_features', 'label' => __('Zimmer', 'immobridge'), 'callback' => [$this, 'getPropertyRooms']],
+            'immobridge_property_bedrooms' => ['group' => 'immobridge_features', 'label' => __('Schlafzimmer', 'immobridge'), 'callback' => [$this, 'getPropertyBedrooms']],
+            'immobridge_property_bathrooms' => ['group' => 'immobridge_features', 'label' => __('Badezimmer', 'immobridge'), 'callback' => [$this, 'getPropertyBathrooms']],
+            'immobridge_property_type' => ['group' => 'immobridge_features', 'label' => __('Objekttyp', 'immobridge'), 'callback' => [$this, 'getPropertyType']],
+            'immobridge_property_status' => ['group' => 'immobridge_features', 'label' => __('Status', 'immobridge'), 'callback' => [$this, 'getPropertyStatus']],
+            'immobridge_property_features' => ['group' => 'immobridge_features', 'label' => __('Ausstattung', 'immobridge'), 'callback' => [$this, 'getPropertyFeatures']],
+            'immobridge_property_equipment' => ['group' => 'immobridge_features', 'label' => __('Einrichtung', 'immobridge'), 'callback' => [$this, 'getPropertyEquipment']],
+
+            // Kontakt
+            'immobridge_property_contact_name' => ['group' => 'immobridge_contact', 'label' => __('Kontaktperson', 'immobridge'), 'callback' => [$this, 'getPropertyContactName']],
+            'immobridge_property_contact_phone' => ['group' => 'immobridge_contact', 'label' => __('Telefon', 'immobridge'), 'callback' => [$this, 'getPropertyContactPhone']],
+            'immobridge_property_contact_email' => ['group' => 'immobridge_contact', 'label' => __('E-Mail', 'immobridge'), 'callback' => [$this, 'getPropertyContactEmail']],
+
+            // Energie
+            'immobridge_property_energy_class' => ['group' => 'immobridge_energy', 'label' => __('Energieeffizienzklasse', 'immobridge'), 'callback' => [$this, 'getPropertyEnergyClass']],
+            'immobridge_property_energy_consumption' => ['group' => 'immobridge_energy', 'label' => __('Energieverbrauch', 'immobridge'), 'callback' => [$this, 'getPropertyEnergyConsumption']],
+
+            // Medien
+            'immobridge_property_featured_image' => ['group' => 'immobridge_media', 'label' => __('Beitragsbild', 'immobridge'), 'callback' => [$this, 'getPropertyFeaturedImage']],
+            'immobridge_property_gallery' => ['group' => 'immobridge_media', 'label' => __('Bildergalerie', 'immobridge'), 'callback' => [$this, 'getPropertyGallery']],
         ];
-        
-        // Price information
-        $tags['immobridge_property_price'] = [
-            'label' => __('Property Price', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyPrice']
-        ];
-        
-        $tags['immobridge_property_price_formatted'] = [
-            'label' => __('Property Price (Formatted)', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyPriceFormatted']
-        ];
-        
-        $tags['immobridge_property_rent'] = [
-            'label' => __('Monthly Rent', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyRent']
-        ];
-        
-        $tags['immobridge_property_additional_costs'] = [
-            'label' => __('Additional Costs', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyAdditionalCosts']
-        ];
-        
-        // Property details
-        $tags['immobridge_property_living_area'] = [
-            'label' => __('Living Area', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyLivingArea']
-        ];
-        
-        $tags['immobridge_property_rooms'] = [
-            'label' => __('Number of Rooms', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyRooms']
-        ];
-        
-        $tags['immobridge_property_bedrooms'] = [
-            'label' => __('Number of Bedrooms', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyBedrooms']
-        ];
-        
-        $tags['immobridge_property_bathrooms'] = [
-            'label' => __('Number of Bathrooms', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyBathrooms']
-        ];
-        
-        // Location information
-        $tags['immobridge_property_address'] = [
-            'label' => __('Property Address', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyAddress']
-        ];
-        
-        $tags['immobridge_property_city'] = [
-            'label' => __('City', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyCity']
-        ];
-        
-        $tags['immobridge_property_postal_code'] = [
-            'label' => __('Postal Code', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyPostalCode']
-        ];
-        
-        $tags['immobridge_property_country'] = [
-            'label' => __('Country', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyCountry']
-        ];
-        
-        // Property type and status
-        $tags['immobridge_property_type'] = [
-            'label' => __('Property Type', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyType']
-        ];
-        
-        $tags['immobridge_property_status'] = [
-            'label' => __('Property Status', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyStatus']
-        ];
-        
-        // Contact information
-        $tags['immobridge_property_contact_name'] = [
-            'label' => __('Contact Name', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyContactName']
-        ];
-        
-        $tags['immobridge_property_contact_phone'] = [
-            'label' => __('Contact Phone', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyContactPhone']
-        ];
-        
-        $tags['immobridge_property_contact_email'] = [
-            'label' => __('Contact Email', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyContactEmail']
-        ];
-        
-        // Images and media
-        $tags['immobridge_property_featured_image'] = [
-            'label' => __('Featured Image', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyFeaturedImage']
-        ];
-        
-        $tags['immobridge_property_gallery'] = [
-            'label' => __('Property Gallery', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyGallery']
-        ];
-        
-        // Energy efficiency
-        $tags['immobridge_property_energy_class'] = [
-            'label' => __('Energy Efficiency Class', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyEnergyClass']
-        ];
-        
-        $tags['immobridge_property_energy_consumption'] = [
-            'label' => __('Energy Consumption', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyEnergyConsumption']
-        ];
-        
-        // Additional features
-        $tags['immobridge_property_features'] = [
-            'label' => __('Property Features', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyFeatures']
-        ];
-        
-        $tags['immobridge_property_equipment'] = [
-            'label' => __('Property Equipment', 'immobridge'),
-            'group' => 'immobridge',
-            'provider' => 'immobridge',
-            'callback' => [$this, 'getPropertyEquipment']
-        ];
-        
+
+        foreach ($property_tags as $key => $tag) {
+            $tags[$key] = [
+                'label'    => $tag['label'],
+                'group'    => $tag['group'],
+                'provider' => 'immobridge',
+                'callback' => $tag['callback'],
+            ];
+        }
+
         return $tags;
     }
     
@@ -339,10 +231,10 @@ final class BricksIntegrationServiceProvider implements ServiceProviderInterface
     private function validatePropertyFields(int $post_id): void
     {
         $required_fields = [
-            '_immo_title',
-            '_immo_price',
-            '_immo_living_area',
-            '_immo_address'
+            'cf_title',
+            'cf_price',
+            'cf_living_area',
+            'cf_address'
         ];
         
         foreach ($required_fields as $field) {
@@ -362,19 +254,19 @@ final class BricksIntegrationServiceProvider implements ServiceProviderInterface
     public function getPropertyTitle($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_title', true) ?: get_the_title($post_id);
+        return get_post_meta($post_id, 'cf_title', true) ?: get_the_title($post_id);
     }
     
     public function getPropertyDescription($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_description', true) ?: get_the_content();
+        return get_post_meta($post_id, 'cf_description', true) ?: get_the_content();
     }
     
     public function getPropertyPrice($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_price', true) ?: '';
+        return get_post_meta($post_id, 'cf_price', true) ?: '';
     }
     
     public function getPropertyPriceFormatted($post_id = null): string
@@ -390,92 +282,92 @@ final class BricksIntegrationServiceProvider implements ServiceProviderInterface
     public function getPropertyRent($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_rent', true) ?: '';
+        return get_post_meta($post_id, 'cf_rent', true) ?: '';
     }
     
     public function getPropertyAdditionalCosts($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_additional_costs', true) ?: '';
+        return get_post_meta($post_id, 'cf_additional_costs', true) ?: '';
     }
     
     public function getPropertyLivingArea($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        $area = get_post_meta($post_id, '_immo_living_area', true);
+        $area = get_post_meta($post_id, 'cf_living_area', true);
         return $area ? $area . ' m²' : '';
     }
     
     public function getPropertyRooms($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_rooms', true) ?: '';
+        return get_post_meta($post_id, 'cf_rooms', true) ?: '';
     }
     
     public function getPropertyBedrooms($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_bedrooms', true) ?: '';
+        return get_post_meta($post_id, 'cf_bedrooms', true) ?: '';
     }
     
     public function getPropertyBathrooms($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_bathrooms', true) ?: '';
+        return get_post_meta($post_id, 'cf_bathrooms', true) ?: '';
     }
     
     public function getPropertyAddress($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_address', true) ?: '';
+        return get_post_meta($post_id, 'cf_address', true) ?: '';
     }
     
     public function getPropertyCity($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_city', true) ?: '';
+        return get_post_meta($post_id, 'cf_city', true) ?: '';
     }
     
     public function getPropertyPostalCode($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_postal_code', true) ?: '';
+        return get_post_meta($post_id, 'cf_zip_code', true) ?: '';
     }
     
     public function getPropertyCountry($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_country', true) ?: '';
+        return get_post_meta($post_id, 'cf_country', true) ?: '';
     }
     
     public function getPropertyType($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_type', true) ?: '';
+        return get_post_meta($post_id, 'cf_property_type', true) ?: '';
     }
     
     public function getPropertyStatus($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_status', true) ?: '';
+        return get_post_meta($post_id, 'cf_status', true) ?: '';
     }
     
     public function getPropertyContactName($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_contact_name', true) ?: '';
+        return get_post_meta($post_id, 'cf_contact_name', true) ?: '';
     }
     
     public function getPropertyContactPhone($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_contact_phone', true) ?: '';
+        return get_post_meta($post_id, 'cf_contact_phone', true) ?: '';
     }
     
     public function getPropertyContactEmail($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_contact_email', true) ?: '';
+        return get_post_meta($post_id, 'cf_contact_email', true) ?: '';
     }
     
     public function getPropertyFeaturedImage($post_id = null): string
@@ -488,7 +380,7 @@ final class BricksIntegrationServiceProvider implements ServiceProviderInterface
     public function getPropertyGallery($post_id = null): array
     {
         $post_id = $post_id ?: get_the_ID();
-        $gallery_ids = get_post_meta($post_id, '_immo_gallery', true);
+        $gallery_ids = get_post_meta($post_id, 'cf_images', true);
         
         if (empty($gallery_ids)) {
             return [];
@@ -512,27 +404,40 @@ final class BricksIntegrationServiceProvider implements ServiceProviderInterface
     public function getPropertyEnergyClass($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        return get_post_meta($post_id, '_immo_energy_class', true) ?: '';
+        return get_post_meta($post_id, 'cf_energy_class', true) ?: '';
     }
     
     public function getPropertyEnergyConsumption($post_id = null): string
     {
         $post_id = $post_id ?: get_the_ID();
-        $consumption = get_post_meta($post_id, '_immo_energy_consumption', true);
+        $consumption = get_post_meta($post_id, 'cf_energy_consumption', true);
         return $consumption ? $consumption . ' kWh/(m²·a)' : '';
     }
     
     public function getPropertyFeatures($post_id = null): array
     {
         $post_id = $post_id ?: get_the_ID();
-        $features = get_post_meta($post_id, '_immo_features', true);
+        $features = get_post_meta($post_id, 'cf_features', true);
         return $features ? explode(',', $features) : [];
     }
     
     public function getPropertyEquipment($post_id = null): array
     {
         $post_id = $post_id ?: get_the_ID();
-        $equipment = get_post_meta($post_id, '_immo_equipment', true);
+        $equipment = get_post_meta($post_id, 'cf_equipment', true);
         return $equipment ? explode(',', $equipment) : [];
+    }
+
+    public function getOpenImmoId($post_id = null): string
+    {
+        $post_id = $post_id ?: get_the_ID();
+        return get_post_meta($post_id, 'cf_openimmo_id', true) ?: '';
+    }
+
+    public function getPropertyTotalArea($post_id = null): string
+    {
+        $post_id = $post_id ?: get_the_ID();
+        $area = get_post_meta($post_id, 'cf_total_area', true);
+        return $area ? $area . ' m²' : '';
     }
 }
