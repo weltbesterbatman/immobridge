@@ -1,0 +1,727 @@
+{
+  "templateName": "ImmoBridge Property Detail",
+  "templateType": "single",
+  "postType": "immo_property",
+  "description": "Single property template with comprehensive property information, image gallery, and contact form",
+  "version": "1.0.0",
+  "elements": [
+    {
+      "id": "container-main",
+      "name": "container",
+      "label": "Main Container",
+      "settings": {
+        "_width": "100%",
+        "_maxWidth": "1200px",
+        "_margin": {
+          "top": "40px",
+          "bottom": "40px"
+        },
+        "_padding": {
+          "left": "20px",
+          "right": "20px"
+        }
+      },
+      "children": [
+        {
+          "id": "breadcrumbs",
+          "name": "breadcrumbs",
+          "label": "Breadcrumbs",
+          "settings": {
+            "_margin": {
+              "bottom": "30px"
+            },
+            "_fontSize": "0.9rem",
+            "_color": "#666666"
+          }
+        },
+        {
+          "id": "property-header",
+          "name": "div",
+          "label": "Property Header",
+          "settings": {
+            "_display": "flex",
+            "_justifyContent": "space-between",
+            "_alignItems": "flex-start",
+            "_margin": {
+              "bottom": "40px"
+            },
+            "_gap": "30px"
+          },
+          "children": [
+            {
+              "id": "header-content",
+              "name": "div",
+              "label": "Header Content",
+              "settings": {
+                "_flex": "1"
+              },
+              "children": [
+                {
+                  "id": "property-title",
+                  "name": "heading",
+                  "label": "Property Title",
+                  "settings": {
+                    "tag": "h1",
+                    "text": "{immobridge_property_title}",
+                    "_typography": {
+                      "fontSize": "2.5rem",
+                      "fontWeight": "700",
+                      "lineHeight": "1.2"
+                    },
+                    "_margin": {
+                      "bottom": "15px"
+                    },
+                    "_color": "#1a1a1a"
+                  }
+                },
+                {
+                  "id": "property-address",
+                  "name": "text",
+                  "label": "Property Address",
+                  "settings": {
+                    "text": "{immobridge_property_address}, {immobridge_property_postal_code} {immobridge_property_city}",
+                    "_typography": {
+                      "fontSize": "1.1rem",
+                      "color": "#666666"
+                    },
+                    "_margin": {
+                      "bottom": "20px"
+                    }
+                  }
+                },
+                {
+                  "id": "property-badges",
+                  "name": "div",
+                  "label": "Property Badges",
+                  "settings": {
+                    "_display": "flex",
+                    "_gap": "10px",
+                    "_flexWrap": "wrap"
+                  },
+                  "children": [
+                    {
+                      "id": "type-badge",
+                      "name": "text",
+                      "label": "Type Badge",
+                      "settings": {
+                        "text": "{immobridge_property_type}",
+                        "_fontSize": "0.85rem",
+                        "_backgroundColor": "#e3f2fd",
+                        "_color": "#1976d2",
+                        "_padding": {
+                          "top": "6px",
+                          "bottom": "6px",
+                          "left": "12px",
+                          "right": "12px"
+                        },
+                        "_borderRadius": "20px",
+                        "_fontWeight": "500"
+                      }
+                    },
+                    {
+                      "id": "status-badge",
+                      "name": "text",
+                      "label": "Status Badge",
+                      "settings": {
+                        "text": "{immobridge_property_status}",
+                        "_fontSize": "0.85rem",
+                        "_backgroundColor": "#e8f5e8",
+                        "_color": "#2e7d32",
+                        "_padding": {
+                          "top": "6px",
+                          "bottom": "6px",
+                          "left": "12px",
+                          "right": "12px"
+                        },
+                        "_borderRadius": "20px",
+                        "_fontWeight": "500"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "price-section",
+              "name": "div",
+              "label": "Price Section",
+              "settings": {
+                "_textAlign": "right"
+              },
+              "children": [
+                {
+                  "id": "property-price",
+                  "name": "text",
+                  "label": "Property Price",
+                  "settings": {
+                    "text": "{immobridge_property_price_formatted}",
+                    "_typography": {
+                      "fontSize": "2.5rem",
+                      "fontWeight": "700",
+                      "color": "#2e7d32"
+                    },
+                    "_margin": {
+                      "bottom": "10px"
+                    }
+                  }
+                },
+                {
+                  "id": "additional-costs",
+                  "name": "text",
+                  "label": "Additional Costs",
+                  "settings": {
+                    "text": "zzgl. {immobridge_property_additional_costs} Nebenkosten",
+                    "_fontSize": "0.9rem",
+                    "_color": "#666666"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "content-layout",
+          "name": "div",
+          "label": "Content Layout",
+          "settings": {
+            "_display": "grid",
+            "_gridTemplateColumns": "2fr 1fr",
+            "_gap": "40px"
+          },
+          "children": [
+            {
+              "id": "main-content",
+              "name": "div",
+              "label": "Main Content",
+              "children": [
+                {
+                  "id": "property-gallery",
+                  "name": "image-gallery",
+                  "label": "Property Gallery",
+                  "settings": {
+                    "dynamicData": "{immobridge_property_gallery}",
+                    "layout": "masonry",
+                    "columns": 2,
+                    "gap": 15,
+                    "_margin": {
+                      "bottom": "40px"
+                    },
+                    "_borderRadius": "12px",
+                    "_overflow": "hidden"
+                  }
+                },
+                {
+                  "id": "property-specs",
+                  "name": "div",
+                  "label": "Property Specifications",
+                  "settings": {
+                    "_margin": {
+                      "bottom": "40px"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "specs-title",
+                      "name": "heading",
+                      "label": "Specifications Title",
+                      "settings": {
+                        "tag": "h2",
+                        "text": "Objektdaten",
+                        "_typography": {
+                          "fontSize": "1.75rem",
+                          "fontWeight": "600"
+                        },
+                        "_margin": {
+                          "bottom": "25px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "specs-grid",
+                      "name": "div",
+                      "label": "Specifications Grid",
+                      "settings": {
+                        "_display": "grid",
+                        "_gridTemplateColumns": "repeat(auto-fit, minmax(250px, 1fr))",
+                        "_gap": "20px"
+                      },
+                      "children": [
+                        {
+                          "id": "spec-rooms",
+                          "name": "div",
+                          "label": "Rooms Spec",
+                          "settings": {
+                            "_display": "flex",
+                            "_justifyContent": "space-between",
+                            "_padding": {
+                              "top": "15px",
+                              "bottom": "15px"
+                            },
+                            "_borderBottom": "1px solid #e0e0e0"
+                          },
+                          "children": [
+                            {
+                              "id": "rooms-label",
+                              "name": "text",
+                              "label": "Rooms Label",
+                              "settings": {
+                                "text": "Zimmer:",
+                                "_fontWeight": "500"
+                              }
+                            },
+                            {
+                              "id": "rooms-value",
+                              "name": "text",
+                              "label": "Rooms Value",
+                              "settings": {
+                                "text": "{immobridge_property_rooms}"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "spec-area",
+                          "name": "div",
+                          "label": "Living Area Spec",
+                          "settings": {
+                            "_display": "flex",
+                            "_justifyContent": "space-between",
+                            "_padding": {
+                              "top": "15px",
+                              "bottom": "15px"
+                            },
+                            "_borderBottom": "1px solid #e0e0e0"
+                          },
+                          "children": [
+                            {
+                              "id": "area-label",
+                              "name": "text",
+                              "label": "Area Label",
+                              "settings": {
+                                "text": "Wohnfläche:",
+                                "_fontWeight": "500"
+                              }
+                            },
+                            {
+                              "id": "area-value",
+                              "name": "text",
+                              "label": "Area Value",
+                              "settings": {
+                                "text": "{immobridge_property_living_area}"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "spec-bedrooms",
+                          "name": "div",
+                          "label": "Bedrooms Spec",
+                          "settings": {
+                            "_display": "flex",
+                            "_justifyContent": "space-between",
+                            "_padding": {
+                              "top": "15px",
+                              "bottom": "15px"
+                            },
+                            "_borderBottom": "1px solid #e0e0e0"
+                          },
+                          "children": [
+                            {
+                              "id": "bedrooms-label",
+                              "name": "text",
+                              "label": "Bedrooms Label",
+                              "settings": {
+                                "text": "Schlafzimmer:",
+                                "_fontWeight": "500"
+                              }
+                            },
+                            {
+                              "id": "bedrooms-value",
+                              "name": "text",
+                              "label": "Bedrooms Value",
+                              "settings": {
+                                "text": "{immobridge_property_bedrooms}"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "spec-bathrooms",
+                          "name": "div",
+                          "label": "Bathrooms Spec",
+                          "settings": {
+                            "_display": "flex",
+                            "_justifyContent": "space-between",
+                            "_padding": {
+                              "top": "15px",
+                              "bottom": "15px"
+                            },
+                            "_borderBottom": "1px solid #e0e0e0"
+                          },
+                          "children": [
+                            {
+                              "id": "bathrooms-label",
+                              "name": "text",
+                              "label": "Bathrooms Label",
+                              "settings": {
+                                "text": "Badezimmer:",
+                                "_fontWeight": "500"
+                              }
+                            },
+                            {
+                              "id": "bathrooms-value",
+                              "name": "text",
+                              "label": "Bathrooms Value",
+                              "settings": {
+                                "text": "{immobridge_property_bathrooms}"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "property-description",
+                  "name": "div",
+                  "label": "Property Description",
+                  "settings": {
+                    "_margin": {
+                      "bottom": "40px"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "description-title",
+                      "name": "heading",
+                      "label": "Description Title",
+                      "settings": {
+                        "tag": "h2",
+                        "text": "Objektbeschreibung",
+                        "_typography": {
+                          "fontSize": "1.75rem",
+                          "fontWeight": "600"
+                        },
+                        "_margin": {
+                          "bottom": "25px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "description-content",
+                      "name": "text",
+                      "label": "Description Content",
+                      "settings": {
+                        "text": "{immobridge_property_description}",
+                        "_lineHeight": "1.6",
+                        "_fontSize": "1rem"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "energy-efficiency",
+                  "name": "div",
+                  "label": "Energy Efficiency",
+                  "settings": {
+                    "_margin": {
+                      "bottom": "40px"
+                    },
+                    "_backgroundColor": "#f8f9fa",
+                    "_padding": {
+                      "top": "25px",
+                      "bottom": "25px",
+                      "left": "25px",
+                      "right": "25px"
+                    },
+                    "_borderRadius": "12px"
+                  },
+                  "children": [
+                    {
+                      "id": "energy-title",
+                      "name": "heading",
+                      "label": "Energy Title",
+                      "settings": {
+                        "tag": "h3",
+                        "text": "Energieeffizienz",
+                        "_typography": {
+                          "fontSize": "1.25rem",
+                          "fontWeight": "600"
+                        },
+                        "_margin": {
+                          "bottom": "20px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "energy-details",
+                      "name": "div",
+                      "label": "Energy Details",
+                      "settings": {
+                        "_display": "flex",
+                        "_gap": "30px",
+                        "_alignItems": "center"
+                      },
+                      "children": [
+                        {
+                          "id": "energy-class",
+                          "name": "text",
+                          "label": "Energy Class",
+                          "settings": {
+                            "text": "Energieklasse: {immobridge_property_energy_class}",
+                            "_fontSize": "1rem",
+                            "_fontWeight": "500"
+                          }
+                        },
+                        {
+                          "id": "energy-consumption",
+                          "name": "text",
+                          "label": "Energy Consumption",
+                          "settings": {
+                            "text": "Verbrauch: {immobridge_property_energy_consumption}",
+                            "_fontSize": "1rem"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "sidebar",
+              "name": "div",
+              "label": "Sidebar",
+              "children": [
+                {
+                  "id": "contact-card",
+                  "name": "div",
+                  "label": "Contact Card",
+                  "settings": {
+                    "_backgroundColor": "#ffffff",
+                    "_borderRadius": "12px",
+                    "_boxShadow": "0 4px 6px rgba(0, 0, 0, 0.1)",
+                    "_padding": {
+                      "top": "30px",
+                      "bottom": "30px",
+                      "left": "25px",
+                      "right": "25px"
+                    },
+                    "_margin": {
+                      "bottom": "30px"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "contact-title",
+                      "name": "heading",
+                      "label": "Contact Title",
+                      "settings": {
+                        "tag": "h3",
+                        "text": "Kontakt",
+                        "_typography": {
+                          "fontSize": "1.5rem",
+                          "fontWeight": "600"
+                        },
+                        "_margin": {
+                          "bottom": "20px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "contact-name",
+                      "name": "text",
+                      "label": "Contact Name",
+                      "settings": {
+                        "text": "{immobridge_property_contact_name}",
+                        "_fontSize": "1.1rem",
+                        "_fontWeight": "500",
+                        "_margin": {
+                          "bottom": "10px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "contact-phone",
+                      "name": "text",
+                      "label": "Contact Phone",
+                      "settings": {
+                        "text": "Tel: {immobridge_property_contact_phone}",
+                        "_margin": {
+                          "bottom": "10px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "contact-email",
+                      "name": "text",
+                      "label": "Contact Email",
+                      "settings": {
+                        "text": "E-Mail: {immobridge_property_contact_email}",
+                        "_margin": {
+                          "bottom": "25px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "contact-form",
+                      "name": "form",
+                      "label": "Contact Form",
+                      "settings": {
+                        "fields": [
+                          {
+                            "type": "text",
+                            "name": "name",
+                            "label": "Name",
+                            "required": true
+                          },
+                          {
+                            "type": "email",
+                            "name": "email",
+                            "label": "E-Mail",
+                            "required": true
+                          },
+                          {
+                            "type": "tel",
+                            "name": "phone",
+                            "label": "Telefon"
+                          },
+                          {
+                            "type": "textarea",
+                            "name": "message",
+                            "label": "Nachricht",
+                            "required": true,
+                            "rows": 4
+                          }
+                        ],
+                        "submitText": "Anfrage senden",
+                        "actions": [
+                          {
+                            "type": "email",
+                            "to": "{immobridge_property_contact_email}",
+                            "subject": "Immobilienanfrage: {immobridge_property_title}"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "features-card",
+                  "name": "div",
+                  "label": "Features Card",
+                  "settings": {
+                    "_backgroundColor": "#ffffff",
+                    "_borderRadius": "12px",
+                    "_boxShadow": "0 4px 6px rgba(0, 0, 0, 0.1)",
+                    "_padding": {
+                      "top": "30px",
+                      "bottom": "30px",
+                      "left": "25px",
+                      "right": "25px"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "features-title",
+                      "name": "heading",
+                      "label": "Features Title",
+                      "settings": {
+                        "tag": "h3",
+                        "text": "Ausstattung",
+                        "_typography": {
+                          "fontSize": "1.5rem",
+                          "fontWeight": "600"
+                        },
+                        "_margin": {
+                          "bottom": "20px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "features-list",
+                      "name": "list",
+                      "label": "Features List",
+                      "settings": {
+                        "dynamicData": "{immobridge_property_features}",
+                        "listType": "ul",
+                        "_lineHeight": "1.6"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "back-to-list",
+          "name": "button",
+          "label": "Back to List Button",
+          "settings": {
+            "text": "← Zurück zur Übersicht",
+            "link": "/immobilien/",
+            "_backgroundColor": "#f8f9fa",
+            "_color": "#007cba",
+            "_border": "1px solid #007cba",
+            "_padding": {
+              "top": "12px",
+              "bottom": "12px",
+              "left": "20px",
+              "right": "20px"
+            },
+            "_borderRadius": "6px",
+            "_margin": {
+              "top": "40px"
+            },
+            "_transition": "all 0.3s ease",
+            "_hover": {
+              "_backgroundColor": "#007cba",
+              "_color": "#ffffff"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "css": {
+    ".immobridge-property-element": {
+      "transition": "all 0.3s ease"
+    },
+    "@media (max-width: 768px)": {
+      "#content-layout": {
+        "grid-template-columns": "1fr"
+      },
+      "#property-header": {
+        "flex-direction": "column",
+        "align-items": "flex-start"
+      },
+      "#price-section": {
+        "text-align": "left"
+      },
+      "#specs-grid": {
+        "grid-template-columns": "1fr"
+      },
+      "#energy-details": {
+        "flex-direction": "column",
+        "align-items": "flex-start",
+        "gap": "15px"
+      }
+    }
+  },
+  "instructions": {
+    "setup": [
+      "1. Import this template in Bricks Builder",
+      "2. Assign it as Single Template for 'immo_property' post type",
+      "3. Configure contact form email settings",
+      "4. Test with imported property data"
+    ],
+    "customization": [
+      "- Modify layout by adjusting grid columns in 'content-layout'",
+      "- Customize contact form fields and actions",
+      "- Add more property specifications in 'specs-grid'",
+      "- Adjust color scheme and typography to match brand"
+    ]
+  }
+}

@@ -15,6 +15,7 @@ use ImmoBridge\Core\Container\Container;
 use ImmoBridge\Core\Container\ServiceProviderInterface;
 use ImmoBridge\Services\PropertyServiceProvider;
 use ImmoBridge\Services\AdminServiceProvider;
+use ImmoBridge\Services\BricksIntegrationServiceProvider;
 use Throwable;
 
 /**
@@ -42,10 +43,10 @@ final class Plugin
         $this->serviceProviders = [
             PropertyServiceProvider::class,
             AdminServiceProvider::class,
+            BricksIntegrationServiceProvider::class,
             // TODO: Add other providers when implemented
             // ImportServiceProvider::class,
             // FrontendServiceProvider::class,
-            // BricksServiceProvider::class,
             // ApiServiceProvider::class,
         ];
     }

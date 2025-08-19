@@ -1,0 +1,384 @@
+{
+  "templateName": "ImmoBridge Property List",
+  "templateType": "archive",
+  "postType": "immo_property",
+  "description": "Archive template for property listings with grid layout and filtering",
+  "version": "1.0.0",
+  "elements": [
+    {
+      "id": "container-main",
+      "name": "container",
+      "label": "Main Container",
+      "settings": {
+        "_width": "100%",
+        "_maxWidth": "1200px",
+        "_margin": {
+          "top": "40px",
+          "bottom": "40px"
+        },
+        "_padding": {
+          "left": "20px",
+          "right": "20px"
+        }
+      },
+      "children": [
+        {
+          "id": "heading-archive",
+          "name": "heading",
+          "label": "Archive Title",
+          "settings": {
+            "tag": "h1",
+            "text": "Immobilien",
+            "_typography": {
+              "fontSize": "2.5rem",
+              "fontWeight": "700",
+              "lineHeight": "1.2"
+            },
+            "_margin": {
+              "bottom": "30px"
+            },
+            "_textAlign": "center"
+          }
+        },
+        {
+          "id": "filter-section",
+          "name": "div",
+          "label": "Filter Section",
+          "settings": {
+            "_margin": {
+              "bottom": "40px"
+            },
+            "_padding": {
+              "top": "20px",
+              "bottom": "20px",
+              "left": "20px",
+              "right": "20px"
+            },
+            "_backgroundColor": "#f8f9fa",
+            "_borderRadius": "8px"
+          },
+          "children": [
+            {
+              "id": "filter-title",
+              "name": "heading",
+              "label": "Filter Title",
+              "settings": {
+                "tag": "h3",
+                "text": "Filter Properties",
+                "_typography": {
+                  "fontSize": "1.25rem",
+                  "fontWeight": "600"
+                },
+                "_margin": {
+                  "bottom": "20px"
+                }
+              }
+            },
+            {
+              "id": "filter-row",
+              "name": "div",
+              "label": "Filter Row",
+              "settings": {
+                "_display": "flex",
+                "_flexWrap": "wrap",
+                "_gap": "20px",
+                "_alignItems": "flex-end"
+              },
+              "children": [
+                {
+                  "id": "filter-type",
+                  "name": "filter-select",
+                  "label": "Property Type Filter",
+                  "settings": {
+                    "filterKey": "_immo_type",
+                    "placeholder": "Property Type",
+                    "_flex": "1 1 200px"
+                  }
+                },
+                {
+                  "id": "filter-city",
+                  "name": "filter-select",
+                  "label": "City Filter",
+                  "settings": {
+                    "filterKey": "_immo_city",
+                    "placeholder": "City",
+                    "_flex": "1 1 200px"
+                  }
+                },
+                {
+                  "id": "filter-price",
+                  "name": "filter-range",
+                  "label": "Price Range Filter",
+                  "settings": {
+                    "filterKey": "_immo_price",
+                    "placeholder": "Price Range",
+                    "_flex": "1 1 250px"
+                  }
+                },
+                {
+                  "id": "filter-submit",
+                  "name": "filter-submit",
+                  "label": "Apply Filters",
+                  "settings": {
+                    "text": "Apply Filters",
+                    "_backgroundColor": "#007cba",
+                    "_color": "#ffffff",
+                    "_padding": {
+                      "top": "10px",
+                      "bottom": "10px",
+                      "left": "20px",
+                      "right": "20px"
+                    },
+                    "_borderRadius": "4px"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "properties-grid",
+          "name": "posts",
+          "label": "Properties Grid",
+          "settings": {
+            "postType": "immo_property",
+            "postsPerPage": 12,
+            "hasLoop": true,
+            "_display": "grid",
+            "_gridTemplateColumns": "repeat(auto-fit, minmax(350px, 1fr))",
+            "_gap": "30px",
+            "_margin": {
+              "bottom": "40px"
+            }
+          },
+          "children": [
+            {
+              "id": "property-card",
+              "name": "div",
+              "label": "Property Card",
+              "settings": {
+                "_backgroundColor": "#ffffff",
+                "_borderRadius": "12px",
+                "_boxShadow": "0 4px 6px rgba(0, 0, 0, 0.1)",
+                "_overflow": "hidden",
+                "_transition": "transform 0.3s ease, box-shadow 0.3s ease",
+                "_hover": {
+                  "_transform": "translateY(-5px)",
+                  "_boxShadow": "0 8px 25px rgba(0, 0, 0, 0.15)"
+                }
+              },
+              "children": [
+                {
+                  "id": "property-image",
+                  "name": "image",
+                  "label": "Property Image",
+                  "settings": {
+                    "dynamicData": "{immobridge_property_featured_image}",
+                    "size": "medium_large",
+                    "_width": "100%",
+                    "_height": "250px",
+                    "_objectFit": "cover",
+                    "_cursor": "pointer"
+                  }
+                },
+                {
+                  "id": "property-content",
+                  "name": "div",
+                  "label": "Property Content",
+                  "settings": {
+                    "_padding": {
+                      "top": "20px",
+                      "bottom": "20px",
+                      "left": "20px",
+                      "right": "20px"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "property-title",
+                      "name": "heading",
+                      "label": "Property Title",
+                      "settings": {
+                        "tag": "h3",
+                        "text": "{immobridge_property_title}",
+                        "_typography": {
+                          "fontSize": "1.25rem",
+                          "fontWeight": "600",
+                          "lineHeight": "1.3"
+                        },
+                        "_margin": {
+                          "bottom": "10px"
+                        },
+                        "_color": "#1a1a1a"
+                      }
+                    },
+                    {
+                      "id": "property-address",
+                      "name": "text",
+                      "label": "Property Address",
+                      "settings": {
+                        "text": "{immobridge_property_address}, {immobridge_property_city}",
+                        "_typography": {
+                          "fontSize": "0.9rem",
+                          "color": "#666666"
+                        },
+                        "_margin": {
+                          "bottom": "15px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "property-details",
+                      "name": "div",
+                      "label": "Property Details",
+                      "settings": {
+                        "_display": "flex",
+                        "_justifyContent": "space-between",
+                        "_alignItems": "center",
+                        "_margin": {
+                          "bottom": "15px"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "property-specs",
+                          "name": "div",
+                          "label": "Property Specs",
+                          "settings": {
+                            "_display": "flex",
+                            "_gap": "15px",
+                            "_fontSize": "0.85rem",
+                            "_color": "#888888"
+                          },
+                          "children": [
+                            {
+                              "id": "rooms-spec",
+                              "name": "text",
+                              "label": "Rooms",
+                              "settings": {
+                                "text": "{immobridge_property_rooms} Zimmer"
+                              }
+                            },
+                            {
+                              "id": "area-spec",
+                              "name": "text",
+                              "label": "Living Area",
+                              "settings": {
+                                "text": "{immobridge_property_living_area}"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "property-type",
+                          "name": "text",
+                          "label": "Property Type",
+                          "settings": {
+                            "text": "{immobridge_property_type}",
+                            "_fontSize": "0.8rem",
+                            "_backgroundColor": "#e3f2fd",
+                            "_color": "#1976d2",
+                            "_padding": {
+                              "top": "4px",
+                              "bottom": "4px",
+                              "left": "8px",
+                              "right": "8px"
+                            },
+                            "_borderRadius": "12px"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "property-price",
+                      "name": "text",
+                      "label": "Property Price",
+                      "settings": {
+                        "text": "{immobridge_property_price_formatted}",
+                        "_typography": {
+                          "fontSize": "1.5rem",
+                          "fontWeight": "700",
+                          "color": "#2e7d32"
+                        },
+                        "_margin": {
+                          "bottom": "15px"
+                        }
+                      }
+                    },
+                    {
+                      "id": "view-details-btn",
+                      "name": "button",
+                      "label": "View Details Button",
+                      "settings": {
+                        "text": "Details ansehen",
+                        "link": "{permalink}",
+                        "_width": "100%",
+                        "_backgroundColor": "#007cba",
+                        "_color": "#ffffff",
+                        "_padding": {
+                          "top": "12px",
+                          "bottom": "12px"
+                        },
+                        "_borderRadius": "6px",
+                        "_textAlign": "center",
+                        "_fontWeight": "500",
+                        "_transition": "background-color 0.3s ease",
+                        "_hover": {
+                          "_backgroundColor": "#005a87"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pagination",
+          "name": "pagination",
+          "label": "Pagination",
+          "settings": {
+            "_textAlign": "center",
+            "_margin": {
+              "top": "40px"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "css": {
+    ".immobridge-property-element": {
+      "transition": "all 0.3s ease"
+    },
+    ".immobridge-property-element:hover": {
+      "transform": "translateY(-2px)"
+    },
+    "@media (max-width: 768px)": {
+      "#properties-grid": {
+        "grid-template-columns": "1fr"
+      },
+      "#filter-row": {
+        "flex-direction": "column"
+      },
+      "#filter-row > *": {
+        "width": "100%"
+      }
+    }
+  },
+  "instructions": {
+    "setup": [
+      "1. Import this template in Bricks Builder",
+      "2. Assign it as Archive Template for 'immo_property' post type",
+      "3. Customize colors and typography to match your brand",
+      "4. Test filtering functionality with imported properties"
+    ],
+    "customization": [
+      "- Modify grid columns by changing '_gridTemplateColumns'",
+      "- Adjust card styling in 'property-card' settings",
+      "- Add more filter options by duplicating filter elements",
+      "- Change color scheme in individual element settings"
+    ]
+  }
+}
