@@ -14,9 +14,11 @@ namespace ImmoBridge\Services;
 use DOMDocument;
 use DOMXPath;
 use WP_Error;
+use SimpleXMLElement;
 
 class OpenImmoImporter
 {
+    private MappingService $mappingService;
     private array $importLog = [];
     private int $importedCount = 0;
     private int $updatedCount = 0;
@@ -56,6 +58,12 @@ class OpenImmoImporter
 
     public function importBatch(string $xmlFilePath, int $offset, int $length, bool $importImages, bool $updateExisting, string $baseDir): array
     {
+        $this->mappingService = new MappingService();
+        if ($this->mappingService->hasError()) {
+            $this->log('Error: Could not load mapping file.', 'error');
+            return $this->getResults();
+        }
+
         $this->resetCounters();
         if (!file_exists($xmlFilePath)) {
             $this->log('Error: XML file not found - ' . $xmlFilePath, 'error');
@@ -136,60 +144,34 @@ class OpenImmoImporter
     private function extractPropertyData(\DOMElement $propertyNode, DOMXPath $xpath): array
     {
         $data = [];
-        $data['openimmo_id'] = $this->getXPathValue($xpath, './/objektnr_extern', $propertyNode);
-        $data['title'] = $this->getXPathValue($xpath, './/objekttitel', $propertyNode);
-        $data['description'] = $this->getXPathValue($xpath, './/objektbeschreibung', $propertyNode);
+        $simpleXmlNode = simplexml_import_dom($propertyNode);
+        $data['__simplexml__'] = $simpleXmlNode;
+
+        // Basic data
+        $data['openimmo_id'] = $this->getXPathValue($xpath, './/verwaltung_techn/objektnr_extern', $propertyNode);
+        if (empty($data['openimmo_id'])) {
+            $data['openimmo_id'] = $this->getXPathValue($xpath, './/verwaltung_techn/openimmo_obid', $propertyNode);
+        }
+        $data['title'] = $this->getXPathValue($xpath, './/freitexte/objekttitel', $propertyNode);
+        
+        // Concatenate description fields
+        $description_parts = [];
+        $description_parts[] = $this->getXPathValue($xpath, './/freitexte/objektbeschreibung', $propertyNode);
+        $description_parts[] = $this->getXPathValue($xpath, './/freitexte/lage', $propertyNode);
+        $description_parts[] = $this->getXPathValue($xpath, './/freitexte/ausstatt_beschr', $propertyNode);
+        $description_parts[] = $this->getXPathValue($xpath, './/freitexte/sonstige_angaben', $propertyNode);
+        $data['description'] = implode("\n\n", array_filter($description_parts));
+
         $data['images'] = $this->extractImages($xpath, $propertyNode);
 
-        // Field mapping
-        $fieldMap = [
-            // Location
-            'address' => './/geo/strasse',
-            'house_number' => './/geo/hausnummer',
-            'zip_code' => './/geo/plz',
-            'city' => './/geo/ort',
-            'region' => './/geo/region',
-            'state' => './/geo/bundesland',
-            'country' => './/geo/land',
-            'latitude' => './/geo/geokoordinaten/@lat',
-            'longitude' => './/geo/geokoordinaten/@lon',
-
-            // Prices
-            'purchase_price' => './/preise/kaufpreis',
-            'rent_cold' => './/preise/nettokaltmiete',
-            'rent_warm' => './/preise/warmmiete',
-            'utilities' => './/preise/nebenkosten',
-            'heating_costs' => './/preise/heizkosten',
-            'deposit' => './/preise/kaution',
-            'commission_buyer' => './/preise/aussen_courtage',
-
-            // Areas
-            'living_area' => './/flaechen/wohnflaeche',
-            'total_area' => './/flaechen/nutzflaeche',
-            'plot_area' => './/flaechen/grundstuecksflaeche',
-            'rooms' => './/flaechen/anzahl_zimmer',
-            'bedrooms' => './/flaechen/anzahl_schlafzimmer',
-            'bathrooms' => './/flaechen/anzahl_badezimmer',
-
-            // Condition
-            'condition' => './/zustand_angaben/zustand/@zustand_art',
-            'year_built' => './/zustand_angaben/baujahr',
-            'last_renovation' => './/zustand_angaben/letztemodernisierung',
-            'energy_certificate_type' => './/energiepass/epart',
-            'energy_consumption' => './/energiepass/endenergieverbrauch',
-            'energy_efficiency_class' => './/energiepass/energieeffizienzklasse',
-
-            // Features
-            'property_type' => './/objektkategorie/immobilienart',
-            'property_subtype' => './/objektkategorie/objektart',
-            'equipment' => './/ausstattung/ausstatt_beschr',
-            'parking_spaces' => './/flaechen/anzahl_stellplaetze',
-        ];
-
-        foreach ($fieldMap as $key => $query) {
-            $value = $this->getXPathValue($xpath, $query, $propertyNode);
-            if ($value) {
-                $data[$key] = $value;
+        // Process mappings from CSV
+        foreach ($this->mappingService->getMappings() as $mapping) {
+            if ($mapping['type'] === 'custom_field') {
+                $value = $this->mappingService->getElementValue($simpleXmlNode, $mapping);
+                if ($value !== false) {
+                    $key = $mapping['destination'];
+                    $data[$key] = $value;
+                }
             }
         }
 
@@ -205,11 +187,15 @@ class OpenImmoImporter
     private function extractImages(DOMXPath $xpath, \DOMElement $propertyNode): array
     {
         $images = [];
-        $imageNodes = $xpath->query('.//anhang[@gruppe="BILD"]', $propertyNode);
+        // Query for all attachments that are images, including TITELBILD, BILD, GRUNDRISS etc.
+        $imageNodes = $xpath->query('.//anhang[daten/pfad and contains("image/", format)] | .//anhang[@gruppe="TITELBILD" or @gruppe="BILD" or @gruppe="GRUNDRISS"]', $propertyNode);
         foreach ($imageNodes as $imageNode) {
-            $imageData = ['url' => $this->getXPathValue($xpath, './/daten/pfad', $imageNode)];
-            if (!empty($imageData['url'])) {
-                $images[] = $imageData;
+            $path = $this->getXPathValue($xpath, './/daten/pfad', $imageNode);
+            if ($path) {
+                $images[] = [
+                    'url' => $path,
+                    'group' => $imageNode->getAttribute('gruppe'),
+                ];
             }
         }
         return $images;
@@ -223,26 +209,13 @@ class OpenImmoImporter
 
     private function savePropertyMeta(int $postId, array $data): void
     {
-        // Prefix custom fields to avoid conflicts
-        $prefixedData = [];
-        $customFields = [
-            'address', 'house_number', 'zip_code', 'city', 'region', 'state', 'country', 'latitude', 'longitude',
-            'purchase_price', 'rent_cold', 'rent_warm', 'utilities', 'heating_costs', 'deposit', 'commission_buyer',
-            'living_area', 'total_area', 'plot_area', 'rooms', 'bedrooms', 'bathrooms',
-            'condition', 'year_built', 'last_renovation', 'energy_certificate_type', 'energy_consumption', 'energy_efficiency_class',
-            'property_type', 'property_subtype', 'equipment', 'parking_spaces'
-        ];
+        $core_fields = ['openimmo_id', 'title', 'description', 'images', '__simplexml__'];
 
         foreach ($data as $key => $value) {
-            if (in_array($key, $customFields)) {
-                $prefixedData['cf_' . $key] = $value;
-            } else {
-                $prefixedData[$key] = $value;
-            }
-        }
-
-        foreach ($prefixedData as $key => $value) {
-            if ($key !== 'images' && $key !== 'title' && $key !== 'description') {
+            if (!in_array($key, $core_fields)) {
+                // The cf_ prefix is now expected to be in the mapping destination
+                update_post_meta($postId, $key, $value);
+            } else if ($key === 'openimmo_id') {
                 update_post_meta($postId, $key, $value);
             }
         }
@@ -250,29 +223,95 @@ class OpenImmoImporter
 
     private function setPropertyTaxonomies(int $postId, array $data): void
     {
-        // Omitted for brevity
+        if (!isset($data['__simplexml__'])) {
+            return;
+        }
+        $simpleXmlNode = $data['__simplexml__'];
+
+        foreach ($this->mappingService->getMappings() as $mapping) {
+            if ($mapping['type'] === 'taxonomy') {
+                $value = $this->mappingService->getElementValue($simpleXmlNode, $mapping);
+
+                if ($value !== false && $value !== '0' && $value !== '') {
+                    $term_name = $mapping['title de'] ?? $mapping['title'] ?? $value;
+                    $taxonomy = $mapping['destination'];
+
+                    if (!taxonomy_exists($taxonomy)) {
+                        continue;
+                    }
+
+                    $parent_term_name = $mapping['parent de'] ?? $mapping['parent'] ?? null;
+                    $parent_id = 0;
+
+                    if ($parent_term_name) {
+                        $parent_term = get_term_by('name', $parent_term_name, $taxonomy);
+                        if ($parent_term) {
+                            $parent_id = $parent_term->term_id;
+                        } else {
+                            $new_parent = wp_insert_term($parent_term_name, $taxonomy);
+                            if (!is_wp_error($new_parent)) {
+                                $parent_id = $new_parent['term_id'];
+                            }
+                        }
+                    }
+
+                    $term = get_term_by('name', $term_name, $taxonomy);
+                    if (!$term) {
+                        $new_term = wp_insert_term($term_name, $taxonomy, ['parent' => $parent_id]);
+                        if (!is_wp_error($new_term)) {
+                            wp_set_object_terms($postId, $new_term['term_id'], $taxonomy, true);
+                        }
+                    } else {
+                        wp_set_object_terms($postId, $term->term_id, $taxonomy, true);
+                    }
+                }
+            }
+        }
     }
 
     private function importPropertyImages(int $postId, array $images, ?string $baseDir = null): void
     {
         $gallery_ids = [];
-        error_log('[ImmoBridge Image Log] Starting image processing for Post ID: ' . $postId . '. Base directory: ' . $baseDir);
+        $featured_image_id = 0;
 
-        foreach ($images as $index => $imageData) {
-            $imageUrl = $imageData['url'];
-            if ($baseDir && !filter_var($imageUrl, FILTER_VALIDATE_URL)) {
-                $originalImageUrl = $imageUrl;
-                // Replace backslashes with forward slashes for consistency
-                $imageUrl = str_replace('\\', '/', $baseDir . '/' . ltrim($imageUrl, '/\\'));
-                error_log('[ImmoBridge Image Log] Relative image path resolved. Base dir: ' . $baseDir . ', Original path: ' . $originalImageUrl . ', Final path: ' . $imageUrl);
-            }
-            $attachmentId = $this->importImage($imageUrl, $postId, basename($imageUrl));
-            if ($attachmentId) {
-                $gallery_ids[] = $attachmentId;
-                if ($index === 0) set_post_thumbnail($postId, $attachmentId);
+        // First, find the designated featured image
+        $featured_image_path = '';
+        foreach ($images as $imageData) {
+            if (strtoupper($imageData['group']) === 'TITELBILD') {
+                $featured_image_path = $imageData['url'];
+                break;
             }
         }
-        if (!empty($gallery_ids)) update_post_meta($postId, 'gallery_images', $gallery_ids);
+
+        foreach ($images as $imageData) {
+            $imageUrl = $imageData['url'];
+            if ($baseDir && !filter_var($imageUrl, FILTER_VALIDATE_URL)) {
+                $imageUrl = str_replace('\\', '/', $baseDir . '/' . ltrim($imageUrl, '/\\'));
+            }
+
+            $attachmentId = $this->importImage($imageUrl, $postId, basename($imageUrl));
+
+            if ($attachmentId) {
+                $gallery_ids[] = $attachmentId;
+                // Check if the current image is the one we designated as the featured image
+                if ($imageUrl === $featured_image_path) {
+                    $featured_image_id = $attachmentId;
+                }
+            }
+        }
+
+        // Set the featured image
+        if ($featured_image_id) {
+            set_post_thumbnail($postId, $featured_image_id);
+        } elseif (!empty($gallery_ids) && !has_post_thumbnail($postId)) {
+            // Fallback: if no featured image was explicitly set, use the first one from the gallery
+            set_post_thumbnail($postId, $gallery_ids[0]);
+        }
+
+        // Save all gallery image IDs (including featured image) for Bricks
+        if (!empty($gallery_ids)) {
+            update_post_meta($postId, 'immobridge_gallery_image_ids', implode(',', $gallery_ids));
+        }
     }
 
     private function importImage(string $imagePath, int $postId, string $title = ''): ?int

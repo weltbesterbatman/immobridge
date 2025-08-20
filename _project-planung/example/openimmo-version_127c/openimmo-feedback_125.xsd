@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--  
+Feedback Datensatz der vom Portal an den Anbieter (Makler / Software) übertragen wird.
+Eine Datei mit einem / mehreren Objekt(en) und jeweils   einem / mehreren Kundenanfrage(n)   
+-->
+
+<!-- 
+$$DOKU:
+$COPYRIGHT: OpenImmo e.V. 
+OpenImmo und das OpenImmo Logo sind eingetragen Marken. 
+Deren Verwendung ist nur Mitgliedern des OpenImmo e.V. oder zertifizierten Firmen erlaubt.
+
+$VERSION: 1.2.5   
+$VERSIONDATE: 2011-11-14
+$HISTORY:
+$CREATED: 2011-10-12, Frank Bitzer (FB)
+ 
+$CHANGE:2006-10-16, FB, Typen
+$CHANGE::2006-12-11, FB,  Enumeration Update
+$CHANGE::2007-06-13,FB,  regi_id in Sender
+$CHANGE::V121:2008-08-07, FB,  Eränzungen in version 1.2.1
+$CHANGE::V123:2010-08-13, FB/Oliver Kunz; FIO,  Eränzungen in version 1.2.3, Formatierung/Strukturierung
+$CHANGE::V124:2010-08-13, FB/Oliver Kunz; FIO,  Eränzungen in version 1.2.3, Formatierung/Strukturierung
+$CHANGE::V125:2012-11-14, einzelen Felder im Objekt
+ 
+$$END
+-->
+
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   version="1.0">
+
+	<xsd:element name="openimmo_feedback">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="version" />	<!--$V124 neu -->
+
+				<xsd:element ref="sender" />	
+				<xsd:element ref="objekt" minOccurs="0" maxOccurs="unbounded"/><!--V121 optional-->
+				<xsd:element ref="fehlerliste" minOccurs="0" maxOccurs="unbounded"/>	
+				<xsd:element ref="status" minOccurs="0" maxOccurs="unbounded"/><!--V121 neu-->
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>	
+
+
+
+
+	<xsd:element name="version" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Entspricht der OpenImmo Version.  Aktuell: "1.2.5" </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<!-- 
+	Angaben zu den ID's
+	- portal_unique_id  = Datenbank interne Index im Portal
+	- portal_obj_id =  sichtbare ID im Portal
+	- anbieter_id  = Id des Anbeiters im Portal
+	- oobj_id   OpenImmo Objekt-Nr, wenn beim Eintrag in die Portal Datenbank vorhanden
+	- makler_id = eigene Kennung eines Maklers
+	- regi_id = Lizenz ID des Anbieter falls vorhanden
+	- openimmo_anid = Siehe OpenImmo Objektbeschreibung 	
+	-->
+
+
+	<xsd:element name="sender">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="name" type="xsd:string"/>
+				<xsd:element name="openimmo_anid" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="datum" type="xsd:string"/>
+				<xsd:element name="makler_id" type="xsd:string"/>
+				<xsd:element name="regi_id" type="xsd:string" minOccurs="0"/><!--V120: Registrieungs Key aus der Lizenzvereinbarung, falls erfolgt-->
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="objekt">
+		<xsd:complexType>
+			<xsd:sequence>	
+				<xsd:element name="portal_unique_id" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="portal_obj_id" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="anbieter_id" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="oobj_id" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="zusatz_refnr" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="expose_url" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="vermarktungsart" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/><!--V123 optional-->
+				<xsd:element name="bezeichnung" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="etage" type="xsd:string" minOccurs="0"/><!--V123 optional--> 
+				<xsd:element name="whg_nr" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="strasse" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="ort" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+
+				<xsd:element name="land" type="xsd:string" minOccurs="0" /><!--V125 optional   ISO Code 3 Stellen verwenden-->	
+				<xsd:element name="stadtbezirk" type="xsd:string" minOccurs="0" /><!--V125 optional   -->	
+
+				<xsd:element name="preis" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="gebot" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="wae" type="xsd:string" minOccurs="0" /><!--V123 optional-->	
+
+				<xsd:element name="anzahl_zimmer" type="xsd:string" minOccurs="0" /><!--V125 optional-->	
+				<xsd:element name="flaeche" type="xsd:string" minOccurs="0" /><!--V125 optional   Wohn/Gewerbe/Grundstück Fläche-->	
+
+				<xsd:element ref="interessent" minOccurs="1" maxOccurs="unbounded"/>		
+				<xsd:element ref="user_defined_extend" minOccurs="0" maxOccurs="unbounded"/>								 
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>			
+
+	<xsd:element name="interessent">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="int_id" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="anrede" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="vorname" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="nachname" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="firma" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="strasse" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="postfach" type="xsd:string"  minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="plz" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="ort" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="tel" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="fax" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="mobil" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="email" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				
+				<xsd:element name="bevorzugt" minOccurs="0" maxOccurs="unbounded"><!--V123 optional-->
+					<xsd:annotation>
+						<xsd:documentation>Bevorzugte Kontaktart des Kunden. Attribut kann mehrfach vorkommen</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="EMAIL"/>
+								<xsd:enumeration value="TEL"/>
+								<xsd:enumeration value="MOBIL"/>
+								<xsd:enumeration value="FAX"/>
+								<xsd:enumeration value="BRIEF"/>
+							</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+
+				<xsd:element name="wunsch" minOccurs="0" maxOccurs="unbounded"><!--V123 optional-->
+					<xsd:annotation>
+						<xsd:documentation>Der Info-/Aktivitätenwunsch des Kunden. Attribut kann mehrfach vorkommen</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:enumeration value="BESICHTIGUNG"/>
+									<xsd:enumeration value="ANRUF"/>
+									<xsd:enumeration value="DETAIL"/>
+								</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				 
+				<xsd:element name="anfrage" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+				<xsd:element ref="user_defined_extend" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>	
+				
+	<xsd:element name="fehlerliste">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="fehler" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="objekt_id" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+							<xsd:element name="fehlernr" type="xsd:int" minOccurs="0"/><!--V123 optional-->
+							<xsd:element name="text" type="xsd:string" minOccurs="0"/><!--V123 optional-->
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="status"><!--$V121-->
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="statusnr" type="xsd:int" minOccurs="0"/><!--V123 optional-->
+				<xsd:element name="text"  type="xsd:string" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="user_defined_extend">
+		<xsd:complexType>
+			<xsd:sequence >
+				  <xsd:element name="feld" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:sequence >
+									<xsd:element name="name" type="xsd:string"/>
+									<xsd:element name="wert" type="xsd:string"/>
+									<xsd:element name="typ" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+									<xsd:element name="modus" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element> 
+	
+</xsd:schema>

@@ -1,6 +1,6 @@
 # ImmoBridge Plugin - Projekt Roadmap
 
-Version 6.2 Date 2025-08-19 19:39
+Version 6.3 Date 2025-08-20 21:17
 
 ## Projektübersicht
 
@@ -38,12 +38,12 @@ Modernisierung des WordPress-Plugins "immonex-openimmo2wp" zu "ImmoBridge" mit m
 - ✅ ZIP-Subdirectory Problem gelöst
 - ✅ Server-Timeout Problem gelöst
 
-## Phase 3: Bricks Builder Integration & Import-System ✅ ABGESCHLOSSEN
+## Phase 3: Bricks Builder Integration & Import-System 🟡 IN ARBEIT
 
-- [x] **Bricks Builder: Dynamic Data Provider**
+- [ ] **Bricks Builder: Dynamic Data Provider**
   - [x] `BricksIntegrationServiceProvider` implementiert.
-  - [x] Dynamic Data Tags für alle relevanten Felder registriert.
-  - [x] Korrekte Render-Logik für Text- und Bilddaten implementiert.
+  - [x] Dynamic Data Tags werden jetzt dynamisch aus der Mapping-Datei generiert.
+  - [ ] Die korrekte Zuweisung der importierten Werte zu den Feldern muss noch implementiert werden.
 - [x] **Admin Interface: Import-Funktion**
   - [x] Löschfunktion für alle Immobiliendaten sicher im Backend integriert.
   - [x] AJAX-basierter Importprozess mit Live-Fortschrittsanzeige implementiert.
@@ -54,14 +54,15 @@ Modernisierung des WordPress-Plugins "immonex-openimmo2wp" zu "ImmoBridge" mit m
   - ✅ **Zusätzliche Fixes:** "processed_in_batch" Array-Key-Problem behoben
   - ✅ **Code bereinigt:** Alle Debugging-Logs entfernt
 
-**Status**: ✅ **ERFOLGREICH ABGESCHLOSSEN**
+**Status**: 🟡 **TEILWEISE ABGESCHLOSSEN**
 
-**Implementierungsdetails (20.08.2025 12:39):**
+**Implementierungsdetails (20.08.2025 21:17):**
 
-- ✅ **Import-Fehler behoben:** Die Kernfunktionalität des Imports wurde erfolgreich repariert und erweitert.
-- ✅ **Bild-Import:** Die Pfadauflösung für Bilder aus ZIP-Archiven wurde korrigiert. Bilder werden nun zuverlässig importiert und der Mediathek zugewiesen.
-- ✅ **Feld-Import:** Das Mapping für OpenImmo-Daten wurde erheblich erweitert. Adressdaten, Preise, Flächen und weitere Details werden nun korrekt ausgelesen und als Custom Fields gespeichert.
-- ✅ **Nächster Schritt:** Sicherung des aktuellen Stands im Git-Repository.
+- ✅ **Bricks-Integration grundlegend implementiert:** Ein dynamischer `DynamicDataProvider` wurde erstellt, der alle Felder aus der `bricks-default.csv` automatisch im Bricks Builder als Dynamic Tags verfügbar macht. Die Felder sind in Bricks sichtbar.
+- ✅ **Mapping erweitert:** Die `bricks-default.csv` wurde um zahlreiche Standard-OpenImmo-Felder erweitert.
+- ✅ **Bild-Import-Logik verbessert:** Die Zuweisung von Titelbild und Galerie wurde an die Logik des alten Plugins angelehnt und verbessert.
+- 🔴 **Offenes Problem:** Die Logik im `MappingService` und `OpenImmoImporter` muss noch finalisiert werden, um sicherzustellen, dass die Werte aus der XML korrekt ausgelesen und in die in der CSV-Datei definierten Custom Fields gespeichert werden.
+- 🟡 **Nächster Schritt:** In der nächsten Session wird die korrekte Wertzuweisung vom XML zum Custom Field implementiert und getestet.
 
 ## Phase 4: API & Extensions 📋 GEPLANT
 

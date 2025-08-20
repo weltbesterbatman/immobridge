@@ -34,6 +34,7 @@ final class PropertyTaxonomyService
         $this->registerPropertyStatusTaxonomy();
         $this->registerPropertyLocationTaxonomy();
         $this->registerPropertyFeaturesTaxonomy();
+        $this->registerPropertyLabelTaxonomy();
     }
 
     /**
@@ -233,6 +234,53 @@ final class PropertyTaxonomyService
         ];
 
         register_taxonomy('property_features', self::POST_TYPE, $args);
+    }
+
+    /**
+     * Register property label taxonomy
+     */
+    private function registerPropertyLabelTaxonomy(): void
+    {
+        $labels = [
+            'name' => __('Property Labels', 'immobridge'),
+            'singular_name' => __('Property Label', 'immobridge'),
+            'search_items' => __('Search Property Labels', 'immobridge'),
+            'all_items' => __('All Property Labels', 'immobridge'),
+            'edit_item' => __('Edit Property Label', 'immobridge'),
+            'update_item' => __('Update Property Label', 'immobridge'),
+            'add_new_item' => __('Add New Property Label', 'immobridge'),
+            'new_item_name' => __('New Property Label Name', 'immobridge'),
+            'menu_name' => __('Labels', 'immobridge'),
+        ];
+
+        $args = [
+            'labels' => $labels,
+            'description' => __('Property labels like "Sold", "Reserved", "Top Offer"', 'immobridge'),
+            'public' => true,
+            'publicly_queryable' => true,
+            'hierarchical' => false,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'show_in_nav_menus' => true,
+            'show_in_rest' => true,
+            'rest_base' => 'property-labels',
+            'show_tagcloud' => true,
+            'show_in_quick_edit' => true,
+            'show_admin_column' => true,
+            'rewrite' => [
+                'slug' => 'property-label',
+                'with_front' => false,
+            ],
+            'query_var' => true,
+            'capabilities' => [
+                'manage_terms' => 'manage_property_features',
+                'edit_terms' => 'edit_property_features',
+                'delete_terms' => 'delete_property_features',
+                'assign_terms' => 'assign_property_features',
+            ],
+        ];
+
+        register_taxonomy('property_label', self::POST_TYPE, $args);
     }
 
     /**

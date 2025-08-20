@@ -1,0 +1,1314 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.0">
+
+<!--
+Version 1.2.4: Neue Länder.  Siehe $V124 
+Ergänzung zur OpenImmo 1.2.1 XSD. Ausgelagerte ISO Länder und Währungstabellen.
+-->
+
+	<xsd:element name="waehrung">
+		<xsd:annotation>
+			<xsd:documentation>Währung </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name="iso_waehrung">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="AED">
+							<!--United Arab Emirates, Dirham-->
+						</xsd:enumeration>
+						<xsd:enumeration value="AFA">
+							<!--Afghanistan, Afghani-->
+						</xsd:enumeration>
+						<xsd:enumeration value="ALL">
+							<!--Albania, Lek-->
+						</xsd:enumeration>
+						<xsd:enumeration value="AMD">
+							<!--Armenia, Dram-->
+						</xsd:enumeration>
+						<xsd:enumeration value="ANG">
+							<!--Netherlands Antilles, Guilder-->
+						</xsd:enumeration>
+						<xsd:enumeration value="AON">
+							<!--Angola, New Kwanza-->
+						</xsd:enumeration>
+						<xsd:enumeration value="ARP">
+							<!--Argentina, Peso-->
+						</xsd:enumeration>
+						<xsd:enumeration value="ATS">
+							<!--Austria, Schilling-->
+						</xsd:enumeration>
+						<xsd:enumeration value="AUD">
+							<!--Australia, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="AWF">
+							<!--Aruba, Florin-->
+						</xsd:enumeration>
+						<xsd:enumeration value="AZM">
+							<!--Azerbaijan, Manat-->
+						</xsd:enumeration>
+						<xsd:enumeration value="BAK">
+							<!--Bosnia and Herzegovina, Convertible Mark-->
+						</xsd:enumeration>
+						<xsd:enumeration value="BBD">
+							<!--Barbados, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="BDT">
+							<!--Bangladesh, Taka-->
+						</xsd:enumeration>
+						<xsd:enumeration value="BEF">
+							<!--Belgium, Franc-->
+						</xsd:enumeration>
+						<xsd:enumeration value="BGL">
+							<!--Bulgaria, Lev-->
+						</xsd:enumeration>
+						<xsd:enumeration value="BHD">
+							<!--Bahrain, Dinar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="BIF">
+							<!--Burundi, Burundi Franc-->
+						</xsd:enumeration>
+						<xsd:enumeration value="BMD">
+							<!--Bermuda, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="BND">
+							<!--Brunei Darussalam, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="BOB">
+							<!--Bolivia, Boliviano-->
+						</xsd:enumeration>
+
+						<xsd:enumeration value="BES">
+							<!--Bonaire, Saint Eustatius and Saba  $V124-->
+						</xsd:enumeration>
+
+						<xsd:enumeration value="BRL">
+							<!--Brazil, Brazilian Real-->
+						</xsd:enumeration>
+						<xsd:enumeration value="BSD">
+							<!--Bahamas, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="BTR">
+							<!--Bhutan, Rupee-->
+						</xsd:enumeration>
+						<xsd:enumeration value="BWP">
+							<!--Botswana, Pula-->
+						</xsd:enumeration>
+						<xsd:enumeration value="BYR">
+							<!--Belarus, Ruble-->
+						</xsd:enumeration>
+						<xsd:enumeration value="BZD">
+							<!--Belize, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="CAD">
+							<!--Canada, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="CDF">
+							<!--Congo-Kinshasa, Congolese Franc-->
+						</xsd:enumeration>
+						<xsd:enumeration value="CHF">
+							<!--Switzerland, Franc-->
+						</xsd:enumeration>
+						<xsd:enumeration value="CLP">
+							<!--Chile, Peso-->
+						</xsd:enumeration>
+						<xsd:enumeration value="CNY">
+							<!--China, Yuan Renminbi-->
+						</xsd:enumeration>
+						<xsd:enumeration value="COP">
+							<!--Colombia, Peso-->
+						</xsd:enumeration>
+						<xsd:enumeration value="CRC">
+							<!--Costa Rica, Colon-->
+						</xsd:enumeration>
+						<xsd:enumeration value="CZK">
+							<!--Czech Republic, Koruna-->
+						</xsd:enumeration>
+						<xsd:enumeration value="CUP">
+							<!--Cuba, Peso-->
+						</xsd:enumeration>
+						<xsd:enumeration value="CVE">
+							<!--Cape Verde, Escudo-->
+						</xsd:enumeration>
+
+
+						<xsd:enumeration value="CUW">
+							<!-- Curacao   $V124  -->
+						</xsd:enumeration>
+
+
+						<xsd:enumeration value="CYP">
+							<!--Cyprus, Pound-->
+						</xsd:enumeration>
+						<xsd:enumeration value="DEM">
+							<!--Germany, Deutsche Mark-->
+						</xsd:enumeration>
+						<xsd:enumeration value="DJF">
+							<!--Djibouti, Franc-->
+						</xsd:enumeration>
+						<xsd:enumeration value="DKK">
+							<!--Denmark, Krone-->
+						</xsd:enumeration>
+						<xsd:enumeration value="DOP">
+							<!--Dominican Republic, Peso-->
+						</xsd:enumeration>
+						<xsd:enumeration value="DZD">
+							<!--Algeria, Algerian Dinar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="ECS">
+							<!--Ecuador, Sucre-->
+						</xsd:enumeration>
+						<xsd:enumeration value="EEK">
+							<!--Estonia, Kroon-->
+						</xsd:enumeration>
+						<xsd:enumeration value="EGP">
+							<!--Egypt, Pound-->
+						</xsd:enumeration>
+						<xsd:enumeration value="ERN">
+							<!--Eritrea, Nakfa-->
+						</xsd:enumeration>
+						<xsd:enumeration value="ESP">
+							<!--Spain, Peseta-->
+						</xsd:enumeration>
+						<xsd:enumeration value="ETB">
+							<!--Ethiopia, Birr-->
+						</xsd:enumeration>
+						<xsd:enumeration value="EUR">
+							<!--European Economic and Monetary Union (EMU), Euro-->
+						</xsd:enumeration>
+						<xsd:enumeration value="FIM">
+							<!--Finland, Markka-->
+						</xsd:enumeration>
+						<xsd:enumeration value="FJD">
+							<!--Fiji, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="FKP">
+							<!--Falkland Islands (Malvinas), Pound-->
+						</xsd:enumeration>
+						<xsd:enumeration value="FRF">
+							<!--France, Franc-->
+						</xsd:enumeration>
+						<xsd:enumeration value="GBP">
+							<!--Great Britain, Pound Sterling-->
+						</xsd:enumeration>
+						<xsd:enumeration value="GEL">
+							<!--Georgia, Lari-->
+						</xsd:enumeration>
+						<xsd:enumeration value="GHC">
+							<!--Ghana, Cedi-->
+						</xsd:enumeration>
+						<xsd:enumeration value="GIP">
+							<!--Gibraltar, Pound-->
+						</xsd:enumeration>
+						<xsd:enumeration value="GMD">
+							<!--Gambia, Dalasi-->
+						</xsd:enumeration>
+						<xsd:enumeration value="GNF">
+							<!--Guinea, Franc-->
+						</xsd:enumeration>
+						<xsd:enumeration value="GRD">
+							<!--Greece, Drachma-->
+						</xsd:enumeration>
+						<xsd:enumeration value="GTQ">
+							<!--Guatemala, Quetzal-->
+						</xsd:enumeration>
+						<xsd:enumeration value="GYD">
+							<!--Guyana, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="HKD">
+							<!--Hong Kong, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="HNL">
+							<!--Honduras, Lempira-->
+						</xsd:enumeration>
+						<xsd:enumeration value="HRK">
+							<!--Croatia, Kuna-->
+						</xsd:enumeration>
+						<xsd:enumeration value="HTG">
+							<!--Haiti, Gourde-->
+						</xsd:enumeration>
+						<xsd:enumeration value="HUF">
+							<!--Hungary, Forint-->
+						</xsd:enumeration>
+						<xsd:enumeration value="IDR">
+							<!--Indonesia, Rupiah-->
+						</xsd:enumeration>
+						<xsd:enumeration value="IEP">
+							<!--Eire (Ireland), Punt-->
+						</xsd:enumeration>
+						<xsd:enumeration value="IEP">
+							<!--Ireland (Eire), Punt-->
+						</xsd:enumeration>
+						<xsd:enumeration value="ILS">
+							<!--Israel, Shekel-->
+						</xsd:enumeration>
+						<xsd:enumeration value="INR">
+							<!--India, Rupee-->
+						</xsd:enumeration>
+						<xsd:enumeration value="IQD">
+							<!--Iraq, Dinar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="IRR">
+							<!--Iran, Rial-->
+						</xsd:enumeration>
+						<xsd:enumeration value="ISK">
+							<!--Iceland, Krona-->
+						</xsd:enumeration>
+						<xsd:enumeration value="ITL">
+							<!--Italy, Lira-->
+						</xsd:enumeration>
+						<xsd:enumeration value="JMD">
+							<!--Jamaica, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="JOD">
+							<!--Jordan, Dinar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="JPY">
+							<!--Japan, Yen-->
+						</xsd:enumeration>
+						<xsd:enumeration value="KES">
+							<!--Kenya, Shilling-->
+						</xsd:enumeration>
+						<xsd:enumeration value="KGS">
+							<!--Kyrgyzstan, Som-->
+						</xsd:enumeration>
+						<xsd:enumeration value="KHR">
+							<!--Cambodia, Riel-->
+						</xsd:enumeration>
+						<xsd:enumeration value="KMF">
+							<!--Comoros, Franc-->
+						</xsd:enumeration>
+						<xsd:enumeration value="KPW">
+							<!--Korea (North), Won-->
+						</xsd:enumeration>
+						<xsd:enumeration value="KRW">
+							<!--Korea (South), Won-->
+						</xsd:enumeration>
+						<xsd:enumeration value="KWD">
+							<!--Kuwait, Dinar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="KYD">
+							<!--Cayman Islands, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="KZT">
+							<!--Kazakstan, Tenge-->
+						</xsd:enumeration>
+						<xsd:enumeration value="LAK">
+							<!--Laos, Kip-->
+						</xsd:enumeration>
+						<xsd:enumeration value="LBP">
+							<!--Lebanon, Pound-->
+						</xsd:enumeration>
+						<xsd:enumeration value="LKR">
+							<!--Sri Lanka, Rupee-->
+						</xsd:enumeration>
+						<xsd:enumeration value="LRD">
+							<!--Liberia, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="LSL">
+							<!--Lesotho, Loti-->
+						</xsd:enumeration>
+						<xsd:enumeration value="LTL">
+							<!--Lithuania, Lita-->
+						</xsd:enumeration>
+						<xsd:enumeration value="LUF">
+							<!--Luxembourg, Franc-->
+						</xsd:enumeration>
+						<xsd:enumeration value="LVL">
+							<!--Latvia, Lat-->
+						</xsd:enumeration>
+						<xsd:enumeration value="LYD">
+							<!--Libya, Dinar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="MAD">
+							<!--Morocco, Dirham-->
+						</xsd:enumeration>
+						<xsd:enumeration value="MDL">
+							<!--Moldova, Leu-->
+						</xsd:enumeration>
+						<xsd:enumeration value="MGF">
+							<!--Madagascar, Malagasy Franc-->
+						</xsd:enumeration>
+	
+						<xsd:enumeration value="MMK">
+							<!--Myanmar (Burma), Kyat-->
+						</xsd:enumeration>
+						<xsd:enumeration value="MNT">
+							<!--Mongolia, Tugrik-->
+						</xsd:enumeration>
+						<xsd:enumeration value="MOP">
+							<!--Macau, Pataca-->
+						</xsd:enumeration>
+						<xsd:enumeration value="MRO">
+							<!--Mauritania, Ouguiya-->
+						</xsd:enumeration>
+						<xsd:enumeration value="MTL">
+							<!--Malta, Lira-->
+						</xsd:enumeration>
+						<xsd:enumeration value="MUR">
+							<!--Mauritius, Rupee-->
+						</xsd:enumeration>
+						<xsd:enumeration value="MVR">
+							<!--Maldives (Maldive Islands), Rufiyaa-->
+						</xsd:enumeration>
+						<xsd:enumeration value="MWK">
+							<!--Malawi, Kwacha-->
+						</xsd:enumeration>
+						<xsd:enumeration value="MXP">
+							<!--Mexico, Peso-->
+						</xsd:enumeration>
+						<xsd:enumeration value="MYR">
+							<!--Malaysia, Ringgit-->
+						</xsd:enumeration>
+						<xsd:enumeration value="MZM">
+							<!--Mozambique, Metical-->
+						</xsd:enumeration>
+						<xsd:enumeration value="NAD">
+							<!--Namibia, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="NGN">
+							<!--Nigeria, Naira-->
+						</xsd:enumeration>
+						<xsd:enumeration value="NIO">
+							<!--Nicaragua, Cordoba Oro-->
+						</xsd:enumeration>
+						<xsd:enumeration value="NLG">
+							<!--Holland (The Netherlands), Guilder-->
+						</xsd:enumeration>
+						<xsd:enumeration value="NOK">
+							<!--Norway, Krone-->
+						</xsd:enumeration>
+						<xsd:enumeration value="NPR">
+							<!--Nepal, Nepalese Rupee-->
+						</xsd:enumeration>
+						<xsd:enumeration value="NZD">
+							<!--New Zealand, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="OMR">
+							<!--Oman, Sul Rial-->
+						</xsd:enumeration>
+						<xsd:enumeration value="PAB">
+							<!--Panama, Balboa-->
+						</xsd:enumeration>
+						<xsd:enumeration value="PEN">
+							<!--Peru, Nuevo Sol-->
+						</xsd:enumeration>
+						<xsd:enumeration value="PGK">
+							<!--Papua New Guinea, Kina-->
+						</xsd:enumeration>
+						<xsd:enumeration value="PHP">
+							<!--Philippines, Peso-->
+						</xsd:enumeration>
+						<xsd:enumeration value="PKR">
+							<!--Pakistan, Rupee-->
+						</xsd:enumeration>
+						<xsd:enumeration value="PLZ">
+							<!--Poland, Zloty-->
+						</xsd:enumeration>
+						<xsd:enumeration value="PTE">
+							<!--Portugal, Escudo-->
+						</xsd:enumeration>
+						<xsd:enumeration value="PYG">
+							<!--Paraguay, Guarani-->
+						</xsd:enumeration>
+						<xsd:enumeration value="QAR">
+							<!--Qatar, Rial-->
+						</xsd:enumeration>
+						<xsd:enumeration value="ROL">
+							<!--Romania, Leu-->
+						</xsd:enumeration>
+						<xsd:enumeration value="RUR">
+							<!--Russia, Ruble-->
+						</xsd:enumeration>
+						<xsd:enumeration value="RWF">
+							<!--Rwanda, Rwanda Franc-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SAR">
+							<!--Saudi Arabia, Riyal-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SBD">
+							<!--Solomon Islands, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SBL">
+							<!--Seborga, Luigino-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SCR">
+							<!--Seychelles, Rupee-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SDD">
+							<!--Sudan, Dinar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SEK">
+							<!--Sweden, Krona-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SGD">
+							<!--Singapore, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SHP">
+							<!--Saint Helena, Pound-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SIT">
+							<!--Slovenia, Tolar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SKK">
+							<!--Slovakia, Koruna-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SLL">
+							<!--Sierra Leone, Leone-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SOS">
+							<!--Somalia, Shilling-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SRG">
+							<!--Suriname, Guilder-->
+						</xsd:enumeration>
+						<xsd:enumeration value="STD">
+							<!--Sao Tome and Principe, Dobra-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SVC">
+							<!--El Salvador, Colon-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SYP">
+							<!--Syria, Pound-->
+						</xsd:enumeration>
+						<xsd:enumeration value="SZL">
+							<!--Swaziland, Lilangeni-->
+						</xsd:enumeration>
+						<xsd:enumeration value="THB">
+							<!--Thailand, Baht-->
+						</xsd:enumeration>
+						<xsd:enumeration value="TJR">
+							<!--Tajikistan, Ruble-->
+						</xsd:enumeration>
+						<xsd:enumeration value="TMM">
+							<!--Turkmenistan, Manat-->
+						</xsd:enumeration>
+						<xsd:enumeration value="TND">
+							<!--Tunisia, Dinar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="TOP">
+							<!--Tonga, Pa'anga-->
+						</xsd:enumeration>
+						<xsd:enumeration value="TRL">
+							<!--Turkey, Lira-->
+						</xsd:enumeration>
+						<xsd:enumeration value="TTD">
+							<!--Trinidad and Tobago, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="TWD">
+							<!--Taiwan, Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="TZS">
+							<!--Tanzania, Shilling-->
+						</xsd:enumeration>
+						<xsd:enumeration value="UAH">
+							<!--Ukraine, Hryvnia-->
+						</xsd:enumeration>
+						<xsd:enumeration value="UGX">
+							<!--Uganda, Shilling-->
+						</xsd:enumeration>
+						<xsd:enumeration value="USD">
+							<!--United States of America, US Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="UYU">
+							<!--Uruguay, Peso-->
+						</xsd:enumeration>
+						<xsd:enumeration value="UZS">
+							<!--Uzbekistan, Som-->
+						</xsd:enumeration>
+						<xsd:enumeration value="VEB">
+							<!--Venezuela, Bolivar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="VND">
+							<!--Viet Nam, Dong-->
+						</xsd:enumeration>
+						<xsd:enumeration value="VUV">
+							<!--Vanuatu, Vatu-->
+						</xsd:enumeration>
+						<xsd:enumeration value="WST">
+							<!--West Samoa, Tala-->
+						</xsd:enumeration>
+						<xsd:enumeration value="XAF">
+							<!--Communauté Financière Africaine (CFA), Franc-->
+						</xsd:enumeration>
+						<xsd:enumeration value="XAG">
+							<!--Silver, Ounces-->
+						</xsd:enumeration>
+						<xsd:enumeration value="XAU">
+							<!--Gold, Ounces-->
+						</xsd:enumeration>
+						<xsd:enumeration value="XCD">
+							<!--East Caribbean Dollar-->
+						</xsd:enumeration>
+						<xsd:enumeration value="XCO">
+							<!--Crude Oil Barrels, XE.com Index-->
+						</xsd:enumeration>
+						<xsd:enumeration value="XDR">
+							<!--International Monetary Fund (IMF) Special Drawing Right-->
+						</xsd:enumeration>
+						<xsd:enumeration value="XPD">
+							<!--Palladium Ounces-->
+						</xsd:enumeration>
+						<xsd:enumeration value="XPF">
+							<!--CFP Franc-->
+						</xsd:enumeration>
+						<xsd:enumeration value="XPT">
+							<!--Platinum, Ounces-->
+						</xsd:enumeration>
+						<xsd:enumeration value="YER">
+							<!--Yemen, Rial-->
+						</xsd:enumeration>
+						<xsd:enumeration value="YUN">
+							<!--Yugoslavia, New Dinar  $V124  ersetzt durch Serb/Montenegro -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ZAR">
+							<!--South Africa, Rand-->
+						</xsd:enumeration>
+						<xsd:enumeration value="ZMK">
+							<!--Zambia, Kwacha-->
+						</xsd:enumeration>
+						<xsd:enumeration value="ZWD">
+							<!--Zimbabwe, Zimbabwe Dollar-->
+						</xsd:enumeration>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+		</xsd:complexType>
+		<!--3-stelliges Währungskürzel, entspr. der ISO 4217, einmal pro Objekt -->
+	</xsd:element>
+
+<!-- =================================================== -->
+
+	<xsd:element name="land">
+		<xsd:annotation>
+			<xsd:documentation>Land</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name="iso_land">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="AFG">
+							<!--Afghanistan -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ALB">
+							<!--Albania -->
+						</xsd:enumeration>
+						<xsd:enumeration value="DZA">
+							<!--Algeria -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ASM">
+							<!--American Samoa -->
+						</xsd:enumeration>
+						<xsd:enumeration value="AND">
+							<!--Andorra -->
+						</xsd:enumeration>
+						<xsd:enumeration value="AGO">
+							<!--Angola -->
+						</xsd:enumeration>
+						<xsd:enumeration value="AIA">
+							<!--Anguilla -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ATG">
+							<!--Antigua and Barbuda -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ARG">
+							<!--Argentina -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ARM">
+							<!--Armenia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ABW">
+							<!--Aruba -->
+						</xsd:enumeration>
+						<xsd:enumeration value="AUS">
+							<!--Australia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="AUT">
+							<!--Austria -->
+						</xsd:enumeration>
+						<xsd:enumeration value="AZE">
+							<!--Azerbaijan -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BHS">
+							<!--Bahamas -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BHR">
+							<!--Bahrain -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BGD">
+							<!--Bangladesh -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BRB">
+							<!--Barbados -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BLR">
+							<!--Belarus -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BEL">
+							<!--Belgium -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BLZ">
+							<!--Belize -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BEN">
+							<!--Benin -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BMU">
+							<!--Bermuda -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BTN">
+							<!--Bhutan -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BOL">
+							<!--Bolivia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BIH">
+							<!--Bosnia and Herzegovina -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BWA">
+							<!--Botswana -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BRA">
+							<!--Brazil -->
+						</xsd:enumeration>
+						<xsd:enumeration value="VGB">
+							<!--British Virgin Islands -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BRN">
+							<!--Brunei Darussalam -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BGR">
+							<!--Bulgaria -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BFA">
+							<!--Burkina Faso -->
+						</xsd:enumeration>
+						<xsd:enumeration value="BDI">
+							<!--Burundi -->
+						</xsd:enumeration>
+						<xsd:enumeration value="KHM">
+							<!--Cambodia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="CMR">
+							<!--Cameroon -->
+						</xsd:enumeration>
+						<xsd:enumeration value="CAN">
+							<!--Canada -->
+						</xsd:enumeration>
+						<xsd:enumeration value="CPV">
+							<!--Cape Verde -->
+						</xsd:enumeration>
+						<xsd:enumeration value="CYM">
+							<!--Cayman Islands -->
+						</xsd:enumeration>
+						<xsd:enumeration value="CAF">
+							<!--Central African Republic -->
+						</xsd:enumeration>
+						<xsd:enumeration value="TCD">
+							<!--Chad -->
+						</xsd:enumeration>
+						<xsd:enumeration value="CHL">
+							<!--Chile -->
+						</xsd:enumeration>
+						<xsd:enumeration value="CHN">
+							<!--China -->
+						</xsd:enumeration>
+						<xsd:enumeration value="HKG">
+							<!--Hong Kong Special Administrative Region of China-->
+						</xsd:enumeration>
+						<xsd:enumeration value="MAC">
+							<!--Macao Special Administrative Region of China -->
+						</xsd:enumeration>
+						<xsd:enumeration value="COL">
+							<!--Colombia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="COM">
+							<!--Comoros -->
+						</xsd:enumeration>
+						<xsd:enumeration value="COG">
+							<!--Congo -->
+						</xsd:enumeration>
+						<xsd:enumeration value="COK">
+							<!--Cook Islands -->
+						</xsd:enumeration>
+						<xsd:enumeration value="CRI">
+							<!--Costa Rica -->
+						</xsd:enumeration>
+						<xsd:enumeration value="CIV">
+							<!--Cote d'Ivoire -->
+						</xsd:enumeration>
+						<xsd:enumeration value="HRV">
+							<!--Croatia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="CUB">
+							<!--Cuba -->
+						</xsd:enumeration>
+						<xsd:enumeration value="CYP">
+							<!--Cyprus -->
+						</xsd:enumeration>
+						<xsd:enumeration value="CZE">
+							<!--Czech Republic -->
+						</xsd:enumeration>
+						<xsd:enumeration value="PRK">
+							<!--Democratic People's Republic of Korea -->
+						</xsd:enumeration>
+						<xsd:enumeration value="COD">
+							<!--Democratic Republic of the Congo -->
+						</xsd:enumeration>
+						<xsd:enumeration value="DNK">
+							<!--Denmark -->
+						</xsd:enumeration>
+						<xsd:enumeration value="DJI">
+							<!--Djibouti -->
+						</xsd:enumeration>
+						<xsd:enumeration value="DMA">
+							<!--Dominica -->
+						</xsd:enumeration>
+						<xsd:enumeration value="DOM">
+							<!--Dominican Republic -->
+						</xsd:enumeration>
+						<xsd:enumeration value="TMP">
+							<!--East Timor -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ECU">
+							<!--Ecuador -->
+						</xsd:enumeration>
+						<xsd:enumeration value="EGY">
+							<!--Egypt -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SLV">
+							<!--El Salvador -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GNQ">
+							<!--Equatorial Guinea -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ERI">
+							<!--Eritrea -->
+						</xsd:enumeration>
+						<xsd:enumeration value="EST">
+							<!--Estonia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ETH">
+							<!--Ethiopia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="FRO">
+							<!--Faeroe Islands -->
+						</xsd:enumeration>
+						<xsd:enumeration value="FLK">
+							<!--Falkland Islands (Malvinas) -->
+						</xsd:enumeration>
+						<xsd:enumeration value="FJI">
+							<!--Fiji -->
+						</xsd:enumeration>
+						<xsd:enumeration value="FIN">
+							<!--Finland -->
+						</xsd:enumeration>
+						<xsd:enumeration value="FRA">
+							<!--France -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GUF">
+							<!--French Guiana -->
+						</xsd:enumeration>
+						<xsd:enumeration value="PYF">
+							<!--French Polynesia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GAB">
+							<!--Gabon -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GMB">
+							<!--Gambia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GEO">
+							<!--Georgia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="DEU">
+							<!--Germany -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GHA">
+							<!--Ghana -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GIB">
+							<!--Gibraltar -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GRC">
+							<!--Greece -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GRL">
+							<!--Greenland -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GRD">
+							<!--Grenada -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GLP">
+							<!--Guadeloupe -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GUM">
+							<!--Guam -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GTM">
+							<!--Guatemala -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GIN">
+							<!--Guinea -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GNB">
+							<!--Guinea-Bissau -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GUY">
+							<!--Guyana -->
+						</xsd:enumeration>
+						<xsd:enumeration value="HTI">
+							<!--Haiti -->
+						</xsd:enumeration>
+						<xsd:enumeration value="VAT">
+							<!--Holy See -->
+						</xsd:enumeration>
+						<xsd:enumeration value="HND">
+							<!--Honduras -->
+						</xsd:enumeration>
+						<xsd:enumeration value="HUN">
+							<!--Hungary -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ISL">
+							<!--Iceland -->
+						</xsd:enumeration>
+						<xsd:enumeration value="IND">
+							<!--India -->
+						</xsd:enumeration>
+						<xsd:enumeration value="IDN">
+							<!--Indonesia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="IRN">
+							<!--Iran (Islamic Republic of) -->
+						</xsd:enumeration>
+						<xsd:enumeration value="IRQ">
+							<!--Iraq -->
+						</xsd:enumeration>
+						<xsd:enumeration value="IRL">
+							<!--Ireland -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ISR">
+							<!--Israel -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ITA">
+							<!--Italy -->
+						</xsd:enumeration>
+						<xsd:enumeration value="JAM">
+							<!--Jamaica -->
+						</xsd:enumeration>
+						<xsd:enumeration value="JPN">
+							<!--Japan -->
+						</xsd:enumeration>
+						<xsd:enumeration value="JOR">
+							<!--Jordan -->
+						</xsd:enumeration>
+						<xsd:enumeration value="KAZ">
+							<!--Kazakhstan -->
+						</xsd:enumeration>
+						<xsd:enumeration value="KEN">
+							<!--Kenya -->
+						</xsd:enumeration>
+						<xsd:enumeration value="KIR">
+							<!--Kiribati -->
+						</xsd:enumeration>
+						<xsd:enumeration value="KWT">
+							<!--Kuwait -->
+						</xsd:enumeration>
+						<xsd:enumeration value="KGZ">
+							<!--Kyrgyzstan -->
+						</xsd:enumeration>
+						<xsd:enumeration value="LAO">
+							<!--Lao People's Democratic Republic -->
+						</xsd:enumeration>
+						<xsd:enumeration value="LVA">
+							<!--Latvia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="LBN">
+							<!--Lebanon -->
+						</xsd:enumeration>
+						<xsd:enumeration value="LSO">
+							<!--Lesotho -->
+						</xsd:enumeration>
+						<xsd:enumeration value="LBR">
+							<!--Liberia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="LBY">
+							<!--Libyan Arab Jamahiriya -->
+						</xsd:enumeration>
+						<xsd:enumeration value="LIE">
+							<!--Liechtenstein -->
+						</xsd:enumeration>
+						<xsd:enumeration value="LTU">
+							<!--Lithuania -->
+						</xsd:enumeration>
+						<xsd:enumeration value="LUX">
+							<!--Luxembourg -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MDG">
+							<!--Madagascar -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MWI">
+							<!--Malawi -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MYS">
+							<!--Malaysia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MDV">
+							<!--Maldives -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MLI">
+							<!--Mali -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MLT">
+							<!--Malta -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MHL">
+							<!--Marshall Islands -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MTQ">
+							<!--Martinique -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MRT">
+							<!--Mauritania -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MUS">
+							<!--Mauritius -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MEX">
+							<!--Mexico -->
+						</xsd:enumeration>
+						<xsd:enumeration value="FSM">
+							<!--Micronesia, Federated States of -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MCO">
+							<!--Monaco -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MNG">
+							<!--Mongolia -->
+						</xsd:enumeration>
+
+						<xsd:enumeration value="MNE">
+							<!-- Montenegro   $V124 -->
+						</xsd:enumeration>
+
+
+						<xsd:enumeration value="MSR">
+							<!--Montserrat -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MAR">
+							<!--Morocco -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MOZ">
+							<!--Mozambique -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MMR">
+							<!--Myanmar -->
+						</xsd:enumeration>
+						<xsd:enumeration value="NAM">
+							<!--Namibia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="NRU">
+							<!--Nauru -->
+						</xsd:enumeration>
+						<xsd:enumeration value="NPL">
+							<!--Nepal -->
+						</xsd:enumeration>
+						<xsd:enumeration value="NLD">
+							<!--Netherlands -->
+						</xsd:enumeration>
+						
+						<xsd:enumeration value="ANT">
+							<!--Netherlands Antilles  Aufgeteilt in: BES,CUW, SXM  Maerz 2011-->
+						</xsd:enumeration>
+						
+						<xsd:enumeration value="NCL">
+							<!--New Caledonia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="NZL">
+							<!--New Zealand -->
+						</xsd:enumeration>
+						<xsd:enumeration value="NIC">
+							<!--Nicaragua -->
+						</xsd:enumeration>
+						<xsd:enumeration value="NER">
+							<!--Niger -->
+						</xsd:enumeration>
+						<xsd:enumeration value="NGA">
+							<!--Nigeria -->
+						</xsd:enumeration>
+						<xsd:enumeration value="NIU">
+							<!--Niue -->
+						</xsd:enumeration>
+						<xsd:enumeration value="NFK">
+							<!--Norfolk Island -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MNP">
+							<!--Northern Mariana Islands -->
+						</xsd:enumeration>
+						<xsd:enumeration value="NOR">
+							<!--Norway -->
+						</xsd:enumeration>
+						<xsd:enumeration value="PSE">
+							<!--Occupied Palestinian Territory -->
+						</xsd:enumeration>
+						<xsd:enumeration value="OMN">
+							<!--Oman -->
+						</xsd:enumeration>
+						<xsd:enumeration value="PAK">
+							<!--	Pakistan -->
+						</xsd:enumeration>
+						<xsd:enumeration value="PLW">
+							<!--Palau -->
+						</xsd:enumeration>
+						<xsd:enumeration value="PAN">
+							<!--Panama -->
+						</xsd:enumeration>
+						<xsd:enumeration value="PNG">
+							<!--Papua New Guinea -->
+						</xsd:enumeration>
+						<xsd:enumeration value="PRY">
+							<!--Paraguay -->
+						</xsd:enumeration>
+						<xsd:enumeration value="PER">
+							<!--Peru -->
+						</xsd:enumeration>
+						<xsd:enumeration value="PHL">
+							<!--Philippines -->
+						</xsd:enumeration>
+						<xsd:enumeration value="PCN">
+							<!--Pitcairn -->
+						</xsd:enumeration>
+						<xsd:enumeration value="POL">
+							<!--Poland -->
+						</xsd:enumeration>
+						<xsd:enumeration value="PRT">
+							<!--Portugal -->
+						</xsd:enumeration>
+						<xsd:enumeration value="PRI">
+							<!--Puerto Rico -->
+						</xsd:enumeration>
+						<xsd:enumeration value="QAT">
+							<!--Qatar -->
+						</xsd:enumeration>
+						<xsd:enumeration value="KOR">
+							<!--Republic of Korea -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MDA">
+							<!--Republic of Moldova -->
+						</xsd:enumeration>
+						<xsd:enumeration value="REU">
+							<!--Réunion -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ROM">
+							<!--Romania -->
+						</xsd:enumeration>
+						<xsd:enumeration value="RUS">
+							<!--Russian Federation -->
+						</xsd:enumeration>
+						<xsd:enumeration value="RWA">
+							<!--Rwanda -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SHN">
+							<!--Saint Helena -->
+						</xsd:enumeration>
+						<xsd:enumeration value="KNA">
+							<!--Saint Kitts and Nevis -->
+						</xsd:enumeration>
+						<xsd:enumeration value="LCA">
+							<!--Saint Lucia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SPM">
+							<!--Saint Pierre and Miquelon -->
+						</xsd:enumeration>
+						<xsd:enumeration value="VCT">
+							<!--Saint Vincent and the Grenadines -->
+						</xsd:enumeration>
+						<xsd:enumeration value="WSM">
+							<!--Samoa -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SMR">
+							<!--San Marino -->
+						</xsd:enumeration>
+						<xsd:enumeration value="STP">
+							<!--Sao Tome and Principe -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SAU">
+							<!--Saudi Arabia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SEN">
+							<!--Senegal -->
+						</xsd:enumeration>
+
+						<xsd:enumeration value="SRB">
+							<!-- Serbia  $V124 -->
+						</xsd:enumeration>
+
+
+
+						<xsd:enumeration value="SYC">
+							<!--Seychelles -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SLE">
+							<!--Sierra Leone -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SGP">
+							<!--Singapore -->
+						</xsd:enumeration>
+
+						<xsd:enumeration value="SMX">
+							<!-- Sint Maarten $V124 -->
+						</xsd:enumeration>
+
+
+						<xsd:enumeration value="SVK">
+							<!--Slovakia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SVN">
+							<!--Slovenia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SLB">
+							<!--Solomon Islands -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SOM">
+							<!--Somalia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ZAF">
+							<!--South Africa -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ESP">
+							<!--Spain -->
+						</xsd:enumeration>
+						<xsd:enumeration value="LKA">
+							<!--Sri Lanka -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SDN">
+							<!--Sudan -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SUR">
+							<!--Suriname -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SJM">
+							<!--Svalbard and Jan Mayen Islands -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SWZ">
+							<!--Swaziland -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SWE">
+							<!--Sweden -->
+						</xsd:enumeration>
+						<xsd:enumeration value="CHE">
+							<!--Switzerland -->
+						</xsd:enumeration>
+						<xsd:enumeration value="SYR">
+							<!--Syrian Arab Republic -->
+						</xsd:enumeration>
+						<xsd:enumeration value="TWN">
+							<!--Taiwan Province of China -->
+						</xsd:enumeration>
+						<xsd:enumeration value="TJK">
+							<!--Tajikistan -->
+						</xsd:enumeration>
+						<xsd:enumeration value="THA">
+							<!--Thailand -->
+						</xsd:enumeration>
+						<xsd:enumeration value="MKD">
+							<!--The former Yugoslav Republic of Macedonia -->
+						</xsd:enumeration>
+			
+
+						<xsd:enumeration value="TGO">
+							<!--Togo -->
+						</xsd:enumeration>
+						<xsd:enumeration value="TKL">
+							<!--Tokelau -->
+						</xsd:enumeration>
+						<xsd:enumeration value="TON">
+							<!--Tonga -->
+						</xsd:enumeration>
+						<xsd:enumeration value="TTO">
+							<!--Trinidad and Tobago -->
+						</xsd:enumeration>
+						<xsd:enumeration value="TUN">
+							<!--Tunisia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="TUR">
+							<!--Turkey -->
+						</xsd:enumeration>
+						<xsd:enumeration value="TKM">
+							<!--Turkmenistan -->
+						</xsd:enumeration>
+						<xsd:enumeration value="TCA">
+							<!--Turks and Caicos Islands -->
+						</xsd:enumeration>
+						<xsd:enumeration value="TUV">
+							<!--Tuvalu -->
+						</xsd:enumeration>
+						<xsd:enumeration value="UGA">
+							<!--Uganda -->
+						</xsd:enumeration>
+						<xsd:enumeration value="UKR">
+							<!--Ukraine -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ARE">
+							<!--United Arab Emirates -->
+						</xsd:enumeration>
+						<xsd:enumeration value="GBR">
+							<!--United Kingdom -->
+						</xsd:enumeration>
+						<xsd:enumeration value="TZA">
+							<!--United Republic of Tanzania -->
+						</xsd:enumeration>
+						<xsd:enumeration value="USA">
+							<!--United States -->
+						</xsd:enumeration>
+						<xsd:enumeration value="VIR">
+							<!--United States Virgin Islands -->
+						</xsd:enumeration>
+						<xsd:enumeration value="URY">
+							<!--Uruguay -->
+						</xsd:enumeration>
+						<xsd:enumeration value="UZB">
+							<!--Uzbekistan -->
+						</xsd:enumeration>
+						<xsd:enumeration value="VUT">
+							<!--Vanuatu -->
+						</xsd:enumeration>
+						<xsd:enumeration value="VEN">
+							<!--Venezuela -->
+						</xsd:enumeration>
+						<xsd:enumeration value="VNM">
+							<!--Viet Nam -->
+						</xsd:enumeration>
+						<xsd:enumeration value="WLF">
+							<!--Wallis and Futuna Islands -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ESH">
+							<!--Western Sahara -->
+						</xsd:enumeration>
+						<xsd:enumeration value="YEM">
+							<!--Yemen -->
+						</xsd:enumeration>
+						<xsd:enumeration value="YUG">
+							<!--Yugoslavia  $V124 Stay für compatibility reason -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ZMB">
+							<!--Zambia -->
+						</xsd:enumeration>
+						<xsd:enumeration value="ZWE">
+							<!--Zimbabwe -->
+						</xsd:enumeration>
+					
+
+
+
+
+
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+		</xsd:complexType>
+		<!--3-stelliges Länderkürzel nach ISO3166-->
+	</xsd:element>
+
+</xsd:schema>

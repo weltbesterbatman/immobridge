@@ -1,0 +1,69 @@
+Type,Group,Source,Destination,Title,Title DE
+# Posts,,,,,,,,
+post,,freitexte->objekttitel,post_title,Post Title,Titel
+post,,freitexte->objektbeschreibung+,post_content,Post Content,Beschreibung
+post,,freitexte->lage+,post_content,Location Description,Lagebeschreibung
+post,,freitexte->ausstatt_beschr+,post_content,Features Description,Ausstattungsbeschreibung
+post,,freitexte->sonstige_angaben+,post_content,Other Notes,Sonstige Angaben
+# Taxonomies,,,,,,,,
+taxonomy,,objektkategorie->vermarktungsart:KAUF=1,property_status,,Verkauf
+taxonomy,,objektkategorie->vermarktungsart:MIETE_PACHT=1,property_status,,Miete
+taxonomy,,objektkategorie->objektart->haus,property_type,House,Haus
+taxonomy,,objektkategorie->objektart->wohnung,property_type,Apartment,Wohnung
+taxonomy,,zustand_angaben->verkaufstatus:stand:VERKAUFT,property_label,,Verkauft
+taxonomy,,verwaltung_objekt->user_defined_simplefield:feldname:reserviert,property_label,,Reserviert
+# Custom Fields - General,,,,,,,,
+custom_field,Allgemein,verwaltung_techn->openimmo_obid,immobridge_openimmo_obid,OpenImmo ID,OpenImmo ID
+custom_field,Allgemein,verwaltung_techn->objektnr_extern,immobridge_objektnr_extern,External Object Number,Externe Objektnummer
+custom_field,Allgemein,verwaltung_objekt->verfuegbar_ab,immobridge_verfuegbar_ab,Available From,Verfügbar ab
+# Custom Fields - Geo,,,,,,,,
+custom_field,Adresse,geo->strasse,immobridge_geo_strasse,Street,Straße
+custom_field,Adresse,geo->hausnummer,immobridge_geo_hausnummer,House Number,Hausnummer
+custom_field,Adresse,geo->plz,immobridge_geo_plz,ZIP Code,PLZ
+custom_field,Adresse,geo->ort,immobridge_geo_ort,City,Ort
+custom_field,Adresse,geo->bundesland,immobridge_geo_bundesland,State,Bundesland
+custom_field,Adresse,geo->land:iso_land,immobridge_geo_land,Country,Land
+custom_field,Adresse,geo->regionaler_zusatz,immobridge_geo_regionaler_zusatz,Regional Addon,Regionaler Zusatz
+custom_field,Adresse,geo->geokoordinaten:breitengrad,immobridge_geo_lat,Latitude,Breitengrad
+custom_field,Adresse,geo->geokoordinaten:laengengrad,immobridge_geo_lon,Longitude,Längengrad
+# Custom Fields - Prices,,,,,,,,
+custom_field,Preise,preise->kaufpreis,immobridge_preise_kaufpreis,Purchase Price,Kaufpreis
+custom_field,Preise,preise->nettokaltmiete,immobridge_preise_nettokaltmiete,Net Cold Rent,Nettokaltmiete
+custom_field,Preise,preise->kaltmiete,immobridge_preise_kaltmiete,Cold Rent,Kaltmiete
+custom_field,Preise,preise->warmmiete,immobridge_preise_warmmiete,Warm Rent,Warmmiete
+custom_field,Preise,preise->nebenkosten,immobridge_preise_nebenkosten,Additional Costs,Nebenkosten
+custom_field,Preise,preise->kaution,immobridge_preise_kaution,Deposit,Kaution
+custom_field,Preise,preise->aussen_courtage,immobridge_preise_aussen_courtage,Buyer Commission,Außen-Courtage
+custom_field,Preise,preise->waehrung:iso_waehrung,immobridge_preise_waehrung,Currency,Währung
+# Custom Fields - Areas,,,,,,,,
+custom_field,Flächen,flaechen->wohnflaeche,immobridge_flaechen_wohnflaeche,Living Area,Wohnfläche
+custom_field,Flächen,flaechen->nutzflaeche,immobridge_flaechen_nutzflaeche,Usable Area,Nutzfläche
+custom_field,Flächen,flaechen->gesamtflaeche,immobridge_flaechen_gesamtflaeche,Total Area,Gesamtfläche
+custom_field,Flächen,flaechen->grundstuecksflaeche,immobridge_flaechen_grundstuecksflaeche,Plot Area,Grundstücksfläche
+custom_field,Flächen,flaechen->anzahl_zimmer,immobridge_flaechen_anzahl_zimmer,Number of Rooms,Anzahl Zimmer
+custom_field,Flächen,flaechen->anzahl_schlafzimmer,immobridge_flaechen_anzahl_schlafzimmer,Number of Bedrooms,Anzahl Schlafzimmer
+custom_field,Flächen,flaechen->anzahl_badezimmer,immobridge_flaechen_anzahl_badezimmer,Number of Bathrooms,Anzahl Badezimmer
+custom_field,Flächen,flaechen->anzahl_balkone,immobridge_flaechen_anzahl_balkone,Number of Balconies,Anzahl Balkone
+custom_field,Flächen,flaechen->anzahl_terrassen,immobridge_flaechen_anzahl_terrassen,Number of Terraces,Anzahl Terrassen
+custom_field,Flächen,flaechen->anzahl_stellplaetze,immobridge_flaechen_anzahl_stellplaetze,Number of Parking Spaces,Anzahl Stellplätze
+# Custom Fields - Condition,,,,,,,,
+custom_field,Zustand,zustand_angaben->baujahr,immobridge_zustand_baujahr,Year Built,Baujahr
+custom_field,Zustand,zustand_angaben->letztemodernisierung,immobridge_zustand_letztemodernisierung,Last Renovation,Letzte Modernisierung
+custom_field,Zustand,zustand_angaben->zustand:zustand_art,immobridge_zustand_art,Condition,Zustand
+custom_field,Zustand,zustand_angaben->alter:alter_attr,immobridge_zustand_alter,Age,Alter
+# Custom Fields - Energy Certificate,,,,,,,,
+custom_field,Energieausweis,energiepass->epart,immobridge_epass_art,Certificate Type,Energiepass Art
+custom_field,Energieausweis,energiepass->gueltig_bis,immobridge_epass_gueltig_bis,Valid Until,Gültig bis
+custom_field,Energieausweis,energiepass->endenergiebedarf,immobridge_epass_endenergiebedarf,Final Energy Demand,Endenergiebedarf
+custom_field,Energieausweis,energiepass->energieverbrauchkennwert,immobridge_epass_verbrauchskennwert,Energy Consumption Value,Energieverbrauchskennwert
+custom_field,Energieausweis,energiepass->primaerenergietraeger,immobridge_epass_primaerenergie,Primary Energy Source,Primärenergieträger
+custom_field,Energieausweis,energiepass->stromwert,immobridge_epass_stromwert,Electricity Value,Stromwert
+custom_field,Energieausweis,energiepass->waermewert,immobridge_epass_waermewert,Heat Value,Wärmewert
+custom_field,Energieausweis,energiepass->wertklasse,immobridge_epass_wertklasse,Efficiency Class,Effizienzklasse
+custom_field,Energieausweis,energiepass->baujahr,immobridge_epass_baujahr,Certificate Year Built,Energiepass Baujahr
+# Custom Fields - Contact,,,,,,,,
+custom_field,Kontakt,kontaktperson->email_direkt,immobridge_kontakt_email,Contact Email,Kontakt E-Mail
+custom_field,Kontakt,kontaktperson->tel_durchw,immobridge_kontakt_tel,Contact Phone,Kontakt Telefon
+custom_field,Kontakt,kontaktperson->name,immobridge_kontakt_name,Contact Name,Kontakt Name
+custom_field,Kontakt,kontaktperson->vorname,immobridge_kontakt_vorname,Contact First Name,Kontakt Vorname
+custom_field,Kontakt,kontaktperson->firma,immobridge_kontakt_firma,Contact Company,Kontakt Firma

@@ -1,0 +1,137 @@
+<immobilie>
+    <objektkategorie>
+        <nutzungsart WOHNEN="1" GEWERBE="0" ANLAGE="0" WAZ="0" />
+        <vermarktungsart KAUF="1" MIETE_PACHT="0" ERBPACHT="0" LEASING="0" />
+        <objektart>
+            <haus haustyp="EINFAMILIENHAUS" />
+        </objektart>
+    </objektkategorie>
+    <geo>
+        <plz>99999</plz>
+        <ort>Demostadt</ort>
+        <geokoordinaten breitengrad="49.858784" laengengrad="6.785441" />
+        <strasse>Pierre-Littbarski-Allee</strasse>
+        <hausnummer>96</hausnummer>
+        <land iso_land="DEU" />
+        <regionaler_zusatz>Hasenberg</regionaler_zusatz>
+    </geo>
+    <kontaktperson>
+        <email_zentrale>info@immonex.one</email_zentrale>
+        <email_direkt>dieter.demo@immonex.one</email_direkt>
+        <tel_zentrale>+49 9999 1234567</tel_zentrale>
+        <tel_durchw>+49 9999 1234568</tel_durchw>
+        <name>Demo</name>
+        <vorname>Dieter</vorname>
+        <anrede>Herr</anrede>
+        <firma>immonex.ONE DEMO Immobilien</firma>
+        <strasse>Demo-Allee</strasse>
+        <hausnummer>1</hausnummer>
+        <plz>99999</plz>
+        <ort>Demostadt</ort>
+        <land iso_land="DEU" />
+    </kontaktperson>
+    <preise>
+        <kaufpreis>389000</kaufpreis>
+        <aussen_courtage>3,57 % inkl. MwSt.</aussen_courtage>
+        <user_defined_simplefield feldname="Aufpreis Außenstellplatz">12000.0</user_defined_simplefield>
+    </preise>
+    <flaechen>
+        <wohnflaeche>100</wohnflaeche>
+        <nutzflaeche>23</nutzflaeche>
+        <grundstuecksflaeche>1400</grundstuecksflaeche>
+        <anzahl_zimmer>5</anzahl_zimmer>
+        <anzahl_schlafzimmer>4</anzahl_schlafzimmer>
+        <anzahl_badezimmer>1</anzahl_badezimmer>
+        <gartenflaeche>200</gartenflaeche>
+    </flaechen>
+    <ausstattung>
+        <ausstatt_kategorie>GEHOBEN</ausstatt_kategorie>
+        <bad DUSCHE="1" WANNE="1" FENSTER="1" />
+        <kueche EBK="1" OFFEN="1" />
+        <boden FLIESEN="1" PARKETT="1" />
+        <heizungsart OFEN="0" ETAGE="0" ZENTRAL="1" FERN="0" FUSSBODEN="1" />
+        <befeuerung GAS="1" />
+        <stellplatzart GARAGE="1" />
+        <kabel_sat_tv>1</kabel_sat_tv>
+        <barrierefrei>1</barrierefrei>
+        <wintergarten>1</wintergarten>
+        <sicherheitstechnik ALARMANLAGE="1" KAMERA="1" POLIZEIRUF="0" />
+        <unterkellert keller="JA" />
+        <bauweise MASSIV="1" />
+        <gaestewc>1</gaestewc>
+    </ausstattung>
+    <zustand_angaben>
+        <baujahr>1978</baujahr>
+        <zustand zustand_art="MODERNISIERT" />
+        <energiepass>
+            <epart>VERBRAUCH</epart>
+            <gueltig_bis>03-2024</gueltig_bis>
+            <energieverbrauchkennwert>291</energieverbrauchkennwert>
+            <mitwarmwasser>1</mitwarmwasser>
+            <primaerenergietraeger>ALTERNATIV</primaerenergietraeger>
+            <wertklasse>H</wertklasse>
+            <ausstelldatum>2019-03-14</ausstelldatum>
+            <jahrgang>2014</jahrgang>
+            <gebaeudeart>wohn</gebaeudeart>
+        </energiepass>
+    </zustand_angaben>
+    <infrastruktur>
+        <ausblick blick="FERNE" />
+        <distanzen distanz_zu="FLUGHAFEN">140</distanzen>
+        <distanzen distanz_zu="ZENTRUM">8</distanzen>
+        <distanzen distanz_zu="EINKAUFSMOEGLICHKEITEN">1</distanzen>
+    </infrastruktur>
+    <freitexte>
+        <objekttitel>Handwerker aufgepasst! Einfamilienhaus in ruhiger Lage</objekttitel>
+        <lage>
+            Das hier angebotene Einfamilienhaus überrascht mit einer erstaunlich idyllischen
+            Lage inmitten des geschäftigen Treibens der Pierre-Littbarski-Allee.
+        </lage>
+        <ausstatt_beschr>
+            Durch die Größe ergeben sich verschiedene Möglichkeiten der Nutzung: So kann beispielsweise
+            eine Wohneinheit selbst genutzt und eine weitere vermietet werden. Die Immobilie kann aber
+            ebenso zu einem Mehrgenerationenhaus umgebaut werden.
+        </ausstatt_beschr>
+        <objektbeschreibung>
+            Einfach Einziehen und wohlfühlen! Das wohl durchdachte Neubauensemble direkt am Park
+            unterstreicht mit Weitblick und viel Grün sein einzigartiges Architekturkonzept...
+        </objektbeschreibung>
+    </freitexte>
+    <anhaenge>
+        <anhang location="EXTERN" gruppe="TITELBILD">
+            <format>image/jpeg</format>
+            <daten>
+                <pfad>aussenansicht.jpg</pfad>
+            </daten>
+        </anhang>
+        <anhang location="EXTERN" gruppe="BILD">
+            <format>image/jpeg</format>
+            <daten>
+                <pfad>innenansicht.jpg</pfad>
+            </daten>
+        </anhang>
+        <anhang location="EXTERN" gruppe="GRUNDRISS">
+            <format>image/jpeg</format>
+            <daten>
+                <pfad>grundriss.jpg</pfad>
+            </daten>
+        </anhang>
+        <anhang location="REMOTE" gruppe="LINKS">
+            <anhangtitel>https://www.rakete-rot.de/kontakt/</anhangtitel>
+        </anhang>
+    </anhaenge>
+    <verwaltung_objekt>
+        <objektadresse_freigeben>1</objektadresse_freigeben>
+        <verfuegbar_ab>sofort</verfuegbar_ab>
+        <gewerbliche_nutzung>1</gewerbliche_nutzung>
+    </verwaltung_objekt>
+    <verwaltung_techn>
+        <objektnr_intern>KH_123</objektnr_intern>
+        <objektnr_extern>123</objektnr_extern>
+        <aktion aktionart="CHANGE" />
+        <openimmo_obid>OINV4711123</openimmo_obid>
+        <stand_vom>2019-03-21</stand_vom>
+        <sprache>de-DE</sprache>
+        <user_defined_simplefield feldname="immobridge">1</user_defined_simplefield>
+    </verwaltung_techn>
+</immobilie>

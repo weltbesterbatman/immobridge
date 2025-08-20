@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace ImmoBridge\Services;
 
+use ImmoBridge\Admin\PropertyMetaBox;
 use ImmoBridge\Core\Container\Container;
 use ImmoBridge\Core\Container\ServiceProviderInterface;
 
@@ -27,6 +28,11 @@ final class AdminServiceProvider implements ServiceProviderInterface
         add_action('admin_menu', fn() => $this->addAdminMenu($container));
         add_action('admin_init', fn() => $this->registerSettings());
         add_action('admin_enqueue_scripts', fn($hook) => $this->enqueueAdminAssets($hook));
+
+        // Register Meta Box for property post type
+        $propertyMetaBox = new PropertyMetaBox();
+        add_action('add_meta_boxes', [$propertyMetaBox, 'add']);
+        add_action('save_post', [$propertyMetaBox, 'save']);
 
         add_action('wp_ajax_immobridge_start_import', fn() => $this->ajax_start_import());
         add_action('wp_ajax_immobridge_process_batch', fn() => $this->ajax_process_batch());
