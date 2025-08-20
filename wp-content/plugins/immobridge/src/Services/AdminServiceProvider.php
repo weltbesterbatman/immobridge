@@ -154,7 +154,7 @@ final class AdminServiceProvider implements ServiceProviderInterface
                 (new OpenImmoImporter())->deleteDirectory($tempDir);
                 wp_send_json_error(['message' => 'No XML file found in ZIP archive.']);
             }
-            $base_dir = $tempDir;
+            $base_dir = dirname($xml_file_path);
         }
 
         $total_items = $importer->countPropertiesInFile($xml_file_path);
@@ -178,6 +178,7 @@ final class AdminServiceProvider implements ServiceProviderInterface
 
         $job_id = 'immobridge_import_job';
         $job_data = get_transient($job_id);
+
         if (!$job_data) {
             wp_send_json_success(['status' => 'complete']);
             return;
@@ -186,9 +187,10 @@ final class AdminServiceProvider implements ServiceProviderInterface
         $importer = new OpenImmoImporter();
         $settings = get_option('immobridge_settings', []);
         $result = $importer->importBatch($job_data['xml_file'], $job_data['processed'], 5, $settings['image_import'] ?? true, $settings['update_existing'] ?? false, $job_data['base_dir']);
-
+        
         $job_data['processed'] += $result['processed_in_batch'];
         $job_data['log'] = array_merge($job_data['log'], $result['log']);
+        
         set_transient($job_id, $job_data, HOUR_IN_SECONDS);
 
         if ($job_data['processed'] >= $job_data['total']) {
@@ -299,6 +301,9 @@ final class AdminServiceProvider implements ServiceProviderInterface
                             alert('An error occurred: ' + response.data.message);
                             $('.immobridge-import-button').prop('disabled', false).text('Import Now');
                         }
+                    }).fail(function(jqXHR, textStatus, errorThrown) {
+                        alert('A critical error occurred during the import.');
+                        $('.immobridge-import-button').prop('disabled', false).text('Import Now');
                     });
                 }
             });

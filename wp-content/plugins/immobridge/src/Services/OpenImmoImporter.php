@@ -78,26 +78,29 @@ class OpenImmoImporter
         $properties = $xpath->query('//immobilie');
         $nodesToProcess = new \LimitIterator(new \IteratorIterator($properties), $offset, $length);
 
+        $processedInBatch = 0;
         foreach ($nodesToProcess as $propertyNode) {
             try {
                 $this->importProperty($propertyNode, $xpath, $importImages, $updateExisting, $baseDir);
+                $processedInBatch++;
             } catch (\Exception $e) {
                 $this->errorCount++;
                 $this->log('Error importing property: ' . $e->getMessage(), 'error');
+                $processedInBatch++;
             }
         }
         
         $results = $this->getResults();
-        $results['processed_in_batch'] = iterator_count($nodesToProcess);
+        $results['processed_in_batch'] = $processedInBatch;
         return $results;
     }
 
     private function importProperty(\DOMElement $propertyNode, DOMXPath $xpath, bool $importImages, bool $updateExisting, ?string $baseDir = null): void
     {
         $propertyData = $this->extractPropertyData($propertyNode, $xpath);
-        if (empty($propertyData['property_id'])) throw new \Exception('Property ID is required but not found');
+        if (empty($propertyData['openimmo_id'])) throw new \Exception('Property ID is required but not found');
 
-        $existingPost = $this->findExistingProperty($propertyData['property_id']);
+        $existingPost = $this->findExistingProperty($propertyData['openimmo_id']);
         if ($existingPost && !$updateExisting) {
             $this->log('Skipping existing property: ' . $propertyData['property_id']);
             return;
@@ -114,11 +117,11 @@ class OpenImmoImporter
             $postData['ID'] = $existingPost->ID;
             $postId = wp_update_post($postData);
             $this->updatedCount++;
-            $this->log('Updated property: ' . $propertyData['property_id']);
+            $this->log('Updated property: ' . $propertyData['openimmo_id']);
         } else {
             $postId = wp_insert_post($postData);
             $this->importedCount++;
-            $this->log('Imported new property: ' . $propertyData['property_id']);
+            $this->log('Imported new property: ' . $propertyData['openimmo_id']);
         }
 
         if (is_wp_error($postId)) throw new \Exception('Failed to create/update post: ' . $postId->get_error_message());
@@ -133,15 +136,67 @@ class OpenImmoImporter
     private function extractPropertyData(\DOMElement $propertyNode, DOMXPath $xpath): array
     {
         $data = [];
-        $data['property_id'] = $this->getXPathValue($xpath, './/objektnr_extern', $propertyNode);
+        $data['openimmo_id'] = $this->getXPathValue($xpath, './/objektnr_extern', $propertyNode);
         $data['title'] = $this->getXPathValue($xpath, './/objekttitel', $propertyNode);
         $data['description'] = $this->getXPathValue($xpath, './/objektbeschreibung', $propertyNode);
         $data['images'] = $this->extractImages($xpath, $propertyNode);
-        // Extract other fields...
+
+        // Field mapping
+        $fieldMap = [
+            // Location
+            'address' => './/geo/strasse',
+            'house_number' => './/geo/hausnummer',
+            'zip_code' => './/geo/plz',
+            'city' => './/geo/ort',
+            'region' => './/geo/region',
+            'state' => './/geo/bundesland',
+            'country' => './/geo/land',
+            'latitude' => './/geo/geokoordinaten/@lat',
+            'longitude' => './/geo/geokoordinaten/@lon',
+
+            // Prices
+            'purchase_price' => './/preise/kaufpreis',
+            'rent_cold' => './/preise/nettokaltmiete',
+            'rent_warm' => './/preise/warmmiete',
+            'utilities' => './/preise/nebenkosten',
+            'heating_costs' => './/preise/heizkosten',
+            'deposit' => './/preise/kaution',
+            'commission_buyer' => './/preise/aussen_courtage',
+
+            // Areas
+            'living_area' => './/flaechen/wohnflaeche',
+            'total_area' => './/flaechen/nutzflaeche',
+            'plot_area' => './/flaechen/grundstuecksflaeche',
+            'rooms' => './/flaechen/anzahl_zimmer',
+            'bedrooms' => './/flaechen/anzahl_schlafzimmer',
+            'bathrooms' => './/flaechen/anzahl_badezimmer',
+
+            // Condition
+            'condition' => './/zustand_angaben/zustand/@zustand_art',
+            'year_built' => './/zustand_angaben/baujahr',
+            'last_renovation' => './/zustand_angaben/letztemodernisierung',
+            'energy_certificate_type' => './/energiepass/epart',
+            'energy_consumption' => './/energiepass/endenergieverbrauch',
+            'energy_efficiency_class' => './/energiepass/energieeffizienzklasse',
+
+            // Features
+            'property_type' => './/objektkategorie/immobilienart',
+            'property_subtype' => './/objektkategorie/objektart',
+            'equipment' => './/ausstattung/ausstatt_beschr',
+            'parking_spaces' => './/flaechen/anzahl_stellplaetze',
+        ];
+
+        foreach ($fieldMap as $key => $query) {
+            $value = $this->getXPathValue($xpath, $query, $propertyNode);
+            if ($value) {
+                $data[$key] = $value;
+            }
+        }
+
         return array_filter($data, fn($value) => $value !== null && $value !== '');
     }
     
-    private function getXPathValue(DOMXPath $xpath, string $query, \DOMElement $context = null): ?string
+    private function getXPathValue(DOMXPath $xpath, string $query, ?\DOMElement $context = null): ?string
     {
         $nodes = $xpath->query($query, $context);
         return $nodes->length > 0 ? trim($nodes->item(0)->textContent) : null;
@@ -168,8 +223,26 @@ class OpenImmoImporter
 
     private function savePropertyMeta(int $postId, array $data): void
     {
+        // Prefix custom fields to avoid conflicts
+        $prefixedData = [];
+        $customFields = [
+            'address', 'house_number', 'zip_code', 'city', 'region', 'state', 'country', 'latitude', 'longitude',
+            'purchase_price', 'rent_cold', 'rent_warm', 'utilities', 'heating_costs', 'deposit', 'commission_buyer',
+            'living_area', 'total_area', 'plot_area', 'rooms', 'bedrooms', 'bathrooms',
+            'condition', 'year_built', 'last_renovation', 'energy_certificate_type', 'energy_consumption', 'energy_efficiency_class',
+            'property_type', 'property_subtype', 'equipment', 'parking_spaces'
+        ];
+
         foreach ($data as $key => $value) {
-            if ($key !== 'images') {
+            if (in_array($key, $customFields)) {
+                $prefixedData['cf_' . $key] = $value;
+            } else {
+                $prefixedData[$key] = $value;
+            }
+        }
+
+        foreach ($prefixedData as $key => $value) {
+            if ($key !== 'images' && $key !== 'title' && $key !== 'description') {
                 update_post_meta($postId, $key, $value);
             }
         }
@@ -183,12 +256,17 @@ class OpenImmoImporter
     private function importPropertyImages(int $postId, array $images, ?string $baseDir = null): void
     {
         $gallery_ids = [];
+        error_log('[ImmoBridge Image Log] Starting image processing for Post ID: ' . $postId . '. Base directory: ' . $baseDir);
+
         foreach ($images as $index => $imageData) {
             $imageUrl = $imageData['url'];
             if ($baseDir && !filter_var($imageUrl, FILTER_VALIDATE_URL)) {
-                $imageUrl = $baseDir . '/' . ltrim($imageUrl, '/');
+                $originalImageUrl = $imageUrl;
+                // Replace backslashes with forward slashes for consistency
+                $imageUrl = str_replace('\\', '/', $baseDir . '/' . ltrim($imageUrl, '/\\'));
+                error_log('[ImmoBridge Image Log] Relative image path resolved. Base dir: ' . $baseDir . ', Original path: ' . $originalImageUrl . ', Final path: ' . $imageUrl);
             }
-            $attachmentId = $this->importImage($imageUrl, $postId);
+            $attachmentId = $this->importImage($imageUrl, $postId, basename($imageUrl));
             if ($attachmentId) {
                 $gallery_ids[] = $attachmentId;
                 if ($index === 0) set_post_thumbnail($postId, $attachmentId);
@@ -197,16 +275,82 @@ class OpenImmoImporter
         if (!empty($gallery_ids)) update_post_meta($postId, 'gallery_images', $gallery_ids);
     }
 
-    private function importImage(string $imageUrl, int $postId, string $title = ''): ?int
+    private function importImage(string $imagePath, int $postId, string $title = ''): ?int
     {
         require_once(ABSPATH . 'wp-admin/includes/media.php');
         require_once(ABSPATH . 'wp-admin/includes/file.php');
         require_once(ABSPATH . 'wp-admin/includes/image.php');
-        $attachmentId = media_sideload_image($imageUrl, $postId, $title, 'id');
-        if (is_wp_error($attachmentId)) {
+
+        $is_remote = filter_var($imagePath, FILTER_VALIDATE_URL);
+        error_log('[ImmoBridge Image Log] 1. Starting import for: ' . $imagePath . ($is_remote ? ' (remote)' : ' (local)'));
+
+        if (!$is_remote && !file_exists($imagePath)) {
+            error_log('[ImmoBridge Image Log] 2. ERROR: Local file does not exist at path: ' . $imagePath);
             return null;
         }
+
+        $temp_file = $this->create_temp_file($imagePath, $is_remote);
+
+        if (is_wp_error($temp_file)) {
+            error_log('[ImmoBridge Image Log] 2. ERROR: download_url() failed for remote file. Error: ' . $temp_file->get_error_message());
+            return null;
+        }
+
+        if (!$temp_file) {
+            error_log('[ImmoBridge Image Log] 2. ERROR: create_temp_file() returned false.');
+            return null;
+        }
+        error_log('[ImmoBridge Image Log] 2. Temp file created at: ' . $temp_file);
+
+        $file_array = [
+            'name' => basename($imagePath),
+            'tmp_name' => $temp_file
+        ];
+
+        $description = $title ?: '';
+        error_log('[ImmoBridge Image Log] 3. Calling media_handle_sideload() with filename: ' . $file_array['name']);
+
+        $attachmentId = media_handle_sideload($file_array, $postId, $description);
+
+        if (is_wp_error($attachmentId)) {
+            @unlink($temp_file);
+            error_log('[ImmoBridge Image Log] 4. ERROR: media_handle_sideload() failed. Error: ' . $attachmentId->get_error_message());
+            return null;
+        }
+
+        error_log('[ImmoBridge Image Log] 4. SUCCESS: Image imported. Attachment ID: ' . $attachmentId);
+        // The temp file is automatically deleted by media_handle_sideload on success.
         return $attachmentId;
+    }
+
+    private function create_temp_file(string $source_file, bool $is_remote)
+    {
+        if ($is_remote) {
+            error_log('[ImmoBridge Image Log] create_temp_file: Is remote, calling download_url for ' . $source_file);
+            return download_url($source_file);
+        }
+
+        if (!file_exists($source_file)) {
+            $this->log('Source file for temporary copy missing: ' . $source_file, 'error');
+            error_log('[ImmoBridge Image Log] create_temp_file: ERROR: Source file does not exist: ' . $source_file);
+            return false;
+        }
+
+        $source_file_info = pathinfo($source_file);
+        $temp_dir = get_temp_dir();
+        $temp_file = trailingslashit($temp_dir) . uniqid('immobridge_') . '_' . $source_file_info['basename'];
+        
+        error_log('[ImmoBridge Image Log] create_temp_file: Attempting to copy ' . $source_file . ' to ' . $temp_file);
+        $result = copy($source_file, $temp_file);
+
+        if (!$result) {
+            $this->log('Temporary copy could not be created: ' . $temp_file, 'error');
+            error_log('[ImmoBridge Image Log] create_temp_file: ERROR: copy() failed.');
+            return false;
+        }
+
+        error_log('[ImmoBridge Image Log] create_temp_file: Successfully copied to temp file.');
+        return $result ? $temp_file : false;
     }
 
     public function deleteDirectory(string $dir): bool

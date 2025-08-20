@@ -1,6 +1,6 @@
 # ImmoBridge Plugin - Projekt Roadmap
 
-Version 6.0 Date 2025-08-19 14:08
+Version 6.2 Date 2025-08-19 19:39
 
 ## Projektübersicht
 
@@ -38,34 +38,30 @@ Modernisierung des WordPress-Plugins "immonex-openimmo2wp" zu "ImmoBridge" mit m
 - ✅ ZIP-Subdirectory Problem gelöst
 - ✅ Server-Timeout Problem gelöst
 
-## Phase 3: Bricks Builder Integration 🔴AIN SRHEITSEN
+## Phase 3: Bricks Builder Integration & Import-System ✅ ABGESCHLOSSEN
 
-- [x] **Recherche & Planung**
-  - [x] Analyse der Frontend-Darstellung im Legacy-Plugin `immonex-openimmo2wp`
-  - [x] Recherche der Bricks Builder "Best Practices" für CPT- und Metafeld-Integration
-  - [x] Erstellung eines technischen Plans für die Dynamic Data Integration
-- [x] **Implementierung des Dynamic Data Providers**
-  - [x] Erstellung eines `BricksIntegrationServiceProvider`
-  - [x] Registrierung aller OpenImmo-Metafelder für Bricks
-  - [x] Entwicklung von benutzerdefinierten Dynamic Data Tags (z.B. `{immobridge_property_price_formatted}`)
-- [x] **Entwicklung von Test-Templates**
-  - [x] Erstellung einer Listenansicht (Archive Template) mit der Bricks Query Loop
-  - [x] Erstellung einer Detailansicht (Single Template)
-  - [x] Umfassende Template-Dokumentation mit Setup-Anweisungen
-- [ ] **Custom Bricks Elements (Optional/Zukunft)**
-  - [ ] Property Card Element
-  - [ ] Property Gallery Element
+- [x] **Bricks Builder: Dynamic Data Provider**
+  - [x] `BricksIntegrationServiceProvider` implementiert.
+  - [x] Dynamic Data Tags für alle relevanten Felder registriert.
+  - [x] Korrekte Render-Logik für Text- und Bilddaten implementiert.
+- [x] **Admin Interface: Import-Funktion**
+  - [x] Löschfunktion für alle Immobiliendaten sicher im Backend integriert.
+  - [x] AJAX-basierter Importprozess mit Live-Fortschrittsanzeige implementiert.
+  - [x] Import-Logik für die Verarbeitung von Stapeln (Batches) optimiert.
+- [x] **AJAX Import-Problem gelöst:**
+  - ✅ **Root Cause identifiziert:** PHP Fatal Error in `OpenImmoImporter.php` Zeile 91 - `iterator_count()` auf LimitIterator ohne Rewinding-Support
+  - ✅ **Fix implementiert:** Manuelle Zählung während der Iteration statt `iterator_count()`
+  - ✅ **Zusätzliche Fixes:** "processed_in_batch" Array-Key-Problem behoben
+  - ✅ **Code bereinigt:** Alle Debugging-Logs entfernt
 
-**Status**: 🔴 **FEHLERHAFT - DEBUGGING ERFORDERLICH**
+**Status**: ✅ **ERFOLGREICH ABGESCHLOSSEN**
 
-**Implementierungsdetails (19.08.2025 12:03):**
+**Implementierungsdetails (20.08.2025 12:39):**
 
-- ✅ **BricksIntegrationServiceProvider** vollständig implementiert mit 25+ Dynamic Data Tags
-- ✅ **Property List Template** (Archive) mit responsivem Grid-Layout und Filteroptionen
-- ✅ **Property Detail Template** (Single) mit Galerie, Kontaktformular und Energieeffizienz-Anzeige
-- ✅ **Vollständige Dokumentation** mit Setup-Anweisungen und Anpassungsoptionen
-- ✅ **Responsive Design** für Desktop, Tablet und Mobile optimiert
-- ✅ **Dynamic Data Integration** für alle relevanten OpenImmo-Felder
+- ✅ **Import-Fehler behoben:** Die Kernfunktionalität des Imports wurde erfolgreich repariert und erweitert.
+- ✅ **Bild-Import:** Die Pfadauflösung für Bilder aus ZIP-Archiven wurde korrigiert. Bilder werden nun zuverlässig importiert und der Mediathek zugewiesen.
+- ✅ **Feld-Import:** Das Mapping für OpenImmo-Daten wurde erheblich erweitert. Adressdaten, Preise, Flächen und weitere Details werden nun korrekt ausgelesen und als Custom Fields gespeichert.
+- ✅ **Nächster Schritt:** Sicherung des aktuellen Stands im Git-Repository.
 
 ## Phase 4: API & Extensions 📋 GEPLANT
 

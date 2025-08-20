@@ -41,6 +41,7 @@ Diese Regeln definieren die Standards und Konventionen für die Entwicklung des 
 ### 8. GitHub Commits
 
 - **Commit-Nachrichten:** Commit-Nachrichten **sollen** dem **Conventional Commits** Standard folgen (z.B. `feat: Add property CPT`, `fix: Correct XML parsing error`, `docs: Update readme`).
+- Nach einem neuen erfolgreich getesteten Entwicklungsstand ist das Projket ins Github Reposetory zu übertragen
 
 ### 9. Login Wordpress Backend
 
@@ -51,9 +52,13 @@ Diese Regeln definieren die Standards und Konventionen für die Entwicklung des 
 
 **URL zur Datenbank**
 
-http://localhost:8888/phpMyAdmin5/index.php?route=/database/structure&db=wp_immonexbrickswplocal_db
+* http://localhost:8888/phpMyAdmin5/index.php?route=/database/structure&db=wp_immonexbrickswplocal_db
 
-Host der Datenbank: localhost:8889
+* Host der Datenbank: localhost:8889
+
+* Database: wp_immonexbrickswplocal_db
+* Database user: wp_immonexbrickswplocal_user
+* Database password: wp_immonexbrickswplocal_pw
 
 ### 10. Aktualisierung der Datei  07_Projekt_Roadmap.md
 
