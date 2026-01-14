@@ -11,9 +11,12 @@ declare(strict_types=1);
 
 namespace ImmoBridge\Admin;
 
+use ImmoBridge\Services\MappingService;
+
 class PropertyMetaBox
 {
     private const POST_TYPE = 'property';
+    private ?MappingService $mappingService = null;
 
     /**
      * Add meta box to property post type
@@ -49,12 +52,13 @@ class PropertyMetaBox
                 $value = $meta[$key][0] ?? '';
                 echo '<tr>';
                 echo '<th><label for="' . esc_attr($key) . '">' . esc_html($label) . '</label></th>';
-                echo '<td><input type="text" id="' . esc_attr($key) . '" name="' . esc_attr($key) . '" value="' . esc_attr($value) . '" class="widefat"></td>';
+                echo '<td><input type="text" id="' . esc_attr($key) . '" name="' . esc_attr($key) . '" value="' . esc_attr($value) . '" class="widefat" readonly></td>';
                 echo '</tr>';
             }
         }
 
         echo '</tbody></table>';
+        echo '<p class="description">' . __('Diese Felder werden automatisch aus den OpenImmo-Importdaten befüllt.', 'immobridge') . '</p>';
     }
 
     /**
@@ -86,51 +90,79 @@ class PropertyMetaBox
 
     /**
      * Get the structure of meta fields to display
+     * Dynamically loads fields from the mapping file
      */
     private function get_meta_fields(): array
     {
+        if ($this->mappingService === null) {
+            $this->mappingService = new MappingService();
+        }
+
+        if ($this->mappingService->hasError()) {
+            // Fallback to hardcoded fields if mapping service fails
+            return $this->get_fallback_meta_fields();
+        }
+
+        $mappings = $this->mappingService->getMappings();
+        $groupedFields = [];
+
+        foreach ($mappings as $mapping) {
+            if ($mapping['type'] !== 'custom_field' || empty($mapping['destination'])) {
+                continue;
+            }
+
+            $group = $mapping['group'] ?? 'Allgemein';
+            $key = $mapping['destination'];
+            $label = !empty($mapping['title de']) ? $mapping['title de'] : (!empty($mapping['title']) ? $mapping['title'] : ucfirst(str_replace('_', ' ', $key)));
+
+            if (!isset($groupedFields[$group])) {
+                $groupedFields[$group] = [
+                    'label' => $group,
+                    'fields' => [],
+                ];
+            }
+
+            $groupedFields[$group]['fields'][$key] = $label;
+        }
+
+        return $groupedFields;
+    }
+
+    /**
+     * Fallback meta fields if mapping service fails
+     */
+    private function get_fallback_meta_fields(): array
+    {
         return [
-            'location' => [
-                'label' => __('Location', 'immobridge'),
+            'Adresse' => [
+                'label' => __('Adresse', 'immobridge'),
                 'fields' => [
-                    'cf_address' => __('Address', 'immobridge'),
-                    'cf_house_number' => __('House Number', 'immobridge'),
-                    'cf_zip_code' => __('ZIP Code', 'immobridge'),
-                    'cf_city' => __('City', 'immobridge'),
-                    'cf_state' => __('State', 'immobridge'),
-                    'cf_country' => __('Country', 'immobridge'),
+                    'immobridge_geo_strasse' => __('Straße', 'immobridge'),
+                    'immobridge_geo_hausnummer' => __('Hausnummer', 'immobridge'),
+                    'immobridge_geo_plz' => __('PLZ', 'immobridge'),
+                    'immobridge_geo_ort' => __('Ort', 'immobridge'),
+                    'immobridge_geo_bundesland' => __('Bundesland', 'immobridge'),
+                    'immobridge_geo_land' => __('Land', 'immobridge'),
                 ],
             ],
-            'prices' => [
-                'label' => __('Prices', 'immobridge'),
+            'Preise' => [
+                'label' => __('Preise', 'immobridge'),
                 'fields' => [
-                    'cf_purchase_price' => __('Purchase Price', 'immobridge'),
-                    'cf_rent_cold' => __('Cold Rent', 'immobridge'),
-                    'cf_rent_warm' => __('Warm Rent', 'immobridge'),
-                    'cf_deposit' => __('Deposit', 'immobridge'),
-                    'cf_commission_buyer' => __('Buyer Commission', 'immobridge'),
+                    'immobridge_preise_kaufpreis' => __('Kaufpreis', 'immobridge'),
+                    'immobridge_preise_nettokaltmiete' => __('Nettokaltmiete', 'immobridge'),
+                    'immobridge_preise_kaltmiete' => __('Kaltmiete', 'immobridge'),
+                    'immobridge_preise_warmmiete' => __('Warmmiete', 'immobridge'),
+                    'immobridge_preise_kaution' => __('Kaution', 'immobridge'),
                 ],
             ],
-            'areas' => [
-                'label' => __('Areas', 'immobridge'),
+            'Flächen' => [
+                'label' => __('Flächen', 'immobridge'),
                 'fields' => [
-                    'cf_living_area' => __('Living Area', 'immobridge'),
-                    'cf_total_area' => __('Total Area', 'immobridge'),
-                    'cf_plot_area' => __('Plot Area', 'immobridge'),
-                    'cf_rooms' => __('Rooms', 'immobridge'),
-                    'cf_bedrooms' => __('Bedrooms', 'immobridge'),
-                    'cf_bathrooms' => __('Bathrooms', 'immobridge'),
-                ],
-            ],
-            'condition' => [
-                'label' => __('Condition & Energy', 'immobridge'),
-                'fields' => [
-                    'cf_condition' => __('Condition', 'immobridge'),
-                    'cf_year_built' => __('Year Built', 'immobridge'),
-                    'cf_last_renovation' => __('Last Renovation', 'immobridge'),
-                    'cf_energy_certificate_type' => __('Energy Certificate Type', 'immobridge'),
-                    'cf_energy_consumption' => __('Energy Consumption', 'immobridge'),
-                    'cf_energy_efficiency_class' => __('Energy Efficiency Class', 'immobridge'),
+                    'immobridge_flaechen_wohnflaeche' => __('Wohnfläche', 'immobridge'),
+                    'immobridge_flaechen_gesamtflaeche' => __('Gesamtfläche', 'immobridge'),
+                    'immobridge_flaechen_anzahl_zimmer' => __('Anzahl Zimmer', 'immobridge'),
+                    'immobridge_flaechen_anzahl_schlafzimmer' => __('Anzahl Schlafzimmer', 'immobridge'),
+                    'immobridge_flaechen_anzahl_badezimmer' => __('Anzahl Badezimmer', 'immobridge'),
                 ],
             ],
         ];

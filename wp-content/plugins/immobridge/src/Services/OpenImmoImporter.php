@@ -358,6 +358,11 @@ class OpenImmoImporter
         }
 
         error_log('[ImmoBridge Image Log] 4. SUCCESS: Image imported. Attachment ID: ' . $attachmentId);
+        
+        // Store meta information to identify ImmoBridge attachments
+        update_post_meta($attachmentId, '_immobridge_property_id', $postId);
+        update_post_meta($attachmentId, '_immobridge_imported', true);
+        
         // The temp file is automatically deleted by media_handle_sideload on success.
         return $attachmentId;
     }

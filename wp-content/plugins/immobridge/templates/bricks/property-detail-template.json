@@ -1,7 +1,7 @@
 {
   "templateName": "ImmoBridge Property Detail",
   "templateType": "single",
-  "postType": "immo_property",
+  "postType": "property",
   "description": "Single property template with comprehensive property information, image gallery, and contact form",
   "version": "1.0.0",
   "elements": [
@@ -307,7 +307,106 @@
                               "name": "text",
                               "label": "Area Value",
                               "settings": {
-                                "text": "{immobridge_property_living_area}"
+                                "text": "{immobridge_flaechen_wohnflaeche} m²"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "spec-usable-area",
+                          "name": "div",
+                          "label": "Usable Area Spec",
+                          "settings": {
+                            "_display": "flex",
+                            "_justifyContent": "space-between",
+                            "_padding": {
+                              "top": "15px",
+                              "bottom": "15px"
+                            },
+                            "_borderBottom": "1px solid #e0e0e0"
+                          },
+                          "children": [
+                            {
+                              "id": "usable-area-label",
+                              "name": "text",
+                              "label": "Usable Area Label",
+                              "settings": {
+                                "text": "Nutzfläche:",
+                                "_fontWeight": "500"
+                              }
+                            },
+                            {
+                              "id": "usable-area-value",
+                              "name": "text",
+                              "label": "Usable Area Value",
+                              "settings": {
+                                "text": "{immobridge_flaechen_nutzflaeche} m²"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "spec-street",
+                          "name": "div",
+                          "label": "Street Spec",
+                          "settings": {
+                            "_display": "flex",
+                            "_justifyContent": "space-between",
+                            "_padding": {
+                              "top": "15px",
+                              "bottom": "15px"
+                            },
+                            "_borderBottom": "1px solid #e0e0e0"
+                          },
+                          "children": [
+                            {
+                              "id": "street-label",
+                              "name": "text",
+                              "label": "Street Label",
+                              "settings": {
+                                "text": "Straße:",
+                                "_fontWeight": "500"
+                              }
+                            },
+                            {
+                              "id": "street-value",
+                              "name": "text",
+                              "label": "Street Value",
+                              "settings": {
+                                "text": "{immobridge_geo_strasse} {immobridge_geo_hausnummer}"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "spec-price",
+                          "name": "div",
+                          "label": "Price Spec",
+                          "settings": {
+                            "_display": "flex",
+                            "_justifyContent": "space-between",
+                            "_padding": {
+                              "top": "15px",
+                              "bottom": "15px"
+                            },
+                            "_borderBottom": "1px solid #e0e0e0"
+                          },
+                          "children": [
+                            {
+                              "id": "price-label",
+                              "name": "text",
+                              "label": "Price Label",
+                              "settings": {
+                                "text": "Kaufpreis:",
+                                "_fontWeight": "500"
+                              }
+                            },
+                            {
+                              "id": "price-value",
+                              "name": "text",
+                              "label": "Price Value",
+                              "settings": {
+                                "text": "{immobridge_preise_kaufpreis} {immobridge_preise_waehrung}"
                               }
                             }
                           ]

@@ -1,7 +1,7 @@
 {
   "templateName": "ImmoBridge Property List",
   "templateType": "archive",
-  "postType": "immo_property",
+  "postType": "property",
   "description": "Archive template for property listings with grid layout and filtering",
   "version": "1.0.0",
   "elements": [
@@ -141,7 +141,7 @@
           "name": "posts",
           "label": "Properties Grid",
           "settings": {
-            "postType": "immo_property",
+            "postType": "property",
             "postsPerPage": 12,
             "hasLoop": true,
             "_display": "grid",
@@ -175,6 +175,7 @@
                   "settings": {
                     "dynamicData": "{immobridge_property_featured_image}",
                     "size": "medium_large",
+                    "link": "{post_url}",
                     "_width": "100%",
                     "_height": "250px",
                     "_objectFit": "cover",
@@ -311,7 +312,7 @@
                       "label": "View Details Button",
                       "settings": {
                         "text": "Details ansehen",
-                        "link": "{permalink}",
+                        "link": "{post_url}",
                         "_width": "100%",
                         "_backgroundColor": "#007cba",
                         "_color": "#ffffff",

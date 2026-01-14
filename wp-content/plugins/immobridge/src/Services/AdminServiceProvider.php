@@ -37,6 +37,8 @@ final class AdminServiceProvider implements ServiceProviderInterface
         add_action('wp_ajax_immobridge_start_import', fn() => $this->ajax_start_import());
         add_action('wp_ajax_immobridge_process_batch', fn() => $this->ajax_process_batch());
         add_action('admin_post_immobridge_delete_all', fn() => $this->handleDeleteAllAction());
+        add_action('admin_post_immobridge_flush_permalinks', fn() => $this->handleFlushPermalinks());
+        add_action('admin_notices', fn() => $this->showTemplateNotice());
     }
 
     private function registerSettings(): void
@@ -107,12 +109,12 @@ final class AdminServiceProvider implements ServiceProviderInterface
         }
 
         echo '<div class="immobridge-delete-section" style="margin-top: 40px; background: #fff; border: 1px solid #d63638; color: #d63638; padding: 20px; border-radius: 4px;">';
-        echo '<h2>' . __('Delete All Property Data', 'immobridge') . '</h2>';
-        echo '<p class="description">' . __('This will permanently delete all imported properties, images, and associated data. This action cannot be undone.', 'immobridge') . '</p>';
-        echo '<form method="post" action="' . admin_url('admin-post.php') . '" onsubmit="return confirm(\'' . __('Are you sure you want to delete all property data? This cannot be undone.', 'immobridge') . '\');">';
+        echo '<h2>' . __('Alle Immobiliendaten löschen', 'immobridge') . '</h2>';
+        echo '<p class="description">' . __('Diese Aktion löscht dauerhaft alle importierten Immobilien, Bilder und zugehörigen Daten. Diese Aktion kann nicht rückgängig gemacht werden.', 'immobridge') . '</p>';
+        echo '<form method="post" action="' . admin_url('admin-post.php') . '" onsubmit="return confirm(\'' . __('Sind Sie sicher, dass Sie alle Immobiliendaten löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.', 'immobridge') . '\');">';
         wp_nonce_field('immobridge_delete_all', 'immobridge_delete_all_nonce');
         echo '<input type="hidden" name="action" value="immobridge_delete_all">';
-        submit_button(__('Delete All Data', 'immobridge'), 'delete');
+        submit_button(__('Alle Immobiliendaten löschen', 'immobridge'), 'delete');
         echo '</form>';
         echo '</div>';
 
@@ -217,22 +219,236 @@ final class AdminServiceProvider implements ServiceProviderInterface
         if (!current_user_can('manage_options')) {
             wp_die(__('Insufficient permissions.', 'immobridge'));
         }
+        
+        global $wpdb;
+        
         $properties = get_posts(['post_type' => 'property', 'posts_per_page' => -1, 'post_status' => 'any', 'fields' => 'ids']);
+        $deletedAttachments = [];
+        
+        // First, collect all attachments from properties
         foreach ($properties as $propertyId) {
             $attachments = get_attached_media('', $propertyId);
             foreach ($attachments as $attachment) {
+                $deletedAttachments[] = $attachment->ID;
+                // Try to delete attachment (file + DB entry)
                 wp_delete_attachment($attachment->ID, true);
             }
             wp_delete_post($propertyId, true);
         }
+        
+        // Find ALL ImmoBridge attachments by meta field (including orphaned ones without files)
+        // This ensures we catch "ghost" entries where the file was deleted but DB entry remains
+        $immobridgeAttachments = get_posts([
+            'post_type' => 'attachment',
+            'posts_per_page' => -1,
+            'post_status' => 'any',
+            'fields' => 'ids',
+            'meta_query' => [
+                'relation' => 'OR',
+                [
+                    'key' => '_immobridge_imported',
+                    'compare' => 'EXISTS',
+                ],
+                [
+                    'key' => '_immobridge_property_id',
+                    'compare' => 'EXISTS',
+                ],
+            ],
+        ]);
+        
+        foreach ($immobridgeAttachments as $attachmentId) {
+            if (in_array($attachmentId, $deletedAttachments)) {
+                continue; // Already processed
+            }
+            
+            // Double-check: Only delete if it's really an ImmoBridge image
+            $hasImmoBridgeMeta = get_post_meta($attachmentId, '_immobridge_imported', true) !== '' || 
+                                 get_post_meta($attachmentId, '_immobridge_property_id', false) !== false;
+            
+            if ($hasImmoBridgeMeta) {
+                // Try normal deletion first (handles file deletion if file exists)
+                // This will delete the file if it exists, but may not remove DB entry if file is missing
+                wp_delete_attachment($attachmentId, true);
+                
+                // ALWAYS force delete the DB entry to ensure "ghost" entries are removed
+                // This is safe because we've already verified it's an ImmoBridge image
+                $this->forceDeleteAttachment($attachmentId);
+                
+                $deletedAttachments[] = $attachmentId;
+            }
+        }
+        
+        // Also clean up attachments that reference deleted properties via meta
+        // (in case some attachments weren't caught in the previous loop)
+        if (!empty($properties)) {
+            $orphanedByMeta = get_posts([
+                'post_type' => 'attachment',
+                'posts_per_page' => -1,
+                'post_status' => 'any',
+                'fields' => 'ids',
+                'meta_query' => [
+                    [
+                        'key' => '_immobridge_property_id',
+                        'value' => $properties,
+                        'compare' => 'IN',
+                    ],
+                ],
+            ]);
+            
+            foreach ($orphanedByMeta as $attachmentId) {
+                if (!in_array($attachmentId, $deletedAttachments)) {
+                    // Try normal deletion first
+                    wp_delete_attachment($attachmentId, true);
+                    // Always force delete DB entry to ensure cleanup
+                    $this->forceDeleteAttachment($attachmentId);
+                }
+            }
+        }
+        
         wp_redirect(admin_url('admin.php?page=immobridge-import&deleted=true'));
         exit;
+    }
+    
+    /**
+     * Force delete attachment from database even if file doesn't exist
+     * This removes "ghost" entries from the media library
+     *
+     * @param int $attachmentId Attachment post ID
+     */
+    private function forceDeleteAttachment(int $attachmentId): void
+    {
+        global $wpdb;
+        
+        // Check if attachment still exists (might have been deleted by wp_delete_attachment)
+        $attachment = $wpdb->get_row($wpdb->prepare(
+            "SELECT * FROM {$wpdb->posts} WHERE ID = %d AND post_type = 'attachment'",
+            $attachmentId
+        ));
+        
+        if (!$attachment) {
+            return; // Already deleted
+        }
+        
+        // Delete all post meta for this attachment (use direct SQL to ensure it works)
+        $wpdb->query($wpdb->prepare(
+            "DELETE FROM {$wpdb->postmeta} WHERE post_id = %d",
+            $attachmentId
+        ));
+        
+        // Delete the attachment post itself
+        $wpdb->query($wpdb->prepare(
+            "DELETE FROM {$wpdb->posts} WHERE ID = %d",
+            $attachmentId
+        ));
+        
+        // Clean up any term relationships
+        $wpdb->query($wpdb->prepare(
+            "DELETE FROM {$wpdb->term_relationships} WHERE object_id = %d",
+            $attachmentId
+        ));
+        
+        // Clean cache aggressively
+        clean_post_cache($attachmentId);
+        wp_cache_delete($attachmentId, 'posts');
+        wp_cache_delete($attachmentId, 'post_meta');
+        
+        // Force cache flush for attachments
+        wp_cache_flush_group('posts');
+        wp_cache_flush_group('post_meta');
     }
 
     private function showImportResults() {
         if (isset($_GET['deleted']) && $_GET['deleted'] === 'true') {
-            echo '<div class="notice notice-success is-dismissible"><p><strong>' . __('All property data has been successfully deleted.', 'immobridge') . '</strong></p></div>';
+            echo '<div class="notice notice-success is-dismissible"><p><strong>' . __('Alle Immobiliendaten wurden erfolgreich gelöscht.', 'immobridge') . '</strong></p></div>';
         }
+        if (isset($_GET['permalinks_flushed']) && $_GET['permalinks_flushed'] === 'true') {
+            echo '<div class="notice notice-success is-dismissible"><p><strong>' . __('Permalinks wurden erfolgreich aktualisiert.', 'immobridge') . '</strong></p></div>';
+        }
+    }
+
+    /**
+     * Handle permalink flush action
+     */
+    public function handleFlushPermalinks(): void {
+        if (!isset($_GET['_wpnonce']) || !wp_verify_nonce($_GET['_wpnonce'], 'immobridge_flush_permalinks')) {
+            wp_die(__('Security check failed.', 'immobridge'));
+        }
+        if (!current_user_can('manage_options')) {
+            wp_die(__('Insufficient permissions.', 'immobridge'));
+        }
+        
+        flush_rewrite_rules(false);
+        wp_redirect(admin_url('admin.php?page=immobridge-import&permalinks_flushed=true'));
+        exit;
+    }
+
+    /**
+     * Show admin notice about Bricks template assignment
+     */
+    private function showTemplateNotice(): void {
+        $screen = get_current_screen();
+        if (!$screen || strpos($screen->id, 'immobridge') === false) {
+            return;
+        }
+
+        // Check if Bricks is active
+        if (!defined('BRICKS_VERSION')) {
+            return;
+        }
+
+        // Check if single property template exists and is assigned
+        $templateAssigned = $this->checkPropertyTemplateAssigned();
+        
+        if (!$templateAssigned) {
+            echo '<div class="notice notice-warning is-dismissible">';
+            echo '<p><strong>' . __('ImmoBridge: Bricks Template zuweisen', 'immobridge') . '</strong></p>';
+            echo '<p>' . __('Damit die Detailansicht von Immobilien funktioniert, muss ein Bricks-Template zugewiesen werden:', 'immobridge') . '</p>';
+            echo '<ol>';
+            echo '<li>' . __('Gehe zu <strong>Bricks → Templates</strong>', 'immobridge') . '</li>';
+            echo '<li>' . __('Importiere das Template aus <code>wp-content/plugins/immobridge/templates/bricks/property-detail-template.json</code>', 'immobridge') . '</li>';
+            echo '<li>' . __('Weise das Template als <strong>Single Template</strong> für den Post-Type <code>property</code> zu', 'immobridge') . '</li>';
+            echo '</ol>';
+            echo '<p>';
+            echo '<a href="' . admin_url('edit.php?post_type=bricks_template') . '" class="button button-primary">' . __('Zu Bricks Templates', 'immobridge') . '</a> ';
+            echo '<a href="' . wp_nonce_url(admin_url('admin-post.php?action=immobridge_flush_permalinks'), 'immobridge_flush_permalinks') . '" class="button">' . __('Permalinks aktualisieren', 'immobridge') . '</a>';
+            echo '</p>';
+            echo '</div>';
+        }
+    }
+
+    /**
+     * Check if a Bricks template is assigned for single property pages
+     */
+    private function checkPropertyTemplateAssigned(): bool {
+        if (!defined('BRICKS_VERSION')) {
+            return false;
+        }
+
+        // Check if there's a template assigned for single property
+        $templates = get_posts([
+            'post_type' => 'bricks_template',
+            'posts_per_page' => -1,
+            'meta_query' => [
+                [
+                    'key' => 'bricks_template_type',
+                    'value' => 'content',
+                ],
+            ],
+        ]);
+
+        foreach ($templates as $template) {
+            $conditions = get_post_meta($template->ID, 'bricks_template_conditions', true);
+            if (is_array($conditions)) {
+                foreach ($conditions as $condition) {
+                    if (isset($condition['type']) && $condition['type'] === 'single' && 
+                        isset($condition['postType']) && $condition['postType'] === 'property') {
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
     }
 
     private function enqueueAdminAssets(string $hook): void
