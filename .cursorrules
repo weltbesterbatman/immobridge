@@ -1,0 +1,124 @@
+# ImmoBridge WordPress Plugin - Cursor Rules
+
+## Projektübersicht
+
+- **Plugin-Name:** ImmoBridge
+- **Zweck:** Modernes WordPress-Plugin zum Import von Immobiliendaten im OpenImmo-Format aus Maklersoftware (z.B. Propstack) mit exklusiver Bricks Builder Integration
+- **GitHub:** https://github.com/weltbesterbatman/immobridge
+- **Lokale Umgebung:** MAMP Pro 6.8.1 (PHP 8.2, MySQL 5.7.39, WordPress 6.9)
+- **Lokale URL:** https://immonex-bricks-wp.local:8890/
+
+## Wichtige Verzeichnisse
+
+```
+Projekt-Root/
+├── wp-content/plugins/immobridge/          # Aktive Entwicklung
+├── wp-content/plugins/immonex-openimmo2wp/ # Legacy-Referenz (nicht bearbeiten)
+├── _project-planung/                       # Dokumentation & Architektur
+│   ├── 00_Projektkontext.md               # Projektziele & Technologien
+│   ├── 01_Architekturdokumentation.md     # Legacy-Analyse
+│   ├── 03_Technische_Spezifikation_ImmoBridge.md  # Haupt-Spezifikation
+│   ├── 06_Projekt_Regeln.md               # Coding-Standards
+│   ├── 07_Projekt_Roadmap.md              # Aktueller Status & Roadmap
+│   └── example/openimmo-version_127c/     # OpenImmo XSD Schema
+└── __old/                                  # Archivierte/veraltete Dateien
+```
+
+## Aktueller Entwicklungsstand (Stand: 14. Januar 2026)
+
+| Phase | Status | Beschreibung |
+|-------|--------|--------------|
+| Phase 1: Grundarchitektur | ✅ Abgeschlossen | PSR-4, DI-Container, CPT, Taxonomien |
+| Phase 2: OpenImmo Integration | ✅ Abgeschlossen | XML-Import funktional, 38 Properties importiert |
+| Phase 3: Bricks Builder | 🟡 In Arbeit | Dynamic Data Tags registriert, Templates erstellt, **Template-Zuweisung & Wertzuweisung XML→CustomField offen** |
+| Phase 4: API & Extensions | 📋 Geplant | REST API, Webhooks |
+| Phase 5: Testing & Optimization | 📋 Geplant | PHPUnit, Performance, Security |
+
+## Nächste priorisierte Aufgaben
+
+1. **[Phase 3 - Kritisch]** Template-Zuweisung validieren und korrigieren (Titel-Links in Listenansicht, Bildergalerie in Detailansicht)
+2. **[Phase 3 - Kritisch]** XML → Custom Field Wertzuweisung im `OpenImmoImporter.php` finalisieren
+3. **[Phase 3 - Kritisch]** Bricks Dynamic Data Tags mit echten importierten Daten testen
+4. **[Phase 3]** Git Commit für Phase 3 Abschluss
+5. **[Phase 5]** Unit-Tests für `MappingService` und `OpenImmoImporter` schreiben
+6. **[Phase 4]** REST API Endpoints für Properties implementieren
+
+## Wichtige Code-Dateien
+
+| Datei | Zweck |
+|-------|-------|
+| `src/Core/Plugin.php` | Hauptklasse, Service Provider Orchestrierung |
+| `src/Services/OpenImmoImporter.php` | OpenImmo XML Import (Batch-fähig) |
+| `src/Services/MappingService.php` | CSV-Mapping-Logik |
+| `src/Integrations/Bricks/DynamicDataProvider.php` | Bricks Dynamic Data Tags |
+| `src/Repositories/PropertyRepository.php` | Datenbankzugriff (Repository Pattern) |
+| `mappings/bricks-default.csv` | Feld-Mapping OpenImmo → WordPress |
+
+## Technische Standards (WICHTIG!)
+
+### PHP & Coding
+- **PHP-Version:** 8.2+ (strikte Typisierung nutzen)
+- **Jede PHP-Datei beginnt mit:** `declare(strict_types=1);`
+- **Namespace:** `ImmoBridge\...` (PSR-4)
+- **Coding Style:** PSR-12 + WordPress Coding Standards
+- **Dependency Injection:** Keine direkte Instanziierung (`new Service()`), immer über Container
+
+### Architektur-Regeln
+- **Repository Pattern:** Kein direkter `WP_Query` oder `$wpdb` in Geschäftslogik
+- **Service Provider:** Neue Services über ServiceProvider registrieren
+- **Interfaces:** Suffix `Interface` (z.B. `PropertyRepositoryInterface`)
+- **Traits:** Suffix `Trait` (z.B. `CacheableTrait`)
+
+### Sprache
+- **Gesamtes Projekt:** Deutsch
+- **Code-Kommentare:** Deutsch
+- **Commit-Messages:** Deutsch, Conventional Commits (`feat:`, `fix:`, `docs:`)
+- **Dokumentation:** Deutsch
+
+## WordPress Backend Zugang
+
+- **URL:** https://immonex-bricks-wp.local:8890/wp-admin/
+- **Benutzer:** admin
+- **Passwort:** Admin-123456
+
+## Datenbank
+
+- **Host:** localhost:8889
+- **Datenbank:** wp_immonexbrickswplocal_db
+- **Benutzer:** wp_immonexbrickswplocal_user
+- **Passwort:** wp_immonexbrickswplocal_pw
+- **phpMyAdmin:** http://localhost:8888/phpMyAdmin5/
+
+## OpenImmo-Standard
+
+- **Unterstützte Version:** 1.2.7c
+- **Schema-Datei:** `_project-planung/example/openimmo-version_127c/openimmo_127c.xsd`
+- **Beispiel-XML:** `_project-planung/example/einzelobjekt-beispiel.xml`
+
+## Workflow nach Änderungen
+
+1. ✅ Code-Änderungen testen
+2. ✅ `_project-planung/07_Projekt_Roadmap.md` aktualisieren (Version + Datum)
+3. ✅ Git Commit mit Conventional Commits
+4. ✅ Bei Milestone: Push zu GitHub
+
+## Bekannte offene Probleme
+
+1. **Template-Zuweisung:** Titel-Links in Listenansicht funktionieren nicht, Bildergalerie in Detailansicht funktioniert nicht - Template-Zuweisung muss validiert werden (verwendetes Template vs. erstelltes Template)
+2. **Wertzuweisung nicht vollständig:** `MappingService.getElementValue()` liefert Werte, aber die Zuweisung zu Custom Fields im `OpenImmoImporter` muss für alle Feldtypen validiert werden
+3. **Keine Unit-Tests:** Test-Infrastruktur vorhanden, aber keine Tests geschrieben
+4. **Logging unstrukturiert:** `error_log()` statt Monolog (Monolog ist installiert)
+
+## Letzte Änderungen (14.01.2026)
+
+- ✅ Template-Verbesserungen: Meta-Informationen hinzugefügt, Links korrigiert, Post-Type korrigiert
+- ✅ Code-Bereinigung: Cleanup-Funktion entfernt, deutsche Übersetzungen implementiert
+- ✅ Git Commit & Push: Erfolgreich zu GitHub gepusht (Commit `7c7908b`, `a1fd14d`)
+
+## Referenz-Dokumente
+
+Bei komplexen Fragen diese Dokumente konsultieren:
+- Architektur: `_project-planung/03_Technische_Spezifikation_ImmoBridge.md`
+- Projekt-Regeln: `_project-planung/06_Projekt_Regeln.md`
+- Roadmap: `_project-planung/07_Projekt_Roadmap.md`
+- Legacy-Analyse: `_project-planung/01_Architekturdokumentation.md`
