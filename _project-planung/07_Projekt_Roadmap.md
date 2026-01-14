@@ -1,6 +1,6 @@
 # ImmoBridge Plugin - Projekt Roadmap
 
-Version 6.4 | Datum: 2026-01-13
+Version 6.5 | Datum: 2026-01-14
 
 ## Projektübersicht
 
@@ -71,6 +71,24 @@ Modernisierung des WordPress-Plugins "immonex-openimmo2wp" zu "ImmoBridge" mit m
 - 🟡 **Dokumentation geprüft:** Alle Planungsdokumente sind aktuell und weiterhin relevant
 - 🟡 **Nächster Schritt:** Wertzuweisung XML → Custom Field im `OpenImmoImporter` finalisieren und mit Bricks Dynamic Data Tags testen
 
+**Aktualisierung (14.01.2026):**
+
+- ✅ **Template-Verbesserungen implementiert:**
+  - Detailansicht: Meta-Informationen hinzugefügt (Straße, Nutzfläche, Preis mit Währung)
+  - Listenansicht: Post-URL korrigiert (`{post_url}` statt `{permalink}`), Bild-Link hinzugefügt
+  - Post-Type in Templates korrigiert (`immo_property` → `property`)
+- ✅ **Code-Bereinigung:**
+  - Cleanup-Funktion für Geister-Bilder entfernt (nicht mehr benötigt)
+  - Admin-Interface: Alle Texte ins Deutsche übersetzt
+  - Bildverwaltung: Verbesserte Löschlogik für ImmoBridge-Bilder implementiert
+- ✅ **Git Commit & Push:**
+  - Commit `7c7908b`: "feat: Template-Verbesserungen und Code-Bereinigung"
+  - Erfolgreich zu GitHub gepusht (https://github.com/weltbesterbatman/immobridge)
+- 🔴 **Bekannte offene Probleme:**
+  - Titel-Links in Listenansicht funktionieren nicht (Template-Zuweisung prüfen)
+  - Bildergalerie in Detailansicht funktioniert nicht (Template-Zuweisung prüfen)
+  - Template-Zuweisung muss validiert werden (verwendetes Template vs. erstelltes Template)
+
 ## Phase 4: API & Extensions 📋 GEPLANT
 
 - [ ] REST API Endpoints
@@ -84,7 +102,7 @@ Modernisierung des WordPress-Plugins "immonex-openimmo2wp" zu "ImmoBridge" mit m
 - [ ] Security Audit
 - [ ] Dokumentation
 
-## Aktueller Status (13.01.2026)
+## Aktueller Status (14.01.2026)
 
 **Fortschritt**: Phase 1 ✅, Phase 2 ✅, Phase 3 🟡
 
@@ -92,18 +110,20 @@ Modernisierung des WordPress-Plugins "immonex-openimmo2wp" zu "ImmoBridge" mit m
 
 - ✅ **Bricks Builder Integration grundlegend implementiert** mit Dynamic Data Provider und 25+ Tags
 - ✅ **Zwei professionelle Templates erstellt**: Property List (Archive) und Property Detail (Single)
-- ✅ **Umfassende Dokumentation** mit Setup-Anweisungen und Anpassungsoptionen
-- ✅ **Git Repository initialisiert** und aktueller Stand committed (GitHub)
+- ✅ **Template-Verbesserungen**: Meta-Informationen hinzugefügt, Links korrigiert, Post-Type korrigiert
+- ✅ **Code-Bereinigung**: Cleanup-Funktion entfernt, deutsche Übersetzungen implementiert
+- ✅ **Git Repository**: Aktueller Stand committed und zu GitHub gepusht
 - ✅ **Responsive Design** für alle Gerätetypen optimiert
 - ✅ **Import funktional**: 38 Properties erfolgreich importiert, 400+ Bilder verknüpft
 
 ### Nächste Schritte (Priorisiert)
 
-1.  **[Phase 3 - Kritisch]** Wertzuweisung XML → Custom Field finalisieren (`OpenImmoImporter.php`)
-2.  **[Phase 3 - Kritisch]** Bricks Dynamic Data Tags mit echten Daten validieren
-3.  **[Phase 3]** Git-Commit für Phase 3 Abschluss
-4.  **[Phase 5]** Unit-Tests für `MappingService` und `OpenImmoImporter` schreiben
-5.  **[Phase 4]** REST API Endpoints implementieren
+1.  **[Phase 3 - Kritisch]** Template-Zuweisung validieren und korrigieren (Titel-Links, Bildergalerie)
+2.  **[Phase 3 - Kritisch]** Wertzuweisung XML → Custom Field finalisieren (`OpenImmoImporter.php`)
+3.  **[Phase 3 - Kritisch]** Bricks Dynamic Data Tags mit echten Daten validieren
+4.  **[Phase 3]** Git-Commit für Phase 3 Abschluss
+5.  **[Phase 5]** Unit-Tests für `MappingService` und `OpenImmoImporter` schreiben
+6.  **[Phase 4]** REST API Endpoints implementieren
 
 ### Technische Schulden
 
@@ -112,10 +132,10 @@ Modernisierung des WordPress-Plugins "immonex-openimmo2wp" zu "ImmoBridge" mit m
 - 🟡 **Caching:** Noch nicht implementiert (Performance-Optimierung für Phase 5)
 - 🟡 **XSD-Validierung:** OpenImmo Schema wird nicht zur Validierung genutzt
 
-## Zeitplan (Aktualisiert 13.01.2026)
+## Zeitplan (Aktualisiert 14.01.2026)
 
 - **Phase 1 & 2 Completion**: ✅ August 2025 (Abgeschlossen)
-- **Phase 3 Completion**: 🟡 Januar 2026 (In Arbeit - Wertzuweisung offen)
+- **Phase 3 Completion**: 🟡 Januar 2026 (In Arbeit - Template-Zuweisung & Wertzuweisung offen)
 - **Phase 4 Start**: Nach Phase 3 Abschluss
 - **Phase 5 (Testing)**: Februar 2026
 - **Beta Release**: Februar/März 2026
@@ -135,10 +155,11 @@ Modernisierung des WordPress-Plugins "immonex-openimmo2wp" zu "ImmoBridge" mit m
 
 **Template Features:**
 
-- **Property List Template**: Responsive Grid, Filteroptionen, Pagination, Hover-Effekte
-- **Property Detail Template**: 2-Spalten Layout, Bildergalerie, Kontaktformular, Energieeffizienz
+- **Property List Template**: Responsive Grid, Filteroptionen, Pagination, Hover-Effekte, Bild-Links zur Detailansicht
+- **Property Detail Template**: 2-Spalten Layout, Bildergalerie, Kontaktformular, Energieeffizienz, Meta-Informationen (Straße, Nutzfläche, Preis)
 - **Mobile-First Design**: Optimiert für alle Bildschirmgrößen
 - **SEO-Optimiert**: Strukturierte Daten und semantisches HTML
+- 🔴 **Offene Probleme**: Titel-Links in Listenansicht, Bildergalerie in Detailansicht (Template-Zuweisung prüfen)
 
 **Developer Experience:**
 
